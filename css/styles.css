@@ -1,0 +1,556 @@
+/* ===============
+  estilos globais
+================ */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 60px;
+  color: #a855f7;
+}
+
+h2, h3 {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+/* ============
+  index.html
+============ */
+
+/* Título */
+.game-modes {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  margin: 0 auto;
+  gap: 5%;
+}
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Imagens */
+.mode-image {
+  width: 304px;
+  height: 304px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid purple;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Botões */
+.draft-btn {
+  background-color: #22c55e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.draft-btn:hover {
+  background-color: #16a34a;
+}
+
+.disabled-btn {
+  background-color: #6b7280;
+  color: #d1d5db;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+/* ==================
+  draftconfig.html
+================== */
+
+/* Título */
+/* h1 e h3 definidos globalmente */
+
+/* Bloco 1 - Instruções */
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto calc((100vh - 100px) * 1.5);
+  height: auto;
+  gap: 10px;
+}
+
+.config-block {
+  background: #222;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.config-block.block-1 {
+  text-align: left;
+}
+
+.config-block h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #a855f7;
+}
+
+/* Bloco 2 - Opções de Configuração */
+.config-block.block-2 {
+  overflow: hidden;
+}
+
+.b2-body {
+  display: flex;
+  flex: 1;
+  gap: 15px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.b2-left {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  gap: 10px;
+  width: 60%;
+}
+
+.b2-field {
+  display: grid;
+  grid-template-columns: auto 140px;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.b2-field label {
+  text-align: left;
+}
+
+.b2-field input[type="number"] {
+  width: 140px;
+  padding: 5px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Inputs */
+.players-label {
+  color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+
+.b2-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.players-scroll-box {
+  flex: 1;
+  max-height: 140px;
+  overflow-y: auto;
+  border: 1px solid #444;
+  padding: 8px;
+  background: #1a1a1a;
+  min-height: 0;
+}
+
+/* Botões */
+.btn-iniciar-draft {
+  background-color: #7e22ce;
+  border: 2px solid yellow;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.btn-iniciar-draft:hover {
+  background-color: #6b21a8;
+}
+
+.b2-left .btn-iniciar-draft {
+  margin-top: auto;
+  width: 97%;
+}
+
+/* Bloco 3 - Seleção de Idols */
+#groupsContainer {
+  text-align: left;
+}
+
+#groupsContainer > div {
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#groupsContainer div div {
+  margin-left: 15px;
+}
+
+.scroll-box {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #444;
+  padding: 10px;
+  background: #1a1a1a;
+}
+
+/* Bloco 4 - Seleção de Músicas e Produtores */
+#producerContainer,
+#musicContainer {
+  margin-top: 10px;
+}
+
+.half-container {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+}
+
+.half-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-container .scroll-box {
+  flex: 1;
+}
+
+/* =====================
+  draftgame.html
+===================== */
+
+/* Título */
+#gameScreen h1 {
+  margin-bottom: 10px;
+}
+
+/* Botão de Turno */
+#gameScreen button {
+  margin-bottom: 15px;
+}
+
+/* Linha do Jogador */
+.playerRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 2px solid #444;
+  width: 100%;
+}
+
+.playerMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 4px;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.playerOrder {
+  font-weight: bold;
+  color: #a855f7;
+  font-size: 24px;
+}
+
+.playerName {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Jogador Atual */
+.activePlayer {
+  background: rgba(174, 0, 255, 0.1);
+}
+
+/* Board */
+.playerBlocks {
+  display: flex;
+  flex: 1;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-width: 0;
+}
+
+.board { 
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-radius: 6px;
+  flex: 1;
+  padding: 8px;
+  min-width: 0;
+  background: #111;
+}
+
+.boardTitle { 
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.musicBoard,
+.producerBoard {
+  flex: 0 0 auto;
+  min-width: 0;
+  width: auto;
+}
+
+/* Boards colour coded lyrics */
+.idolBoard {
+  border-color: yellow;
+}
+
+.musicBoard {
+  border-color: navy;
+}
+
+.producerBoard {
+  border-color: purple;
+}
+
+/* Slots */
+.slotsContainer {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  overflow: visible;
+}
+
+.idolBoard .slotsContainer {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.musicBoard .slotsContainer,
+.producerBoard .slotsContainer {
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.board .slot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 0 0 90px;
+  align-content: flex-start;
+  background: #0a0a0a;
+  width: 90px;
+  height: 120px;
+  border: 2px dashed #555;
+}
+
+/* Slots colour coded lyrics */
+.idolBoard .slot {
+  border-color: yellow;
+}
+
+.musicBoard .slot {
+  border-color: navy;
+}
+
+.producerBoard .slot {
+  border-color: purple;
+}
+
+.locked {
+  opacity: 0.6;
+  border: 2px solid red;
+}
+
+/* Pool */
+#pool {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #444;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+#pool .card {
+  width: 160px;
+  height: 200px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #444;
+  background: #000;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cardLabel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 0;
+}
+
+.cardInfo {
+  font-size: 8px;
+  color: #aaa;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardName {
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Card colour coded lyrics */
+.card-idol {
+  border: 3px solid yellow;
+  box-shadow: inset 0 0 8px rgba(255, 255, 0, 0.3);
+}
+
+.card-music {
+  border: 3px solid navy;
+  box-shadow: inset 0 0 8px rgba(0, 0, 128, 0.3);
+}
+
+.card-producer {
+  border: 3px solid purple;
+  box-shadow: inset 0 0 8px rgba(128, 0, 128, 0.3);
+}
+
+.card.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background: #222;
+  padding: 20px;
+  max-width: 390px;
+  max-height: 90vh;
+  min-width: 390px;
+}
+
+.modalImg {
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.closeBtn {
+  cursor: pointer;
+  float: right;
+  font-size: 18px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .playerRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .playerBlocks {
+    flex-wrap: wrap;
+  }
+}

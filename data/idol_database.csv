@@ -1,0 +1,386 @@
+Geração,Type,ID,Nome,Grupo,Vocal,Dance,Rap,Center,Visual,Especialidade,Conceito predominante,Pontos Fortes,Pontos Fracos
+4,Idol,3yeyurim,Yurim,3YE,C,B,B,C,C,,Girl Crush / Powerful Dance,Consistente em vocais e expressividade / timbre forte e limpo,Falta leveza nas harmonizações / movimentos às vezes rígidos
+4,Idol,3yeyuji,Yuji,3YE,B,A,B,B,C,,Girl Crush / Powerful Dance,Excelente dançarina e vocalista estável / líder de performance com carisma de palco notável,Falta suavidade em conceitos mais leves
+4,Idol,3yehaeun,Haeun,3YE,C,B,A,B,C,,Girl Crush / Powerful Dance,Energia cênica boa / sólida como apoio de dança e rap,Limitações vocais e menor domínio técnico
+4,Idol,aespawinter,Winter,aespa,S,B,D,A,A,,Pop / Vocal Focus,Estabilidade vocal de elite / dicção clara / consistência ao vivo,Coreografias muito pesadas podem reduzir projeção vocal
+4,Idol,aespaningning,NingNing,aespa,S,B,D,C,B,,R&B / Pop Soul,Alcance vocal excepcional / timbre único / técnica avançada,Presença de palco por vezes discreta / menos foco em dance
+4,Idol,aespakarina,Karina,aespa,B,S,B,A,S,,Futurista / Girlcrush,Presença cênica / precisão e impacto em performances poderosas,Dificuldade em adaptar-se a conceitos leves ou “cute”
+4,Idol,aespagiselle,Giselle,aespa,C,B,A,C,B,,Hip-hop / Urban,Flow estável / versatilidade em rap e feature vocals,Projeção vocal limitada / dança menos técnica que as demais
+5,Idol,alldayprojectyoungseo,Youngseo,ALLDAY PROJECT,A,B,D,A,B,,Co-ed Pop / Hip-hop Hybrid,Visual mais destacado / presença elegante e carisma natural,Técnica vocal irregular ao vivo / pouca versatilidade estilística
+5,Idol,alldayprojectbailey,Bailey,ALLDAY PROJECT,D,A,B,B,C,,Co-ed Pop / Hip-hop Hybrid,Excelente controle vocal e corporal / equilíbrio técnico geral,Falta destaque marcante em uma posição específica
+5,Idol,alldayprojectannie,Annie,ALLDAY PROJECT,D,C,C,D,C,,Co-ed Pop / Hip-hop Hybrid,Timbre limpo e expressivo / postura de palco confiante / carisma em conceitos suaves e sensuais,Falta impacto em rap sections e projeção em notas altas
+5,Idol,artmskimlip,Kim Lip,ARTMS,A,S,D,A,A,,R&B / Elegant Pop,Timbre expressivo / técnica vocal refinada / harmonia e emoção,Projeção vocal variável ao vivo em performances muito coreografadas
+5,Idol,artmsjinsoul,Jinsoul,ARTMS,B,B,B,B,A,,Urban Pop / EDM,Rapper melódica com ótimo controle vocal / timbre distinto,Execução menos fluida em coreografias muito técnicas
+5,Idol,artmsheejin,HeeJin,ARTMS,A,S,C,S,A,,Girlcrush / Pop,All-rounder completa / força cênica / carisma e precisão coreográfica,Pode sobrecarregar-se em lineups longas por intensidade constante
+5,Idol,artmshaseul,Haseul,ARTMS,A,B,C,B,A,,Ballad / Emotional,Controle vocal limpo / excelente suporte respiratório,Expressividade corporal e dança mais contida
+5,Idol,artmschoerry,Choerry,ARTMS,B,A,D,A,A,,Pop / Bright Concept,Energia cênica contagiante / versatilidade e presença natural,Técnica vocal limitada em notas graves
+5,Idol,atheartseohyeon,Seohyeon,AtHeart,A,B,D,B,B,,Bright Pop / Performance,Excelente sincronização de grupo / bom suporte em harmonias e estabilidade em lives,Ainda em crescimento para solo vocal de destaque / presença solo moderada
+5,Idol,atheartnahyun,Nahyun,AtHeart,B,B,D,A,A,,Supporting Vocals / Dance,Boa química em formações de grupo / consistente em linhas de apoio e adlibs,Não se destaca tecnicamente em vocal principal ou rap / presença visual média
+5,Idol,atheartmichi,Michi,AtHeart,B,B,D,B,C,,Girlcrush / Powerful Pop,Execução de performance muito polida / controle corporal e presença de palco (destaque nas stages),Em trechos vocais complexos pode perder estabilidade pela intensidade da dança
+5,Idol,atheartkatelyn,Katelyn,AtHeart,B,B,C,B,C,,Pop / Visual Focus,Forte projeção vocal ao vivo / timbre marcante / rosto/visual com apelo alto (possível titular visual),Menos foco em rap / movimentos muito técnicos podem reduzir consistência vocal
+5,Idol,atheartbome,Bome,AtHeart,A,B,D,B,B,,R&B-tinged Pop,Boa estabilidade vocal e controle em runs / interpretação musical sensível,Coreografias mais pesadas afetam ligeiramente a projeção
+5,Idol,atheartaurora,Aurora,AtHeart,B,C,D,C,C,,Ethereal Pop / Visual,Visual diferenciado e expressividade gestual / encaixa bem em passes atmosféricos,Projeção vocal e rap moderados / menos consistente em partes técnicas
+5,Idol,atheartarin,Arin,AtHeart,B,A,D,B,B,,Urban Pop / Rap-forward,Flow e entrega rap consistente / presença carismática / boa versatilidade rítmica,Técnica vocal menos expressiva em notas longas / timbre médio
+5,Idol,babydontcryyihyun,Yihyun,Baby DONT Cry,A,B,D,A,A,,Dark Pop / Girlcrush,Controle vocal excepcional / presença de palco dominante / carisma central,Algumas notas agudas exigem apoio corporal / respiração visível em trechos rápidos
+5,Idol,babydontcrymia,Mia,Baby DONT Cry,C,C,D,B,A,,Hip-Hop / Rap-forward,Flow limpo / dicção e entrega rítmica excelentes / boa presença cênica,Falta potência vocal em trechos altos / expressividade facial ainda limitada
+5,Idol,babydontcrykumi,Kumi,Baby DONT Cry,C,B,B,B,B,,Powerful Pop / Dance Focus,Coreógrafa precisa / musicalidade e fluidez / ótima sincronização,Vocais mais suaves podem perder projeção / rap neutro
+5,Idol,babydontcrybeni,Beni,Baby DONT Cry,B,B,D,B,A,,Visual Pop / Ballad,Visual impactante e carismática / boa interpretação facial / presença em frames,Técnica vocal limitada em trechos dinâmicos / rap pouco desenvolvido
+5,Idol,babymonsterruka,Ruka,BABYMONSTER,B,B,S,B,B,,Hip-hop / Rap-Dance Focus,Execução de dança de elite / presença forte no palco,Técnica vocal média em alta intensidade
+5,Idol,babymonsterrora,Rora,BABYMONSTER,A,B,D,B,A,,Lead Vocal / Youth Pop,Boa presença corporal / dança sólida,Vocal principal falta refinamento
+5,Idol,babymonsterrami,Rami,BABYMONSTER,S,B,B,B,A,,Vocal / Pop,Vocal estável / cresce no palco,Rap e dança com menor destaque
+5,Idol,babymonsterpharita,Pharita,BABYMONSTER,A,C,D,C,B,,Lead Vocal / International Pop,Vocal principal muito forte / domínio de inglês/tailandês,Rap e coreografia menos marcantes
+5,Idol,babymonsterchiquita,Chiquita,BABYMONSTER,B,B,A,B,C,,Supporting Vocals / Performance,Boa expressividade e carisma,Técnica vocal/rap iniciante / presença menor
+5,Idol,babymonsterasa,Asa,BABYMONSTER,B,B,S,B,S,,Rap / Performance Hip-hop,Flow limpo / rap de destaque / boa entrega,Vocal principal menos refinado
+5,Idol,babymonsterahyeon,Ahyeon,BABYMONSTER,S,B,S,A,A,,Main Vocal / Multi-talent,Visual forte / vocal bom / versatilidade,Dança e rap menos consistentes
+4,Idol,billlietsuki,Tsuki,Billlie,B,S,D,A,A,,Dance Focus / International,Elevado nível de dança / fluidez no palco,Vocais principais mais fracos
+4,Idol,billliesuhyeon,Suhyeon,Billlie,A,B,C,B,A,,Pop / Bright Performance,Coreografia bem executada / bons vocais de suporte,Falta consistência em rap mais pesado
+4,Idol,billliesiyoon,Siyoon,Billlie,C,B,B,B,B,,Performance / Rap & Dance,Flow rítmico e presença de palco,Vocais e visual menos dominantes
+4,Idol,billliesheon,Sheon,Billlie,B,A,B,B,A,,Rap / All-rounder,Rap sólido / entrega lírica forte,Técnica vocal em altos registros menos robusta
+4,Idol,billliemoonsua,Moon Sua,Billlie,B,A,A,B,B,,Girlcrush / Rap-Vocal Hybrid,Técnica vocal de alto nível / presença de palco forte,Dança mais técnica poderia ganhar mais refinamento
+4,Idol,billlieharuna,Haruna,Billlie,C,B,C,C,A,,Visual / Supporting Vocals,Visual forte / presença visual marcante,Técnica vocal e rap ainda em crescimento
+4,Idol,billlieharam,Haram,Billlie,A,C,D,C,B,,Vocal Main / Emotional Pop,Dominância vocal em partes melódicas,Rap e dança com menos destaque
+4,Idol,bvndityiyeon,Yiyeon,BVNDIT,B,B,D,C,C,,Girl Crush / Modern R&B Pop,Vocal sólido / estável ao vivo / boa líder de palco / presença marcante,Falta impacto em coreografias de alta intensidade
+4,Idol,bvnditsonghee,Songhee,BVNDIT,B,B,D,B,A,,Girl Crush / Modern R&B Pop,Vocal doce e limpo / boa dicção e apoio melódico,Falta projeção vocal em refrões / timidez performática
+4,Idol,bvnditsimyeong,Simyeong,BVNDIT,B,B,D,C,C,,Girl Crush / Modern R&B Pop,Destaque visual e expressividade / boa leitura de câmera,Falta estabilidade vocal em notas longas
+4,Idol,bvnditseungeun,Seungeun,BVNDIT,B,B,D,B,B,,Girl Crush / Modern R&B Pop,Melhor dançarina do grupo / grande controle rítmico e carisma,Falta consistência vocal em partes principais
+4,Idol,bvnditjungwoo,Jungwoo,BVNDIT,A,B,D,B,C,,Girl Crush / Modern R&B Pop,Excelente dançarina / movimentos controlados e expressivos,Voz pouco marcante / timbre plano
+4,Idol,cherrybulletyuju,Yuju,Cherry Bullet,B,B,D,B,B,,Cute Pop / Retro Tech Pop,Excelente performer e center natural / boa energia de palco,Falta potência vocal
+4,Idol,cherrybulletremi,Remi,Cherry Bullet,C,A,C,C,C,,Cute Pop / Retro Tech Pop,Movimentos precisos e energia alegre / sólida em refrões,Falta projeção e confiança em solos
+4,Idol,cherrybulletmay,May,Cherry Bullet,B,B,D,B,B,,Cute Pop / Retro Tech Pop,Destaque visual / charmosa em conceitos doces,Performance e vocais inconsistentes
+4,Idol,cherrybulletjiwon,Jiwon,Cherry Bullet,B,B,C,S,S,,Cute Pop / Retro Tech Pop,Boa rapper e dançarina / forte presença cênica,Vocais medianos / respiração irregular
+4,Idol,cherrybullethaeyoon,Haeyoon,Cherry Bullet,S,C,D,B,C,,Cute Pop / Retro Tech Pop,Melhor vocalista do grupo / grande controle de pitch / expressiva,Movimentos coreográficos menos refinados
+4,Idol,cherrybulletchaerin,Chaerin,Cherry Bullet,C,A,C,C,B,,Cute Pop / Retro Tech Pop,Equilibrada tecnicamente / expressiva em estilos variados,Falta impacto visual
+4,Idol,cherrybulletbora,Bora,Cherry Bullet,S,B,D,B,C,,Cute Pop / Retro Tech Pop,Boa estabilidade vocal / presença equilibrada,Expressividade irregular / falta impacto individual
+4,Idol,cignatureyeahformer,Ye Ah (former),cignature,A,C,D,B,C,,Teen Crush / Vibrant Pop,Boa rapper e stage performer / presença energética,Vocais inconsistentes e pouca emoção nas falas
+4,Idol,cignaturesunnformer,Sunn (former),cignature,C,A,B,B,C,,Teen Crush / Vibrant Pop,Boa rapper e energia sólida / coordenação forte,Falta de precisão rítmica em algumas partes
+4,Idol,cignaturesemi,Semi,cignature,B,B,D,B,C,,Teen Crush / Vibrant Pop,Coreógrafa de precisão e boa rapper / presença consistente,Técnica vocal básica
+4,Idol,cignatureseline,Seline,cignature,C,B,C,C,B,,Teen Crush / Vibrant Pop,Expressiva / carismática e visual marcante / boa coordenação corporal,Falta estabilidade em vocais de apoio
+4,Idol,cignaturejeewon,Jeewon,cignature,B,B,D,S,A,,Teen Crush / Vibrant Pop,Vocal sólida / bom controle de palco e carisma consistente,Movimentos às vezes rígidos em coreografias rápidas
+4,Idol,cignaturedohee,Dohee,cignature,C,B,C,C,B,,Teen Crush / Vibrant Pop,Boa estabilidade e tonalidade única / forte conexão de palco,Movimentos menos limpos que as principais dancers
+4,Idol,cignaturechloe,Chloe,cignature,B,C,D,C,B,,Teen Crush / Vibrant Pop,Vocal límpido e estável / estilo mais suave e emotivo,Pouca versatilidade em conceito “crush”
+4,Idol,cignaturechaesol,Chaesol,cignature,B,B,D,B,A,,Teen Crush / Vibrant Pop,Boa dançarina e expressão cênica natural / destaque em conceitos energéticos,Falta projeção vocal e estabilidade nas notas médias
+5,Idol,classyseonyou,Seonyou,CLASS:y,D,B,C,B,B,,Hip-hop / Performance,Dança carismática / entrega energética / rap rítmico e dinâmico,Estabilidade vocal variável ao vivo
+5,Idol,classyriwon,Riwon,CLASS:y,A,C,D,C,B,,Cute / Bright Pop,Boa projeção vocal e energia leve / comunicação natural,Rap limitado / coreografias complexas um pouco rígidas
+5,Idol,classymyunghyungseo,Myung Hyungseo,CLASS:y,B,B,D,B,B,,Emotional Pop / Vocal,Timbre emocional e técnica refinada / presença de palco madura,Movimentos de dança menos fluidos em coreos rápidas
+5,Idol,classyjimin,Jimin,CLASS:y,A,B,C,A,A,,Pop / Vocal Power,Técnica vocal madura para a idade / timbre limpo e boa extensão,Expressividade facial um pouco contida em estágios “cute”
+5,Idol,classyhyeju,Hyeju,CLASS:y,C,A,C,B,B,,Girlcrush / Balanced,All-rounder sólida / mantém consistência nas três áreas principais,Falta brilho individual em foco de câmera
+5,Idol,classychaewon,Chaewon,CLASS:y,A,B,D,B,A,,R&B / Charisma,Flow suave e vocal limpo / presença constante no palco,Falta potência nas notas graves
+5,Idol,classyboeun,Boeun,CLASS:y,B,B,D,A,A,,Elegant Pop / Visual,Visual marcante / vocais estáveis e controlados,Falta projeção em notas altas
+5,Idol,cosmosykamion,Kamión,COSMOSY,A,B,D,B,B,,Dream Pop / Visual,Visual etéreo e estilo refinado / destaque em close-ups,Técnica vocal limitada / estabilidade irregular em dança rápida
+5,Idol,cosmosyhimesha,Himesha,COSMOSY,B,B,A,B,C,,Pop / Dance,Coordenação precisa / fluidez corporal notável / expressão natural,Timbre vocal leve e projeção reduzida em palco
+5,Idol,cosmosydehana,De_Hana,COSMOSY,A,B,D,B,A,,R&B / Hip-Hop,Flow firme e articulado / dicção clara e ritmo bem controlado,Falta amplitude vocal / expressão cênica discreta
+5,Idol,cosmosyamei,A’mei ,COSMOSY,B,B,A,B,C,,Elegant Pop / R&B,Vocal limpo e expressivo / ótimo controle tonal / presença carismática e confiante,Ainda carece de potência em agudos longos / energia levemente contida
+4,Idol,csryuna,Yuna,CSR,A,B,D,B,A,,Cute / Pop Ballad,Vocal suave e harmonioso / delicadeza natural de palco,Falta de presença em performances girlcrush
+4,Idol,csryeham,Yeham,CSR,A,B,D,B,B,,All-rounder / Pop & R&B,Boa versatilidade / presença natural,Falta impacto em dança rápida
+4,Idol,csrsua,Sua,CSR,C,B,D,B,A,,Bright Pop / Emotional,Técnica vocal refinada / projeção estável / timbre puro e distinto,Expressão facial contida em coreos mais intensas
+4,Idol,csrsihyeon,Sihyeon,CSR,D,C,D,C,B,,Visual / Emotional Pop,Visual proeminente e expressão cinematográfica,Menos destaque técnico em vocal
+4,Idol,csrseoyeon,Seoyeon,CSR,B,B,D,B,B,,Supporting Vocal / Cute,Vocal limpo e estável / carisma leve,Falta projeção e confiança em câmera
+4,Idol,csrgeumhee,Geumhee,CSR,D,C,C,C,B,,Vocal / Pure Pop,Timbre agradável / harmonia estável,Falta intensidade nas notas mais altas
+4,Idol,csrduna,Duna,CSR,B,B,D,B,A,,Pop / Dance Line,Excelente coordenação e ritmo / execução limpa,Controle de respiração precisa melhorar em long sets
+4,Idol,dreamnoteyoui,Youi,DreamNote,C,B,D,B,B,,Elegant Pop / Leader,Liderança natural / voz estável e clara / boa presença de palco,Falta impacto vocal em notas altas / rap não explorado
+4,Idol,dreamnotesumin,Sumin,DreamNote,B,B,D,A,B,,Rap / Performance,Flow natural e limpo / entrega confiante / bom controle de timing,Alcance vocal limitado / expressão facial um pouco repetitiva
+4,Idol,dreamnotemiso,Miso,DreamNote,A,B,C,B,B,,Bright Pop / Dance Line,Agilidade / coordenação e expressão vívida / técnica consistente,Timbre vocal delicado / menor projeção em estágios ao vivo
+4,Idol,dreamnotelara,Lara ,DreamNote,A,B,D,B,B,,R&B / Vocal Power,Timbre rico e controle de respiração exemplar / excelente dicção,Coreografia em ritmo acelerado às vezes perde fluidez
+4,Idol,dreamnotehanbyeol,Hanbyeol,DreamNote,C,B,C,B,B,,All-rounder / Soft Pop,Equilíbrio entre vocal e dança / boa consistência,Falta projeção e originalidade vocal
+4,Idol,dreamnoteeunjo,Eunjo,DreamNote,B,B,C,B,B,,Visual / Emotional,Visual de destaque e carisma de câmera / tom vocal agradável,Falta domínio técnico / pouca agressividade em coreos
+4,Idol,dreamnoteboni,Boni,DreamNote,B,B,D,B,C,,Main Vocal / Pop,Vibrato limpo / estabilidade e confiança notáveis em palco,Rap fraco / presença cênica mais reservada
+4,Idol,everglowyiren,Yiren,Everglow,C,B,D,A,S,,Visual / Graceful,Visual top-tier / graciosidade e carisma natural / boa gestualidade,Falta impacto performático em trechos fortes / vocais delicados demais
+4,Idol,everglowsihyeon,Sihyeon,Everglow,A,B,D,B,A,,Vocal / Elegant Power,Técnica vocal sólida / estabilidade / excelente líder e presença de palco,Rap e movimentos agressivos um pouco contidos
+4,Idol,everglowonda,Onda,Everglow,C,A,D,C,C,,Visual / Cute-Pop,Visual e expressão ideais para variações de conceito / evolução notável,Força vocal mediana / coreografias pesadas exigem esforço extra
+4,Idol,everglowmia,Mia,Everglow,A,S,B,A,B,,Dance / Charisma,Precisão coreográfica / intensidade performática de elite,Timbre vocal rasgado — difícil manter consistência ao vivo
+4,Idol,evergloweu,E:U,Everglow,D,B,S,B,B,,Girlcrush / Performance,Energia de palco explosiva / timbre grave e distinto / rapper versátil,Controle vocal irregular / dicção em inglês limitada
+4,Idol,everglowaisha,Aisha ,Everglow,C,A,B,B,A,,Rap / Dark-Pop,Flow e presença poderosos / linha de rap de apoio estável,Projeção vocal limitada / controle de respiração em falsettos
+5,Idol,fiftyfiftyyewon,Yewon,FIFTY FIFTY,B,C,D,B,B,,Lead Vocal / Dance Focus,Dança técnica / boa execução,Vocais principais com menor amplitude
+5,Idol,fiftyfiftykeena,Keena,FIFTY FIFTY,B,B,B,B,C,,Rap-Leader / Global Pop,Rap strong / entrega internacional,Vocal principal menos desenvolvido
+5,Idol,fiftyfiftyhana,Hana,FIFTY FIFTY,A,B,D,C,B,,Main Dancer / Visual Pop,Visual forte / presença marcante em palco,Técnica vocal moderada
+5,Idol,fiftyfiftychanellemoon,Chanelle Moon,FIFTY FIFTY,A,A,B,B,C,,Vocal / Pop-R&B,Vocais estáveis / presença de palco boa,Dança e rap menos destacados
+5,Idol,fiftyfiftyathena,Athena,FIFTY FIFTY,B,B,D,A,B,,Maknae / Supporting Vocal,Desenvolvimento contínuo,Técnica vocal e rap ainda em crescimento
+4,Idol,fromis9seoyeon,Seoyeon,fromis_9,B,B,B,C,B,,Visual / Vocal,Visual marcante / vocais consistentes,Rap e presença centrada menos destacados
+4,Idol,fromis9saerom,Saerom,fromis_9,C,A,D,B,A,,Dance Line / Bright Pop,Dança forte / presença de palco,Técnica vocal de lead ainda em progresso
+4,Idol,fromis9nagyung,Nagyung,fromis_9,A,B,D,A,A,,Supporting Vocal / Youth Pop,Consistência de grupo,Técnica individual ainda em crescimento
+4,Idol,fromis9jiwon,Jiwon,fromis_9,S,B,D,B,B,,Lead Vocal / Elegant Pop,Visual forte / vocais de apoio,Dança e rap com menor destaque
+4,Idol,fromis9jisun,Jisun,fromis_9,C,C,D,B,A,,Supporting Vocal / Performance,Execução de grupo estável,Técnica individual limitada
+4,Idol,fromis9jiheon,Jiheon,fromis_9,C,B,D,C,A,,Maknae / Supporting Line,Envolvente em performances,Técnica vocal e rap básica
+4,Idol,fromis9hayoung,Hayoung,fromis_9,S,A,D,B,A,,Bright Pop / Leader,Liderança e vocals de apoio,Técnica de rap e dança moderada
+4,Idol,fromis9gyuri,Gyuri,fromis_9,A,C,D,B,A,,Main Vocal / Pop-Ballad,Vocais sólidos / bom sustain,Dança e rap menos proeminentes
+4,Idol,fromis9chaeyoung,Chaeyoung,fromis_9,B,B,C,B,A,,Performance / Dance Focus,Execução de dança acima da média,Técnica vocal menos refinada
+4,Idol,h1-keyyel,Yel,H1-KEY,B,A,C,A,A,,Dance / Rap Focus,Flow de rap forte / excelente execução de dança,Técnica vocal mais limitada / liderança de palco menor
+4,Idol,h1-keyseoi,Seoi,H1-KEY,B,C,D,B,A,,Leader / Dance-Vocal Hybrid,Equilíbrio técnico bom / presença forte em palco,Ainda não se destaca como vocal de elite
+4,Idol,h1-keyriina,Riina,H1-KEY,B,B,D,B,A,,Vocal / Elegant Pop,Vocais limpos e consistentes,Menos impacto em rap / dança pode se intensificar mais
+4,Idol,h1-keyhwiseo,Hwiseo,H1-KEY,A,B,C,A,B,,Supporting Vocal / Performance,Técnica vocal estável / boa presença de grupo,Dance e rap ainda desenvolvendo
+5,Idol,hearts2heartsyuha,Yuha,Hearts2Hearts,A,B,D,B,A,,All-rounder / Bright Pop,Dança de qualidade / vocais consistentes,Rap linha menos destacada
+5,Idol,hearts2heartsye-on,Ye-on,Hearts2Hearts,A,B,D,C,B,,Maknae / Youth Pop,Potencial de crescimento,Trabalho técnico ainda em fase inicial
+5,Idol,hearts2heartsstella,Stella,Hearts2Hearts,A,B,D,B,A,,Visual / Performance Focus,Visual expressivo / boa performance em palco,Vocais principais e rap ainda em desenvolvimento
+5,Idol,hearts2heartsjuun,Juun,Hearts2Hearts,C,S,B,C,B,,Maknae / Bright Concept,Dança boa / presença juvenil,Técnica vocal/rap menos refinada
+5,Idol,hearts2heartsjiwoo,Jiwoo,Hearts2Hearts,C,A,C,B,S,,Leader / Global Pop,Vocais estáveis / presença forte / visual marcante,Rap/flow ainda limitado
+5,Idol,hearts2heartsian,Ian,Hearts2Hearts,B,A,D,S,S,,Maknae / Performance Foundation,Projeção para grupo futuro,Técnica ainda emergente em várias posições
+5,Idol,hearts2heartscarmen,Carmen,Hearts2Hearts,S,B,D,B,B,,Vocal / Multi-talent,Técnica vocal boa / multinacional qualificação,Ainda em crescimento em dance e rap
+5,Idol,hearts2heartsa-na,A-na,Hearts2Hearts,B,A,B,S,S,,Supporting Vocals / Cute Focus,Presença de grupo estável,Pouco destaque em solo técnico
+5,Idol,hitgsvv,VV,HITGS,D,D,D,D,B,,Teen Pop / Performance-Focus,Boa coordenação de dança / presença de palco,Técnica vocal principal ainda em crescimento
+5,Idol,hitgsseojin,Seojin,HITGS,D,C,D,C,C,,Visual / Pop,Visual marcante / bom para câmeras,Rap e vocal principais menos evidentes
+5,Idol,hitgsseohee,Seohee,HITGS,B,B,D,B,B,,Rap / Urban Pop,Entrega de rap competitiva,Vocal principal médio / técnica precisa em notas altas
+5,Idol,hitgsiyoo,Iyoo,HITGS,B,B,B,B,B,,Maknae / Youth Pop,Potencial de crescimento,Técnica geral ainda em fase de desenvolvimento
+5,Idol,hitgshyerin,Hyerin,HITGS,B,B,D,A,A,,Supporting Vocals / Cute Line,Boa presença de grupo,Técnica vocal e rap ainda iniciante
+4,Idol,i-dleyuqi,Yuqi,i-dle,B,B,B,B,A,,Strong vocal / Performance,Projeção sólida e cor de voz distinta / mantém estabilidade em refrões ao vivo nas 4 shows / presença cênica autêntica ,Movimento de palco intenso pode afetar levemente o suporte respiratório / rap/flow medianos
+4,Idol,i-dlesoyeon,Soyeon,i-dle,B,B,S,B,C,,Rap / Producer / Leader,Rap/flow e entrega vocal rítmica excepcionais — clareza e atitude nas stages (destaque técnico de rap) Carisma de palco consistente ,Técnica de canto mais crua / sustain e afinação em notas longas menos refinados
+4,Idol,i-dleshuhua,Shuhua,i-dle,D,B,D,C,S,,Visual / Supporting vocal,Fotogenia e expressão para câmera muito boas / segurou bem linhas de apoio nas performances sem quebrar harmonia ,Técnica vocal e potência limitadas em solos / rap não é posição forte / dança consistente mas não de destaque técnico
+4,Idol,i-dlemiyeon,Miyeon,i-dle,S,C,D,B,A,,Main vocal / Elegant pop,Estabilidade de pitch e controle dinâmico consistente nas 4 stages (sustain / respiração) Vívida atuação vocal em refrões e adlibs ,Em números muito agudos perde um pouco da potência / performances muito dançantes exigem suporte respiratório extra
+4,Idol,i-dleminnie,Minnie,i-dle,A,B,D,B,A,,Vocal / Pop R&B,Excelente timbre e musicalidade / mantém afinação em falsetes e runs nas shows analisadas / boa presença em partes melódicas ,Menor projeção em passagens com muita backing  / instrumental alto / rap é limitado
+4,Idol,ichillinyeju,Yeju,ICHILLIN',B,B,D,A,A,,Dance / Visual / Youth Pop,Boa dança / presença de palco,Técnica vocal principal moderada
+4,Idol,ichillinjoonie,Joonie,ICHILLIN',C,B,A,C,B,,Lead Rap / Pop Hybrid,Vocais de suporte confiáveis,Dança e rap menos evidentes
+4,Idol,ichillinjiyoon,Jiyoon,ICHILLIN',A,B,D,C,B,,Main Vocal / Elegant Pop,Visual de destaque / vocais consistentes,Técnica de dança e rap menos marcada
+4,Idol,ichillinjackie,Jackie,ICHILLIN',C,B,S,C,B,,Main Rap / Urban Pop,Rap de destaque / boa coordenação de dança,Técnica vocal principal ainda em desenvolvimento
+4,Idol,ichilline.ji,E.Ji,ICHILLIN',B,A,D,A,B,,Leader / Main Dancer / Pop,Excelente performance de dança / vocal sólido,Rap-line ainda menos pronunciada
+4,Idol,ichillinchowon,Chowon,ICHILLIN',A,B,D,B,B,,Maknae / Supporting Vocal,Envolvente em performances de grupo,Técnica individual ainda em fase inicial
+4,Idol,ichillinchaerin,Chaerin,ICHILLIN',B,B,D,B,B,,Vocal Focus / Emotional Pop,Técnica vocal refinada,Rap e dança menos explorados
+5,Idol,ifeyewonhwayeon,Won Hwayeon,ifeye,B,B,D,B,A,,Vocalist / Pop Rookie,Vocal promissor / timbre limpo,Dança e rap menos destacados
+5,Idol,ifeyetaerin,Taerin,ifeye,B,A,D,C,B,,Main Dancer / Pop,Dança muito boa / presença coreográfica forte,Técnica vocal principal mediana
+5,Idol,ifeyesasha,Sasha,ifeye,A,A,B,A,B,,Visual / Maknae Support,Visual forte / expressividade para câmera,Técnica vocal e rap iniciante
+5,Idol,ifeyerahee,Rahee,ifeye,C,B,B,B,C,,All-rounder,Versatilidade e suporte estável,Especialização técnica ainda em crescimento
+5,Idol,ifeyemeu,Meu,ifeye,B,B,D,B,B,,Lead Vocal / Performance,Boa dança / presença de palco agradável,Alcance vocal mais limitado
+5,Idol,ifeyekasia,Kasia,ifeye,C,A,B,A,C,,Leader / Rap Focus,Rap sólida / boa presença de palco,Técnica vocal principal ainda em evolução
+5,Idol,iiitaeri,Taeri,iii,B,B,D,B,C,,Lead Vocal / Dance Focus,Boa dança e performance corporal para rookie,Técnica vocal principal ainda crescente
+5,Idol,iiisoobin,Soobin,iii,B,B,D,B,B,,Leader / Main Vocal,Nome revelado líder / estabilidade vocal para uma rookie,Ainda precisa de maior amplitude e técnica refinada
+5,Idol,iiinamkhing,Namkhing,iii,D,A,D,B,B,,Maknae / Supporting Line,Presença de grupo e potencial visível,Técnica geral menos desenvolvida
+5,Idol,iiihuranformer,Huran (former),iii,B,B,D,B,B,,Rap Focus / Urban Pop,Rap destaque entre rookies,Vocal e dança com margem de crescimento
+5,Idol,iiihana,Hana,iii,C,B,D,C,C,,Visual / Supporting Vocal,Visual forte e presença de palco iniciais,Dança e rap com menor evidência técnica
+5,Idol,iiieungi,Eungi,iii,D,D,D,C,B,,Performance / Pop Hybrid,Boa dança / suporte vocal estável,Técnica de vocal e rap ainda em fase emergente
+5,Idol,illityunah,Yunah,ILLIT,B,B,D,B,B,,Leader / Vocal Hybrid,Boa estabilidade vocal / presença de palco sólida,Ainda não demonstrou amplitude máxima de notas mais altas
+5,Idol,illitwonhee,Wonhee,ILLIT,A,B,D,A,A,,Rap / Urban Pop,Rap de destaque / presença forte em versos,Vocais principais não tão marcados
+5,Idol,illitmoka,Moka,ILLIT,C,B,D,B,A,,Main Dance / Performance Focus,Dança refinada / performance visível,Técnica vocal principal menos refinada
+5,Idol,illitminju,Minju,ILLIT,B,B,D,A,A,,Main Vocal / Visual,Visual forte / vocal confiável,Técnica de rap e dance menos evidentes
+5,Idol,illitiroha,Iroha,ILLIT,B,S,D,B,A,,Maknae / Visual Support,Visual agradável / suportes estáveis,Técnica geral ainda em fase de crescimento
+4,Idol,itzyyuna,Yuna,ITZY,B,B,D,A,S,,Maknae / Visual Pop,Dança fluida / presença de palco em crescimento,Técnica vocal e rap menos refinadas
+4,Idol,itzyyeji,Yeji,ITZY,A,S,C,A,A,,Leader / Girlcrush Power Pop,Presença de palco dominante / danças de nível muito alto / rap sólido,Técnica vocal de lead ainda pode evoluir em sustain alto
+4,Idol,itzyryujin,Ryujin,ITZY,B,S,A,A,A,,Rap / Performance Front,Rap de elite / entrega e presença front cam / grande impacto,Técnica vocal principal inferior aos melhores vocalistas
+4,Idol,itzylia,Lia,ITZY,A,C,D,C,A,,Main Vocal / Elegant Pop,Vocal principal de excelência / alcance / controle e técnica,Dança pesada pode exigir apoio / rap quase inexistente
+4,Idol,itzychaeryeong,Chaeryeong,ITZY,B,S,D,B,B,,All-rounder / Bright Girlcrush,Visual forte / versatilidade em dança e vocal,Rap e flow menos destacados
+4,Idol,iveyujin,Yujin,IVE,S,A,D,A,S,,Leader / Power-Pop,Liderança e carisma natural / estabilidade vocal e energia de palco,Flow de rap limitado / estilo vocal pouco versátil
+4,Idol,ivewonyoung,Wonyoung,IVE,B,B,D,S,S,,Visual / Center-Pop,Center carismática / postura e expressão excepcionais,Falta potência vocal / dificuldade em conceitos mais maduros
+4,Idol,iverei,Rei,IVE,C,B,B,B,A,,Rap / R&B-Pop,Timbre único / flow melódico e distintivo / composição própria,Resistência limitada em lives longas / coreografia precisa porém contida
+4,Idol,iveliz,Liz,IVE,S,B,D,B,A,,Vocal / Ballad-Pop,Controle vocal notável / alcance médio-alto excelente,Energia performática irregular / expressão limitada em girlcrush
+4,Idol,iveleeseo,Leeseo,IVE,B,B,D,B,A,,Youth-Pop / Performance,Boa presença / melhora técnica contínua / brilho em refrões,Falta de consistência vocal em notas altas / menor estabilidade em palco
+4,Idol,ivegaeul,Gaeul,IVE,C,B,B,B,A,,Rap / Elegant-Pop,Flow limpo e preciso / boa leitura rítmica / suporte vocal consistente,Falta destaque visual nas performances em grupo
+5,Idol,iznayoonjiyoonformer,Yoon Jiyoon (former),izna,S,C,D,C,B,,Pop / R&B moderno,Forte background de survival show / presença cênica / bons momentos em stages iniciais,Saiu do grupo (reportado em agosto/2025) / marca presença histórica mas não é mais ativa na formação atual (Kpop Profiles)
+5,Idol,iznaryusarang,Ryu Sarang,izna,B,A,B,B,B,,Vocal / Bright Pop,Projeção vocal boa para rookie / dance de suporte competente,Rap menos desenvolvido
+5,Idol,iznamai,Mai,izna,C,A,D,B,A,,Leader / Elegant Pop,Vocal estável para rookie / visual marcante,Dança e rap ainda em fase de evolução
+5,Idol,iznakoko,Koko,izna,B,S,A,B,A,,Rap / International Pop,Rap de destaque / entrega lírica clara,Técnica vocal principal e dança ainda em desenvolvimento
+5,Idol,iznajeongsaebi,Jeong Saebi,izna,B,B,D,B,B,,Maknae / Supporting Line,Potencial de crescimento / presença de grupo crescente,Técnica geral ainda em fase inicial
+5,Idol,iznachoijungeun,Choi Jungeun,izna,A,A,D,B,B,,Visual / Supporting Vocal,Visual forte / presença de câmera,Técnica vocal principal e rap ainda iniciante
+5,Idol,iznabangjeemin,Bang Jeemin,izna,C,B,D,S,A,,Dance Focus / Performance Rookie,Dança de nível elevado para rookie / presença de palco boa,Técnica vocal ainda menos refinada
+4,Idol,kep1eryujin,Yujin,Kep1er,B,B,D,B,B,,Leader / Dance-Vocal Hybrid,Dança forte / presença de palco,Técnica vocal principal ainda menos refinada
+4,Idol,kep1eryoungeunformer,Youngeun (former),Kep1er,A,A,B,B,B,,Maknae / Supporting Line,Potencial visível / performance coerente,Técnica individual ainda em crescimento
+4,Idol,kep1eryeseoformer,Yeseo (former),Kep1er,B,B,D,B,B,,Cute / Youthful pop,Entonação limpa e grande presença cênica,Estabilidade vocal irregular em lives exigentes
+4,Idol,kep1erxiaoting,Xiaoting,Kep1er,B,S,D,A,S,,Lead Vocal / Visual,Visual de destaque / vocal e dança equilibrados,Rap linha moderada
+4,Idol,kep1ermashiroformer,Mashiro (former),Kep1er,B,B,D,B,B,,Soft pop / Cute,Técnica vocal limpa e precisão de movimento,Falta impacto visual em alguns stages intensos
+4,Idol,kep1erhueningbahiyyih,Huening Bahiyyih,Kep1er,C,C,D,C,C,,Vocal / International Pop,Vocal estável / presença internacional,Dança/rap linha média
+4,Idol,kep1erhikaru,Hikaru,Kep1er,C,A,A,C,C,,Rap / Dance Hybrid,Rap de destaque para a posição / performance energética,Técnica vocal principal menos desenvolvida
+4,Idol,kep1erdayeon,Dayeon,Kep1er,B,S,B,B,A,,Main Dancer / Performance,Dança de alto nível,Vocal/rap menos destacados
+4,Idol,kep1erchaehyun,Chaehyun,Kep1er,A,C,D,B,B,,Main Vocal / Pop-Ballad,Vocal muito competente para a posição,Dança/rap linha média
+5,Idol,kiiikiiisui,Sui,KiiiKiii,B,B,D,B,A,,Visual / Vocal Support,Visual impactante / vocais razoáveis para rookie,Menos destaque em rap ou dança técnica
+5,Idol,kiiikiiileesol,Leesol,KiiiKiii,B,B,A,B,B,,Main Dancer / Performance,Dança de nível elevado / presença cênica forte,Técnica vocal principal menos refinada
+5,Idol,kiiikiiikya,Kya,KiiiKiii,B,B,A,B,A,,Rap / Youth Pop,Rap de destaque para rookie / flow sólido,Vocais principais e presença de centro menos evidentes
+5,Idol,kiiikiiijiyu,Jiyu,KiiiKiii,B,B,B,B,B,,Leader / All-rounder Pop,Liderança e estabilidade / bom equilíbrio nas três áreas principais,Técnica de rap mais fraca / ainda em construção de presença global
+5,Idol,kiiikiiihaum,Haum,KiiiKiii,B,A,D,B,A,,Performance / Dance Support,Boa execução de coreografia / presença estável,Técnica vocal e rap ainda em desenvolvimento
+5,Idol,kiirasroah,Roah,Kiiras,S,B,D,B,B,,Maknae / Vocal & Visual Support,Potencial visível / presença de palco para rookie,Técnica vocal/rap/dança ainda em início de trajetória
+5,Idol,kiiraslingling,LingLing,Kiiras,B,B,D,B,C,,Leader / Global All-rounder,Multilíngue / presença de palco e carisma global,Técnica vocal ainda em refinamento
+5,Idol,kiiraskylie,Kylie,Kiiras,C,B,B,D,B,,Rap / Youth Hip-hop Pop,Rap de destaque em debut / fluxo natural,Vocais principais ainda moderados
+5,Idol,kiiraskurumi,Kurumi,Kiiras,A,C,D,B,B,,Main Vocal / International Pop,Vocal emocional / paciência técnica,Dança e rap menos dominantes
+5,Idol,kiirasharin,Harin,Kiiras,B,B,D,B,B,,Visual / Dance Focus,Visual muito forte / presença central em concept visuals,Técnica vocal principal ainda menos robusta
+5,Idol,kiirasdoyeon,Doyeon,Kiiras,C,C,D,D,B,,Supporting Vocal / Performance,Visual expressivo / presença de grupo estável,Técnica individual mais limitada
+4,Idol,lapillusyue,Yue,Lapillus,B,C,D,C,C,,Power Pop / Confident Youth,Dancer central e destaque performático / excelente controle corporal,Vocais instáveis sob esforço
+4,Idol,lapillusshana,Shana,Lapillus,B,B,D,B,C,,Power Pop / Confident Youth,Líder estável / presença equilibrada e vocais limpos,Falta carisma mais explosivo em conceitos intensos
+4,Idol,lapillusseowon,Seowon,Lapillus,B,B,A,B,B,,Power Pop / Confident Youth,Boa vocalista e sincronizada / entrosamento forte em grupo,Falta presença solo marcante
+4,Idol,lapillushaeun,Haeun,Lapillus,B,B,B,B,C,,Power Pop / Confident Youth,Maknae com destaque crescente / movimentos limpos e boa estabilidade,Expressividade ainda em desenvolvimento
+4,Idol,lapilluschanty,Chanty,Lapillus,B,C,D,C,C,,Power Pop / Confident Youth,Boa vocalista / naturalidade e charme de câmera,Coreografia limitada em potência
+4,Idol,lapillusbessie,Bessie,Lapillus,A,C,C,C,C,,Power Pop / Confident Youth,Rapper de impacto e boa performer / forte projeção e ritmo,Dicção irregular em partes rápidas
+4,Idol,lesserafimsakura,Sakura,Le Sserafim,D,C,D,B,A,,Visual / Performance,Visual expressivo / boa execução de palco,Técnica vocal ainda em refinamento
+4,Idol,lesserafimkimchaewon,Kim Chaewon,Le Sserafim,B,B,D,B,A,,Leader / Pop-Girlcrush,Técnica vocal de top nível / presença de palco forte,Dança/rap menos destacados
+4,Idol,lesserafimkazuha,Kazuha,Le Sserafim,D,A,C,B,A,,Dance / Performance Hybrid,Dança de nível elevado / estética refinada,Técnica vocal principal menos robusta
+4,Idol,lesserafimhuhyunjin,Huh Yunjin,Le Sserafim,A,B,D,A,A,,Vocal / Elegant Pop,Vocal sólido / presença confiante,Rap e dança menos dominantes
+4,Idol,lesserafimhongeunchae,Hong Eunchae,Le Sserafim,D,B,C,B,A,,Maknae / Visual Focus,Visual forte / presença de palco,Técnica vocal e rap iniciante
+4,Idol,lightsumyujeong,Yujeong,LIGHTSUM,C,B,D,C,B,,Maknae / Supporting Line,Suporte de grupo estável,Técnica individual ainda em fase de desenvolvimento
+4,Idol,lightsumsangah,Sangah,LIGHTSUM,C,A,B,B,B,,Rap & Dance Focus / Girlcrush,Dança de altíssimo nível / rap forte,Técnica vocal principal menos refinada
+4,Idol,lightsumnayoung,Nayoung,LIGHTSUM,B,A,D,A,B,,Visual / Performance Hybrid,Visual expressivo / dança e vocal equilibrados,Rap menos destacado
+4,Idol,lightsumjuhyeon,Juhyeon,LIGHTSUM,C,A,C,B,B,,Rap / Dance Focus / Youth Pop,Rap e dança promissoras,Vocal principal menos refinado
+4,Idol,lightsumhina,Hina,LIGHTSUM,C,B,D,C,B,,Supporting Vocal / Dance Line,Presença de palco boa / dança competente,Técnica vocal principal média
+4,Idol,lightsumchowon,Chowon,LIGHTSUM,A,B,C,B,B,,Lead Vocal / Bright Pop,Vocais estáveis / boa presença de palco,Rap e dança complexa menos evidentes
+5,Idol,loossembleyeojin,Yeojin,Loossemble,C,C,D,C,B,,Lead Vocal / Visual,Visual muito forte / bom vocal para o grupo,Rap linha pouco destacada
+5,Idol,loossemblevivi,Vivi,Loossemble,C,B,D,C,B,,Supporting Vocal / Performance,Versatilidade e presença nos vocais de suporte,Rap e dança de nível médio
+5,Idol,loossemblehyunjin,Hyunjin,Loossemble,B,B,D,A,S,,Dance-Focus / Girlcrush,Domínio de dança / presença de palco forte,Técnica vocal principal ainda em crescimento
+5,Idol,loossemblehyeju,Hyeju,Loossemble,B,A,C,A,A,,Visual / Supporting Line,Visual e presença frente à câmera,Técnica vocal e rap ainda em desenvolvimento
+5,Idol,loossemblegowon,Gowon,Loossemble,C,C,C,C,B,,All-rounder / Pop,Estabilidade de performance,Técnica vocal principal menos refinada
+5,Idol,meovvsooin,Sooin,Meovv,B,B,D,A,A,,Main Vocal / Main Dancer,Forte nas duas áreas principais / presença de palco,Rap linha menos desenvolvida
+5,Idol,meovvnarin,Narin,Meovv,B,A,S,B,B,,Rap / Vocal Hybrid,Rap de destaque / fluxo bom,Técnica vocal principal moderada
+5,Idol,meovvgawon,Gawon,Meovv,B,A,S,B,B,,Vocal / Visual / Global Pop,Visual marcante / desempenho vocal sólido,Rap/dança de apoio menos destacado
+5,Idol,meovvella,Ella,Meovv,B,B,D,B,A,,Visual / Maknae / Supporting Line,Visual altíssimo nível / presença para câmera,Técnica vocal/rap/dança ainda em fase inicial
+5,Idol,meovvanna,Anna,Meovv,C,C,D,B,S,,Visual / Supporting Vocal,Visual forte / presença internacional,Técnica vocal principal ainda em refinamento
+4,Idol,natureuchae,Uchae,Nature,C,B,C,C,A,,Fresh / Bright Pop,Visual e dancer consistente / expressão refinada,Projeção vocal mais suave
+4,Idol,naturesunshine,Sunshine,Nature,B,C,D,C,C,,Fresh / Bright Pop,Performer energética e estável,Respiração irregular em notas longas
+4,Idol,naturesohee,Sohee,Nature,A,B,D,B,C,,Fresh / Bright Pop,Técnica vocal estável e presença carismática / ex-IBI com forte experiência de palco,Performance em dança menos energética comparada ao resto
+4,Idol,naturesaebom,Saebom,Nature,B,A,C,A,A,,Fresh / Bright Pop,Boa rapper-dancer híbrida / transmite confiança,Menos estabilidade vocal em faixas intensas
+4,Idol,naturelu,Lu,Nature,B,B,D,B,C,,Fresh / Bright Pop,Vocal agradável e boa coordenação rítmica,Falta de destaque marcante individual
+4,Idol,natureloha,Loha,Nature,C,B,C,B,C,,Fresh / Bright Pop,Boa performer equilibrada / transmite leveza,Falta potência vocal
+4,Idol,natureharu,Haru,Nature,C,A,D,C,C,,Fresh / Bright Pop,Excelente dancer / potência e precisão / presença cênica superior,Vocais discretos em performances ao vivo
+4,Idol,naturechaebin,Chaebin,Nature,A,C,D,C,B,,Fresh / Bright Pop,Main vocal de timbre limpo e emocional,Menos presença corporal em palco
+4,Idol,natureaurora,Aurora,Nature,C,C,D,C,B,,Fresh / Bright Pop,Expressiva / com domínio técnico e visual chamativo / forte presença internacional,Pronúncia coreana ocasionalmente limitada
+5,Idol,newjeansminji,Minji,NewJeans,C,B,C,B,A,,Leader-like / Pop Next-Gen,Boa versatilidade / presença forte no palco,Técnica de rap menos demonstrada
+5,Idol,newjeanshyein,Hyein,NewJeans,B,B,C,B,B,,Maknae / Pop Support,Potencial visível / boa presença de grupo,Técnica vocal/rap/dança ainda iniciando
+5,Idol,newjeanshanni,Hanni,NewJeans,B,A,C,A,B,,Main Vocal / International Pop,Voz clara / alcance sólido / apelo multicultural,Rap/dança técnica menor
+5,Idol,newjeanshaerin,Haerin,NewJeans,B,A,C,B,B,,Youth Pop / Dance Focus,Coreografia fluida / presença natural,Técnica vocal principal menos refinada
+5,Idol,newjeansdanielle,Danielle,NewJeans,A,B,C,B,B,,Bright Pop / Visual,Visual muito forte / presença de palco,Técnica de dança/rap menos evidente
+4,Idol,niziurio,Rio,NiziU,B,B,C,C,C,,Bright Pop / Teen Refresh,Excelente dançarina / presença muito natural / bom flow,Limitações vocais notáveis em faixas mais melódicas
+4,Idol,niziurima,Rima,NiziU,B,B,S,B,C,,Bright Pop / Teen Refresh,Flow natural / dicção clara em japonês e inglês,Pode soar forçada em estilos “cute”
+4,Idol,niziuriku,Riku,NiziU,A,B,D,B,C,,Bright Pop / Teen Refresh,Visual expressivo / tom vocal leve e agradável,Dificuldade em controle de respiração
+4,Idol,niziunina,Nina,NiziU,A,B,D,B,C,,Bright Pop / Teen Refresh,Melhor alcance vocal do grupo / controle técnico excelente,Coreografias menos refinadas
+4,Idol,niziumiihi,Miihi,NiziU,A,B,D,B,A,,Bright Pop / Teen Refresh,Potência vocal / timbre limpo e carismático / expressiva,Estabilidade inconsistente em notas longas ao vivo
+4,Idol,niziumayuka,Mayuka,NiziU,B,B,S,B,A,,Bright Pop / Teen Refresh,Boa rapper e vocal versátil / equilíbrio geral sólido,Falta de impacto visual nos stages
+4,Idol,niziumaya,Maya,NiziU,B,B,D,B,C,,Bright Pop / Teen Refresh,Bom controle vocal / expressão emocional convincente,Baixo impacto dançante / pouca energia em estágios
+4,Idol,niziumako,Mako,NiziU,B,B,C,B,C,,Bright Pop / Teen Refresh,Liderança e presença / estabilidade notável em performances,Falta brilho individual fora do papel de líder
+4,Idol,niziuayaka,Ayaka,NiziU,C,C,D,B,A,,Bright Pop / Teen Refresh,Excelente visual / transmite charme e suavidade,Falta técnica vocal e firmeza nos movimentos
+4,Idol,nmixxsullyoon,Sullyoon,NMIXX,A,B,D,B,S,,Lead Vocal / Dance Hybrid,Dança excelente / boa presença no palco,Técnica vocal de topo ainda em pequena margem
+4,Idol,nmixxlily,Lily,NMIXX,S,B,D,B,C,,Main Vocal / International,Excelente alcance / experiência internacional,Rap quase ausente / dança mediana
+4,Idol,nmixxkyujin,Kyujin,NMIXX,B,A,A,S,B,,Main Dancer / Maknae,Dança de nível competitivo / presença consistente,Vocal/rap menos destacadas
+4,Idol,nmixxjiwoo,Jiwoo,NMIXX,C,B,A,C,B,,Main Rap / Vocal Hybrid,Rap de destaque / entrega articula bem,Técnica vocal principal menos refinada
+4,Idol,nmixxhaewon,Haewon,NMIXX,A,B,C,A,A,,Leader / Main Vocal,Vocal refinado para a posição / presença de palco forte,Rap/dança com menor foco técnico
+4,Idol,nmixxbae,Bae,NMIXX,B,B,D,C,C,,Lead Vocal / Tall Member,Visual forte / estabilidade vocal,Dança/rap menos destacadas
+5,Idol,oddyouthyeeum,Yeeum,ODD YOUTH,B,C,D,C,B,,Maknae / Supporting Line,Potencial visível / boa base de desempenho,Técnica geral ainda em fase de desenvolvimento
+5,Idol,oddyouthsummer,Summer,ODD YOUTH,B,B,D,B,A,,Rap / Urban Pop,Rap de destaque para idade/júnior,Vocal e visual menos evidentes
+5,Idol,oddyouthmyah,Myah,ODD YOUTH,B,A,B,A,B,,Vocal / Performance Focus,Vocal estável / presença internacional,Rap e dança menos destacados
+5,Idol,oddyouthmaika,Maika,ODD YOUTH,D,B,D,C,B,,Leader / Next-Gen Pop,Boa dança / presença de palco forte,Técnica vocal principal ainda em crescimento
+5,Idol,oddyouthkanie,Kanie,ODD YOUTH,C,B,D,C,B,,All-rounder / Youth Pop,Dança competitiva / visual forte,Técnica vocal principal com margem de crescimento
+4,Idol,pixysua,Sua,PIXY,B,B,D,C,C,,Dark Fantasy / Girl Crush,Líder e dancer excepcional / precisão e teatralidade notáveis,Dificuldade em manter expressão neutra em conceitos suaves
+4,Idol,pixysatbyeolformer,Satbyeol (former),PIXY,D,B,C,C,C,,Dark Fantasy / Girl Crush,Boa rapper e performer estável / contribuiu ao equilíbrio sonoro,Expressividade limitada em close-ups
+4,Idol,pixylola,Lola,PIXY,B,B,C,B,B,,Dark Fantasy / Girl Crush,Excelente rapper e performer / presença de palco dominante,Vocais menos potentes
+4,Idol,pixyellaformer,Ella (former),PIXY,A,A,D,B,C,,Dark Fantasy / Girl Crush,Excepcional presença / uma das vozes mais distintas do grupo,Forçada a se afastar por saúde / estabilidade vocal caiu nas últimas promoções
+4,Idol,pixydia,Dia,PIXY,B,B,D,B,C,,Dark Fantasy / Girl Crush,Vocalista principal com ótimo controle e emoção,Movimentos um pouco rígidos em coreos pesadas
+4,Idol,pixydajeong,Dajeong,PIXY,B,B,D,C,C,,Dark Fantasy / Girl Crush,Maknae com energia e sincronização sólidas,Projeção vocal moderada
+5,Idol,primroseruby,Ruby,PRIMROSE,D,C,D,C,C,,Rap / Dance / Visual Hybrid,Rap e dança de alto nível / presença de palco muito boa,Técnica vocal principal com mais espaço para crescimento
+5,Idol,primroserainie,Rainie,PRIMROSE,D,C,D,C,C,,Vocal / International Pop,Visual forte / apoio vocal sólido,Rap e dança com menor destaque
+5,Idol,primrosenahyun,Nahyun,PRIMROSE,B,B,D,B,B,,Main Vocal / Pop Ballad,Vocal líder forte / técnica refinada,Dança e rap menos dominantes
+5,Idol,primrosehayun,Hayun,PRIMROSE,C,C,D,B,B,,Maknae / Supporting Vocal,Presença de palco delicada / visual suave,Técnica vocal/rap/dança ainda em fase inicial
+4,Idol,purplekissyuki,Yuki,Purple Kiss,C,B,S,B,B,,Main Rapper / Lead Dancer,Rap técnico e entrega sólida,Vocal principal limitado
+4,Idol,purplekissswan,Swan,Purple Kiss,S,C,D,B,B,,Main Vocal / Maknae,Vocal potente / timbre único,Dança mais básica / rap praticamente ausente
+4,Idol,purplekissireh,Ireh,Purple Kiss,B,A,D,B,B,,Lead Dancer / Sub Vocal,Coreografia fluida e presença marcante,Rap e liderança menos evidentes
+4,Idol,purplekissgoeun,Goeun,Purple Kiss,S,B,D,B,B,,Main Vocal / Lead Dancer / Pop-Rock,Técnica de vocal de topo / presença de palco forte,Rap linha menos desenvolvida
+4,Idol,purplekissdosie,Dosie,Purple Kiss,B,A,D,A,B,,Main Dancer / Supporting Vocal,Dança de nível muito alto,Vocal principal poderia ter mais projeção
+4,Idol,purplekisschaein,Chaein,Purple Kiss,A,A,D,B,B,,Lead Vocal / Visual,Visual de destaque / boa estabilidade vocal,Dança/rap linha média
+5,Idol,queenzeyewonchae,Wonchae,Queenz Eye,B,B,D,B,C,,Leader / Main Dancer / Vocal,Dança de nível elevado / presença frontal / visual forte,Rap e voz principal ainda em refinamento
+5,Idol,queenzeyeseovin,Seovin,Queenz Eye,B,B,D,C,C,,Vocal / Supporting Line,Vocais sólidos de suporte / desempenho estável,Dança e rap de nível médio
+5,Idol,queenzeyeseoha,Seoha,Queenz Eye,B,B,D,B,C,,Maknae / Supporting Vocal,Potencial visível / presença de grupo,Técnica geral de nível inicial
+5,Idol,queenzeyekiirii,Kiirii,Queenz Eye,C,B,D,C,B,,Vocal / International Rookie,Vocais promissores / apelo internacional,Dança/rap ainda em fase de consolidação
+5,Idol,queenzeyejinyul,Jinyul,Queenz Eye,B,B,D,B,B,,Dance / Visual Rookie,Dança competente / visual bom,Técnica vocal/rap para desenvolver
+5,Idol,queenzeyeahyoon,Ahyoon,Queenz Eye,C,B,B,B,C,,Main Dancer / Rap Focus,Rap potente / entrega forte,Vocal principal e presença de centro menos definidas
+5,Idol,rescenezena,Zena,Rescene,B,B,D,B,A,,Dance‐Focus / Youth Pop,Dança acima da média para rookie,Técnica vocal/rap menos refinada
+5,Idol,rescenewoni,Woni,Rescene,C,B,D,B,A,,Leader / Pop-Performance,Boa dança / presença de palco forte,Técnica vocal principal ainda em crescimento
+5,Idol,resceneminami,Minami,Rescene,A,B,D,B,B,,Lead Vocal / Emotional Pop,Vocal refinado para o período de estreia,Rap e dança com menos destaque inicial
+5,Idol,rescenemay,May,Rescene,B,C,D,C,B,,Visual / Supporting Line,Visual forte / estilo distinto,Técnica vocal/rap/dança ainda em fases iniciais
+5,Idol,resceneliv,Liv,Rescene,A,C,D,B,B,,Rap / Performance Hybrid,Flow de rap promissor / presença única,Vocais principais menos evidentes
+4,Idol,rocketpunchyunkyoung,Yunkyoung,Rocket Punch,B,B,D,C,C,,Color Pop / Youthful Energy,Principal dançarina / movimentos precisos e carisma de palco,Vocais limitados / pouca variedade expressiva
+4,Idol,rocketpunchyeonhee,Yeonhee,Rocket Punch,B,B,D,A,B,,Color Pop / Youthful Energy,Líder sólida e equilibrada / presença forte e expressiva,Falta impacto em notas altas
+4,Idol,rocketpunchsuyun,Suyun,Rocket Punch,A,B,D,C,C,,Color Pop / Youthful Energy,Melhor vocalista do grupo / excelente alcance e emoção,Falta presença cênica em partes não vocais
+4,Idol,rocketpunchsohee,Sohee,Rocket Punch,C,B,C,C,C,,Color Pop / Youthful Energy,Forte em estilos modernos e expressivos / boa conexão com a câmera,Falta consistência respiratória
+4,Idol,rocketpunchjuri,Juri,Rocket Punch,B,B,D,B,C,,Color Pop / Youthful Energy,Estável e experiente / forte presença vocal e expressiva,Coreografia menos fluida comparada às mais jovens
+4,Idol,rocketpunchdahyun,Dahyun,Rocket Punch,B,B,C,B,B,,Color Pop / Youthful Energy,Equilibrada entre vocal e rap / potencial notável,Ainda em desenvolvimento técnico / estabilidade variável
+5,Idol,saymynamesoha,Soha,SAY MY NAME,A,B,D,B,A,,Rap / Bright Pop,Rap entrega boa para rookie,Técnica vocal principal limitada
+5,Idol,saymynameshuie,Shuie,SAY MY NAME,D,C,A,C,B,,New Member / Support Hybrid,Boa dança / melhoria visível,Técnica vocal principal ainda em crescimento
+5,Idol,saymynameseungjoo,Seungjoo,SAY MY NAME,B,C,D,C,B,,Maknae / Visual Support,Potencial e presença de grupo,Técnica vocal/rap/dança iniciante
+5,Idol,saymynamemei,Mei,SAY MY NAME,B,B,D,A,B,,Vocal / Pop Hybrid,Vocais consistentes / bom desempenho de estreia,Dança e rap menos exploradas
+5,Idol,saymynamekanny,Kanny,SAY MY NAME,D,B,B,C,B,,Dance / Performance Focus,Dança de nível elevado para rookie,Técnica vocal principal ainda em refinamento
+5,Idol,saymynamejunhwi,Junhwi,SAY MY NAME,C,C,C,C,A,,Maknae / Support Line,Potencial visível,Técnicas principais menos maduras
+5,Idol,saymynamehitomi,Hitomi,SAY MY NAME,B,B,D,B,B,,Leader / International Pop,Visual forte e presença global / boas funções vocais,Técnica de rap e dança de destaque ainda em construção
+5,Idol,saymynamedohee,Dohee,SAY MY NAME,A,B,D,S,A,,Visual / Supporting Vocal,Visual forte / presença de grupo,Técnica vocal/rap/dança ainda emergente
+4,Idol,secretnumberzuuformer,Zuu (former),SECRET NUMBER,D,C,D,C,C,,Lead Vocal / Dance Hybrid,Boa dança + vocais confiáveis,Rap pouco explorado
+4,Idol,secretnumbersoodamformer,Soodam (former),SECRET NUMBER,C,C,D,B,B,,Vocal / Performance Hybrid,Versatilidade como vocal e presença estável,Rap linha menos forte
+4,Idol,secretnumbernavi,Navi,SECRET NUMBER,D,D,D,D,C,,Supporting Vocal / Visual,Potencial visível / presença de grupo crescente,Técnica individual ainda em fase inicial
+4,Idol,secretnumberminjiformer,Minji (former),SECRET NUMBER,B,B,D,C,C,,Vocal / Sub Vocal (ex-membro),Vocais estáveis quando ativa,Já ex-membro → atividade encerrada
+4,Idol,secretnumberminc,Min C,SECRET NUMBER,D,D,D,D,C,,Rap / Maknae Focus,Rap de destaque para nova formação,Vocais e dança ainda em maturação
+4,Idol,secretnumberléaformer,Léa (former),SECRET NUMBER,D,B,D,C,C,,Lead Vocal / Visual (ex-membro),Vocal forte / visual de impacto,Já ex-membro → não está mais em atividade plena
+4,Idol,secretnumberjinnyformer,Jinny (former),SECRET NUMBER,D,B,A,B,C,,Rap / Sub Vocal (ex-membro),Rap de destaque durante participação,Menos impacto vocal principal / ex-membro
+4,Idol,secretnumberebin,Ebin,SECRET NUMBER,D,D,D,D,C,,Main Vocal / Rookie,Vocal líder promissor,Dança/rap menos desenvolvidos
+4,Idol,secretnumberditaformer,Dita (former),SECRET NUMBER,B,A,D,A,B,,Dance / Sub Vocal (ex-membro),Dança excelente / desempenho de palco,Vocal/rap menos dominantes / não mais ativa no grupo
+4,Idol,secretnumberdinda,Dinda,SECRET NUMBER,C,C,D,B,B,,Dance / Support Vocal,Dança de nível para rookie,Vocais/rap com menos impacto técnico
+4,Idol,secretnumberdeniseformer,Denise (former),SECRET NUMBER,A,B,D,B,C,,Vocal / Maknae Support (ex-membro),Boa voz para debut,Técnica de dança/rap moderada / saiu em 2022
+5,Idol,soloistyves,Yves,Soloist,B,S,C,B,C,,Art Pop / R&B / Conceptual,Dancer sofisticada e excelente controle corporal / estilo artístico único,Faixas mais mainstream reduzem seu impacto
+4,Idol,soloistleechaeyeon,Lee Chaeyeon,Soloist,A,S,C,C,C,,Performance / Pop Hip-hop,Uma das dançarinas mais técnicas da 4ª geração / presença poderosa e versátil,Voz mais leve / perde projeção em notas agudas longas
+4,Idol,soloistkwoneunbi,Kwon Eunbi,Soloist,A,A,C,B,A,,Mature Pop / Elegant Concept,Estilo refinado / controle vocal sólido / e consistência em palco,Movimentos podem parecer contidos em faixas de alta energia
+4,Idol,soloistjoyuri,Jo Yuri,Soloist,S,C,D,B,B,,Vocal Pop / Emotional Ballad,Controle vocal impecável / projeção forte e expressividade acima da média / boa intérprete,Performance de palco menos energética em coreografias complexas
+4,Idol,soloistjeonsomi,Jeon Somi,Soloist,B,A,C,S,S,,Pop / Hip-hop Fusion,Performer global / carisma forte / domínio total de palco,Por vezes / foco maior em imagem do que em técnica vocal pura
+5,Idol,soloistchuu,Chuu,Soloist,S,B,C,B,B,,Bright Pop / R&B,Timidez vocal natural e carisma genuíno / timbre limpo e potente,Coreografias podem parecer suaves demais em conceitos girlcrush
+4,Idol,soloistchoiyena,Choi Yena,Soloist,B,B,B,B,B,,Pop Rock / Bright Concept,Performer completa / versátil e carismática / boa rapper melódica,Expressividade vocal menos emocional em baladas
+4,Idol,staycyoon,Yoon,STAYC,A,B,D,B,A,,Lead Vocal / Maknae,Visual e presença interessante,Técnica vocal principal/modulo de rap/dança precisa melhorar
+4,Idol,staycsumin,Sumin,STAYC,B,B,C,C,B,,Leader / Vocal-Rapper Hybrid,Boa estabilidade vocal + entrega de rap suportada,Técnica de dança de elite ainda pode evoluir
+4,Idol,staycsieun,Sieun,STAYC,S,B,A,A,B,,Main Vocal / Visual Front,Vocais de altíssimo nível / presença de palco forte,Rap praticamente ausente / dança precisa de mais destaque
+4,Idol,staycseeun,Seeun,STAYC,C,B,D,C,B,,Dance / Support Vocal,Dança de alto nível / presença de palco,Vocais principais abaixo de alguns pares
+4,Idol,staycj,J,STAYC,B,B,A,B,B,,Rap / Maknae / Performance Hybrid,Rap de nível competitivo para posição / presença de palco,Técnica vocal principal e dança ainda em fase de refinamento
+4,Idol,staycisa,Isa,STAYC,B,B,D,B,A,,Lead Vocal / Visual,Visual expressivo / vocais competentes,Rap/dança técnica menos evidentes
+4,Idol,tri.besongsun,Songsun,TRI.BE,A,B,D,B,B,,Girl Crush / Energetic Pop,Estável e refinada no palco / timbre doce com boa projeção / grande controle corporal,Falta impacto vocal em notas agudas potentes
+4,Idol,tri.besoeun,Soeun,TRI.BE,C,B,B,C,C,,Girl Crush / Energetic Pop,Muito estável em vocais / boa conexão com a plateia,Falta versatilidade em conceitos mais intensos
+4,Idol,tri.bemire,Mire,TRI.BE,B,A,A,A,B,,Girl Crush / Energetic Pop,Boa energia / destaque natural no palco / dança precisa,Falta de controle respiratório em partes rápidas
+4,Idol,tri.bekelly,Kelly,TRI.BE,B,B,D,B,A,,Girl Crush / Energetic Pop,Excelente presença e expressão facial / sólida técnica de dança,Timbre vocal limitado / pouco destaque em partes principais
+4,Idol,tri.bejinhaformer,Jinha (former),TRI.BE,A,B,D,C,B,,Girl Crush / Energetic Pop,Voz suave / muito estável / contribui para o equilíbrio sonoro do grupo,Pouca energia dançante comparada às outras
+4,Idol,tri.bejia,Jia,TRI.BE,B,B,D,C,B,,Girl Crush / Energetic Pop,Movimentos limpos e boa sincronia / carisma natural,Falta projeção vocal / timidez em câmeras centrais
+4,Idol,tri.behyunbin,Hyunbin,TRI.BE,C,A,A,B,C,,Girl Crush / Energetic Pop,Boa rapper e dançarina / ótima presença de palco,Técnica vocal inconsistente em performances ao vivo
+5,Idol,triplesyubin,Yubin,tripleS,B,A,D,A,B,,Sub-Vocal / Support,Entrega limpinha nas linhas que tem / presença de apoio sólida,Ainda em crescimento para carregar solos longos
+5,Idol,triplesyooyeon,Yooyeon,tripleS,C,C,C,S,S,,Center/Visual,Visual line forte / estabilidade vocal segura,Falta dinamismo nas coreografias
+5,Idol,triplesxinyu,Xinyu,tripleS,C,B,D,B,S,,Visual / Sub-Vocal,Grande impacto visual e estabilidade vocal nas partes atribuídas,Movimentos coreográficos menos agressivos / projeção variável
+5,Idol,triplessullin,Sullin,tripleS,D,C,D,D,B,,Support / Dance (±),Participação de grupo consistente / execução de formação,Exposição limitada em stages / dados de solo escassos (±)
+5,Idol,triplessoomin,Soomin,tripleS,B,B,C,B,A,,Support / Rap/Vocal (±),Performance de grupo limpa / suporte em harmonias,Pouca exposição solo / avaliado conservativamente
+5,Idol,triplessohyun,Sohyun,tripleS,B,B,B,A,A,,Dance / Support,Excelente sincronização e limpeza em group-dance / confiável na execução,Voz de apoio / poucas linhas solo para destacar
+5,Idol,triplesshion,Shion,tripleS,A,B,D,C,B,,Support / Visual (±),Visual expressivo / suporte de performance estável,Poucas lines na era → dados limitados (±)
+5,Idol,triplesseoyeon,Seoyeon,tripleS,B,B,D,S,A,,Main Vocal / Center,Controle de fraseado / sustain e presença de câmera / segura os momentos-chave da era,Em alguns cortes / expressão estática / pouca ênfase em dança intensa
+5,Idol,triplesseoah,SeoAh,tripleS,B,B,D,C,B,,Support / Visual,Cumpre bem as linhas atribuídas / boa conexão visual,Menos destaque solo / rank conservador
+5,Idol,triplesnien,Nien,tripleS,B,B,D,C,A,,Lead Vocal / Support,Melhora perceptível em projeção e estabilidade / performa bem em harmonias,Movimentos coreográficos às vezes mais robustos que fluidos
+5,Idol,triplesnakyoung,Nakyoung,tripleS,B,S,B,A,B,,Sub-Vocal / Visual,Afinação segura / entrega consistente nas bridges / boa presença em câmeras,Pouca explosão nos clímaxes / presença de center limitada
+5,Idol,triplesmayu,Mayu,tripleS,A,B,D,B,B,,Sub-Vocal / Dance,Leitura rítmica segura / contribui bem a harmonias,Projeção e alcance ainda moderados nas stages
+5,Idol,tripleslynn,Lynn,tripleS,C,A,C,C,B,,Sub-Vocal / Visual,Vocais limpos / boa estabilidade em letras / presença visual elegante,Energia de palco às vezes mais reservada / coreos mais simples
+5,Idol,tripleskwakyeonji,Kwak Yeonji,tripleS,C,B,D,B,B,,Dance / All-round,Energia coreográfica alta / transições e expressão bem resolvidas,Afinação sob fadiga tem pequenos vacilos (observados em uma stage)
+5,Idol,tripleskotone,Kotone,tripleS,B,A,B,B,B,,Dance / Visual,Execução coreográfica consistente / ótima leitura de câmera / muito limpa ao vivo,Alcance vocal em registros graves/baixos ligeiramente restrito
+5,Idol,tripleskaede,Kaede,tripleS,A,S,D,B,B,,Main Dancer / Sub-Vocal,Timing e precisão em dança / funciona bem em passagens sincronizadas,Range vocal menos explorado nas stages / pouco solo
+5,Idol,triplesjoobin,Joobin,tripleS,B,C,D,C,C,,Support / Dance (±),Integra bem as coreografias / presença regular,Pouca exposição → nota provisória
+5,Idol,triplesjiyeon,Jiyeon,tripleS,B,B,D,B,A,,All-round / Support,Bom suporte vocal / posição segura em formações / presença consistente,Falta destaque solo que mostre mais amplitude vocal
+5,Idol,triplesjiwoo,Jiwoo,tripleS,A,B,D,B,C,,Main Dancer / Performance,Marca de dança forte / excelente leitura rítmica e presença de palco,Runs vocais longos menos frequentes no setlist — menos oportunidade de brilhar vocalmente
+5,Idol,tripleshyerin,Hyerin,tripleS,B,S,D,B,B,,Dance / Rap support,Ritmo e sincronização / preza a musicalidade no fraseado,Não sai muito do formato de suporte / menos solo
+5,Idol,tripleshayeon,Hayeon,tripleS,B,B,C,B,B,,Support / Dance (±),Entrosamento no grupo / presença correta,Dados de solo escassos / rank provisório
+5,Idol,triplesdahyun,Dahyun,tripleS,S,B,D,B,B,,Lead Vocal / Emotional line,Entrega emotiva e afinação exemplar nas lives / ótimo controle dinâmico,Dança deliberadamente contida pelo concept / menor exposição de solo
+5,Idol,tripleschaeyeon,Chaeyeon,tripleS,B,B,D,A,A,,Sub-Vocal / Visual,Entonação estável e presença refinada  / boa em partes melódicas,Em climas muito altos pode perder ligeira potência
+5,Idol,tripleschaewon,Chaewon,tripleS,B,B,D,B,B,,Support / Visual (±),Visual forte / contribuições seguras em formações,Poucas linhas  / pouca exposição solo → nota conservadora
+5,Idol,unisyunha,Yunha,UNIS,B,B,D,B,B,,Lead Vocal / Dance Hybrid,Vocal de qualidade / dance de suporte,Rap linha moderada
+5,Idol,unisyoona,Yoona,UNIS,B,B,B,C,B,,Rap / Dance Focus / Youth Pop,Rap de destaque relativo para o grupo,Vocal principal e presença de centro menos definidas
+5,Idol,unisseowon,Seowon,UNIS,S,B,D,B,B,,Maknae / Supporting Vocal,Potencial visível para crescimento,Técnica global ainda emergente
+5,Idol,unisnana,Nana,UNIS,B,B,D,B,B,,Main Dancer / Sub Vocal,Excelente em dança / presença forte,Vocais principais ainda em desenvolvimento
+5,Idol,uniskotoko,Kotoko,UNIS,B,B,C,A,C,,Rap / Supporting Line,Potencial de rap/performances,Técnica geral menos desenvolvida
+5,Idol,unishyeonju,Hyeonju,UNIS,A,B,D,B,B,,Leader / Vocal Focus,Líder com presença de palco / vocal estável,Dança/rap menos dominantes
+5,Idol,unisgehlee,Gehlee,UNIS,B,B,D,C,B,,Visual / Sub Vocal,Visual de destaque / boa versatilidade / filiprima,Técnica de rap/vocal principal menos refinada
+5,Idol,uniselisia,Elisia,UNIS,S,B,D,C,C,,Main Vocal / International Focus,Vocais bons / apelo global / filiprima,Dança e rap menos marcantes
+5,Idol,uspeeryeowon,Yeowon,USPEER,D,B,C,D,C,,Leader / Rap & Performance,Rap forte / dança de nível alto / liderança visível,Técnica vocal principal ainda em desenvolvimento
+5,Idol,uspeersoee,Soee,USPEER,C,B,D,B,B,,Vocal / Support,Vocais sólidos para rookie,Dança/rap menos destacados
+5,Idol,uspeersian,Sian,USPEER,A,B,D,A,B,,Lead Vocal / Youth Pop,Vocais de qualidade / presença promissora,Ainda desenvolver dança/rap de alto impacto
+5,Idol,uspeerseoyu,Seoyu,USPEER,C,A,C,B,B,,Main Dancer / Performance Focus,Dança de nível elevado para rookie,Vocais principais e rap linha média
+5,Idol,uspeerroa,Roa,USPEER,A,B,D,B,B,,Maknae / Support,Potencial visível para rookie,Técnica global ainda emergente
+5,Idol,uspeerdaon,Daon,USPEER,C,C,D,C,B,,Vocal / Pop Hybrid,Vocais bons / presença estável,Dança/rap ainda em desenvolvimento
+5,Idol,uspeerchaena,Chaena,USPEER,B,B,D,C,C,,Visual / Supporting Line,Visual forte / presença nos frames,Técnica vocal/rap/dança menos refinada
+5,Idol,vivizumji,Umji,VIVIZ,B,A,D,B,B,,Lead Vocal / Visual,Visual de impacto / versatilidade vocal-dança,Rap/flow menos explorado
+5,Idol,vivizsinb,SinB,VIVIZ,B,S,C,B,B,,Main Dancer / Vocal & Performance,Execução de dança de elite / presença de palco forte,Técnica vocal mais moderada comparada à especialização
+5,Idol,vivizeunha,Eunha,VIVIZ,A,A,D,B,A,,Main Vocal / Elegant Pop,Técnica vocal de destaque / controle refinado,Dança ligeiramente menos dominante
+5,Idol,vvupsuyeon,Suyeon,VVUP,C,C,C,C,C,,Vocal / Visual / Dance Support,Visual de destaque / boa execução em dança/vocal suporte,Rap linha moderada
+5,Idol,vvuppaan,Paan,VVUP,C,B,B,B,C,,Main Dancer / Rap & Performance,Dança de nível elevado / rap de destaque,Vocais principais menos distintos
+5,Idol,vvupkim,Kim,VVUP,A,B,D,A,B,,Main Vocal / International Pop,Vocais fortes / presença promissora,Rap e dança técnica ainda em crescimento
+5,Idol,vvupjiyoon,Jiyoon,VVUP,C,C,D,C,B,,Maknae / Rookie Support,Potencial visível / presença de grupo,Técnica geral ainda emergente
+4,Idol,weeeklyzoa,Zoa,Weeekly,C,B,C,B,A,,Bright Youth / Refreshing Pop,Versátil / rap e dança consistentes / presença marcante em câmera,Falta estabilidade vocal sob esforço
+4,Idol,weeeklysoojin,Soojin,Weeekly,B,A,C,A,A,,Bright Youth / Refreshing Pop,Líder e main dancer / movimentos extremamente limpos e fluidos / presença magnética,Vocal mediano em notas altas
+4,Idol,weeeklysoeun,Soeun,Weeekly,A,A,C,B,C,,Bright Youth / Refreshing Pop,Equilibrada / ótima coreografia e presença constante no centro,Falta destaque individual vocal
+4,Idol,weeeklymonday,Monday,Weeekly,S,A,B,B,C,,Bright Youth / Refreshing Pop,Main vocal com excelente técnica e projeção / versátil e confiante,Expressão facial às vezes contida
+4,Idol,weeeklyjiyoonformer,Jiyoon (former),Weeekly,B,C,D,C,C,,Bright Youth / Refreshing Pop,Artista multifuncional / excelente domínio de palco e expressão,Falta consistência respiratória em vocais vivos
+4,Idol,weeeklyjihan,Jihan,Weeekly,B,B,D,A,B,,Bright Youth / Refreshing Pop,Visual principal / carisma e gestos controlados / melhora vocal notável,Movimentos um pouco contidos em performances fortes
+4,Idol,weeeklyjaehee,Jaehee,Weeekly,C,C,D,C,B,,Bright Youth / Refreshing Pop,Visual natural e expressiva / presença cênica gentil,Falta impacto vocal e físico
+4,Idol,wooahwooyeon,Wooyeon,WOOAH,B,C,D,B,A,,Lead Vocal / Performance Focus,Vocais bons / presença forte em palco,Coreografia mais básica que a líder
+4,Idol,wooahsora,Sora,WOOAH,C,C,D,C,C,,Rap / Dance Hybrid,Rap de destaque / entrega confiável,Vocal principal menos marcado
+4,Idol,wooahnana,Nana,WOOAH,B,S,B,S,A,,Leader / All-Rounder,Dança e visual de alto nível / vocal muito estável,Rap linha moderada
+4,Idol,wooahminseo,Minseo,WOOAH,A,B,D,B,C,,Maknae / Youth Pop,Potencial visível / presença de grupo,Técnica global de topo ainda em fase de construção
+4,Idol,wooahlucy,Lucy,WOOAH,D,B,A,C,C,,Visual / Supporting Vocal,Visual expressivo / dança de nível para suporte,Técnica vocal/rap ainda crescendo
+5,Idol,youngposseyeonjung,Yeonjung,YOUNG POSSE,C,B,S,B,C,,Lead Dancer / Performance Focus,Dança de alto nível / presença fluida no palco,Técnica de rap/vocal principal menos destacada
+5,Idol,youngpossesunhye,Sunhye,YOUNG POSSE,C,B,S,B,C,,Leader / Rap-&-Dance Hybrid,Boa presença de palco / rap/dança com desempenho forte,Vocais principais ainda em crescimento
+5,Idol,youngpossejieun,Jieun,YOUNG POSSE,C,C,A,C,C,,Maknae / Supporting Line,Potencial visível / presença de palco para rookie,Técnicas principais (vocal/rap/dança) ainda em fase inicial
+5,Idol,youngpossejiana,Jiana,YOUNG POSSE,B,C,S,B,B,,Main Vocal / Visual,Vocais promissores / visual forte / apelo internacional,Dança/rap linha ainda em aprimoramento
+5,Idol,youngpossedoeun,Doeun,YOUNG POSSE,C,C,A,C,C,,Vocal / Rap Support / Youth Pop,Estabilidade vocal de suporte / presença visível,Técnica de rap/dança ainda menos refinada

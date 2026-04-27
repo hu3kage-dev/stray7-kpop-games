@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CSV → JSON Converter</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #111;
+      color: #eee;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-top: 10px;
+      background: #222;
+      color: #0f0;
+      border: 1px solid #555;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<h1>Conversor CSV → JS (pronto pra colar)</h1>
+<!-- IDOLS -->
+<div class="section">
+  <h2>Idols</h2>
+  <input type="file" id="idolsFile" accept=".csv">
+  <button onclick="processarArquivo('idols')">Converter</button>
+  <button onclick="copiarJS('idols')">Copiar JS</button>
+  <textarea id="idolsOutput"></textarea>
+</div>
+<!-- SONGS -->
+<div class="section">
+  <h2>Musics</h2>
+  <input type="file" id="songsFile" accept=".csv">
+  <button onclick="processarArquivo('songs')">Converter</button>
+  <button onclick="copiarJS('songs')">Copiar JS</button>
+  <textarea id="songsOutput"></textarea>
+</div>
+<!-- PRODUCERS -->
+<div class="section">
+  <h2>Producers</h2>
+  <input type="file" id="producersFile" accept=".csv">
+  <button onclick="processarArquivo('producers')">Converter</button>
+  <button onclick="copiarJS('producers')">Copiar JS</button>
+  <textarea id="producersOutput"></textarea>
+</div>
+<script>
+//f:detectarSeparador
+function detectarSeparador(linha) {
+  if (linha.includes(";")) return ";";
+  if (linha.includes("\t")) return "\t";
+  return ",";
+}
+
+//f:normalizarChave
+function normalizarChave(chave) {
+  return chave
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "");
+}
+
+//f:processarArquivo
+function processarArquivo(tipo) {
+  const input = document.getElementById(tipo + "File");
+  const output = document.getElementById(tipo + "Output");
+  const file = input.files[0];
+  if (!file) {
+    alert("Selecione um arquivo!");
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const texto = e.target.result.trim();
+    const linhas = texto.split("\n");
+    const separador = detectarSeparador(linhas[0]);
+    const headers = linhas[0]
+      .split(separador)
+      .map(h => normalizarChave(h));
+    let resultado = [];
+    for (let i = 1; i < linhas.length; i++) {
+      if (!linhas[i].trim()) continue;
+      let valores = linhas[i].split(separador);
+      let obj = {};
+      headers.forEach((h, index) => {
+        obj[h] = valores[index]?.trim() || "";
+      });
+      //IDOLS
+      if (tipo === "idols") {
+        obj = {
+          gen: obj.geracao,
+          type: obj.type,
+          id: obj.id,
+          name: obj.nome,
+          group: obj.grupo,
+          vocal: obj.vocal,
+          dance: obj.dance,
+          rap: obj.rap,
+          center: obj.center,
+          visual: obj.visual,
+          especialidade: obj.especialidade,
+          conceito: obj.conceitopredominante,
+          fortes: obj.pontosfortes,
+          fracos: obj.pontosfracos,
+        };
+      }
+      //SONGS
+      if (tipo === "songs") {
+        obj = {
+          type: obj.type,
+          id: obj.id,
+          name: obj.nome,
+          fonte: obj.fonte,
+          conceito: obj.conceitooriginal,
+        };
+      }
+      //PRODUCERS
+      if (tipo === "producers") {
+        obj = {
+          type: obj.type,
+          id: obj.id,
+          name: obj.nome,
+          conceito: obj.conceitopredominante,
+          outrosconceitos: obj.outrosconceitos,
+        };
+      }
+      resultado.push(obj);
+    }
+    const json = JSON.stringify(resultado, null, 2);
+    output.value = json;
+    output.style.display = "block";
+  };
+  reader.readAsText(file);
+}
+
+//f:copiarJS
+function copiarJS(tipo) {
+  const output = document.getElementById(tipo + "Output");
+  if (!output.value) {
+    alert("Converta primeiro!");
+    return;
+  }
+  let nomeConst = "";
+  if (tipo === "idols") nomeConst = "idols";
+  if (tipo === "songs") nomeConst = "musics";
+  if (tipo === "producers") nomeConst = "producers";
+  const textoFinal = `const ${nomeConst} = ${output.value};`;
+  navigator.clipboard.writeText(textoFinal)
+    .then(() => alert("Código JS copiado!"))
+    .catch(() => alert("Erro ao copiar"));
+}
+</script>
+</body>
+</html>

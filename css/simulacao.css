@@ -1,0 +1,239 @@
+/* ===============
+  estilos globais
+================ */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #a855f7;
+}
+
+/* =====================
+  simulacao.html
+===================== */
+
+/* Seção por Jogador */
+.simSection {
+  margin-bottom: 30px;
+}
+
+/* Linha do Jogador */
+.simPlayerRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+  width: 100%;
+}
+
+.simMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.simPos {
+  font-weight: bold;
+  font-size: 24px;
+  color: #a855f7;
+}
+
+.simName {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Board */
+.simIdolBoard { /* Board */
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-radius: 6px;
+  flex: 1;
+  padding: 8px;
+  min-width: 0;
+  background: #111;
+}
+
+.simBoardTitle { /* boardTitle */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+/* Extras (música + produtor) */
+.simExtras {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.simExtraBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 6px;
+  border-radius: 6px;
+  gap: 4px;
+  background: #111;
+}
+
+.simExtraTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+/* Boards colour coded lyrics */
+.simIdolBoard {
+  border-color: yellow;
+}
+
+.simMusicBoard {
+  border-color: navy;
+}
+.simMusicBox    { border: 2px solid navy; }
+.simProducerBox { border: 2px solid purple; }
+
+.simProducerBoard {
+  border-color: purple;
+}
+
+/* Slots */
+.simBoardSlots { /* slotsContainer */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+  align-content: flex-start;
+}
+
+.simSlotWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.roleSelect {
+  width: 90px;
+  font-size: 10px;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 2px 3px;
+  cursor: pointer;
+}
+
+.roleSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.simBoardSlot {
+  width: 160px;
+  height: 200px;
+  border: 2px dashed #555;
+  background: #0a0a0a;
+}
+
+/* Slots colour coded lyrics */
+.simBoardSlot[data-tipo="idol"] {
+  border-color: yellow;
+}
+
+.simBoardSlot[data-tipo="music"] {
+  border-color: navy;
+}
+
+.simBoardSlot[data-tipo="producer"] {
+  border-color: purple;
+}
+
+/* Botão Travar */
+.btnTravar {
+  background-color: #7e22ce;
+  border: 2px solid yellow;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: center;
+  flex-shrink: 0;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.btnTravar:hover:not(:disabled) {
+  background-color: #6b21a8;
+}
+
+.btnTravado {
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Pool */
+.simPoolSection {
+  background: #161616;
+  border-top: 1px solid #333;
+  padding: 10px 10px 14px;
+  margin-top: 6px;
+}
+
+.simPoolHeader {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.simPoolHeader strong {
+  color: #fff;
+  margin-right: 4px;
+}
+
+.simPoolCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.simPoolCardWrap {
+  cursor: grab;
+}
+
+.simPoolCardWrap:active {
+  cursor: grabbing;
+}
+
+/* Cards no Pool */
+.simPoolCards .card {
+  width: 90px;
+  height: 120px;
+}
