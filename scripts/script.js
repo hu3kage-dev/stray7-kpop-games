@@ -285,7 +285,7 @@ function renderizarProdutores() {
     let cb = document.createElement("input");
     cb.type = "checkbox";
     cb.checked = true;
-    cb.value = p.name;
+    cb.value = p.id;
     let label = document.createElement("label");
     label.innerText = " " + p.name;
     div.appendChild(cb);
@@ -330,7 +330,7 @@ function renderizarMusicas() {
       const cb = document.createElement("input");
       cb.type = "checkbox";
       cb.checked = true;
-      cb.value = m.name;
+      cb.value = m.id;
       listaFilhos.push(cb);
 
       cb.addEventListener("change", () => {
@@ -476,7 +476,7 @@ function pegarMusicasSelecionadas() {
   let selecionados = [];
   document.querySelectorAll("#musicContainer input[type='checkbox']").forEach(cb => {
     if (cb.checked && cb.value) {
-      let music = getMusics().find(m => m.name === cb.value);
+      let music = getMusics().find(m => m.id === cb.value);
       if (music) selecionados.push(music);
     }
   });
@@ -488,7 +488,7 @@ function pegarProdutoresSelecionados() {
   let selecionados = [];
   document.querySelectorAll("#producerContainer input[type='checkbox']").forEach(cb => {
     if (cb.checked && cb.value) {
-      let producer = getProducers().find(p => p.name === cb.value);
+      let producer = getProducers().find(p => p.id === cb.value);
       if (producer) selecionados.push(producer);
     }
   });
@@ -1045,10 +1045,10 @@ function importarDraftTxt(event) {
     });
     atualizarCheckboxesGrupo();
     document.querySelectorAll("#musicContainer input[type='checkbox']").forEach(cb => {
-      if (poolMusicas.some(m => m.name === cb.value)) cb.checked = true;
+      if (poolMusicas.some(m => m.id === cb.value)) cb.checked = true;
     });
     document.querySelectorAll("#producerContainer input[type='checkbox']").forEach(cb => {
-      if (poolProdutores.some(p => p.name === cb.value)) cb.checked = true;
+      if (poolProdutores.some(p => p.id === cb.value)) cb.checked = true;
     });
 
     // salvar no localStorage e redirecionar direto para o jogo
