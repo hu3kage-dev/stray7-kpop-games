@@ -6162,196 +6162,1846 @@ const idols = [
   },
 ];
 
-//data:musics
+//data:music
 const musics = [
   {
     "type": "music",
-    "id": "boysplanetsaymyname",
-    "name": "Say My Name",
-    "fonte": "Boys Planet",
-    "conceito": "Bright Pop / Youth"
+    "id": "boysiiplanetbratattitude",
+    "name": "Brat Attitude",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Girl Crush",
+      "Performance",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Hip-hop",
+      "Groove"
+    ]
   },
   {
     "type": "music",
-    "id": "boysplanetjellypop",
-    "name": "Jelly Pop",
-    "fonte": "Boys Planet",
-    "conceito": "Funky Pop / Refreshing"
+    "id": "boysiiplanetchains",
+    "name": "Chains",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Dreamcore",
+      "Performance",
+      "Dark"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "Experimental",
+      "Groove"
+    ]
   },
   {
     "type": "music",
-    "id": "boysplanetoverme",
-    "name": "Over Me",
-    "fonte": "Boys Planet",
-    "conceito": "R&B / Sensual"
+    "id": "boysiiplanetholasolar",
+    "name": "HOLA SOLAR",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Teen Crush",
+      "Dreamcore",
+      "Conceptual"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysiiplanethowtofly",
+    "name": "How To Fly",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Conceptual"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysiiplanetluckymacho",
+    "name": "Lucky MACHO",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Tropical",
+      "Hip-hop",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysiiplanetmaindish",
+    "name": "MAIN DISH",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Dark",
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Rock",
+      "Experimental",
+      "Hip-hop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysiiplanetneverbeen2heaven",
+    "name": "Never Been 2 Heaven",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Conceptual",
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysiiplanetsuperhigh",
+    "name": "Super HIGH",
+    "fonte": "Boys II Planet",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Tropical"
+    ]
   },
   {
     "type": "music",
     "id": "boysplanetengarde",
     "name": "En Garde",
     "fonte": "Boys Planet",
-    "conceito": "Powerful / EDM Performance"
+    "conceitos": [
+      "Performance",
+      "Elegant",
+      "Conceptual"
+    ],
+    "generos": [
+      "Groove",
+      "Experimental",
+      "Electro-Synth"
+    ]
   },
   {
     "type": "music",
     "id": "boysplanethereiam",
     "name": "Here I Am",
     "fonte": "Boys Planet",
-    "conceito": "Signal Song / Bright Unity"
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "EDM"
+    ]
   },
   {
     "type": "music",
-    "id": "boysplanetswitch",
-    "name": "Switch",
+    "id": "boysplanethotsummer",
+    "name": "Hot Summer",
     "fonte": "Boys Planet",
-    "conceito": "Hip-hop / Groove"
+    "conceitos": [
+      "Elegant",
+      "Mature",
+      "Conceptual"
+    ],
+    "generos": [
+      "Tropical",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysplanetjellypop",
+    "name": "Jelly Pop",
+    "fonte": "Boys Planet",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysplanetnotalone",
+    "name": "Not Alone",
+    "fonte": "Boys Planet",
+    "conceitos": [
+      "Elegant",
+      "Dreamcore",
+      "Conceptual"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysplanetoverme",
+    "name": "Over Me",
+    "fonte": "Boys Planet",
+    "conceitos": [
+      "Mature",
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "R&B",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "boysplanetsaymyname",
+    "name": "Say My Name",
+    "fonte": "Boys Planet",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Rock",
+      "Electro-Synth"
+    ]
   },
   {
     "type": "music",
     "id": "boysplanetsupercharger",
     "name": "SuperCharger",
     "fonte": "Boys Planet",
-    "conceito": "High Energy EDM"
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Hip-hop",
+      "Experimental"
+    ]
   },
   {
     "type": "music",
-    "id": "girlsplanet999umelove",
-    "name": "U+ME=LOVE",
-    "fonte": "Girls Planet 999",
-    "conceito": "Bright Pop / Love Concept"
+    "id": "boysplanetswitch",
+    "name": "Switch",
+    "fonte": "Boys Planet",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Experimental"
+    ]
   },
   {
     "type": "music",
-    "id": "girlsplanet999utopia",
-    "name": "Utopia",
+    "id": "girlsplanet999anotherdream",
+    "name": "Another Dream",
     "fonte": "Girls Planet 999",
-    "conceito": "Dreamy / Vocal Focus"
-  },
-  {
-    "type": "music",
-    "id": "girlsplanet999snake",
-    "name": "Snake",
-    "fonte": "Girls Planet 999",
-    "conceito": "Girl Crush / EDM"
-  },
-  {
-    "type": "music",
-    "id": "girlsplanet999shoot",
-    "name": "Shoot!",
-    "fonte": "Girls Planet 999",
-    "conceito": "Teen Crush / Funk Pop"
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Elegant"
+    ],
+    "generos": [
+      "R&B",
+      "Emotional",
+      "Electro-Synth"
+    ]
   },
   {
     "type": "music",
     "id": "girlsplanet999ooo",
     "name": "O.O.O",
     "fonte": "Girls Planet 999",
-    "conceito": "Signal Song / Bright Unity"
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Experimental"
+    ]
   },
   {
     "type": "music",
-    "id": "iland2naiwaly",
-    "name": "IWALY",
-    "fonte": "I-Land 2 N/a",
-    "conceito": "Emotional EDM / Performance"
+    "id": "girlsplanet999shine",
+    "name": "Shine",
+    "fonte": "Girls Planet 999",
+    "conceitos": [
+      "Teen Crush",
+      "Cute",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Experimental"
+    ]
   },
   {
     "type": "music",
-    "id": "iland2nafinallovesong",
-    "name": "Final Love Song",
-    "fonte": "I-Land 2 N/a",
-    "conceito": "Anthem / Dramatic Pop"
+    "id": "girlsplanet999shoot",
+    "name": "Shoot!",
+    "fonte": "Girls Planet 999",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "girlsplanet999snake",
+    "name": "Snake",
+    "fonte": "Girls Planet 999",
+    "conceitos": [
+      "Girl Crush",
+      "Mature",
+      "Dark"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "girlsplanet999umelove",
+    "name": "U+ME=LOVE",
+    "fonte": "Girls Planet 999",
+    "conceitos": [
+      "Dreamcore",
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "Pop",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "girlsplanet999utopia",
+    "name": "Utopia",
+    "fonte": "Girls Planet 999",
+    "conceitos": [
+      "Dreamcore",
+      "Elegant",
+      "Conceptual"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "ilandcallingruntoyou",
+    "name": "Calling (Run to You)",
+    "fonte": "I-LAND",
+    "conceitos": [
+      "Mature",
+      "Performance",
+      "Dark"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "R&B"
+    ]
   },
   {
     "type": "music",
     "id": "ilandflicker",
     "name": "Flicker",
     "fonte": "I-LAND",
-    "conceito": "Dark Pop / Performance"
+    "conceitos": [
+      "Conceptual",
+      "Elegant",
+      "Dark"
+    ],
+    "generos": [
+      "R&B",
+      "Groove",
+      "Emotional"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "ilandicredible",
+    "name": "I&credible",
+    "fonte": "I-LAND",
+    "conceitos": [
+      "Conceptual",
+      "Elegant",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Experimental",
+      "Emotional",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "ilandintotheiland",
+    "name": "Into the I-LAND",
+    "fonte": "I-LAND",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "Tropical",
+      "Emotional",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "iland2nadrip",
+    "name": "DRIP",
+    "fonte": "I-Land 2 N/a",
+    "conceitos": [
+      "Swag",
+      "Performance",
+      "Mature"
+    ],
+    "generos": [
+      "Tropical",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "iland2nafakeit",
+    "name": "FAKE IT",
+    "fonte": "I-Land 2 N/a",
+    "conceitos": [
+      "Conceptual",
+      "Mature",
+      "Elegant"
+    ],
+    "generos": [
+      "Emotional",
+      "Pop",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "iland2nafinallovesong",
+    "name": "Final Love Song",
+    "fonte": "I-Land 2 N/a",
+    "conceitos": [
+      "Conceptual",
+      "Performance",
+      "Mature"
+    ],
+    "generos": [
+      "EDM",
+      "Electro-Synth",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "iland2naiwaly",
+    "name": "IWALY",
+    "fonte": "I-Land 2 N/a",
+    "conceitos": [
+      "Teen Crush",
+      "Performance",
+      "Conceptual"
+    ],
+    "generos": [
+      "Emotional",
+      "Electro-Synth",
+      "Rock"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "idolschoolmagical",
+    "name": "Magical",
+    "fonte": "Idol School",
+    "conceitos": [
+      "Dreamcore",
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "idolschoolmiracle",
+    "name": "Miracle",
+    "fonte": "Idol School",
+    "conceitos": [
+      "Dreamcore",
+      "Elegant",
+      "Conceptual"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "Emotional",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "idolschoolpinocchio",
+    "name": "Pinocchio",
+    "fonte": "Idol School",
+    "conceitos": [
+      "Cute",
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "idolschoolpretty",
+    "name": "Pretty",
+    "fonte": "Idol School",
+    "conceitos": [
+      "Teen Crush",
+      "Cute",
+      "Conceptual"
+    ],
+    "generos": [
+      "Rock",
+      "Pop",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "idolschoolhighfive",
+    "name": "High Five",
+    "fonte": "Idol School",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Conceptual"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Emotional"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "myteenagegirldreaming",
+    "name": "Dreaming",
+    "fonte": "My Teenage Girl",
+    "conceitos": [
+      "Dreamcore",
+      "Elegant",
+      "Cute"
+    ],
+    "generos": [
+      "Emotional",
+      "Electro-Synth",
+      "R&B"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "myteenagegirllions",
+    "name": "Lions",
+    "fonte": "My Teenage Girl",
+    "conceitos": [
+      "Performance",
+      "Swag",
+      "Elegant"
+    ],
+    "generos": [
+      "Groove",
+      "Experimental",
+      "R&B"
+    ]
   },
   {
     "type": "music",
     "id": "myteenagegirlsamesamedifferent",
     "name": "Same Same Different",
     "fonte": "My Teenage Girl",
-    "conceito": "Teen Pop / Identity Concept"
+    "conceitos": [
+      "Teen Crush",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Electro-Synth"
+    ]
   },
   {
     "type": "music",
-    "id": "produce101japanthegirlsleaphigh",
-    "name": "Leap High!",
-    "fonte": "Produce 101 Japan The Girls",
-    "conceito": "Signal Song / Bright Pop"
+    "id": "myteenagegirlsonicboom",
+    "name": "Sonic Boom",
+    "fonte": "My Teenage Girl",
+    "conceitos": [
+      "Girl Crush",
+      "Swag",
+      "Dark"
+    ],
+    "generos": [
+      "Groove",
+      "Electro-Synth",
+      "Hip-hop"
+    ]
   },
   {
     "type": "music",
-    "id": "produce101japanthegirlsme",
-    "name": "&ME",
-    "fonte": "Produce 101 Japan The Girls",
-    "conceito": "Cute Pop / Fan Song"
+    "id": "myteenagegirlsun",
+    "name": "Sun",
+    "fonte": "My Teenage Girl",
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Swag"
+    ],
+    "generos": [
+      "Tropical",
+      "Groove",
+      "Pop"
+    ]
   },
   {
     "type": "music",
-    "id": "produce101season2never",
-    "name": "Never",
-    "fonte": "Produce 101 Season 2",
-    "conceito": "Emotional EDM / Boy Group Performance"
+    "id": "niziprojectbabyimastar",
+    "name": "Baby I'm a Star",
+    "fonte": "Nizi Project",
+    "conceitos": [
+      "Teen Crush",
+      "Cute",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Rock",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "niziprojectboomboomboom",
+    "name": "Boom Boom Boom",
+    "fonte": "Nizi Project",
+    "conceitos": [
+      "Swag",
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "niziprojectbeyondtherainbow",
+    "name": "Beyond the Rainbow",
+    "fonte": "Nizi Project",
+    "conceitos": [
+      "Dark",
+      "Performance",
+      "Elegant"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "niziprojectmakeyouhappy",
+    "name": "Make You Happy",
+    "fonte": "Nizi Project",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce10124hours",
+    "name": "24Hours",
+    "fonte": "Produce 101",
+    "conceitos": [
+      "Performance",
+      "Mature",
+      "Conceptual"
+    ],
+    "generos": [
+      "EDM",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101crush",
+    "name": "Crush",
+    "fonte": "Produce 101",
+    "conceitos": [
+      "Elegant",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "EDM",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101dontmatter",
+    "name": "Don't Matter",
+    "fonte": "Produce 101",
+    "conceitos": [
+      "Elegant",
+      "Swag",
+      "Mature"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101fingertips",
+    "name": "FingerTips",
+    "fonte": "Produce 101",
+    "conceitos": [
+      "Mature",
+      "Performance",
+      "Cute"
+    ],
+    "generos": [
+      "Groove",
+      "Electro-Synth",
+      "Experimental"
+    ]
   },
   {
     "type": "music",
     "id": "produce101inthesameplace",
     "name": "In The Same Place",
     "fonte": "Produce 101",
-    "conceito": "Bright Pop / Cute Concept"
+    "conceitos": [
+      "Conceptual",
+      "Elegant",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101pickme",
+    "name": "Pick Me",
+    "fonte": "Produce 101",
+    "conceitos": [
+      "Conceptual",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101yumyum",
+    "name": "Yum-Yum",
+    "fonte": "Produce 101",
+    "conceitos": [
+      "Teen Crush",
+      "Performance",
+      "Cute"
+    ],
+    "generos": [
+      "Groove",
+      "Electro-Synth",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101japanthegirlsleaphigh",
+    "name": "Leap High!",
+    "fonte": "Produce 101 Japan The Girls",
+    "conceitos": [
+      "Cute",
+      "Conceptual",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101japanthegirlsme",
+    "name": "&ME",
+    "fonte": "Produce 101 Japan The Girls",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101japanthegirlsatoz",
+    "name": "AtoZ",
+    "fonte": "Produce 101 Japan The Girls",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101japanthegirlsbaddie",
+    "name": "Baddie",
+    "fonte": "Produce 101 Japan The Girls",
+    "conceitos": [
+      "Girl Crush",
+      "Swag",
+      "Dark"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Experimental",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101japanthegirlspopcorn",
+    "name": "Popcorn",
+    "fonte": "Produce 101 Japan The Girls",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Tropical",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101japanthegirlstoxic",
+    "name": "Toxic",
+    "fonte": "Produce 101 Japan The Girls",
+    "conceitos": [
+      "Dark",
+      "Swag",
+      "Girl Crush"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2always",
+    "name": "Always",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Elegant"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2handsonme",
+    "name": "Hands On Me",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Elegant",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Electro-Synth",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2iknowyouknow",
+    "name": "I Know You Know",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Swag"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2itsmepickme",
+    "name": "It's Me (Pick Me)",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Electro-Synth",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2never",
+    "name": "Never",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Elegant",
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "Experimental",
+      "Emotional"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2ohlittlegirl",
+    "name": "Oh Little Girl",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Groove",
+      "Experimental",
+      "R&B"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2openup",
+    "name": "Open Up",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Dark",
+      "Elegant",
+      "Mature"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2showtime",
+    "name": "Show Time",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Teen Crush",
+      "Performance",
+      "Conceptual"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce101season2superhot",
+    "name": "Super Hot",
+    "fonte": "Produce 101 Season 2",
+    "conceitos": [
+      "Teen Crush",
+      "Performance",
+      "Conceptual"
+    ],
+    "generos": [
+      "Groove",
+      "Pop",
+      "Hip-hop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce481000",
+    "name": "1000%",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Conceptual"
+    ],
+    "generos": [
+      "Pop",
+      "Emotional",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48aswedream",
+    "name": "As We Dream",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Elegant"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48iam",
+    "name": "IAM",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Dark",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48nekkoyapickme",
+    "name": "Nekkoya (Pick Me)",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Teen Crush",
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "EDM",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48rollinrollin",
+    "name": "Rollin' Rollin'",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Tropical",
+      "Groove"
+    ]
   },
   {
     "type": "music",
     "id": "produce48rumor",
     "name": "Rumor",
     "fonte": "Produce 48",
-    "conceito": "Moombahton / Sexy Concept"
+    "conceitos": [
+      "Dark",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Tropical",
+      "Hip-hop",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48seeyouagain",
+    "name": "See You Again",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Elegant"
+    ],
+    "generos": [
+      "Pop",
+      "Emotional",
+      "R&B"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48toreachyou",
+    "name": "To Reach You",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Elegant"
+    ],
+    "generos": [
+      "Pop",
+      "R&B",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48wetogether",
+    "name": "We Together",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Conceptual"
+    ],
+    "generos": [
+      "Groove",
+      "Electro-Synth",
+      "R&B"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "produce48youreinlovearentyou",
+    "name": "You're In Love, Aren't You?",
+    "fonte": "Produce 48",
+    "conceitos": [
+      "Elegant",
+      "Performance",
+      "Conceptual"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "Pop",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "producex101boyness",
+    "name": "Boyness",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Elegant",
+      "Mature",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "EDM"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "producex101dreamforyou",
+    "name": "Dream For You",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Elegant"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Rock"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "producex101mondaytosunday",
+    "name": "Monday to Sunday",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Elegant"
+    ],
+    "generos": [
+      "Emotional",
+      "Electro-Synth",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "producex101move",
+    "name": "MOVE",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Dark",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Tropical"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "producex101prettygirl",
+    "name": "Pretty Girl",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Rock"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "producex101superspecialgirl",
+    "name": "Super Special Girl",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Teen Crush",
+      "Performance",
+      "Cute"
+    ],
+    "generos": [
+      "Groove",
+      "Tropical",
+      "Pop"
+    ]
   },
   {
     "type": "music",
     "id": "producex101tomyworld",
     "name": "To My World",
     "fonte": "Produce X 101",
-    "conceito": "Emotional Pop / Finale"
+    "conceitos": [
+      "Dark",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "R&B",
+      "Groove"
+    ]
   },
   {
     "type": "music",
-    "id": "queendompuzzlecharismatic",
-    "name": "Charismatic",
-    "fonte": "Queendom Puzzle",
-    "conceito": "Girl Crush / Performance"
+    "id": "producex101ugotit",
+    "name": "U GOT IT",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Dark",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Tropical",
+      "Experimental"
+    ]
   },
   {
     "type": "music",
-    "id": "queendompuzzlesnap",
-    "name": "Snap",
-    "fonte": "Queendom Puzzle",
-    "conceito": "Dark Pop / Intense Performance"
+    "id": "producex101x1ma",
+    "name": "X1-MA",
+    "fonte": "Produce X 101",
+    "conceitos": [
+      "Teen Crush",
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Pop"
+    ]
   },
   {
     "type": "music",
     "id": "queendompuzzlebadblood",
     "name": "Bad Blood",
     "fonte": "Queendom Puzzle",
-    "conceito": "Powerful Pop / Rivalry Concept"
+    "conceitos": [
+      "Performance",
+      "Mature",
+      "Conceptual"
+    ],
+    "generos": [
+      "Tropical",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzlebillionaire",
+    "name": "Billionaire",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzlecharismatic",
+    "name": "Charismatic",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Tropical",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzleglowup",
+    "name": "Glow-up",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzleidgaidontgivea",
+    "name": "i DGA (i DONT GIVE A)",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "EDM",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzleido",
+    "name": "I Do",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Cute"
+    ],
+    "generos": [
+      "Groove",
+      "Pop",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzlelastpiece",
+    "name": "Last Piece",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Dark",
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzleoverwater",
+    "name": "Overwater",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Elegant"
+    ],
+    "generos": [
+      "Groove",
+      "R&B",
+      "Tropical"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzlepuzzlin",
+    "name": "PUZZLIN'",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Cute",
+      "Elegant",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Groove",
+      "Electro-Synth",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzleriseup",
+    "name": "RISE UP",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Conceptual",
+      "Cute",
+      "Elegant"
+    ],
+    "generos": [
+      "Emotional",
+      "R&B",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzlesnap",
+    "name": "Snap",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Dark",
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Experimental",
+      "Rock"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "queendompuzzleweb",
+    "name": "WEB",
+    "fonte": "Queendom Puzzle",
+    "conceitos": [
+      "Dark",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove",
+      "Rock"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "runextaimhigh",
+    "name": "Aim High",
+    "fonte": "R U Next?",
+    "conceitos": [
+      "Teen Crush",
+      "Cute",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Groove"
+    ]
   },
   {
     "type": "music",
     "id": "runextdesperate",
     "name": "Desperate",
     "fonte": "R U Next?",
-    "conceito": "Dark Pop / Emotional"
+    "conceitos": [
+      "Dark",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "runextpride",
+    "name": "Pride",
+    "fonte": "R U Next?",
+    "conceitos": [
+      "Girl Crush",
+      "Swag",
+      "Dark"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Hip-hop"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "runextrun",
+    "name": "R.U.N",
+    "fonte": "R U Next?",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush",
+      "Conceptual"
+    ],
+    "generos": [
+      "Electro-Synth",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "runextscrum",
+    "name": "Scrum",
+    "fonte": "R U Next?",
+    "conceitos": [
+      "Teen Crush",
+      "Performance",
+      "Cute"
+    ],
+    "generos": [
+      "Groove",
+      "Pop",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "theunitlastone",
+    "name": "Last One",
+    "fonte": "THE UNI+",
+    "conceitos": [
+      "Conceptual",
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "theunitmyturn",
+    "name": "My Turn",
+    "fonte": "THE UNI+",
+    "conceitos": [
+      "Conceptual",
+      "Elegant",
+      "Mature"
+    ],
+    "generos": [
+      "Tropical",
+      "Pop",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "theunitshine",
+    "name": "Shine",
+    "fonte": "THE UNI+",
+    "conceitos": [
+      "Cute",
+      "Conceptual",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Tropical",
+      "Pop",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universeticketcomewithmeuniverse",
+    "name": "Come with me? (Universe)",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Conceptual",
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Electro-Synth",
+      "Rock"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universeticketdopamine",
+    "name": "Dopamine",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Dark",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Rock",
+      "Experimental",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universeticketdreamofgirls",
+    "name": "Dream of Girls",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Cute",
+      "Dreamcore",
+      "Conceptual"
+    ],
+    "generos": [
+      "Emotional",
+      "Electro-Synth",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universeticketcamera",
+    "name": "Camera",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Teen Crush",
+      "Cute",
+      "Swag"
+    ],
+    "generos": [
+      "Experimental",
+      "Pop",
+      "Hip-hop"
+    ]
   },
   {
     "type": "music",
     "id": "universeticketrushhour",
     "name": "Rush Hour",
     "fonte": "Universe Ticket",
-    "conceito": "Hip-hop / Performance"
+    "conceitos": [
+      "Swag",
+      "Dark",
+      "Girl Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-hop",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universetickettickettoyou",
+    "name": "Ticket to You",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Cute",
+      "Conceptual",
+      "Dreamcore"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Electro-Synth"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universeticketwhateva",
+    "name": "Whateva",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Experimental"
+    ]
+  },
+  {
+    "type": "music",
+    "id": "universeticketyummyyum",
+    "name": "Yummy Yum",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Dark",
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Experimental",
+      "Groove"
+    ]
   }
 ];
 
