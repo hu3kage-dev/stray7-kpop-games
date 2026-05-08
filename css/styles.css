@@ -241,6 +241,61 @@ body::before {
 }
 
 /* ===================
+   drafttutorial.html
+====================== */
+
+.tut-config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.tut-config-block {
+  background: rgba(255,255,255,0.03);
+  padding: 24px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(168,85,247,0.14);
+}
+
+.tut-config-block.block-1 {
+  text-align: left;
+}
+
+.tut-config-block h3 {
+  text-align: left;
+  margin-top: 0;
+  color: #a855f7;
+}
+
+.tut-config-block ul {
+  text-align: left;
+  padding-left: 18px;
+  color: #d7d1e9;
+}
+
+.tut-config-block li {
+  margin-bottom: 10px;
+}
+
+.tut-config-block p,
+.tut-config-block label {
+  color: #d7d1e9;
+}
+
+.tut-config-block blockquote,
+.tut-config-block strong {
+  color: #fff;
+}
+
+
+/* ===================
    draftconfig.html
 ====================== */
 .config-grid {
@@ -268,7 +323,9 @@ body::before {
 ============= */
 
 .config-block h3 {
-  text-align: center;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 5px;
   margin-top: 0;
   color: #a855f7;
 }
