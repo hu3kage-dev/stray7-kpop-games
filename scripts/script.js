@@ -104,6 +104,37 @@ function modoEmDesenvolvimento() {
 }
 
 // ========================
+// IMAGENS DE MENU
+// ========================
+ 
+//f:aplicarImagemMenu
+function aplicarImagemMenu(imgEl, nome) {
+  const extensoes = ["jpg", "png", "jpeg", "webp"];
+  let i = 0;
+  function tentar() {
+    if (i >= extensoes.length) {
+      imgEl.removeAttribute("src");
+      return;
+    }
+    imgEl.src = `assets/menus/index_${nome}.${extensoes[i++]}`;
+  }
+  imgEl.onerror = tentar;
+  tentar();
+}
+
+//f:carregarImagensMenu
+function carregarImagensMenu() {
+  document.querySelectorAll(".mode-image").forEach(img => {
+    const nome = img.dataset.menu;
+    aplicarImagemMenu(img, nome);
+  });
+}
+
+if (document.querySelector(".game-modes")) {
+  document.addEventListener("DOMContentLoaded", carregarImagensMenu);
+}
+
+// ========================
 // FUNÇÕES DE BLOCOS
 // ========================
 
