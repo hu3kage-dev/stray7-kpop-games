@@ -77,7 +77,7 @@ let draftWarningContainer = null;
 // ========================
 // DATABASE VOLÁTIL
 // ========================
-// Armazena idols/musics/producers importados em sessão (perdidos ao recarregar)
+
 let extraIdols     = [];
 let extraMusics    = [];
 let extraProducers = [];
@@ -107,46 +107,66 @@ function modoEmDesenvolvimento() {
 // IMAGENS DE MENU
 // ========================
  
-// quantidade de variações por menu
-const MENU_IMAGE_POOL = {
-  draft: 5,
-  quiz: 5,
-  gacha: 6,
-  manager: 6
-};
-
-//f:sortearImagemMenu
-function sortearImagemMenu(nome) {
-  const max = MENU_IMAGE_POOL[nome] || 1;
-  return Math.floor(Math.random() * max) + 1;
-}
-
-//f:aplicarImagemMenu
-function aplicarImagemMenu(imgEl, nome) {
-  const extensoes = ["jpg", "png", "jpeg", "webp"];
-  const numero = sortearImagemMenu(nome);
-  let i = 0;
-  function tentar() {
-    if (i >= extensoes.length) {
-      imgEl.removeAttribute("src");
-      return;
+const MENU_EXTENSOES = ["jpg", "png", "jpeg", "webp"];
+const MENU_INTERVALO = 5000;
+const menuImagens = {};
+const menuEstado = {};
+ 
+//f:descobrirImagensMenu
+function descobrirImagensMenu(nome) {
+  return new Promise(resolve => {
+    const imagens = [];
+    let numero = 1;
+ 
+    function tentarProximo() {
+      const candidatos = MENU_EXTENSOES.map(ext => `assets/menus/index_${nome}_${numero}.${ext}`);
+      let idx = 0;
+ 
+      function tentarExt() {
+        if (idx >= candidatos.length) {
+          // nenhuma extensão funcionou para este número — encerrar busca
+          resolve(imagens);
+          return;
+        }
+        const img = new Image();
+        img.onerror = () => { idx++; tentarExt(); };   // registrado ANTES de src
+        img.onload  = () => { imagens.push(candidatos[idx]); numero++; tentarProximo(); };
+        img.src = candidatos[idx];
+      }
+      tentarExt();
     }
-    imgEl.src = `assets/menus/index_${nome}_${numero}.${extensoes[i++]}`;
-  }
-  imgEl.onerror = tentar;
-  tentar();
-}
-
-//f:carregarImagensMenu
-function carregarImagensMenu() {
-  document.querySelectorAll(".mode-image").forEach(img => {
-    const nome = img.dataset.menu;
-    aplicarImagemMenu(img, nome);
+    tentarProximo();
   });
 }
-
-if (document.querySelector(".game-modes")) {
-  document.addEventListener("DOMContentLoaded", carregarImagensMenu);
+ 
+//f:trocarImagemMenu
+function trocarImagemMenu(imgEl, nome) {
+  const lista = menuImagens[nome];
+  if (!lista?.length) return;
+  if (menuEstado[nome] == null) menuEstado[nome] = 0;
+  menuEstado[nome] = (menuEstado[nome] + 1) % lista.length;
+  const novaSrc = lista[menuEstado[nome]];
+  imgEl.classList.add("fade-out");
+  setTimeout(() => {
+    imgEl.src = novaSrc;
+    imgEl.onload = () => imgEl.classList.remove("fade-out");
+  }, 250);
+}
+ 
+//f:iniciarCarouselMenus
+async function iniciarCarouselMenus() {
+  const imgs = document.querySelectorAll(".mode-image[data-menu]");
+  for (const img of imgs) {
+    const nome = img.dataset.menu;
+    const lista = await descobrirImagensMenu(nome);
+    if (!lista.length) continue;
+    menuImagens[nome] = lista;
+    menuEstado[nome] = 0;
+    img.src = lista[0];
+    if (lista.length > 1) {
+      setInterval(() => trocarImagemMenu(img, nome), MENU_INTERVALO);
+    }
+  }
 }
 
 // ========================
@@ -1225,6 +1245,7 @@ window.addEventListener("load", () => {
   if (document.getElementById("producerContainer")) renderizarProdutores();
   if (document.getElementById("musicContainer"))    renderizarMusicas();
   if (document.querySelector(".btn-iniciar-draft")) iniciarAvisoDraft();
+  if (document.querySelector(".game-modes")) iniciarCarouselMenus();
   const paginaAtual = location.pathname.split("/").pop();
   if (paginaAtual === "draftgame.html") injetarBotaoExportar();
 });
