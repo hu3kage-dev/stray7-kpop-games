@@ -526,13 +526,20 @@ function abrirModal(item) {
   modal.style.display = "flex";
   const itemType = getItemType(item);
   const cleanText = t => {
-    if (!t) return "-";
+    if (!t || (Array.isArray(t) && !t.length)) return "-";
+    if (Array.isArray(t)) return t.join(", ");
+    return t.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
+  };
+  const listText = t => {
+    if (!t || (Array.isArray(t) && !t.length)) return "-";
+    if (Array.isArray(t)) return t.join("<br>");
     return t.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
   };
   let bodyContent = "";
   if (itemType === "idol") {
     bodyContent = `
       <p><b>Grupo:</b> ${cleanText(item.group)}</p>
+      <p><b>Aniversário:</b> ${cleanText(item.aniversario)}</p>
       <p><b>Vocal:</b> ${cleanText(item.vocal)}</p>
       <p><b>Dance:</b> ${cleanText(item.dance)}</p>
       <p><b>Rap:</b> ${cleanText(item.rap)}</p>
@@ -554,7 +561,7 @@ function abrirModal(item) {
     bodyContent = `
       <p><b>Conceitos Predominantes:</b> ${cleanText(item.conceitos)}</p>
       <p><b>Gêneros Predominantes:</b> ${cleanText(item.generos)}</p>
-      <p><b>Músicas Conhecidas:</b> ${cleanText(item.musicas)}</p>
+      <p><b>Músicas Conhecidas:</b><br> ${listText(item.musicas)}</p>
     `;
   }
   modal.innerHTML = `
