@@ -759,9 +759,15 @@ function abrirModal(item) {
   if (!modal) return;
   modal.style.display = "flex";
   const itemType = getItemType(item);
-  const cleanText = (text) => {
-    if (!text) return "-";
-    return text.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
+  const cleanText = t => {
+    if (!t || (Array.isArray(t) && !t.length)) return "-";
+    if (Array.isArray(t)) return t.join(", ");
+    return t.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
+  };
+  const listText = t => {
+    if (!t || (Array.isArray(t) && !t.length)) return "-";
+    if (Array.isArray(t)) return t.join("<br>");
+    return t.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
   };
   let bodyContent = "";
   if (itemType === "idol") {
@@ -788,7 +794,7 @@ function abrirModal(item) {
     bodyContent = `
       <p><b>Conceitos Predominantes:</b> ${cleanText(item.conceitos)}</p>
       <p><b>Gêneros Predominantes:</b> ${cleanText(item.generos)}</p>
-      <p><b>Músicas Conhecidas:</b> ${cleanText(item.musicas)}</p>
+      <p><b>Músicas Conhecidas:</b><br> ${listText(item.musicas)}</p>
     `;
   } else {
     bodyContent = `<p><b>Tipo:</b> ${itemType}</p>`;
