@@ -1,0 +1,207 @@
+/* ========================
+   CORPO DA PÁGINA
+======================== */
+.patchnotes-page {
+  padding-bottom: 60px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.patchnotes-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.patchnotes-header h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #a855f7;
+}
+
+.patchnotes-header p {
+  color: #b8b8c8;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ========================
+   CARD DE PATCH
+======================== */
+.patch-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(168,85,247,0.14);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.patch-card:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* Header do card — clicável para expandir */
+.patch-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  gap: 12px;
+}
+
+.patch-header:hover {
+  background: #3d3a4d;
+}
+
+.patch-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.patch-version {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 900;
+  color: #eee;
+  white-space: nowrap;
+}
+
+.patch-title {
+  font-size: 15px;
+  color: #ccc;
+  text-align: left;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.patch-date {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.patch-chevron {
+  color: #666;
+  font-size: 12px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.patch-card.open .patch-chevron {
+  transform: rotate(180deg);
+}
+
+/* Tag de tipo */
+.patch-tag {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tag-major   { background: rgba(168, 85, 247, 0.2); color: #a855f7; border: 1px solid #a855f7; }
+.tag-minor   { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid #3b82f6; }
+.tag-fix     { background: rgba(34, 197, 94, 0.2);  color: #4ade80; border: 1px solid #22c55e; }
+.tag-hotfix  { background: rgba(239, 68, 68, 0.2);  color: #f87171; border: 1px solid #ef4444; }
+
+/* Corpo colapsável */
+.patch-body {
+  display: none;
+  padding: 0 20px 20px;
+  border-top: 1px solid #2a2a2a;
+  text-align: left;
+}
+
+.patch-card.open .patch-body {
+  display: block;
+}
+
+.patch-section {
+  margin-top: 18px;
+}
+
+.patch-section-title {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.patch-section-title.new      { color: #a855f7; }
+.patch-section-title.change   { color: #60a5fa; }
+.patch-section-title.fix      { color: #4ade80; }
+.patch-section-title.remove   { color: #f87171; }
+.patch-section-title.balance  { color: #fbbf24; }
+
+.patch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.patch-list li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.patch-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.patch-section-title.new    + .patch-list li::before { color: #a855f7; }
+.patch-section-title.change + .patch-list li::before { color: #60a5fa; }
+.patch-section-title.fix    + .patch-list li::before { color: #4ade80; }
+.patch-section-title.remove + .patch-list li::before { color: #f87171; }
+.patch-section-title.balance + .patch-list li::before { color: #fbbf24; }
+
+/* destaque inline */
+.hl {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ========================
+   EMPTY STATE
+======================== */
+.patchnotes-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ========================
+   RESETAR HERANÇA DE CENTRALIZAÇÃO
+======================== */
+.patch-card, .patch-section {
+  text-align: left;
+}

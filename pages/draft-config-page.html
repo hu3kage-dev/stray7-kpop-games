@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stray7 Configuração do Draft</title>
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/pages-styles.css">
+  <script src="../assets/i18n/translations.js"></script>
+  <script src="../data/draft-game-objects.js"></script>
+  <script src="../scripts/pages-script.js"></script>
+</head>
+<body>
+
+<div class="page-header">
+  <h1 data-i18n="draftconfig_title">Configuração do Draft</h1>
+  <p data-i18n="draftconfig_subtitle">Defina os jogadores, tamanho do grupo e selecione grupos, idols, músicas e produtores para o sorteio.</p>
+</div>
+
+<div class="config-grid">
+
+  <div class="config-block block-1">
+    <h3>&#x1F5CE <span data-i18n="block1_title">Regras do Jogo</span></h3>
+    <ul>
+      <li data-i18n="rule_1">Monte um time escolhendo idols, músicas e produtores no formato Snake Draft.</li>
+      <li data-i18n="rule_2">O Pool é limitado ao número de jogadores — pegar um item prejudica diretamente os outros.</li>
+      <li data-i18n="rule_3">A ordem dos turnos inverte a cada rodada (cobrinha): quem escolheu por último joga duas vezes seguidas.</li>
+      <li data-i18n="rule_4">Combine conceitos e gêneros entre idols, músicas e produtores para maximizar a pontuação.</li>
+      <li data-i18n="rule_5">Músicas e produtores são opcionais — ao desmarcá-los, o draft usa apenas idols.</li>
+      <li data-i18n="rule_6">Este jogo ainda está em desenvolvimento.</li>
+    </ul>
+    <div class="tut-btn-row">
+      <button class="btn-tutorial" onclick="abrirTutorial()" data-i18n="btn_tutorial_completo">Ver Tutorial Completo</button>
+      <button class="btn-tutorial" onclick="abrirTutorialLobby()" data-i18n="btn_tutorial_lobby">Ver Tutoriais de Importação</button>
+    </div>
+  </div>
+
+  <div class="config-block block-2" style="grid-column: 2 / -1">
+    <h3>&#9881 <span data-i18n="block2_title">Opções de Configuração</span></h3>
+    <div class="b2-body">
+
+      <div class="b2-left">
+      <div class="b2-field">
+      <label data-i18n="label_num_jogadores">Número de jogadores:</label>
+      <input type="number" id="playerCount" placeholder="Ex: 4 jogadores" data-i18n-placeholder="placeholder_num_jogadores" onchange="criarInputsJogadores()">
+    </div>
+    <div class="b2-field">
+      <label data-i18n="label_tamanho_grupo">Tamanho do Grupo:</label>
+      <input type="number" id="idolCount" placeholder="Ex: 6 integrantes" data-i18n-placeholder="placeholder_tamanho_grupo">
+    </div>
+    <div class="b2-field">
+      <span></span>
+      <button onclick="sortearIntegrantes()" data-i18n="btn_random">Random</button>
+    </div>
+    <label class="btn-importar-draft" for="importDraftInput" data-i18n="btn_importar_draft">⬆ Importar Draft</label>
+    <input type="file" id="importDraftInput" accept=".txt" onchange="importarDraftTxt(event)" style="display:none;">
+    <button class="btn-iniciar-draft" onclick="iniciarDraft()" data-i18n="btn_iniciar_draft">Iniciar Draft</button>
+  </div>
+
+  <div class="b2-right">
+    <span class="players-label" data-i18n="label_nome_jogadores">Nome dos jogadores:</span>
+    <div id="playersContainer" class="players-scroll-box"></div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="config-block block-3">
+      <h3>&#x2605 <span data-i18n="block3_title">Seleção de Idols e Grupos</span></h3>
+      <div id="idolFilter">
+        <div class="idol-filter-row">
+          <span class="idol-filter-label" data-i18n="filtro_geracao">Geração:</span>
+          <div class="idol-filter-pills" id="filterGen">
+            <button class="filter-pill active" data-filter="gen" data-value="all" onclick="setFiltro('gen','all')" data-i18n="filtro_todas">Todas</button>
+            <button class="filter-pill" data-filter="gen" data-value="1" onclick="setFiltro('gen','1')">1ª</button>
+            <button class="filter-pill" data-filter="gen" data-value="2" onclick="setFiltro('gen','2')">2ª</button>
+            <button class="filter-pill" data-filter="gen" data-value="3" onclick="setFiltro('gen','3')">3ª</button>
+            <button class="filter-pill" data-filter="gen" data-value="4" onclick="setFiltro('gen','4')">4ª</button>
+            <button class="filter-pill" data-filter="gen" data-value="5" onclick="setFiltro('gen','5')">5ª</button>
+          </div>
+        </div>
+        <div class="idol-filter-row">
+          <span class="idol-filter-label" data-i18n="filtro_inicial">Inicial:</span>
+          <div class="idol-filter-pills" id="filterLetra">
+            <button class="filter-pill active" data-filter="letra" data-value="all" onclick="setFiltro('letra','all')" data-i18n="filtro_todas">Todas</button>
+            <button class="filter-pill" data-filter="letra" data-value="09" onclick="setFiltro('letra','09')">0–9 @ #</button>
+            <button class="filter-pill" data-filter="letra" data-value="A" onclick="setFiltro('letra','A')">A</button>
+            <button class="filter-pill" data-filter="letra" data-value="B" onclick="setFiltro('letra','B')">B</button>
+            <button class="filter-pill" data-filter="letra" data-value="C" onclick="setFiltro('letra','C')">C</button>
+            <button class="filter-pill" data-filter="letra" data-value="D" onclick="setFiltro('letra','D')">D</button>
+            <button class="filter-pill" data-filter="letra" data-value="E" onclick="setFiltro('letra','E')">E</button>
+            <button class="filter-pill" data-filter="letra" data-value="F" onclick="setFiltro('letra','F')">F</button>
+            <button class="filter-pill" data-filter="letra" data-value="G" onclick="setFiltro('letra','G')">G</button>
+            <button class="filter-pill" data-filter="letra" data-value="H" onclick="setFiltro('letra','H')">H</button>
+            <button class="filter-pill" data-filter="letra" data-value="I" onclick="setFiltro('letra','I')">I</button>
+            <button class="filter-pill" data-filter="letra" data-value="J" onclick="setFiltro('letra','J')">J</button>
+            <button class="filter-pill" data-filter="letra" data-value="K" onclick="setFiltro('letra','K')">K</button>
+            <button class="filter-pill" data-filter="letra" data-value="L" onclick="setFiltro('letra','L')">L</button>
+            <button class="filter-pill" data-filter="letra" data-value="M" onclick="setFiltro('letra','M')">M</button>
+            <button class="filter-pill" data-filter="letra" data-value="N" onclick="setFiltro('letra','N')">N</button>
+            <button class="filter-pill" data-filter="letra" data-value="O" onclick="setFiltro('letra','O')">O</button>
+            <button class="filter-pill" data-filter="letra" data-value="P" onclick="setFiltro('letra','P')">P</button>
+            <button class="filter-pill" data-filter="letra" data-value="Q" onclick="setFiltro('letra','Q')">Q</button>
+            <button class="filter-pill" data-filter="letra" data-value="R" onclick="setFiltro('letra','R')">R</button>
+            <button class="filter-pill" data-filter="letra" data-value="S" onclick="setFiltro('letra','S')">S</button>
+            <button class="filter-pill" data-filter="letra" data-value="T" onclick="setFiltro('letra','T')">T</button>
+            <button class="filter-pill" data-filter="letra" data-value="U" onclick="setFiltro('letra','U')">U</button>
+            <button class="filter-pill" data-filter="letra" data-value="V" onclick="setFiltro('letra','V')">V</button>
+            <button class="filter-pill" data-filter="letra" data-value="W" onclick="setFiltro('letra','W')">W</button>
+            <button class="filter-pill" data-filter="letra" data-value="X" onclick="setFiltro('letra','X')">X</button>
+            <button class="filter-pill" data-filter="letra" data-value="Y" onclick="setFiltro('letra','Y')">Y</button>
+            <button class="filter-pill" data-filter="letra" data-value="Z" onclick="setFiltro('letra','Z')">Z</button>
+          </div>
+        </div>
+        <div class="idol-filter-row idol-filter-actions">
+          <div class="idol-filter-import">
+            <label class="btn-importar-db" for="importDbInput" data-i18n="btn_importar_db">⬆ Importar Database</label>
+            <input type="file" id="importDbInput" accept=".csv,.json" onchange="importarDatabase(event)" style="display:none;">
+            <span id="importDbStatus" class="import-db-status"></span>
+          </div>
+          <div class="idol-filter-mark-btns">
+            <button onclick="marcarTodosGeracoes()" data-i18n="btn_marcar_todos">Marcar Todos</button>
+            <button onclick="desmarcarTodosGeracoes()" data-i18n="btn_desmarcar_todos">Desmarcar Todos</button>
+          </div>
+        </div>
+      </div>
+      <div id="groupsContainer" class="scroll-box"></div>
+    </div>
+
+    <div class="config-block block-4">
+    <h3>&#9835 <span data-i18n="block4_title">Seleção de Músicas e Produtores</span></h3>
+      <div class="half-container">
+        <div>
+          <span style="font-weight:bold; color:#fff;" data-i18n="label_musicas">&#9835 Músicas</span>
+          <button onclick="marcarTodasMusicas()" data-i18n="btn_marcar_todos">Marcar Todos</button>
+          <button onclick="desmarcarTodasMusicas()" data-i18n="btn_desmarcar_todos">Desmarcar Todos</button>
+          <div id="musicContainer" class="scroll-box"></div>
+        </div>
+        <div>
+          <span style="font-weight:bold; color:#fff;" data-i18n="label_produtores">&#x1F3A7 Produtores</span>
+          <button onclick="marcarTodosProdutores()" data-i18n="btn_marcar_todos">Marcar Todos</button>
+          <button onclick="desmarcarTodosProdutores()" data-i18n="btn_desmarcar_todos">Desmarcar Todos</button>
+            <div id="producerContainer" class="scroll-box"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalTutorial" class="modal-tutorial" onclick="fecharTutorialFora(event)">
+  <div class="modal-tutorial-content">
+    <button class="modal-tutorial-close" onclick="fecharTutorial()">✕</button>
+    <div id="modalTutorialBody">Carregando...</div>
+  </div>
+</div>
+
+<div id="modalTutorialLobby" class="modal-tutorial" onclick="fecharTutorialLobbyFora(event)">
+  <div class="modal-tutorial-content">
+    <button class="modal-tutorial-close" onclick="fecharTutorialLobby()">✕</button>
+    <div id="modalTutorialLobbyBody"></div>
+  </div>
+</div>
+
+</body>
+</html>

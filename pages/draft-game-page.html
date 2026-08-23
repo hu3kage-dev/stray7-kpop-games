@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stray7 Draft Game</title>
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/pages-styles.css">
+
+  <script src="../assets/i18n/translations.js"></script>
+  <script src="../data/draft-game-objects.js" defer></script>
+  <script src="../scripts/pages-script.js"></script>
+  <script src="../scripts/draft-game-script.js"></script>
+</head>
+
+<body>
+  <div class="page-header">
+    <h1 data-i18n="draftgame_title">Draft Game</h1>
+    <p data-i18n="draftgame_subtitle">Escolha suas cartas e faça o melhor draft com idols, músicas e produtores.</p>
+  </div>
+  <div id="gameScreen">
+    <div id="playersBoard"></div>
+
+  <div id="turnActions">
+    <h1 id="turnoAtual"></h1>
+    <button onclick="encerrarTurno()" data-i18n="btn_encerrar_turno">Encerrar Turno</button>
+  </div>
+
+  <hr>
+
+  <h2 data-i18n="label_pool">Pool</h2>
+  <div id="pool"></div>
+</div>
+<div id="modal" class="modal"></div>
+</body>
+</html>
