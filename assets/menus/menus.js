@@ -18,7 +18,8 @@ const MENU_IMAGENS = {
     "assets/menus/index_quiz_2.jpg",
     "assets/menus/index_quiz_3.jpg",
     "assets/menus/index_quiz_4.png",
-    "assets/menus/index_quiz_5.png",
+    "assets/menus/index_quiz_5.jpg",
+    "assets/menus/index_quiz_6.png",
   ],
   gacha: [
     "assets/menus/index_gacha_1.png",
@@ -33,7 +34,7 @@ const MENU_IMAGENS = {
     "assets/menus/index_manager_2.jpg",
     "assets/menus/index_manager_3.png",
     "assets/menus/index_manager_4.jpg",
-    "assets/menus/index_manager_5.jpg",
+    "assets/menus/index_manager_5.png",
     "assets/menus/index_manager_6.jpg",
   ],
 };

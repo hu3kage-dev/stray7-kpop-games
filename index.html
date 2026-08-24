@@ -4,55 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stray K-Pop Games</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages-styles.css">
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <script src="assets/i18n/translations.js"></script>
     <script src="assets/menus/menus.js" defer></script>
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/pages-script.js" defer></script>
 </head>
 <body>
     <div class="page-header">
-        <h1>Bem-vindo ao Stray7 K-Pop Idol Games!</h1>
-        <p>Entre no universo K-Pop e escolha o seu modo preferido de jogo.</p>
+        <h1 data-i18n="index_title">Bem-vindo ao Stray7 K-Pop Idol Games!</h1>
+        <p data-i18n="index_subtitle">Entre no universo K-Pop e escolha o seu modo preferido de jogo.</p>
     </div>
     <div class="game-modes">
         <div class="mode">
             <img data-menu="draft" alt="Draft Mode" class="mode-image">
-            <h2 class="mode-title">Draft Game</h2>
-            <p class="mode-description">
+            <h2 class="mode-title" data-i18n="mode_draft_title">Draft Game</h2>
+            <p class="mode-description" data-i18n="mode_draft_desc">
             Faça um draft com suas idols preferidas e tente montar o time ideal com base nas variáveis de posições, conceitos e gêneros musicais.
             </p>
-            <button onclick="irParaDraft()" class="draft-btn">Jogar</button>
+            <button onclick="irParaDraft()" class="draft-btn" data-i18n="btn_jogar">Jogar</button>
         </div>
 
         <div class="mode">
             <img data-menu="quiz" alt="Quiz Mode" class="mode-image">
-            <h2 class="mode-title">Quiz Game</h2>
-            <p class="mode-description">
+            <h2 class="mode-title" data-i18n="mode_quiz_title">Quiz Game</h2>
+            <p class="mode-description" data-i18n="mode_quiz_desc">
             Teste seus conhecimentos sobre K-Pop com perguntas desafiadoras.
             </p>
-            <button onclick="modoEmDesenvolvimento()" disabled class="disabled-btn">
+            <button onclick="modoEmDesenvolvimento()" disabled class="disabled-btn" data-i18n="btn_em_breve">
             Jogar (em breve)
             </button>
         </div>
 
         <div class="mode">
             <img data-menu="gacha" alt="Gacha Mode" class="mode-image">
-            <h2 class="mode-title">Gacha Game</h2>
-            <p class="mode-description">
+            <h2 class="mode-title" data-i18n="mode_gacha_title">Gacha Game</h2>
+            <p class="mode-description" data-i18n="mode_gacha_desc">
             Rode o gacha e obtenha novas idols para seu time, combinando sorte e estratégia.
             </p>
-            <button onclick="modoEmDesenvolvimento()" disabled class="disabled-btn">
+            <button onclick="modoEmDesenvolvimento()" disabled class="disabled-btn" data-i18n="btn_em_breve">
             Jogar (em breve)
             </button>
         </div>
 
         <div class="mode">
             <img data-menu="manager" alt="Manager Mode" class="mode-image">
-            <h2 class="mode-title">Manager Game</h2>
-            <p class="mode-description">
+            <h2 class="mode-title" data-i18n="mode_manager_title">Manager Game</h2>
+            <p class="mode-description" data-i18n="mode_manager_desc">
             Gerencie seu grupo de idols, planeje estratégias e acompanhe o desempenho de suas atividades.
             </p>
-            <button onclick="modoEmDesenvolvimento()" disabled class="disabled-btn">
+            <button onclick="modoEmDesenvolvimento()" disabled class="disabled-btn" data-i18n="btn_em_breve">
             Jogar (em breve)
             </button>
         </div>
