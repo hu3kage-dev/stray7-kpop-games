@@ -1239,4 +1239,56 @@ body::before {
   .b2-field {
     grid-template-columns: minmax(0, 1fr) minmax(110px, 180px);
   }
+
+  /* Bloco 1: os acessos aos tutoriais ocupam uma linha cada. */
+  .tut-btn-row {
+    flex-direction: column;
+  }
+
+  .tut-btn-row .btn-tutorial {
+    width: 100%;
+  }
+
+  /* Bloco 3: ações e cartões de grupos passam para uma única coluna. */
+  .idol-filter-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .idol-filter-import,
+  .idol-filter-mark-btns {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-importar-db,
+  .idol-filter-mark-btns button {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+  }
+
+  .import-db-status {
+    white-space: normal;
+  }
+
+  #groupsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  #groupsContainer > div,
+  #groupsContainer div div {
+    overflow-wrap: anywhere;
+  }
+
+  /* Bloco 4: músicas e produtores são exibidos um abaixo do outro. */
+  .half-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .half-container > div {
+    min-width: 0;
+  }
 }
