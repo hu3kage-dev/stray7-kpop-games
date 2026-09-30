@@ -1,151 +1,151 @@
 //data:idols
 const idols = [
-  /* //UNCHILD APAGAR
-  {
-    "gen": "5",
-    "type": "idol",
-    "id": "unchildyeeun",
-    "name": "Yeeun",
-    "group": "Unchild",
-    "aniversario": "21-12-2006",
-    "vocal": "B",
-    "dance": "B",
-    "rap": "D",
-    "center": "A",
-    "visual": "A",
-    "especialidade": "Visual",
-    "conceitos": [
-      "Teen Crush",
-      "Performance"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental"
-    ],
-    "fortes": "Cativa a audiência com seu visual e carisma, boa leitura de câmera e presença natural em palco, estabilidade sólida para linhas de apoio.",
-    "fracos": "Ainda é inexperiente, falta refinamento técnico em vocal e dança, pouca potência em performances mais intensas."
-  },
-  {
-    "gen": "5",
-    "type": "idol",
-    "id": "unchildheekie",
-    "name": "Heekie",
-    "group": "Unchild",
-    "aniversario": "17-03-2007",
-    "vocal": "B",
-    "dance": "B",
-    "rap": "B",
-    "center": "B",
-    "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Teen Crush",
-      "Performance"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental"
-    ],
-    "fortes": "Entrega de rap equilibrada, boa estabilidade geral nas performances, presença energética e consistente em coreografias.",
-    "fracos": "Ainda carece de identidade vocal mais marcante, impacto visual moderado comparado às integrantes centrais."
-  },
-  {
-    "gen": "5",
-    "type": "idol",
-    "id": "unchildako",
-    "name": "Ako",
-    "group": "Unchild",
-    "aniversario": "09-03-2008",
-    "vocal": "C",
-    "dance": "B",
-    "rap": "B",
-    "center": "B",
-    "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Teen Crush",
-      "Performance"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental"
-    ],
-    "fortes": "Boa dicção e timing em rap, energia jovem combina bem com conceitos experimentais, dança estável para rookie.",
-    "fracos": "Vocais ainda limitados tecnicamente, presença de palco menos dominante em partes centrais."
-  },
-  {
-    "gen": "5",
-    "type": "idol",
-    "id": "unchildtina",
-    "name": "Tina",
-    "group": "Unchild",
-    "aniversario": "08-07-2008",
-    "vocal": "B",
-    "dance": "B",
-    "rap": "C",
-    "center": "B",
-    "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Teen Crush",
-      "Performance"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental"
-    ],
-    "fortes": "Timbre vocal agradável e estável, boa adaptabilidade entre linhas melódicas e performáticas, presença equilibrada.",
-    "fracos": "Ainda falta estabilidade vocal em performances mais intensas, expressividade facial pode evoluir mais."
-  },
-  {
-    "gen": "5",
-    "type": "idol",
-    "id": "unchildevon",
-    "name": "Evon",
-    "group": "Unchild",
-    "aniversario": "11-07-2008",
-    "vocal": "B",
-    "dance": "B",
-    "rap": "D",
-    "center": "B",
-    "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Teen Crush",
-      "Performance"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental"
-    ],
-    "fortes": "Vocais limpos e consistentes, boa harmonia em grupo, transmite leveza e estabilidade nas stages.",
-    "fracos": "Rap pouco desenvolvido, impacto performático ainda discreto em músicas mais agressivas."
-  },
-  {
-    "gen": "5",
-    "type": "idol",
-    "id": "unchildhaeun",
-    "name": "Haeun",
-    "group": "Unchild",
-    "aniversario": "16-01-2009",
-    "vocal": "B",
-    "dance": "S",
-    "rap": "B",
-    "center": "B",
-    "visual": "B",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Teen Crush",
-      "Performance"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental"
-    ],
-    "fortes": "Destaque absoluto em dança, excelente controle corporal e sincronização, presença forte em performances energéticas.",
-    "fracos": "Vocais ainda menos refinados tecnicamente, pode perder estabilidade vocal em coreografias muito intensas."
-  },
-  // UNCHILD APAGAR */
+  // //UNCHILD APAGAR
+  // {
+  //   "gen": "5",
+  //   "type": "idol",
+  //   "id": "unchildyeeun",
+  //   "name": "Yeeun",
+  //   "group": "Unchild",
+  //   "aniversario": "21-12-2006",
+  //   "vocal": "B",
+  //   "dance": "B",
+  //   "rap": "D",
+  //   "center": "A",
+  //   "visual": "A",
+  //   "especialidade": "Visual",
+  //   "conceitos": [
+  //     "Teen Crush",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental"
+  //   ],
+  //   "fortes": "Cativa a audiência com seu visual e carisma, boa leitura de câmera e presença natural em palco, estabilidade sólida para linhas de apoio.",
+  //   "fracos": "Ainda é inexperiente, falta refinamento técnico em vocal e dança, pouca potência em performances mais intensas."
+  // },
+  // {
+  //   "gen": "5",
+  //   "type": "idol",
+  //   "id": "unchildheekie",
+  //   "name": "Heekie",
+  //   "group": "Unchild",
+  //   "aniversario": "17-03-2007",
+  //   "vocal": "B",
+  //   "dance": "B",
+  //   "rap": "B",
+  //   "center": "B",
+  //   "visual": "B",
+  //   "especialidade": "Rap",
+  //   "conceitos": [
+  //     "Teen Crush",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental"
+  //   ],
+  //   "fortes": "Entrega de rap equilibrada, boa estabilidade geral nas performances, presença energética e consistente em coreografias.",
+  //   "fracos": "Ainda carece de identidade vocal mais marcante, impacto visual moderado comparado às integrantes centrais."
+  // },
+  // {
+  //   "gen": "5",
+  //   "type": "idol",
+  //   "id": "unchildako",
+  //   "name": "Ako",
+  //   "group": "Unchild",
+  //   "aniversario": "09-03-2008",
+  //   "vocal": "C",
+  //   "dance": "B",
+  //   "rap": "B",
+  //   "center": "B",
+  //   "visual": "B",
+  //   "especialidade": "Rap",
+  //   "conceitos": [
+  //     "Teen Crush",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental"
+  //   ],
+  //   "fortes": "Boa dicção e timing em rap, energia jovem combina bem com conceitos experimentais, dança estável para rookie.",
+  //   "fracos": "Vocais ainda limitados tecnicamente, presença de palco menos dominante em partes centrais."
+  // },
+  // {
+  //   "gen": "5",
+  //   "type": "idol",
+  //   "id": "unchildtina",
+  //   "name": "Tina",
+  //   "group": "Unchild",
+  //   "aniversario": "08-07-2008",
+  //   "vocal": "B",
+  //   "dance": "B",
+  //   "rap": "C",
+  //   "center": "B",
+  //   "visual": "B",
+  //   "especialidade": "Vocal",
+  //   "conceitos": [
+  //     "Teen Crush",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental"
+  //   ],
+  //   "fortes": "Timbre vocal agradável e estável, boa adaptabilidade entre linhas melódicas e performáticas, presença equilibrada.",
+  //   "fracos": "Ainda falta estabilidade vocal em performances mais intensas, expressividade facial pode evoluir mais."
+  // },
+  // {
+  //   "gen": "5",
+  //   "type": "idol",
+  //   "id": "unchildevon",
+  //   "name": "Evon",
+  //   "group": "Unchild",
+  //   "aniversario": "11-07-2008",
+  //   "vocal": "B",
+  //   "dance": "B",
+  //   "rap": "D",
+  //   "center": "B",
+  //   "visual": "B",
+  //   "especialidade": "Vocal",
+  //   "conceitos": [
+  //     "Teen Crush",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental"
+  //   ],
+  //   "fortes": "Vocais limpos e consistentes, boa harmonia em grupo, transmite leveza e estabilidade nas stages.",
+  //   "fracos": "Rap pouco desenvolvido, impacto performático ainda discreto em músicas mais agressivas."
+  // },
+  // {
+  //   "gen": "5",
+  //   "type": "idol",
+  //   "id": "unchildhaeun",
+  //   "name": "Haeun",
+  //   "group": "Unchild",
+  //   "aniversario": "16-01-2009",
+  //   "vocal": "B",
+  //   "dance": "S",
+  //   "rap": "B",
+  //   "center": "B",
+  //   "visual": "B",
+  //   "especialidade": "Dance",
+  //   "conceitos": [
+  //     "Teen Crush",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental"
+  //   ],
+  //   "fortes": "Destaque absoluto em dança, excelente controle corporal e sincronização, presença forte em performances energéticas.",
+  //   "fracos": "Vocais ainda menos refinados tecnicamente, pode perder estabilidade vocal em coreografias muito intensas."
+  // },
+  // // UNCHILD APAGAR */
   {
     "gen": "4",
     "type": "idol",
@@ -10091,162 +10091,162 @@ const musics = [
 
 //data:producers
 const producers = [
-  /*//TESTE, APAGAR
-  {
-    "type": "producer",
-    "id": "producerproducerteste1",
-    "name": "Producer Teste 1",
-    "conceitos": [
-      "Performance",
-      "Conceptual",
-      "Girl Crush"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental",
-      "Rock"
-    ],
-    "musicas": [
-      "NMIXX - Know About Me",
-      "Red Velvet - Feel My Rythm",
-      "Kai - Peaches",
-      "Riize - Get a Guitar",
-      "Seventeen - Maestro"
-    ]
-  },
-  {
-    "type": "producer",
-    "id": "producerproducerteste2",
-    "name": "Producer Teste 2",
-    "conceitos": [
-      "Conceptual",
-      "Teen Crush",
-      "Dark"
-    ],
-    "generos": [
-      "Electro-Synth",
-      "EDM",
-      "Rock"
-    ],
-    "musicas": [
-      "tripleS - Rising",
-      "ARTMS - Icarus",
-      "LOONA Olivia Hye - Egoist",
-      "LOONA Hyunjin - Around You",
-      "LOONA Haseul - Let Me In"
-    ]
-  },
-  {
-    "type": "producer",
-    "id": "producerproducerteste3",
-    "name": "Producer Teste 3",
-    "conceitos": [
-      "Cute",
-      "Teen Crush",
-      "Dreamcore"
-    ],
-    "generos": [
-      "Pop",
-      "Emotional",
-      "R&B"
-    ],
-    "musicas": [
-      "TWICE - Likey",
-      "Itzy - Cake",
-      "STAYC - Stereotype",
-      "ChungHa - Gotta Go",
-      "Apink - I'm So Sick"
-    ]
-  },
-  {
-    "type": "producer",
-    "id": "producerproducerteste4",
-    "name": "Producer Teste 4",
-    "conceitos": [
-      "Mature",
-      "Elegant",
-      "Cute"
-    ],
-    "generos": [
-      "Tropical",
-      "Groove",
-      "Pop"
-    ],
-    "musicas": [
-      "AOA - Miniskirt",
-      "SISTAR19 - Ma Boy",
-      "Brave Girls - Rollin'",
-      "BIGBANG - Lies",
-      "HyunA - Ice Cream"
-    ]
-  },
-  {
-    "type": "producer",
-    "id": "producerproducerteste5",
-    "name": "Producer Teste 5",
-    "conceitos": [
-      "Cute",
-      "Dark",
-      "Conceptual"
-    ],
-    "generos": [
-      "Pop",
-      "Tropical",
-      "Groove"
-    ],
-    "musicas": [
-      "TXT - LO$ER = LOVER",
-      "Red Velvet - Pick-A-Boo",
-      "ILLIT - Do The Dance",
-      "Enhypen - Given-Taken",
-      "TWICE - Dance the Night Away"
-    ]
-  },
-  {
-    "type": "producer",
-    "id": "producerproducerteste6",
-    "name": "Producer Teste 6",
-    "conceitos": [
-      "Conceptual",
-      "Mature",
-      "Elegant"
-    ],
-    "generos": [
-      "Groove",
-      "Experimental",
-      "Pop"
-    ],
-    "musicas": [
-      "IVE - BANG BANG",
-      "NMIXX - Blue Valentine",
-      "fromis_9 - Supersonic",
-      "VIVIZ - Maniac",
-      "Loossemble - Sensitive"
-    ]
-  },
-  {
-    "type": "producer",
-    "id": "producerproducerteste7",
-    "name": "Producer Teste 7",
-    "conceitos": [
-      "Girl Crush",
-      "Swag",
-      "Performance"
-    ],
-    "generos": [
-      "Hip-hop",
-      "Experimental",
-      "Electro-Synth"
-    ],
-    "musicas": [
-      "aespa - Supernova",
-      "NCT 127 - Kick It",
-      "IVE - HEYA",
-      "Kiiikiii - BTG",
-      "Shinee - Don't Call Me"
-    ]
-  },
-  //TESTE, APAGAR */
+  // //TESTE, APAGAR
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste1",
+  //   "name": "Producer Teste 1",
+  //   "conceitos": [
+  //     "Performance",
+  //     "Conceptual",
+  //     "Girl Crush"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental",
+  //     "Rock"
+  //   ],
+  //   "musicas": [
+  //     "NMIXX - Know About Me",
+  //     "Red Velvet - Feel My Rythm",
+  //     "Kai - Peaches",
+  //     "Riize - Get a Guitar",
+  //     "Seventeen - Maestro"
+  //   ]
+  // },
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste2",
+  //   "name": "Producer Teste 2",
+  //   "conceitos": [
+  //     "Conceptual",
+  //     "Teen Crush",
+  //     "Dark"
+  //   ],
+  //   "generos": [
+  //     "Electro-Synth",
+  //     "EDM",
+  //     "Rock"
+  //   ],
+  //   "musicas": [
+  //     "tripleS - Rising",
+  //     "ARTMS - Icarus",
+  //     "LOONA Olivia Hye - Egoist",
+  //     "LOONA Hyunjin - Around You",
+  //     "LOONA Haseul - Let Me In"
+  //   ]
+  // },
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste3",
+  //   "name": "Producer Teste 3",
+  //   "conceitos": [
+  //     "Cute",
+  //     "Teen Crush",
+  //     "Dreamcore"
+  //   ],
+  //   "generos": [
+  //     "Pop",
+  //     "Emotional",
+  //     "R&B"
+  //   ],
+  //   "musicas": [
+  //     "TWICE - Likey",
+  //     "Itzy - Cake",
+  //     "STAYC - Stereotype",
+  //     "ChungHa - Gotta Go",
+  //     "Apink - I'm So Sick"
+  //   ]
+  // },
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste4",
+  //   "name": "Producer Teste 4",
+  //   "conceitos": [
+  //     "Mature",
+  //     "Elegant",
+  //     "Cute"
+  //   ],
+  //   "generos": [
+  //     "Tropical",
+  //     "Groove",
+  //     "Pop"
+  //   ],
+  //   "musicas": [
+  //     "AOA - Miniskirt",
+  //     "SISTAR19 - Ma Boy",
+  //     "Brave Girls - Rollin'",
+  //     "BIGBANG - Lies",
+  //     "HyunA - Ice Cream"
+  //   ]
+  // },
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste5",
+  //   "name": "Producer Teste 5",
+  //   "conceitos": [
+  //     "Cute",
+  //     "Dark",
+  //     "Conceptual"
+  //   ],
+  //   "generos": [
+  //     "Pop",
+  //     "Tropical",
+  //     "Groove"
+  //   ],
+  //   "musicas": [
+  //     "TXT - LO$ER = LOVER",
+  //     "Red Velvet - Pick-A-Boo",
+  //     "ILLIT - Do The Dance",
+  //     "Enhypen - Given-Taken",
+  //     "TWICE - Dance the Night Away"
+  //   ]
+  // },
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste6",
+  //   "name": "Producer Teste 6",
+  //   "conceitos": [
+  //     "Conceptual",
+  //     "Mature",
+  //     "Elegant"
+  //   ],
+  //   "generos": [
+  //     "Groove",
+  //     "Experimental",
+  //     "Pop"
+  //   ],
+  //   "musicas": [
+  //     "IVE - BANG BANG",
+  //     "NMIXX - Blue Valentine",
+  //     "fromis_9 - Supersonic",
+  //     "VIVIZ - Maniac",
+  //     "Loossemble - Sensitive"
+  //   ]
+  // },
+  // {
+  //   "type": "producer",
+  //   "id": "producerproducerteste7",
+  //   "name": "Producer Teste 7",
+  //   "conceitos": [
+  //     "Girl Crush",
+  //     "Swag",
+  //     "Performance"
+  //   ],
+  //   "generos": [
+  //     "Hip-hop",
+  //     "Experimental",
+  //     "Electro-Synth"
+  //   ],
+  //   "musicas": [
+  //     "aespa - Supernova",
+  //     "NCT 127 - Kick It",
+  //     "IVE - HEYA",
+  //     "Kiiikiii - BTG",
+  //     "Shinee - Don't Call Me"
+  //   ]
+  // },
+  // //TESTE, APAGAR */
   {
     "type": "producer",
     "id": "producerartiffect",

@@ -28,8 +28,10 @@
     display: none;
   }
 </style>
-<link rel="stylesheet" href="../../css/styles.css">
-<script src="../../scripts/script.js" defer></script>
+<link rel="stylesheet" href="../../css/pages-styles.css">
+<script src="../../assets/i18n/translations.js"></script>
+<script src="../../data/patchnotes.js"></script>
+<script src="../../scripts/pages-script.js" defer></script>
 </head>
 
 <body>
@@ -65,6 +67,12 @@
 </section>
 
 <script>
+// Tudo aqui dentro roda isolado numa IIFE para não colidir com as declarações
+// globais de pages-script.js (que também é carregado nesta página para o header
+// funcionar). Só processarArquivo e copiarJS são expostos no window, pois são
+// os únicos chamados pelos onclick="" do HTML acima.
+(function () {
+
 //f:parseCSVLine
 function parseCSVLine(line) {
   const result = [];
@@ -100,14 +108,54 @@ function normalizarChave(chave) {
     .replace(/\s+/g, "");
 }
 
-//f:parseArray
+//f:parseArray (suporta "/" e " / " como separadores)
 function parseArray(valor) {
   if (!valor) return [];
   return valor
-    .split("/")
+    .split(/\s*\/\s*/)
     .map(v => v.trim())
     .filter(Boolean);
 }
+
+// Tabela de aliases de colunas (pt-BR / en-US) aceitos na importação.
+// Mantenha esta tabela sincronizada com a mesma constante em pages-script.js.
+const CONV_CSV_ALIASES = {
+  id:                     ["id"],
+  nome:                   ["nome", "name"],
+  grupo:                  ["grupo", "group"],
+  geracao:                ["geracao", "gen", "generation"],
+  aniversario:            ["aniversario", "birthday", "birthdate", "dob"],
+  vocal:                  ["vocal"],
+  dance:                  ["dance", "danca"],
+  rap:                    ["rap"],
+  center:                 ["center", "centro"],
+  visual:                 ["visual"],
+  especialidade:          ["especialidade", "specialty", "speciality", "position"],
+  conceitosPredominantes: ["conceitospredominantes", "mainconcepts", "predominantconcepts"],
+  generosPredominantes:   ["generospredominantes", "maingenres", "predominantgenres"],
+  pontosFortes:           ["pontosfortes", "strengths", "strongpoints"],
+  pontosFracos:           ["pontosfracos", "weaknesses", "weakpoints"],
+  fonte:                  ["fonte", "source"],
+  conceitosOriginais:     ["conceitosoriginais", "originalconcepts"],
+  generosOriginais:       ["generosoriginais", "originalgenres"],
+  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics"]
+};
+
+//f:convPegarCampo — retorna o primeiro valor não-vazio dentre os aliases pt/en aceitos
+function convPegarCampo(obj, aliases) {
+  for (const chave of aliases) {
+    if (obj[chave] !== undefined && obj[chave] !== "") return obj[chave];
+  }
+  return "";
+}
+
+// Tipo canônico de cada aba — não depende da coluna "Tipo" do CSV,
+// já que o próprio botão clicado já identifica a categoria.
+const TIPO_CANONICO = {
+  idols: "Idol",
+  songs: "music",
+  producers: "producer"
+};
 
 //f:processarArquivo
 function processarArquivo(tipo) {
@@ -137,57 +185,59 @@ function processarArquivo(tipo) {
         obj[h] = valores[index] || "";
       });
 
+      let objFinal = {};
+
       // IDOLS
       if (tipo === "idols") {
-        obj = {
-          gen: obj.geracao,
-          type: obj.tipo,
-          id: obj.id,
-          name: obj.nome,
-          group: obj.grupo,
-          aniversario: obj.aniversario,
-          vocal: obj.vocal,
-          dance: obj.dance,
-          rap: obj.rap,
-          center: obj.center,
-          visual: obj.visual,
-          especialidade: obj.especialidade,
+        objFinal = {
+          gen: convPegarCampo(obj, CONV_CSV_ALIASES.geracao),
+          type: TIPO_CANONICO.idols,
+          id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
+          name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
+          group: convPegarCampo(obj, CONV_CSV_ALIASES.grupo),
+          aniversario: convPegarCampo(obj, CONV_CSV_ALIASES.aniversario),
+          vocal: convPegarCampo(obj, CONV_CSV_ALIASES.vocal),
+          dance: convPegarCampo(obj, CONV_CSV_ALIASES.dance),
+          rap: convPegarCampo(obj, CONV_CSV_ALIASES.rap),
+          center: convPegarCampo(obj, CONV_CSV_ALIASES.center),
+          visual: convPegarCampo(obj, CONV_CSV_ALIASES.visual),
+          especialidade: convPegarCampo(obj, CONV_CSV_ALIASES.especialidade),
 
-          conceitos: parseArray(obj.conceitospredominantes),
-          generos: parseArray(obj.generospredominantes),
+          conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosPredominantes)),
+          generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosPredominantes)),
 
-          fortes: obj.pontosfortes,
-          fracos: obj.pontosfracos
+          fortes: convPegarCampo(obj, CONV_CSV_ALIASES.pontosFortes),
+          fracos: convPegarCampo(obj, CONV_CSV_ALIASES.pontosFracos)
         };
       }
 
       // SONGS
       if (tipo === "songs") {
-        obj = {
-          type: obj.tipo,
-          id: obj.id,
-          name: obj.nome,
-          fonte: obj.fonte,
+        objFinal = {
+          type: TIPO_CANONICO.songs,
+          id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
+          name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
+          fonte: convPegarCampo(obj, CONV_CSV_ALIASES.fonte),
 
-          conceitos: parseArray(obj.conceitosoriginais),
-          generos: parseArray(obj.generosoriginais)
+          conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosOriginais)),
+          generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosOriginais))
         };
       }
 
       // PRODUCERS
       if (tipo === "producers") {
-        obj = {
-          type: obj.tipo,
-          id: obj.id,
-          name: obj.nome,
+        objFinal = {
+          type: TIPO_CANONICO.producers,
+          id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
+          name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
 
-          conceitos: parseArray(obj.conceitospredominantes),
-          generos: parseArray(obj.generospredominantes),
-          musicas: parseArray(obj.musicasconhecidas)
+          conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosPredominantes)),
+          generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosPredominantes)),
+          musicas: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.musicasConhecidas))
         };
       }
 
-      resultado.push(obj);
+      resultado.push(objFinal);
     }
 
     output.value = JSON.stringify(resultado, null, 2);
@@ -214,6 +264,12 @@ function copiarJS(tipo) {
     .then(() => alert("Copiado!"))
     .catch(() => alert("Erro ao copiar"));
 }
+
+// Expostas globalmente pois são chamadas pelos onclick="" do HTML.
+window.processarArquivo = processarArquivo;
+window.copiarJS = copiarJS;
+
+})();
 </script>
 </body>
 </html>

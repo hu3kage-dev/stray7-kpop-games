@@ -62,36 +62,33 @@ const NAV_LINKS = [
   { key: "nav_patchnotes",  href: "patchnotes-page.html" },
 ];
 
+// Calculado uma única vez, enquanto document.currentScript ainda aponta para este
+// arquivo (pages-script.js) — conta quantos "../" foram usados na própria tag
+// <script src="..."> da página atual e usa isso para descobrir a profundidade real,
+// sem depender de checar nomes de pasta fixos como "/pages/". Funciona em qualquer
+// página, em qualquer nível de pasta, desde que o <script src> esteja correto.
+const SCRIPT_DEPTH = (() => {
+  const scriptEl = document.currentScript;
+  const src = scriptEl ? (scriptEl.getAttribute("src") || "") : "";
+  const matches = src.match(/\.\.\//g);
+  return matches ? matches.length : 0;
+})();
+
 //f:pegarHref
 function pegarHref() {
-  const path = location.pathname;
-  return path.includes('/pages/') ? '../' : './';
+  return "../".repeat(SCRIPT_DEPTH);
 }
 
 //f:pegarNavLink
 function pegarNavLink(href) {
   const base = pegarHref();
-  const isScreensPage = location.pathname.includes('/pages/');
-  const screenPages = NAV_LINKS.map(link => link.href).filter(href => href !== "index.html");
-  if (isScreensPage) {
-    if (screenPages.includes(href)) {
-      return href;
-    }
-    return `${base}${href}`;
-  }
-  if (screenPages.includes(href)) {
-    return `pages/${href}`;
-  }
-  return href;
+  if (href === "index.html") return `${base}index.html`;
+  return `${base}pages/${href}`;
 }
 
 //f:pegarHrefJogo
 function pegarHrefJogo(pageName) {
-  const isScreensPage = location.pathname.includes('/pages/');
-  if (isScreensPage) {
-    return pageName;
-  }
-  return `pages/${pageName}`;
+  return `${pegarHref()}pages/${pageName}`;
 }
 
 //f:injetarHeader
@@ -118,7 +115,7 @@ function injetarHeader() {
         <button data-lang="pt" title="Português" onclick="mudarIdioma('pt')">🇧🇷</button>
         <button data-lang="en" title="English" onclick="mudarIdioma('en')">🇺🇸</button>
       </div>
-      <span class="header-badge">v0.4.5</span>
+      <span class="header-badge">${(typeof PATCHES !== "undefined" && PATCHES.length) ? PATCHES[0].version : ""}</span>
     </div>
   `;
   document.body.prepend(header);
@@ -737,47 +734,81 @@ function csvParaObjetos(texto) {
   return resultado;
 }
 
+// Tabela de aliases de colunas (pt-BR / en-US) aceitos na importação de CSV/JSON.
+// Mantenha esta tabela sincronizada com a mesma constante em conversor_csv_json.html.
+const CSV_ALIASES = {
+  tipo:                   ["tipo", "type"],
+  id:                     ["id"],
+  nome:                   ["nome", "name"],
+  grupo:                  ["grupo", "group"],
+  geracao:                ["geracao", "gen", "generation"],
+  aniversario:            ["aniversario", "birthday", "birthdate", "dob"],
+  vocal:                  ["vocal"],
+  dance:                  ["dance", "danca"],
+  rap:                    ["rap"],
+  center:                 ["center", "centro"],
+  visual:                 ["visual"],
+  especialidade:          ["especialidade", "specialty", "speciality", "position"],
+  conceitosPredominantes: ["conceitospredominantes", "mainconcepts", "predominantconcepts"],
+  generosPredominantes:   ["generospredominantes", "maingenres", "predominantgenres"],
+  pontosFortes:           ["pontosfortes", "strengths", "strongpoints", "fortes"],
+  pontosFracos:           ["pontosfracos", "weaknesses", "weakpoints", "fracos"],
+  fonte:                  ["fonte", "source"],
+  conceitosOriginais:     ["conceitosoriginais", "originalconcepts"],
+  generosOriginais:       ["generosoriginais", "originalgenres"],
+  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics", "musicas"]
+};
+
+//f:pegarCampo — retorna o primeiro valor não-vazio dentre os aliases pt/en aceitos
+function pegarCampo(obj, aliases) {
+  for (const chave of aliases) {
+    if (obj[chave] !== undefined && obj[chave] !== "") return obj[chave];
+  }
+  return "";
+}
+
 //f:normalizarObjeto
 function normalizarObjeto(obj) {
-  const tipo = (obj.tipo || obj.type || "").toLowerCase();
-  if (tipo === "idol") {
+  const tipo = pegarCampo(obj, CSV_ALIASES.tipo).toString().toLowerCase();
+
+  if (tipo === "idol" || tipo === "idolo" || tipo === "ídolo") {
     return {
-      gen:          obj.geracao       || obj.gen        || "",
-      type:         "idol",
-      id:           obj.id            || "",
-      name:         obj.nome          || obj.name       || "",
-      group:        obj.grupo         || obj.group      || "",
-      aniversario:  obj.aniversario   || obj.birthday   || "",
-      vocal:        obj.vocal         || "",
-      dance:        obj.dance         || "",
-      rap:          obj.rap           || "",
-      center:       obj.center        || "",
-      visual:       obj.visual        || "",
-      especialidade: obj.especialidade || "",
-      conceitos:    parseArrayDB(obj.conceitospredominantes || (Array.isArray(obj.conceitos) ? obj.conceitos.join("/") : obj.conceitos) || ""),
-      generos:      parseArrayDB(obj.generospredominantes  || (Array.isArray(obj.generos)   ? obj.generos.join("/")   : obj.generos)   || ""),
-      fortes:       obj.pontosfortes  || obj.fortes     || "",
-      fracos:       obj.pontosfracos  || obj.fracos     || ""
+      gen:           pegarCampo(obj, CSV_ALIASES.geracao),
+      type:          "idol",
+      id:            pegarCampo(obj, CSV_ALIASES.id),
+      name:          pegarCampo(obj, CSV_ALIASES.nome),
+      group:         pegarCampo(obj, CSV_ALIASES.grupo),
+      aniversario:   pegarCampo(obj, CSV_ALIASES.aniversario),
+      vocal:         pegarCampo(obj, CSV_ALIASES.vocal),
+      dance:         pegarCampo(obj, CSV_ALIASES.dance),
+      rap:           pegarCampo(obj, CSV_ALIASES.rap),
+      center:        pegarCampo(obj, CSV_ALIASES.center),
+      visual:        pegarCampo(obj, CSV_ALIASES.visual),
+      especialidade: pegarCampo(obj, CSV_ALIASES.especialidade),
+      conceitos: Array.isArray(obj.conceitos) ? obj.conceitos : parseArrayDB(pegarCampo(obj, CSV_ALIASES.conceitosPredominantes)),
+      generos:   Array.isArray(obj.generos)   ? obj.generos   : parseArrayDB(pegarCampo(obj, CSV_ALIASES.generosPredominantes)),
+      fortes: pegarCampo(obj, CSV_ALIASES.pontosFortes),
+      fracos: pegarCampo(obj, CSV_ALIASES.pontosFracos)
     };
   }
-  if (tipo === "music" || tipo === "musica" || tipo === "música") {
+  if (tipo === "music" || tipo === "musica" || tipo === "música" || tipo === "song") {
     return {
-      type:     "music",
-      id:       obj.id    || "",
-      name:     obj.nome  || obj.name  || "",
-      fonte:    obj.fonte || "",
-      conceitos: parseArrayDB(obj.conceitosoriginais || (Array.isArray(obj.conceitos) ? obj.conceitos.join("/") : obj.conceitos) || ""),
-      generos:   parseArrayDB(obj.generosoriginais   || (Array.isArray(obj.generos)   ? obj.generos.join("/")   : obj.generos)   || "")
+      type: "music",
+      id:   pegarCampo(obj, CSV_ALIASES.id),
+      name: pegarCampo(obj, CSV_ALIASES.nome),
+      fonte: pegarCampo(obj, CSV_ALIASES.fonte),
+      conceitos: Array.isArray(obj.conceitos) ? obj.conceitos : parseArrayDB(pegarCampo(obj, CSV_ALIASES.conceitosOriginais)),
+      generos:   Array.isArray(obj.generos)   ? obj.generos   : parseArrayDB(pegarCampo(obj, CSV_ALIASES.generosOriginais))
     };
   }
   if (tipo === "producer" || tipo === "produtor") {
     return {
-      type:     "producer",
-      id:       obj.id   || "",
-      name:     obj.nome || obj.name || "",
-      conceitos: parseArrayDB(obj.conceitospredominantes || (Array.isArray(obj.conceitos) ? obj.conceitos.join("/") : obj.conceitos) || ""),
-      generos:   parseArrayDB(obj.generospredominantes   || (Array.isArray(obj.generos)   ? obj.generos.join("/")   : obj.generos)   || ""),
-      musicas:   parseArrayDB(obj.musicasconhecidas      || (Array.isArray(obj.musicas)   ? obj.musicas.join("/")   : obj.musicas)   || "")
+      type: "producer",
+      id:   pegarCampo(obj, CSV_ALIASES.id),
+      name: pegarCampo(obj, CSV_ALIASES.nome),
+      conceitos: Array.isArray(obj.conceitos) ? obj.conceitos : parseArrayDB(pegarCampo(obj, CSV_ALIASES.conceitosPredominantes)),
+      generos:   Array.isArray(obj.generos)   ? obj.generos   : parseArrayDB(pegarCampo(obj, CSV_ALIASES.generosPredominantes)),
+      musicas:   Array.isArray(obj.musicas)   ? obj.musicas   : parseArrayDB(pegarCampo(obj, CSV_ALIASES.musicasConhecidas))
     };
   }
   return null;
@@ -1094,45 +1125,49 @@ const TUTORIAL_LOBBY_HTML = {
       <li>É possível adicionar idols, músicas e produtores além da database padrão usando um arquivo <code>.csv</code>.</li>
       <li>Clique em <strong>⬆ Importar Database</strong> no bloco de Seleção de Idols.</li>
       <li><strong>Atenção:</strong> a database importada é volátil — ela se perde ao recarregar a página.</li>
+      <li><strong>Idioma das colunas:</strong> os nomes das colunas podem estar em <strong>português (pt-BR)</strong> ou <strong>inglês (en-US)</strong> — o sistema reconhece ambos automaticamente, inclusive misturados no mesmo arquivo.</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">Formato do CSV — Idols</strong>
-    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Cabeçalho obrigatório (nomes das colunas, nessa ordem):</p>
+    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Cabeçalho aceito (nomes das colunas, nessa ordem — use a versão em pt-BR OU em en-US):</p>
     <code class="tut-code">Geracao,Tipo,ID,Nome,Grupo,Aniversário,Vocal,Dance,Rap,Center,Visual,Especialidade,ConceitosPredominantes,GenerosPredominantes,PontosFortes,PontosFracos</code>
+    <code class="tut-code">Generation,Type,ID,Name,Group,Birthday,Vocal,Dance,Rap,Center,Visual,Specialty,MainConcepts,MainGenres,Strengths,Weaknesses</code>
     <img src="../assets/tutorial/exemplo_idol_csv.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
-      <li>Monte um arquivo Excel com as colunas correspondentes ao cabeçalho acima (obrigatório)</li>
-      <li>A coluna <strong>Tipo</strong> deve ser preenchida com <code>idol</code></li>
+      <li>Monte um arquivo Excel com as colunas correspondentes a um dos cabeçalhos acima (obrigatório)</li>
+      <li>A coluna <strong>Tipo/Type</strong> deve ser preenchida com <code>idol</code></li>
       <li>A coluna <strong>ID</strong> é simplesmente o nome do grupo e o nome do idol juntos: sem espaços, caracteres especiais ou acentos (ex: <code>unchildyeeun</code>)</li>
       <li>As colunas dos <strong>Atributos (Vocal, Dance, Rap, Center, Visual)</strong> devem ser preenchidas com letras <code>S / A / B / C / D</code></li>
-      <li>A coluna <strong>Aniversário</strong> é opcional, contém apenas a data de nascimento do Idol no formato dd-mm-aaaa. O formato pode ser alterado, inclusive, pode ser escrito por extenso. Evite usar vírgula, pois isso quebra o parse do <code>.csv</code></li>
-      <li>As colunas <strong>Conceitos Predominantes</strong> e <strong>Gêneros Predominantes</strong> devem conter dois valores separados por <code>/</code> (ex: <code>Girl Crush / Performance</code>)</li>
-      <li>As colunas <strong>Pontos Fortes</strong> e <strong>Pontos Fracos</strong> não precisam ser preenchidas, são apenas observações. Mas caso escolham preencher, usem aspas duplas <code>"</code> para envolver seu conteúdo</li>
+      <li>A coluna <strong>Aniversário/Birthday</strong> é opcional, contém apenas a data de nascimento do Idol no formato dd-mm-aaaa. O formato pode ser alterado, inclusive, pode ser escrito por extenso. Evite usar vírgula, pois isso quebra o parse do <code>.csv</code></li>
+      <li>As colunas <strong>Conceitos Predominantes/MainConcepts</strong> e <strong>Gêneros Predominantes/MainGenres</strong> devem conter dois valores separados por <code>/</code> (ex: <code>Girl Crush / Performance</code>)</li>
+      <li>As colunas <strong>Pontos Fortes/Strengths</strong> e <strong>Pontos Fracos/Weaknesses</strong> não precisam ser preenchidas, são apenas observações. Mas caso escolham preencher, usem aspas duplas <code>"</code> para envolver seu conteúdo</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">Formato do CSV — Músicas</strong>
     <code class="tut-code">Tipo,ID,Nome,Fonte,ConceitosOriginais,GenerosOriginais</code>
+    <code class="tut-code">Type,ID,Name,Source,OriginalConcepts,OriginalGenres</code>
     <img src="../assets/tutorial/exemplo_music_csv.png" style="width:100%; max-width:1000px; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
-      <li>Monte um arquivo Excel com as colunas correspondentes ao cabeçalho acima (obrigatório)</li>
-      <li>A coluna <strong>Tipo</strong> deve ser preenchida com <code>music</code></li>
+      <li>Monte um arquivo Excel com as colunas correspondentes a um dos cabeçalhos acima (obrigatório)</li>
+      <li>A coluna <strong>Tipo/Type</strong> deve ser preenchida com <code>music</code> (ou <code>song</code>)</li>
       <li>A coluna <strong>ID</strong> é simplesmente o nome da fonte e o nome da música juntos: sem espaços, caracteres especiais ou acentos (ex: <code>girlsplanet999anotherdream</code>)</li>
-      <li>A coluna <strong>Fonte</strong> é o nome do programa ou álbum do qual a música faz parte</li>
-      <li>As colunas <strong>Conceitos Originais</strong> e <strong>Gêneros Originais</strong> devem conter três valores separados por <code>/</code> (ex: <code>Girl Crush / Performance / Dreamcore</code>)</li>
+      <li>A coluna <strong>Fonte/Source</strong> é o nome do programa ou álbum do qual a música faz parte</li>
+      <li>As colunas <strong>Conceitos Originais/OriginalConcepts</strong> e <strong>Gêneros Originais/OriginalGenres</strong> devem conter três valores separados por <code>/</code> (ex: <code>Girl Crush / Performance / Dreamcore</code>)</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">Formato do CSV — Produtores</strong>
     <code class="tut-code">Tipo,ID,Nome,ConceitosPredominantes,GenerosPredominantes,MusicasConhecidas</code>
+    <code class="tut-code">Type,ID,Name,MainConcepts,MainGenres,KnownSongs</code>
     <img src="../assets/tutorial/exemplo_producer_csv.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
-      <li>Monte um arquivo Excel com as colunas correspondentes ao cabeçalho acima (obrigatório)</li>
-      <li>A coluna <strong>Tipo</strong> deve ser preenchida com <code>producer</code></li>
+      <li>Monte um arquivo Excel com as colunas correspondentes a um dos cabeçalhos acima (obrigatório)</li>
+      <li>A coluna <strong>Tipo/Type</strong> deve ser preenchida com <code>producer</code></li>
       <li>A coluna <strong>ID</strong> é simplesmente producer mais o nome do produtor (ex: <code>producerartronicwaves</code>)</li>
-      <li>As colunas <strong>Conceitos Predominantes</strong> e <strong>Gêneros Predominantes</strong> devem conter três valores separados por <code>/</code> (ex: <code>Girl Crush / Performance / Conceptual</code>)</li>
-      <li>A coluna <strong>Músicas Conhecidas</strong> é opcional. Serve para exibir uma lista de músicas associadas ao produtor. Não existe um limite de músicas, mas devem estar separadas por / (ex: <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
+      <li>As colunas <strong>Conceitos Predominantes/MainConcepts</strong> e <strong>Gêneros Predominantes/MainGenres</strong> devem conter três valores separados por <code>/</code> (ex: <code>Girl Crush / Performance / Conceptual</code>)</li>
+      <li>A coluna <strong>Músicas Conhecidas/KnownSongs</strong> é opcional. Serve para exibir uma lista de músicas associadas ao produtor. Não existe um limite de músicas, mas devem estar separadas por / (ex: <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
     </ul>
 
     <br>
@@ -1141,7 +1176,7 @@ const TUTORIAL_LOBBY_HTML = {
       <li>Apenas baixe os arquivos criados acima no formato .csv</li>
     </ul>
     <img src="../assets/tutorial/exemplo_csv.png" style="width:100%; border-radius:8px; margin: 0">
-    <p style="color:#b8b8c8; font-size:12px">O mesmo arquivo pode conter idols, músicas e produtores misturados — o sistema detecta pelo campo <code>Tipo</code>.</p>
+    <p style="color:#b8b8c8; font-size:12px">O mesmo arquivo pode conter idols, músicas e produtores misturados — o sistema detecta pelo campo <code>Tipo/Type</code>.</p>
 
   </div>
 
@@ -1204,45 +1239,49 @@ const TUTORIAL_LOBBY_HTML = {
       <li>You can add idols, songs, and producers beyond the default database using a <code>.csv</code> file.</li>
       <li>Click <strong>⬆ Import Database</strong> in the Idol Selection block.</li>
       <li><strong>Note:</strong> the imported database is volatile — it's lost when the page is reloaded.</li>
+      <li><strong>Column language:</strong> column names can be in <strong>Portuguese (pt-BR)</strong> or <strong>English (en-US)</strong> — the system recognizes both automatically, even mixed within the same file.</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">CSV Format — Idols</strong>
-    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Required header (column names, in this order):</p>
+    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Accepted header (column names, in this order — use either the pt-BR OR the en-US version):</p>
     <code class="tut-code">Geracao,Tipo,ID,Nome,Grupo,Aniversário,Vocal,Dance,Rap,Center,Visual,Especialidade,ConceitosPredominantes,GenerosPredominantes,PontosFortes,PontosFracos</code>
+    <code class="tut-code">Generation,Type,ID,Name,Group,Birthday,Vocal,Dance,Rap,Center,Visual,Specialty,MainConcepts,MainGenres,Strengths,Weaknesses</code>
     <img src="../assets/tutorial/exemplo_idol_csv.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
-      <li>Build an Excel file with columns matching the header above (required)</li>
-      <li>The <strong>Tipo</strong> column must be filled with <code>idol</code></li>
+      <li>Build an Excel file with columns matching one of the headers above (required)</li>
+      <li>The <strong>Tipo/Type</strong> column must be filled with <code>idol</code></li>
       <li>The <strong>ID</strong> column is simply the group name and idol name combined: no spaces, special characters, or accents (e.g. <code>unchildyeeun</code>)</li>
       <li>The <strong>Attribute (Vocal, Dance, Rap, Center, Visual)</strong> columns must be filled with the letters <code>S / A / B / C / D</code></li>
-      <li>The <strong>Aniversário</strong> (birthday) column is optional, containing just the idol's birth date in dd-mm-yyyy format. The format can be changed, and it can even be written out in full. Avoid using commas, since that breaks the <code>.csv</code> parsing</li>
-      <li>The <strong>Conceitos Predominantes</strong> and <strong>Gêneros Predominantes</strong> columns must contain two values separated by <code>/</code> (e.g. <code>Girl Crush / Performance</code>)</li>
-      <li>The <strong>Pontos Fortes</strong> and <strong>Pontos Fracos</strong> columns don't need to be filled in — they're just notes. But if you do fill them in, wrap the content in double quotes <code>"</code></li>
+      <li>The <strong>Aniversário/Birthday</strong> column is optional, containing just the idol's birth date in dd-mm-yyyy format. The format can be changed, and it can even be written out in full. Avoid using commas, since that breaks the <code>.csv</code> parsing</li>
+      <li>The <strong>Conceitos Predominantes/MainConcepts</strong> and <strong>Gêneros Predominantes/MainGenres</strong> columns must contain two values separated by <code>/</code> (e.g. <code>Girl Crush / Performance</code>)</li>
+      <li>The <strong>Pontos Fortes/Strengths</strong> and <strong>Pontos Fracos/Weaknesses</strong> columns don't need to be filled in — they're just notes. But if you do fill them in, wrap the content in double quotes <code>"</code></li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">CSV Format — Songs</strong>
     <code class="tut-code">Tipo,ID,Nome,Fonte,ConceitosOriginais,GenerosOriginais</code>
+    <code class="tut-code">Type,ID,Name,Source,OriginalConcepts,OriginalGenres</code>
     <img src="../assets/tutorial/exemplo_music_csv.png" style="width:100%; max-width:1000px; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
-      <li>Build an Excel file with columns matching the header above (required)</li>
-      <li>The <strong>Tipo</strong> column must be filled with <code>music</code></li>
+      <li>Build an Excel file with columns matching one of the headers above (required)</li>
+      <li>The <strong>Tipo/Type</strong> column must be filled with <code>music</code> (or <code>song</code>)</li>
       <li>The <strong>ID</strong> column is simply the source name and song name combined: no spaces, special characters, or accents (e.g. <code>girlsplanet999anotherdream</code>)</li>
-      <li>The <strong>Fonte</strong> column is the name of the show or album the song is from</li>
-      <li>The <strong>Conceitos Originais</strong> and <strong>Gêneros Originais</strong> columns must contain three values separated by <code>/</code> (e.g. <code>Girl Crush / Performance / Dreamcore</code>)</li>
+      <li>The <strong>Fonte/Source</strong> column is the name of the show or album the song is from</li>
+      <li>The <strong>Conceitos Originais/OriginalConcepts</strong> and <strong>Gêneros Originais/OriginalGenres</strong> columns must contain three values separated by <code>/</code> (e.g. <code>Girl Crush / Performance / Dreamcore</code>)</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">CSV Format — Producers</strong>
     <code class="tut-code">Tipo,ID,Nome,ConceitosPredominantes,GenerosPredominantes,MusicasConhecidas</code>
+    <code class="tut-code">Type,ID,Name,MainConcepts,MainGenres,KnownSongs</code>
     <img src="../assets/tutorial/exemplo_producer_csv.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
-      <li>Build an Excel file with columns matching the header above (required)</li>
-      <li>The <strong>Tipo</strong> column must be filled with <code>producer</code></li>
+      <li>Build an Excel file with columns matching one of the headers above (required)</li>
+      <li>The <strong>Tipo/Type</strong> column must be filled with <code>producer</code></li>
       <li>The <strong>ID</strong> column is simply "producer" plus the producer's name (e.g. <code>producerartronicwaves</code>)</li>
-      <li>The <strong>Conceitos Predominantes</strong> and <strong>Gêneros Predominantes</strong> columns must contain three values separated by <code>/</code> (e.g. <code>Girl Crush / Performance / Conceptual</code>)</li>
-      <li>The <strong>Músicas Conhecidas</strong> (known songs) column is optional. It shows a list of songs associated with the producer. There's no song limit, but they must be separated by / (e.g. <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
+      <li>The <strong>Conceitos Predominantes/MainConcepts</strong> and <strong>Gêneros Predominantes/MainGenres</strong> columns must contain three values separated by <code>/</code> (e.g. <code>Girl Crush / Performance / Conceptual</code>)</li>
+      <li>The <strong>Músicas Conhecidas/KnownSongs</strong> column is optional. It shows a list of songs associated with the producer. There's no song limit, but they must be separated by / (e.g. <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
     </ul>
 
     <br>
@@ -1251,7 +1290,7 @@ const TUTORIAL_LOBBY_HTML = {
       <li>Just download the files you created above in .csv format</li>
     </ul>
     <img src="../assets/tutorial/exemplo_csv.png" style="width:100%; border-radius:8px; margin: 0">
-    <p style="color:#b8b8c8; font-size:12px">The same file can contain idols, songs, and producers mixed together — the system detects the type via the <code>Tipo</code> field.</p>
+    <p style="color:#b8b8c8; font-size:12px">The same file can contain idols, songs, and producers mixed together — the system detects the type via the <code>Tipo/Type</code> field.</p>
 
   </div>
 
