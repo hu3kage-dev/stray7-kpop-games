@@ -90,7 +90,6 @@ const TRANSLATIONS = {
     "btn_fase_simulacao": "Fase de Simulação",
 
     "sim_formacao": "Formação",
-    "sim_pool_pessoal_de": "Pool pessoal de ",
     "sim_tooltip_travar": "Preencha todos os slots e defina todos os papéis",
     "sim_calcular_resultado": "🏆 Calcular Resultado",
     "sim_resultado_final": "🏆 Resultado Final",
@@ -149,7 +148,24 @@ const TRANSLATIONS = {
     "patch_section_change": "Alterado",
     "patch_section_fix": "Correções",
     "patch_section_remove": "Removido",
-    "patch_section_balance": "Balanceamento"
+    "patch_section_balance": "Balanceamento",
+    "nav_feedback": "Feedback",
+    "feedback_title": "Fale com a gente",
+    "feedback_subtitle": "Encontrou um bug, tem uma sugestão ou quer só dar um oi? Mande sua mensagem para a equipe do Stray7.",
+    "feedback_label_name": "Nome ou apelido",
+    "feedback_placeholder_name": "Como podemos te chamar?",
+    "feedback_label_email": "E-mail",
+    "feedback_placeholder_email": "seuemail@exemplo.com",
+    "feedback_label_message": "Mensagem",
+    "feedback_placeholder_message": "Escreva aqui seu feedback, sugestão ou problema encontrado...",
+    "feedback_btn_send": "Enviar",
+    "feedback_btn_sending": "Enviando...",
+    "feedback_success": "Feedback enviado com sucesso!",
+    "feedback_error_send": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para stray7team@gmail.com.",
+    "feedback_not_configured": "O envio de feedback ainda não foi configurado. Escreva para stray7team@gmail.com.",
+    "feedback_err_name": "Informe seu nome ou apelido.",
+    "feedback_err_email": "Informe um e-mail válido.",
+    "feedback_err_message": "Escreva sua mensagem."
   },
   "en": {
     "nav_inicio": "Home",
@@ -238,7 +254,6 @@ const TRANSLATIONS = {
     "btn_fase_simulacao": "Simulation Phase",
 
     "sim_formacao": "Lineup",
-    "sim_pool_pessoal_de": "Personal pool for ",
     "sim_tooltip_travar": "Fill every slot and assign every role",
     "sim_calcular_resultado": "🏆 Calculate Result",
     "sim_resultado_final": "🏆 Final Result",
@@ -297,6 +312,23 @@ const TRANSLATIONS = {
     "patch_section_change": "Changed",
     "patch_section_fix": "Fixes",
     "patch_section_remove": "Removed",
-    "patch_section_balance": "Balance"
+    "patch_section_balance": "Balance",
+    "nav_feedback": "Feedback",
+    "feedback_title": "Get in touch",
+    "feedback_subtitle": "Want to report a bug, give a suggestion, or just say hi? Send a message to the Stray7 team.",
+    "feedback_label_name": "Name or nickname",
+    "feedback_placeholder_name": "What should we call you?",
+    "feedback_label_email": "Email",
+    "feedback_placeholder_email": "youremail@example.com",
+    "feedback_label_message": "Message",
+    "feedback_placeholder_message": "Write your feedback, suggestion, or the problem you found here...",
+    "feedback_btn_send": "Send",
+    "feedback_btn_sending": "Sending...",
+    "feedback_success": "Feedback sent successfully!",
+    "feedback_error_send": "We couldn't send it right now. Please try again shortly or write to stray7team@gmail.com.",
+    "feedback_not_configured": "Feedback sending hasn't been set up yet. Please write to stray7team@gmail.com.",
+    "feedback_err_name": "Enter your name or nickname.",
+    "feedback_err_email": "Enter a valid email.",
+    "feedback_err_message": "Write your message."
   }
 };

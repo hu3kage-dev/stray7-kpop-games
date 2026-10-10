@@ -1,0 +1,152 @@
+/* ========================
+   FEEDBACK — estilos exclusivos
+   Header, body, h1, .page-header, button e input base vêm de pages-styles.css
+======================== */
+
+.feedback-wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Card do formulário (mesma linguagem visual dos blocos de configuração) */
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(168, 85, 247, 0.14);
+  border-radius: 24px;
+}
+
+/* Campos */
+.feedback-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feedback-field label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #d7d1e9;
+}
+
+.feedback-field input,
+.feedback-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 14px;
+  color: #f4efff;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  border-radius: 12px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.feedback-field textarea {
+  min-height: 160px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.feedback-field input::placeholder,
+.feedback-field textarea::placeholder {
+  color: #8f89a6;
+}
+
+.feedback-field input:focus,
+.feedback-field textarea:focus {
+  outline: none;
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.18);
+}
+
+/* Estado inválido */
+.feedback-field.invalid input,
+.feedback-field.invalid textarea {
+  border-color: rgba(255, 91, 94, 0.6);
+}
+
+.feedback-error {
+  margin: 0;
+  font-size: 12px;
+  color: #ff9b9d;
+}
+
+/* Campo isca anti-spam (fora da tela, não usa display:none de propósito) */
+.feedback-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Botão enviar */
+.feedback-submit {
+  align-self: flex-end;
+  margin: 0;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #7f56d9;
+}
+
+.feedback-submit:hover:not(:disabled) {
+  background-color: #6e3dc3;
+}
+
+.feedback-submit:disabled {
+  background-color: #3d3a4d;
+  color: #b9b3c8;
+  cursor: not-allowed;
+}
+
+/* Mensagem de resultado */
+.feedback-status {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.feedback-status.success {
+  color: #bbf7d0;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.feedback-status.error {
+  color: #ffd7d7;
+  background: rgba(255, 91, 94, 0.16);
+  border: 1px solid rgba(255, 91, 94, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .feedback-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  /* 16px evita o zoom automático do iOS ao focar no campo */
+  .feedback-field input,
+  .feedback-field textarea {
+    font-size: 16px;
+  }
+
+  .feedback-submit {
+    align-self: stretch;
+  }
+}

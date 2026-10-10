@@ -8,6 +8,28 @@
 // ========================
 const PATCHES = [
   {
+    version: "v0.4.6",
+    title: { pt: "Página de Feedback", en: "Feedback Page" },
+    date: "2026-10-10",
+    type: "major",
+    sections: [
+      {
+        type: "new",
+        items: [
+          { pt: "Adicionada uma página de Feedback, onde os usuários podem enviar sugestões, reportar bugs e entrar em contato com a equipe do projeto.",
+            en: "Added a Feedback page where users can submit suggestions, report bugs, and get in touch with the project team." },
+        ]
+      },
+      {
+        type: "fix",
+        items: [
+          { pt: "Iniciada a atualização da database de Idols. Os textos descritivos foram temporariamente removidos durante a revisão dos dados e serão restaurados após a conclusão.",
+            en: "Started updating the Idol database. Descriptive text fields have been temporarily removed during the data review and will be restored once the update is complete."},
+        ]
+      }
+   ]
+  },
+  {
     version: "v0.4.5",
     title: { pt: "Sistema de Idiomas (PT/EN)", en: "Language System (PT/EN)" },
     date: "2026-08-23",

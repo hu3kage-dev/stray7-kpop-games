@@ -205,3 +205,67 @@
 .patch-card, .patch-section {
   text-align: left;
 }
+
+/* ========================
+   MEDIA QUERIES
+   (640px acompanha pages-styles.css; 480px é onde o cabeçalho do card
+   realmente fica apertado — abaixo disso o título perdia toda a largura)
+======================== */
+
+@media (max-width: 640px) {
+  /* o body já tem padding lateral; evita somar mais 20px de cada lado */
+  .patchnotes-page {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+
+  .patchnotes-header {
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+  }
+
+  .patchnotes-header h1 {
+    font-size: 26px;
+  }
+
+  .patch-card {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Cabeçalho do card em duas linhas:
+     linha 1 -> versão + título (o título pode quebrar normalmente)
+     linha 2 -> tag, data e seta */
+  .patch-header {
+    flex-wrap: wrap;
+    padding: 14px 16px;
+    gap: 8px 10px;
+  }
+
+  .patch-header-left {
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .patch-title {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* empurra data + seta para a direita da segunda linha */
+  .patch-date {
+    margin-left: auto;
+  }
+
+  .patch-body {
+    padding: 0 16px 16px;
+  }
+
+  .patch-list li {
+    font-size: 14px;
+  }
+}

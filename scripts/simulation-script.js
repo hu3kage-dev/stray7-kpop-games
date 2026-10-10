@@ -19,7 +19,6 @@ const ROLE_PLACEHOLDER_KEYS = {
 };
 let simData       = null;
 let boardSlots    = {};
-let poolCards     = {}; 
 let roleBoard     = {};
 let lockedPlayers = {};
 
@@ -52,23 +51,17 @@ window.onload = function () {
     return;
   }
   simData = JSON.parse(raw);
+  const cfg = simData.config;
+  // Ajusta a lista salva no draft ao número de slots esperado (preenche com null)
+  const ajustarSlots = (lista, tamanho) =>
+    Array.from({ length: tamanho }, (_, i) => (lista && lista[i]) ? { ...lista[i] } : null);
   simData.ordem.forEach(pi => {
-  const p = simData.picks[pi];
-  if (simData.pickOrder?.[pi]?.length) {
-    poolCards[pi] = simData.pickOrder[pi].map(c => ({...c}));
-  } else {
-    const cards = [];
-    if (p) {
-      (p.idol     || []).forEach(c => { if (c) cards.push({...c}); });
-      (p.music    || []).forEach(c => { if (c) cards.push({...c}); });
-      (p.producer || []).forEach(c => { if (c) cards.push({...c}); });
-    }
-    poolCards[pi] = cards;
-  }
+    const p = simData.picks[pi] || {};
+    // Os cards já entram nas mesmas posições em que ficaram no draft
     boardSlots[pi] = {
-      idol:     Array(simData.config.integrantes).fill(null),
-      music:    simData.config.usarMusica    ? [null] : [],
-      producer: simData.config.usarProdutor  ? [null] : []
+      idol:     ajustarSlots(p.idol, cfg.integrantes),
+      music:    cfg.usarMusica   ? ajustarSlots(p.music, 1)    : [],
+      producer: cfg.usarProdutor ? ajustarSlots(p.producer, 1) : []
     };
     roleBoard[pi] = {
       idol:     Array(simData.config.integrantes).fill("—"),
@@ -113,7 +106,6 @@ function iniciarDrag(e, item, origem, playerIndex = null, slotIndex = null) {
   dragOrigin = origem;
   dragPayload = {
     item,
-    fromPool: origem === "pool",
     fromPlayer: playerIndex,
     fromType: origem === "board" ? getItemType(item) : null,
     fromIndex: slotIndex
@@ -154,16 +146,9 @@ function finalizarDrag(e) {
     justDragged = true;
     setTimeout(() => { justDragged = false; }, 0);
     if (elementoAlvo) {
-      //procura o slot ou pool mais próximo
-      let slot = elementoAlvo.closest(".slot");
-      let poolDiv = elementoAlvo.closest(".simPoolCards");
-      if (slot) {
-        //drop em um slot
-        executarDropNoSlot(slot, dragPayload);
-      } else if (poolDiv) {
-        //drop no pool (devolve item)
-        executarDropNoPool(poolDiv, dragPayload);
-      }
+      //drop em um slot (fora de um slot, o card simplesmente volta ao lugar)
+      const slot = elementoAlvo.closest(".slot");
+      if (slot) executarDropNoSlot(slot, dragPayload);
     }
   }
   draggedItem = null;
@@ -191,19 +176,6 @@ function executarDropNoSlot(slot, data) {
   const pi = slot.dataset.pi;
   const slotIndex = Number(slot.dataset.idx);
   if (!tipo || pi === undefined || Number.isNaN(slotIndex)) return;
-  if (data.fromPool) {
-    const item = data.item;
-    if (getItemType(item) !== tipo) return;
-    if (String(data.fromPlayer) !== String(pi)) return;
-    const current = boardSlots[pi][tipo][slotIndex];
-    if (current) {
-      poolCards[pi].push(current);
-    }
-    boardSlots[pi][tipo][slotIndex] = item;
-    poolCards[pi] = poolCards[pi].filter(c => c.id !== item.id);
-    render();
-    return;
-  }
   if (data.fromPlayer !== undefined) {
     const fromPI = data.fromPlayer;
     const fromType = data.fromType;
@@ -222,21 +194,6 @@ function executarDropNoSlot(slot, data) {
     }
     render();
   }
-}
-
-//f:executarDropNoPool
-function executarDropNoPool(poolDiv, data) {
-  if (!data || data.fromPlayer === undefined || !poolDiv.dataset.pi) return;
-  const pi = poolDiv.dataset.pi;
-  if (String(data.fromPlayer) !== String(pi)) return;
-  const tipo = data.fromType;
-  const fromIndex = Number(data.fromIndex);
-  if (!tipo || Number.isNaN(fromIndex)) return;
-  const item = boardSlots[pi][tipo][fromIndex];
-  if (!item) return;
-  boardSlots[pi][tipo][fromIndex] = null;
-  poolCards[pi].push(item);
-  render();
 }
 
 // =====================
@@ -314,30 +271,9 @@ function render() {
     btnWrapper.appendChild(btn);
     playerRow.appendChild(btnWrapper);
     section.appendChild(playerRow);
-    // Pool pessoal
-    const poolSection = document.createElement("div");
-    poolSection.className = "simPoolSection";
-    const poolHeader = document.createElement("div");
-    poolHeader.className = "simPoolHeader";
-    poolHeader.innerText = `${t("sim_pool_pessoal_de")}${nome}`;
-    poolSection.appendChild(poolHeader);
-
-    const poolWrap = document.createElement("div");
-    poolWrap.className = "simPoolCards";
-    poolWrap.dataset.pi = pi;
-
-    poolCards[pi].forEach((item, idx) => {
-      const wrap = document.createElement("div");
-      wrap.className = "simPoolCardWrap";
-      const card = criarCard(item, isLocked, "pool", pi, idx);
-      wrap.appendChild(card);
-      poolWrap.appendChild(wrap);
-    });
-    injetarBotaoResultado();
-    poolSection.appendChild(poolWrap);
-    section.appendChild(poolSection);
     container.appendChild(section);
   });
+  injetarBotaoResultado();
 }
 
 // =====================
@@ -468,7 +404,7 @@ function getCardImageCandidates(item) {
 // =====================
 
 //f:criarCard
-function criarCard(item, isLocked = false, origem = "pool", pi = null, idx = null) {
+function criarCard(item, isLocked = false, origem = "board", pi = null, idx = null) {
   // Limpa aspas extras dos dados
   const cleanText = val => {
     if (!val) return "";

@@ -1,6 +1,6 @@
 //data:idols
 const idols = [
-  // //UNCHILD APAGAR
+  //UNCHILD APAGAR
   // {
   //   "gen": "5",
   //   "type": "idol",
@@ -145,10 +145,10 @@ const idols = [
   //   "fortes": "Destaque absoluto em dança, excelente controle corporal e sincronização, presença forte em performances energéticas.",
   //   "fracos": "Vocais ainda menos refinados tecnicamente, pode perder estabilidade vocal em coreografias muito intensas."
   // },
-  // // UNCHILD APAGAR */
+  // UNCHILD APAGAR
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "3yehaeun",
     "name": "Haeun",
     "group": "3YE",
@@ -158,18 +158,15 @@ const idols = [
     "rap": "A",
     "center": "B",
     "visual": "C",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Girl Crush",
-      "Powerful Dance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Energia cênica boa, sólida como apoio de dança e rap",
-    "fracos": "Limitações vocais e menor domínio técnico"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "3yeyuji",
     "name": "Yuji",
     "group": "3YE",
@@ -179,18 +176,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "C",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Girl Crush",
-      "Powerful Dance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente dançarina e vocalista estável, líder de performance com carisma de palco notável",
-    "fracos": "Falta suavidade em conceitos mais leves"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "3yeyurim",
     "name": "Yurim",
     "group": "3YE",
@@ -200,18 +194,15 @@ const idols = [
     "rap": "B",
     "center": "C",
     "visual": "C",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Girl Crush",
-      "Powerful Dance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Consistente em vocais e expressividade, timbre forte e limpo",
-    "fracos": "Falta leveza nas harmonizações, movimentos às vezes rígidos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "aespagiselle",
     "name": "Giselle",
     "group": "aespa",
@@ -221,18 +212,15 @@ const idols = [
     "rap": "A",
     "center": "C",
     "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Hip-hop",
-      "Urban"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow estável, versatilidade em rap e feature vocals",
-    "fracos": "Projeção vocal limitada, dança menos técnica que as demais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "aespakarina",
     "name": "Karina",
     "group": "aespa",
@@ -242,18 +230,15 @@ const idols = [
     "rap": "B",
     "center": "A",
     "visual": "S",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Futurista",
-      "Girlcrush"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Presença cênica, precisão e impacto em performances poderosas",
-    "fracos": "Dificuldade em adaptar-se a conceitos leves ou cute"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "aespaningning",
     "name": "NingNing",
     "group": "aespa",
@@ -263,18 +248,15 @@ const idols = [
     "rap": "D",
     "center": "C",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "R&B",
-      "Pop Soul"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Alcance vocal excepcional, timbre único, técnica avançada",
-    "fracos": "Presença de palco por vezes discreta, menos foco em dance"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "aespawinter",
     "name": "Winter",
     "group": "aespa",
@@ -284,18 +266,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Pop",
-      "Vocal Focus"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estabilidade vocal de elite, dicção clara, consistência ao vivo",
-    "fracos": "Coreografias muito pesadas podem reduzir projeção vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "alldayprojectannie",
     "name": "Annie",
     "group": "ALLDAY PROJECT",
@@ -305,18 +284,15 @@ const idols = [
     "rap": "C",
     "center": "D",
     "visual": "C",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Co-ed Pop",
-      "Hip-hop Hybrid"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timbre limpo e expressivo, postura de palco confiante, carisma em conceitos suaves e sensuais",
-    "fracos": "Falta impacto em rap sections e projeção em notas altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "alldayprojectbailey",
     "name": "Bailey",
     "group": "ALLDAY PROJECT",
@@ -326,18 +302,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "C",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Co-ed Pop",
-      "Hip-hop Hybrid"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente controle vocal e corporal, equilíbrio técnico geral",
-    "fracos": "Falta destaque marcante em uma posição específica"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "alldayprojectyoungseo",
     "name": "Youngseo",
     "group": "ALLDAY PROJECT",
@@ -347,18 +320,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "B",
-    "especialidade": "All-Rounder",
-    "conceitos": [
-      "Co-ed Pop",
-      "Hip-hop Hybrid"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual mais destacado, presença elegante e carisma natural",
-    "fracos": "Técnica vocal irregular ao vivo, pouca versatilidade estilística"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "artmschoerry",
     "name": "Choerry",
     "group": "ARTMS",
@@ -368,18 +338,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "A",
-    "especialidade": "Dancer",
-    "conceitos": [
-      "Pop",
-      "Bright Concept"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Energia cênica contagiante, versatilidade e presença natural",
-    "fracos": "Técnica vocal limitada em notas graves"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "artmshaseul",
     "name": "Haseul",
     "group": "ARTMS",
@@ -389,18 +356,15 @@ const idols = [
     "rap": "C",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Ballad",
-      "Emotional"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Controle vocal limpo, excelente suporte respiratório",
-    "fracos": "Expressividade corporal e dança mais contida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "artmsheejin",
     "name": "HeeJin",
     "group": "ARTMS",
@@ -410,18 +374,15 @@ const idols = [
     "rap": "C",
     "center": "S",
     "visual": "A",
-    "especialidade": "All-Rounder",
-    "conceitos": [
-      "Girlcrush",
-      "Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "All-rounder completa, força cênica, carisma e precisão coreográfica",
-    "fracos": "Pode sobrecarregar-se em lineups longas por intensidade constante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "artmsjinsoul",
     "name": "Jinsoul",
     "group": "ARTMS",
@@ -431,18 +392,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "A",
-    "especialidade": "Visual",
-    "conceitos": [
-      "Urban Pop",
-      "EDM"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rapper melódica com ótimo controle vocal, timbre distinto",
-    "fracos": "Execução menos fluida em coreografias muito técnicas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "artmskimlip",
     "name": "Kim Lip",
     "group": "ARTMS",
@@ -452,18 +410,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "B",
-    "especialidade": "Dance",
-    "conceitos": [
-      "R&B",
-      "Elegant Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timbre expressivo, técnica vocal refinada, harmonia e emoção",
-    "fracos": "Projeção vocal variável ao vivo em performances muito coreografadas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartarin",
     "name": "Arin",
     "group": "AtHeart",
@@ -473,18 +428,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Urban Pop",
-      "Rap-forward"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow e entrega rap consistente, presença carismática, boa versatilidade rítmica",
-    "fracos": "Técnica vocal menos expressiva em notas longas, timbre médio"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartaurora",
     "name": "Aurora",
     "group": "AtHeart",
@@ -494,18 +446,15 @@ const idols = [
     "rap": "D",
     "center": "C",
     "visual": "C",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Ethereal Pop",
-      "Visual"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual diferenciado e expressividade gestual, encaixa bem em passes atmosféricos",
-    "fracos": "Projeção vocal e rap moderados, menos consistente em partes técnicas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartbome",
     "name": "Bome",
     "group": "AtHeart",
@@ -515,17 +464,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "R&B-tinged Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa estabilidade vocal e controle em runs, interpretação musical sensível",
-    "fracos": "Coreografias mais pesadas afetam ligeiramente a projeção"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartkatelyn",
     "name": "Katelyn",
     "group": "AtHeart",
@@ -535,18 +482,15 @@ const idols = [
     "rap": "C",
     "center": "B",
     "visual": "C",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Pop",
-      "Visual Focus"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Forte projeção vocal ao vivo, timbre marcante, rosto/visual com apelo alto (possível titular visual)",
-    "fracos": "Menos foco em rap, movimentos muito técnicos podem reduzir consistência vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartmichi",
     "name": "Michi",
     "group": "AtHeart",
@@ -556,18 +500,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "C",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Girlcrush",
-      "Powerful Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Execução de performance muito polida, controle corporal e presença de palco (destaque nas stages)",
-    "fracos": "Em trechos vocais complexos pode perder estabilidade pela intensidade da dança"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartnahyun",
     "name": "Nahyun",
     "group": "AtHeart",
@@ -577,18 +518,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "A",
-    "especialidade": "Visual",
-    "conceitos": [
-      "Supporting Vocals",
-      "Dance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa química em formações de grupo, consistente em linhas de apoio e adlibs",
-    "fracos": "Não se destaca tecnicamente em vocal principal ou rap, presença visual média"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "atheartseohyeon",
     "name": "Seohyeon",
     "group": "AtHeart",
@@ -598,18 +536,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Bright Pop",
-      "Performance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente sincronização de grupo, bom suporte em harmonias e estabilidade em lives",
-    "fracos": "Ainda em crescimento para solo vocal de destaque, presença solo moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babydontcrybeni",
     "name": "Beni",
     "group": "Baby DONT Cry",
@@ -619,18 +554,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Visual Pop",
-      "Ballad"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual impactante e carismática, boa interpretação facial, presença em frames",
-    "fracos": "Técnica vocal limitada em trechos dinâmicos, rap pouco desenvolvido"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babydontcrykumi",
     "name": "Kumi",
     "group": "Baby DONT Cry",
@@ -640,18 +572,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Powerful Pop",
-      "Dance Focus"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Coreógrafa precisa, musicalidade e fluidez, ótima sincronização",
-    "fracos": "Vocais mais suaves podem perder projeção, rap neutro"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babydontcrymia",
     "name": "Mia",
     "group": "Baby DONT Cry",
@@ -661,18 +590,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Hip-Hop",
-      "Rap-forward"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow limpo, dicção e entrega rítmica excelentes, boa presença cênica",
-    "fracos": "Falta potência vocal em trechos altos, expressividade facial ainda limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babydontcryyihyun",
     "name": "Yihyun",
     "group": "Baby DONT Cry",
@@ -682,18 +608,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Dark Pop",
-      "Girlcrush"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Controle vocal excepcional, presença de palco dominante, carisma central",
-    "fracos": "Algumas notas agudas exigem apoio corporal, respiração visível em trechos rápidos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterahyeon",
     "name": "Ahyeon",
     "group": "BABYMONSTER",
@@ -703,18 +626,15 @@ const idols = [
     "rap": "S",
     "center": "A",
     "visual": "A",
-    "especialidade": "All-Rounder",
-    "conceitos": [
-      "Main Vocal",
-      "Multi-talent"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, vocal bom, versatilidade",
-    "fracos": "Dança e rap menos consistentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterasa",
     "name": "Asa",
     "group": "BABYMONSTER",
@@ -724,18 +644,15 @@ const idols = [
     "rap": "S",
     "center": "B",
     "visual": "S",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Rap",
-      "Performance Hip-hop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow limpo, rap de destaque, boa entrega",
-    "fracos": "Vocal principal menos refinado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterchiquita",
     "name": "Chiquita",
     "group": "BABYMONSTER",
@@ -745,18 +662,15 @@ const idols = [
     "rap": "A",
     "center": "B",
     "visual": "C",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Supporting Vocals",
-      "Performance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa expressividade e carisma",
-    "fracos": "Técnica vocal/rap iniciante, presença menor"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterpharita",
     "name": "Pharita",
     "group": "BABYMONSTER",
@@ -766,18 +680,15 @@ const idols = [
     "rap": "D",
     "center": "C",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Lead Vocal",
-      "International Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal principal muito forte, domínio de inglês/tailandês",
-    "fracos": "Rap e coreografia menos marcantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterrami",
     "name": "Rami",
     "group": "BABYMONSTER",
@@ -787,18 +698,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Vocal",
-      "Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal estável, cresce no palco",
-    "fracos": "Rap e dança com menor destaque"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterrora",
     "name": "Rora",
     "group": "BABYMONSTER",
@@ -808,18 +716,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "A",
-    "especialidade": "Visual",
-    "conceitos": [
-      "Lead Vocal",
-      "Youth Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa presença corporal, dança sólida",
-    "fracos": "Vocal principal falta refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "babymonsterruka",
     "name": "Ruka",
     "group": "BABYMONSTER",
@@ -829,18 +734,15 @@ const idols = [
     "rap": "S",
     "center": "B",
     "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Hip-hop",
-      "Rap-Dance Focus"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Execução de dança de elite, presença forte no palco",
-    "fracos": "Técnica vocal média em alta intensidade"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billlieharam",
     "name": "Haram",
     "group": "Billlie",
@@ -850,18 +752,15 @@ const idols = [
     "rap": "D",
     "center": "C",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Vocal Main",
-      "Emotional Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dominância vocal em partes melódicas",
-    "fracos": "Rap e dança com menos destaque"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billlieharuna",
     "name": "Haruna",
     "group": "Billlie",
@@ -871,18 +770,15 @@ const idols = [
     "rap": "C",
     "center": "C",
     "visual": "A",
-    "especialidade": "Visual",
-    "conceitos": [
-      "Visual",
-      "Supporting Vocals"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença visual marcante",
-    "fracos": "Técnica vocal e rap ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billliemoonsua",
     "name": "Moon Sua",
     "group": "Billlie",
@@ -892,18 +788,15 @@ const idols = [
     "rap": "A",
     "center": "B",
     "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Girlcrush",
-      "Rap-Vocal Hybrid"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal de alto nível, presença de palco forte",
-    "fracos": "Dança mais técnica poderia ganhar mais refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billliesheon",
     "name": "Sheon",
     "group": "Billlie",
@@ -913,18 +806,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "A",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Rap",
-      "All-rounder"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap sólido, entrega lírica forte",
-    "fracos": "Técnica vocal em altos registros menos robusta"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billliesiyoon",
     "name": "Siyoon",
     "group": "Billlie",
@@ -935,17 +825,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Performance",
-      "Rap & Dance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow rítmico e presença de palco",
-    "fracos": "Vocais e visual menos dominantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billliesuhyeon",
     "name": "Suhyeon",
     "group": "Billlie",
@@ -955,18 +842,15 @@ const idols = [
     "rap": "C",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Pop",
-      "Bright Performance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Coreografia bem executada, bons vocais de suporte",
-    "fracos": "Falta consistência em rap mais pesado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "billlietsuki",
     "name": "Tsuki",
     "group": "Billlie",
@@ -976,18 +860,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "A",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Dance Focus",
-      "International"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Elevado nível de dança, fluidez no palco",
-    "fracos": "Vocais principais mais fracos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "bvnditjungwoo",
     "name": "Jungwoo",
     "group": "BVNDIT",
@@ -997,18 +878,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "C",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Girl Crush",
-      "Modern R&B Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente dançarina, movimentos controlados e expressivos",
-    "fracos": "Voz pouco marcante, timbre plano"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "bvnditseungeun",
     "name": "Seungeun",
     "group": "BVNDIT",
@@ -1019,17 +897,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Modern R&B Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Melhor dançarina do grupo, grande controle rítmico e carisma",
-    "fracos": "Falta consistência vocal em partes principais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "bvnditsimyeong",
     "name": "Simyeong",
     "group": "BVNDIT",
@@ -1040,17 +915,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Modern R&B Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Destaque visual e expressividade, boa leitura de câmera",
-    "fracos": "Falta estabilidade vocal em notas longas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "bvnditsonghee",
     "name": "Songhee",
     "group": "BVNDIT",
@@ -1061,17 +933,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Modern R&B Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal doce e limpo, boa dicção e apoio melódico",
-    "fracos": "Falta projeção vocal em refrões, timidez performática"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "bvndityiyeon",
     "name": "Yiyeon",
     "group": "BVNDIT",
@@ -1082,17 +951,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Modern R&B Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal sólido, estável ao vivo, boa líder de palco, presença marcante",
-    "fracos": "Falta impacto em coreografias de alta intensidade"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybulletbora",
     "name": "Bora",
     "group": "Cherry Bullet",
@@ -1102,18 +968,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "C",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa estabilidade vocal, presença equilibrada",
-    "fracos": "Expressividade irregular, falta impacto individual"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybulletchaerin",
     "name": "Chaerin",
     "group": "Cherry Bullet",
@@ -1123,18 +986,15 @@ const idols = [
     "rap": "C",
     "center": "C",
     "visual": "B",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Equilibrada tecnicamente, expressiva em estilos variados",
-    "fracos": "Falta impacto visual"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybullethaeyoon",
     "name": "Haeyoon",
     "group": "Cherry Bullet",
@@ -1144,18 +1004,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "C",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Melhor vocalista do grupo, grande controle de pitch, expressiva",
-    "fracos": "Movimentos coreográficos menos refinados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybulletjiwon",
     "name": "Jiwon",
     "group": "Cherry Bullet",
@@ -1165,18 +1022,15 @@ const idols = [
     "rap": "C",
     "center": "S",
     "visual": "S",
-    "especialidade": "Visual",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper e dançarina, forte presença cênica",
-    "fracos": "Vocais medianos, respiração irregular"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybulletmay",
     "name": "May",
     "group": "Cherry Bullet",
@@ -1186,18 +1040,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Destaque visual, charmosa em conceitos doces",
-    "fracos": "Performance e vocais inconsistentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybulletremi",
     "name": "Remi",
     "group": "Cherry Bullet",
@@ -1207,18 +1058,15 @@ const idols = [
     "rap": "C",
     "center": "C",
     "visual": "C",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Movimentos precisos e energia alegre, sólida em refrões",
-    "fracos": "Falta projeção e confiança em solos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cherrybulletyuju",
     "name": "Yuju",
     "group": "Cherry Bullet",
@@ -1228,18 +1076,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Cute Pop",
-      "Retro Tech Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente performer e center natural, boa energia de palco",
-    "fracos": "Falta potência vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignaturechaesol",
     "name": "Chaesol",
     "group": "cignature",
@@ -1250,17 +1095,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dançarina e expressão cênica natural, destaque em conceitos energéticos",
-    "fracos": "Falta projeção vocal e estabilidade nas notas médias"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignaturechloe",
     "name": "Chloe",
     "group": "cignature",
@@ -1271,17 +1113,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal límpido e estável, estilo mais suave e emotivo",
-    "fracos": "Pouca versatilidade em conceito crush"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignaturedohee",
     "name": "Dohee",
     "group": "cignature",
@@ -1292,17 +1131,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa estabilidade e tonalidade única, forte conexão de palco",
-    "fracos": "Movimentos menos limpos que as principais dancers"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignaturejeewon",
     "name": "Jeewon",
     "group": "cignature",
@@ -1312,18 +1148,15 @@ const idols = [
     "rap": "D",
     "center": "S",
     "visual": "A",
-    "especialidade": "Center",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal sólida, bom controle de palco e carisma consistente",
-    "fracos": "Movimentos às vezes rígidos em coreografias rápidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignatureseline",
     "name": "Seline",
     "group": "cignature",
@@ -1334,17 +1167,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Expressiva, carismática e visual marcante, boa coordenação corporal",
-    "fracos": "Falta estabilidade em vocais de apoio"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignaturesemi",
     "name": "Semi",
     "group": "cignature",
@@ -1354,18 +1184,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "C",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Coreógrafa de precisão e boa rapper, presença consistente",
-    "fracos": "Técnica vocal básica"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignaturesunnformer",
     "name": "Sunn (former)",
     "group": "cignature",
@@ -1375,18 +1202,15 @@ const idols = [
     "rap": "B",
     "center": "B",
     "visual": "C",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper e energia sólida, coordenação forte",
-    "fracos": "Falta de precisão rítmica em algumas partes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "cignatureyeahformer",
     "name": "Ye Ah (former)",
     "group": "cignature",
@@ -1396,18 +1220,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "C",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Teen Crush",
-      "Vibrant Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper e stage performer, presença energética",
-    "fracos": "Vocais inconsistentes e pouca emoção nas falas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classyboeun",
     "name": "Boeun",
     "group": "CLASS:y",
@@ -1417,18 +1238,15 @@ const idols = [
     "rap": "D",
     "center": "A",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Elegant Pop",
-      "Visual"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual marcante, vocais estáveis e controlados",
-    "fracos": "Falta projeção em notas altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classychaewon",
     "name": "Chaewon",
     "group": "CLASS:y",
@@ -1438,18 +1256,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "R&B",
-      "Charisma"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow suave e vocal limpo, presença constante no palco",
-    "fracos": "Falta potência nas notas graves"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classyhyeju",
     "name": "Hyeju",
     "group": "CLASS:y",
@@ -1459,18 +1274,15 @@ const idols = [
     "rap": "C",
     "center": "B",
     "visual": "B",
-    "especialidade": "Dance",
-    "conceitos": [
-      "Girlcrush",
-      "Balanced"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "All-rounder sólida, mantém consistência nas três áreas principais",
-    "fracos": "Falta brilho individual em foco de câmera"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classyjimin",
     "name": "Jimin",
     "group": "CLASS:y",
@@ -1480,18 +1292,15 @@ const idols = [
     "rap": "C",
     "center": "A",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Pop",
-      "Vocal Power"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal madura para a idade, timbre limpo e boa extensão",
-    "fracos": "Expressividade facial um pouco contida em estágios cute"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classymyunghyungseo",
     "name": "Myung Hyungseo",
     "group": "CLASS:y",
@@ -1501,18 +1310,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Emotional Pop",
-      "Vocal"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timbre emocional e técnica refinada, presença de palco madura",
-    "fracos": "Movimentos de dança menos fluidos em coreos rápidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classyriwon",
     "name": "Riwon",
     "group": "CLASS:y",
@@ -1522,18 +1328,15 @@ const idols = [
     "rap": "D",
     "center": "C",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Cute",
-      "Bright Pop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa projeção vocal e energia leve, comunicação natural",
-    "fracos": "Rap limitado, coreografias complexas um pouco rígidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "classyseonyou",
     "name": "Seonyou",
     "group": "CLASS:y",
@@ -1543,18 +1346,15 @@ const idols = [
     "rap": "C",
     "center": "B",
     "visual": "B",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Hip-hop",
-      "Performance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança carismática, entrega energética, rap rítmico e dinâmico",
-    "fracos": "Estabilidade vocal variável ao vivo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "cosmosyamei",
     "name": "A’mei",
     "group": "COSMOSY",
@@ -1564,18 +1364,15 @@ const idols = [
     "rap": "A",
     "center": "B",
     "visual": "C",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Elegant Pop",
-      "R&B"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal limpo e expressivo, ótimo controle tonal, presença carismática e confiante",
-    "fracos": "Ainda carece de potência em agudos longos, energia levemente contida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "cosmosydehana",
     "name": "De_Hana",
     "group": "COSMOSY",
@@ -1585,18 +1382,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "A",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "R&B",
-      "Hip-Hop"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow firme e articulado, dicção clara e ritmo bem controlado",
-    "fracos": "Falta amplitude vocal, expressão cênica discreta"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "cosmosyhimesha",
     "name": "Himesha",
     "group": "COSMOSY",
@@ -1606,18 +1400,15 @@ const idols = [
     "rap": "A",
     "center": "B",
     "visual": "C",
-    "especialidade": "Rap",
-    "conceitos": [
-      "Pop",
-      "Dance"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Coordenação precisa, fluidez corporal notável, expressão natural",
-    "fracos": "Timbre vocal leve e projeção reduzida em palco"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "cosmosykamion",
     "name": "Kamión",
     "group": "COSMOSY",
@@ -1627,18 +1418,15 @@ const idols = [
     "rap": "D",
     "center": "B",
     "visual": "B",
-    "especialidade": "Vocal",
-    "conceitos": [
-      "Dream Pop",
-      "Visual"
-    ],
+    "especialidade": "",
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual etéreo e estilo refinado, destaque em close-ups",
-    "fracos": "Técnica vocal limitada, estabilidade irregular em dança rápida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csrduna",
     "name": "Duna",
     "group": "CSR",
@@ -1649,17 +1437,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Pop",
-      "Dance Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente coordenação e ritmo, execução limpa",
-    "fracos": "Controle de respiração precisa melhorar em long sets"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csrgeumhee",
     "name": "Geumhee",
     "group": "CSR",
@@ -1670,17 +1455,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Pure Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timbre agradável, harmonia estável",
-    "fracos": "Falta intensidade nas notas mais altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csrseoyeon",
     "name": "Seoyeon",
     "group": "CSR",
@@ -1691,17 +1473,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Cute"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal limpo e estável, carisma leve",
-    "fracos": "Falta projeção e confiança em câmera"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csrsihyeon",
     "name": "Sihyeon",
     "group": "CSR",
@@ -1712,17 +1491,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Emotional Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual proeminente e expressão cinematográfica",
-    "fracos": "Menos destaque técnico em vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csrsua",
     "name": "Sua",
     "group": "CSR",
@@ -1733,17 +1509,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Emotional"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal refinada, projeção estável, timbre puro e distinto",
-    "fracos": "Expressão facial contida em coreos mais intensas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csryeham",
     "name": "Yeham",
     "group": "CSR",
@@ -1754,17 +1527,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder",
-      "Pop & R&B"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa versatilidade, presença natural",
-    "fracos": "Falta impacto em dança rápida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "csryuna",
     "name": "Yuna",
     "group": "CSR",
@@ -1775,17 +1545,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Cute",
-      "Pop Ballad"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal suave e harmonioso, delicadeza natural de palco",
-    "fracos": "Falta de presença em performances girlcrush"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnoteboni",
     "name": "Boni",
     "group": "DreamNote",
@@ -1796,17 +1563,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vibrato limpo, estabilidade e confiança notáveis em palco",
-    "fracos": "Rap fraco, presença cênica mais reservada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnoteeunjo",
     "name": "Eunjo",
     "group": "DreamNote",
@@ -1817,17 +1581,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Emotional"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de destaque e carisma de câmera, tom vocal agradável",
-    "fracos": "Falta domínio técnico, pouca agressividade em coreos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnotehanbyeol",
     "name": "Hanbyeol",
     "group": "DreamNote",
@@ -1838,17 +1599,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder",
-      "Soft Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Equilíbrio entre vocal e dança, boa consistência",
-    "fracos": "Falta projeção e originalidade vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnotelara",
     "name": "Lara",
     "group": "DreamNote",
@@ -1859,17 +1617,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "R&B",
-      "Vocal Power"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timbre rico e controle de respiração exemplar, excelente dicção",
-    "fracos": "Coreografia em ritmo acelerado às vezes perde fluidez"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnotemiso",
     "name": "Miso",
     "group": "DreamNote",
@@ -1880,17 +1635,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Dance Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Agilidade, coordenação e expressão vívida, técnica consistente",
-    "fracos": "Timbre vocal delicado, menor projeção em estágios ao vivo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnotesumin",
     "name": "Sumin",
     "group": "DreamNote",
@@ -1901,17 +1653,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow natural e limpo, entrega confiante, bom controle de timing",
-    "fracos": "Alcance vocal limitado, expressão facial um pouco repetitiva"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "dreamnoteyoui",
     "name": "Youi",
     "group": "DreamNote",
@@ -1922,17 +1671,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Elegant Pop",
-      "Leader"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Liderança natural, voz estável e clara, boa presença de palco",
-    "fracos": "Falta impacto vocal em notas altas, rap não explorado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "everglowaisha",
     "name": "Aisha",
     "group": "Everglow",
@@ -1943,17 +1689,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Dark-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow e presença poderosos, linha de rap de apoio estável",
-    "fracos": "Projeção vocal limitada, controle de respiração em falsettos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "evergloweu",
     "name": "E:U",
     "group": "Everglow",
@@ -1964,17 +1707,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Girlcrush",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Energia de palco explosiva, timbre grave e distinto, rapper versátil",
-    "fracos": "Controle vocal irregular, dicção em inglês limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "everglowmia",
     "name": "Mia",
     "group": "Everglow",
@@ -1985,17 +1725,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Charisma"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Precisão coreográfica, intensidade performática de elite",
-    "fracos": "Timbre vocal rasgado — difícil manter consistência ao vivo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "everglowonda",
     "name": "Onda",
     "group": "Everglow",
@@ -2006,17 +1743,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Cute-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual e expressão ideais para variações de conceito, evolução notável",
-    "fracos": "Força vocal mediana, coreografias pesadas exigem esforço extra"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "everglowsihyeon",
     "name": "Sihyeon",
     "group": "Everglow",
@@ -2027,17 +1761,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Elegant Power"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal sólida, estabilidade, excelente líder e presença de palco",
-    "fracos": "Rap e movimentos agressivos um pouco contidos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "everglowyiren",
     "name": "Yiren",
     "group": "Everglow",
@@ -2048,17 +1779,14 @@ const idols = [
     "center": "A",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Graceful"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual top-tier, graciosidade e carisma natural, boa gestualidade",
-    "fracos": "Falta impacto performático em trechos fortes, vocais delicados demais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "fiftyfiftyathena",
     "name": "Athena",
     "group": "FIFTY FIFTY",
@@ -2069,17 +1797,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Desenvolvimento contínuo",
-    "fracos": "Técnica vocal e rap ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "fiftyfiftychanellemoon",
     "name": "Chanelle Moon",
     "group": "FIFTY FIFTY",
@@ -2090,17 +1815,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Pop-R&B"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais estáveis, presença de palco boa",
-    "fracos": "Dança e rap menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "fiftyfiftyhana",
     "name": "Hana",
     "group": "FIFTY FIFTY",
@@ -2111,17 +1833,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Visual Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença marcante em palco",
-    "fracos": "Técnica vocal moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "fiftyfiftykeena",
     "name": "Keena",
     "group": "FIFTY FIFTY",
@@ -2132,17 +1851,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap-Leader",
-      "Global Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap strong, entrega internacional",
-    "fracos": "Vocal principal menos desenvolvido"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "fiftyfiftyyewon",
     "name": "Yewon",
     "group": "FIFTY FIFTY",
@@ -2153,17 +1869,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Dance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança técnica, boa execução",
-    "fracos": "Vocais principais com menor amplitude"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9chaeyoung",
     "name": "Chaeyoung",
     "group": "fromis_9",
@@ -2174,17 +1887,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Performance",
-      "Dance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Execução de dança acima da média",
-    "fracos": "Técnica vocal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9gyuri",
     "name": "Gyuri",
     "group": "fromis_9",
@@ -2195,17 +1905,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Pop-Ballad"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais sólidos, bom sustain",
-    "fracos": "Dança e rap menos proeminentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9hayoung",
     "name": "Hayoung",
     "group": "fromis_9",
@@ -2216,17 +1923,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Leader"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Liderança e vocals de apoio",
-    "fracos": "Técnica de rap e dança moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9jiheon",
     "name": "Jiheon",
     "group": "fromis_9",
@@ -2237,17 +1941,14 @@ const idols = [
     "center": "C",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Envolvente em performances",
-    "fracos": "Técnica vocal e rap básica"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9jisun",
     "name": "Jisun",
     "group": "fromis_9",
@@ -2258,17 +1959,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Execução de grupo estável",
-    "fracos": "Técnica individual limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9jiwon",
     "name": "Jiwon",
     "group": "fromis_9",
@@ -2279,17 +1977,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, vocais de apoio",
-    "fracos": "Dança e rap com menor destaque"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9nagyung",
     "name": "Nagyung",
     "group": "fromis_9",
@@ -2300,17 +1995,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Consistência de grupo",
-    "fracos": "Técnica individual ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9saerom",
     "name": "Saerom",
     "group": "fromis_9",
@@ -2321,17 +2013,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance Line",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança forte, presença de palco",
-    "fracos": "Técnica vocal de lead ainda em progresso"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "fromis9seoyeon",
     "name": "Seoyeon",
     "group": "fromis_9",
@@ -2342,17 +2031,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual marcante, vocais consistentes",
-    "fracos": "Rap e presença centrada menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "h1keyhwiseo",
     "name": "Hwiseo",
     "group": "H1-KEY",
@@ -2363,17 +2049,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal estável, boa presença de grupo",
-    "fracos": "Dance e rap ainda desenvolvendo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "h1keyriina",
     "name": "Riina",
     "group": "H1-KEY",
@@ -2384,17 +2067,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais limpos e consistentes",
-    "fracos": "Menos impacto em rap, dança pode se intensificar mais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "h1keyseoi",
     "name": "Seoi",
     "group": "H1-KEY",
@@ -2405,17 +2085,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Dance-Vocal Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Equilíbrio técnico bom, presença forte em palco",
-    "fracos": "Ainda não se destaca como vocal de elite"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "h1keyyel",
     "name": "Yel",
     "group": "H1-KEY",
@@ -2426,17 +2103,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Rap Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow de rap forte, excelente execução de dança",
-    "fracos": "Técnica vocal mais limitada, liderança de palco menor"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsa-na",
     "name": "A-na",
     "group": "Hearts2Hearts",
@@ -2447,17 +2121,14 @@ const idols = [
     "center": "S",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocals",
-      "Cute Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Presença de grupo estável",
-    "fracos": "Pouco destaque em solo técnico"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartscarmen",
     "name": "Carmen",
     "group": "Hearts2Hearts",
@@ -2468,17 +2139,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Multi-talent"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal boa, multinacional qualificação",
-    "fracos": "Ainda em crescimento em dance e rap"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsian",
     "name": "Ian",
     "group": "Hearts2Hearts",
@@ -2489,17 +2157,14 @@ const idols = [
     "center": "S",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Performance Foundation"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Projeção para grupo futuro",
-    "fracos": "Técnica ainda emergente em várias posições"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsjiwoo",
     "name": "Jiwoo",
     "group": "Hearts2Hearts",
@@ -2510,17 +2175,14 @@ const idols = [
     "center": "B",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Global Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais estáveis, presença forte, visual marcante",
-    "fracos": "Rap/flow ainda limitado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsjuun",
     "name": "Juun",
     "group": "Hearts2Hearts",
@@ -2531,17 +2193,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Bright Concept"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança boa, presença juvenil",
-    "fracos": "Técnica vocal/rap menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsstella",
     "name": "Stella",
     "group": "Hearts2Hearts",
@@ -2552,17 +2211,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, boa performance em palco",
-    "fracos": "Vocais principais e rap ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsye-on",
     "name": "Ye-on",
     "group": "Hearts2Hearts",
@@ -2573,17 +2229,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial de crescimento",
-    "fracos": "Trabalho técnico ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hearts2heartsyuha",
     "name": "Yuha",
     "group": "Hearts2Hearts",
@@ -2594,17 +2247,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de qualidade, vocais consistentes",
-    "fracos": "Rap linha menos destacada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hitgshyerin",
     "name": "Hyerin",
     "group": "HITGS",
@@ -2615,17 +2265,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocals",
-      "Cute Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa presença de grupo",
-    "fracos": "Técnica vocal e rap ainda iniciante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hitgsiyoo",
     "name": "Iyoo",
     "group": "HITGS",
@@ -2636,17 +2283,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial de crescimento",
-    "fracos": "Técnica geral ainda em fase de desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hitgsseohee",
     "name": "Seohee",
     "group": "HITGS",
@@ -2657,17 +2301,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Urban Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Entrega de rap competitiva",
-    "fracos": "Vocal principal médio, técnica precisa em notas altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hitgsseojin",
     "name": "Seojin",
     "group": "HITGS",
@@ -2678,17 +2319,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual marcante, bom para câmeras",
-    "fracos": "Rap e vocal principais menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "hitgsvv",
     "name": "VV",
     "group": "HITGS",
@@ -2699,17 +2337,14 @@ const idols = [
     "center": "D",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Teen Pop",
-      "Performance-Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa coordenação de dança, presença de palco",
-    "fracos": "Técnica vocal principal ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "i-dleminnie",
     "name": "Minnie",
     "group": "i-dle",
@@ -2720,17 +2355,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Pop R&B"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente timbre e musicalidade, mantém afinação em falsetes e runs nas shows analisadas, boa presença em partes melódicas",
-    "fracos": "Menor projeção em passagens com muita backing , instrumental alto, rap é limitado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "i-dlemiyeon",
     "name": "Miyeon",
     "group": "i-dle",
@@ -2741,17 +2373,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main vocal",
-      "Elegant pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estabilidade de pitch e controle dinâmico consistente nas 4 stages (sustain, respiração) Vívida atuação vocal em refrões e adlibs",
-    "fracos": "Em números muito agudos perde um pouco da potência, performances muito dançantes exigem suporte respiratório extra"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "i-dleshuhua",
     "name": "Shuhua",
     "group": "i-dle",
@@ -2762,17 +2391,14 @@ const idols = [
     "center": "C",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Fotogenia e expressão para câmera muito boas, segurou bem linhas de apoio nas performances sem quebrar harmonia",
-    "fracos": "Técnica vocal e potência limitadas em solos, rap não é posição forte, dança consistente mas não de destaque técnico"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "i-dlesoyeon",
     "name": "Soyeon",
     "group": "i-dle",
@@ -2783,18 +2409,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Producer",
-      "Leader"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap/flow e entrega vocal rítmica excepcionais — clareza e atitude nas stages (destaque técnico de rap) Carisma de palco consistente",
-    "fracos": "Técnica de canto mais crua, sustain e afinação em notas longas menos refinados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "i-dleyuqi",
     "name": "Yuqi",
     "group": "i-dle",
@@ -2805,17 +2427,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Strong vocal",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Projeção sólida e cor de voz distinta, mantém estabilidade em refrões ao vivo nas 4 shows, presença cênica autêntica",
-    "fracos": "Movimento de palco intenso pode afetar levemente o suporte respiratório, rap/flow medianos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichillinchaerin",
     "name": "Chaerin",
     "group": "ICHILLIN'",
@@ -2826,17 +2445,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal Focus",
-      "Emotional Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal refinada",
-    "fracos": "Rap e dança menos explorados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichillinchowon",
     "name": "Chowon",
     "group": "ICHILLIN'",
@@ -2847,17 +2463,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Envolvente em performances de grupo",
-    "fracos": "Técnica individual ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichilline.ji",
     "name": "E.Ji",
     "group": "ICHILLIN'",
@@ -2868,18 +2481,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Main Dancer",
-      "Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente performance de dança, vocal sólido",
-    "fracos": "Rap-line ainda menos pronunciada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichillinjackie",
     "name": "Jackie",
     "group": "ICHILLIN'",
@@ -2890,17 +2499,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Rap",
-      "Urban Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque, boa coordenação de dança",
-    "fracos": "Técnica vocal principal ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichillinjiyoon",
     "name": "Jiyoon",
     "group": "ICHILLIN'",
@@ -2911,17 +2517,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de destaque, vocais consistentes",
-    "fracos": "Técnica de dança e rap menos marcada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichillinjoonie",
     "name": "Joonie",
     "group": "ICHILLIN'",
@@ -2932,17 +2535,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Rap",
-      "Pop Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais de suporte confiáveis",
-    "fracos": "Dança e rap menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ichillinyeju",
     "name": "Yeju",
     "group": "ICHILLIN'",
@@ -2953,18 +2553,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Visual",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança, presença de palco",
-    "fracos": "Técnica vocal principal moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "ifeyekasia",
     "name": "Kasia",
     "group": "ifeye",
@@ -2975,17 +2571,14 @@ const idols = [
     "center": "A",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Rap Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap sólida, boa presença de palco",
-    "fracos": "Técnica vocal principal ainda em evolução"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "ifeyemeu",
     "name": "Meu",
     "group": "ifeye",
@@ -2996,17 +2589,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança, presença de palco agradável",
-    "fracos": "Alcance vocal mais limitado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "ifeyerahee",
     "name": "Rahee",
     "group": "ifeye",
@@ -3017,16 +2607,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Versatilidade e suporte estável",
-    "fracos": "Especialização técnica ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "ifeyesasha",
     "name": "Sasha",
     "group": "ifeye",
@@ -3037,17 +2625,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Maknae Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, expressividade para câmera",
-    "fracos": "Técnica vocal e rap iniciante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "ifeyetaerin",
     "name": "Taerin",
     "group": "ifeye",
@@ -3058,17 +2643,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança muito boa, presença coreográfica forte",
-    "fracos": "Técnica vocal principal mediana"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "ifeyewonhwayeon",
     "name": "Won Hwayeon",
     "group": "ifeye",
@@ -3079,17 +2661,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Vocalist",
-      "Pop Rookie"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal promissor, timbre limpo",
-    "fracos": "Dança e rap menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iiieungi",
     "name": "Eungi",
     "group": "iii",
@@ -3100,17 +2679,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Performance",
-      "Pop Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança, suporte vocal estável",
-    "fracos": "Técnica de vocal e rap ainda em fase emergente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iiihana",
     "name": "Hana",
     "group": "iii",
@@ -3121,17 +2697,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte e presença de palco iniciais",
-    "fracos": "Dança e rap com menor evidência técnica"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iiihuranformer",
     "name": "Huran (former)",
     "group": "iii",
@@ -3142,17 +2715,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap Focus",
-      "Urban Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap destaque entre rookies",
-    "fracos": "Vocal e dança com margem de crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iiinamkhing",
     "name": "Namkhing",
     "group": "iii",
@@ -3163,17 +2733,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Presença de grupo e potencial visível",
-    "fracos": "Técnica geral menos desenvolvida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iiisoobin",
     "name": "Soobin",
     "group": "iii",
@@ -3184,17 +2751,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Main Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Nome revelado líder, estabilidade vocal para uma rookie",
-    "fracos": "Ainda precisa de maior amplitude e técnica refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iiitaeri",
     "name": "Taeri",
     "group": "iii",
@@ -3205,17 +2769,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Dance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança e performance corporal para rookie",
-    "fracos": "Técnica vocal principal ainda crescente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "illitiroha",
     "name": "Iroha",
     "group": "ILLIT",
@@ -3226,17 +2787,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Visual Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual agradável, suportes estáveis",
-    "fracos": "Técnica geral ainda em fase de crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "illitminju",
     "name": "Minju",
     "group": "ILLIT",
@@ -3247,17 +2805,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, vocal confiável",
-    "fracos": "Técnica de rap e dance menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "illitmoka",
     "name": "Moka",
     "group": "ILLIT",
@@ -3268,17 +2823,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Dance",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança refinada, performance visível",
-    "fracos": "Técnica vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "illitwonhee",
     "name": "Wonhee",
     "group": "ILLIT",
@@ -3289,17 +2841,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Urban Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque, presença forte em versos",
-    "fracos": "Vocais principais não tão marcados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "illityunah",
     "name": "Yunah",
     "group": "ILLIT",
@@ -3310,17 +2859,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Vocal Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa estabilidade vocal, presença de palco sólida",
-    "fracos": "Ainda não demonstrou amplitude máxima de notas mais altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "itzychaeryeong",
     "name": "Chaeryeong",
     "group": "ITZY",
@@ -3331,17 +2877,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder",
-      "Bright Girlcrush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, versatilidade em dança e vocal",
-    "fracos": "Rap e flow menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "itzylia",
     "name": "Lia",
     "group": "ITZY",
@@ -3352,17 +2895,14 @@ const idols = [
     "center": "C",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal principal de excelência, alcance, controle e técnica",
-    "fracos": "Dança pesada pode exigir apoio, rap quase inexistente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "itzyryujin",
     "name": "Ryujin",
     "group": "ITZY",
@@ -3373,17 +2913,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Performance Front"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de elite, entrega e presença front cam, grande impacto",
-    "fracos": "Técnica vocal principal inferior aos melhores vocalistas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "itzyyeji",
     "name": "Yeji",
     "group": "ITZY",
@@ -3394,17 +2931,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Girlcrush Power Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Presença de palco dominante, danças de nível muito alto, rap sólido",
-    "fracos": "Técnica vocal de lead ainda pode evoluir em sustain alto"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "itzyyuna",
     "name": "Yuna",
     "group": "ITZY",
@@ -3415,17 +2949,14 @@ const idols = [
     "center": "A",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Visual Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança fluida, presença de palco em crescimento",
-    "fracos": "Técnica vocal e rap menos refinadas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ivegaeul",
     "name": "Gaeul",
     "group": "IVE",
@@ -3436,17 +2967,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Elegant-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow limpo e preciso, boa leitura rítmica, suporte vocal consistente",
-    "fracos": "Falta destaque visual nas performances em grupo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "iveleeseo",
     "name": "Leeseo",
     "group": "IVE",
@@ -3457,17 +2985,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Youth-Pop",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa presença, melhora técnica contínua, brilho em refrões",
-    "fracos": "Falta de consistência vocal em notas altas, menor estabilidade em palco"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "iveliz",
     "name": "Liz",
     "group": "IVE",
@@ -3478,17 +3003,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Ballad-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Controle vocal notável, alcance médio-alto excelente",
-    "fracos": "Energia performática irregular, expressão limitada em girlcrush"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "iverei",
     "name": "Rei",
     "group": "IVE",
@@ -3499,17 +3021,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "R&B-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timbre único, flow melódico e distintivo, composição própria",
-    "fracos": "Resistência limitada em lives longas, coreografia precisa porém contida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "ivewonyoung",
     "name": "Wonyoung",
     "group": "IVE",
@@ -3520,17 +3039,14 @@ const idols = [
     "center": "S",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Center-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Center carismática, postura e expressão excepcionais",
-    "fracos": "Falta potência vocal, dificuldade em conceitos mais maduros"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "iveyujin",
     "name": "Yujin",
     "group": "IVE",
@@ -3541,17 +3057,14 @@ const idols = [
     "center": "A",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Power-Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Liderança e carisma natural, estabilidade vocal e energia de palco",
-    "fracos": "Flow de rap limitado, estilo vocal pouco versátil"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznabangjeemin",
     "name": "Bang Jeemin",
     "group": "izna",
@@ -3562,17 +3075,14 @@ const idols = [
     "center": "S",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance Focus",
-      "Performance Rookie"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado para rookie, presença de palco boa",
-    "fracos": "Técnica vocal ainda menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznachoijungeun",
     "name": "Choi Jungeun",
     "group": "izna",
@@ -3583,17 +3093,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença de câmera",
-    "fracos": "Técnica vocal principal e rap ainda iniciante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznajeongsaebi",
     "name": "Jeong Saebi",
     "group": "izna",
@@ -3604,17 +3111,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial de crescimento, presença de grupo crescente",
-    "fracos": "Técnica geral ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznakoko",
     "name": "Koko",
     "group": "izna",
@@ -3625,17 +3129,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque, entrega lírica clara",
-    "fracos": "Técnica vocal principal e dança ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznamai",
     "name": "Mai",
     "group": "izna",
@@ -3646,17 +3147,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal estável para rookie, visual marcante",
-    "fracos": "Dança e rap ainda em fase de evolução"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznaryusarang",
     "name": "Ryu Sarang",
     "group": "izna",
@@ -3667,17 +3165,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Projeção vocal boa para rookie, dance de suporte competente",
-    "fracos": "Rap menos desenvolvido"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "iznayoonjiyoonformer",
     "name": "Yoon Jiyoon (former)",
     "group": "izna",
@@ -3688,17 +3183,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Pop",
-      "R&B moderno"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Forte background de survival show, presença cênica, bons momentos em stages iniciais",
-    "fracos": "Saiu do grupo (reportado em agosto/2025), marca presença histórica mas não é mais ativa na formação atual"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1erchaehyun",
     "name": "Chaehyun",
     "group": "Kep1er",
@@ -3709,17 +3201,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Pop-Ballad"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal muito competente para a posição",
-    "fracos": "Dança/rap linha média"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1erdayeon",
     "name": "Dayeon",
     "group": "Kep1er",
@@ -3730,17 +3219,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de alto nível",
-    "fracos": "Vocal/rap menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1erhikaru",
     "name": "Hikaru",
     "group": "Kep1er",
@@ -3751,17 +3237,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Dance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque para a posição, performance energética",
-    "fracos": "Técnica vocal principal menos desenvolvida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1erhueningbahiyyih",
     "name": "Huening Bahiyyih",
     "group": "Kep1er",
@@ -3772,17 +3255,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal estável, presença internacional",
-    "fracos": "Dança/rap linha média"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1ermashiroformer",
     "name": "Mashiro (former)",
     "group": "Kep1er",
@@ -3793,17 +3273,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Soft pop",
-      "Cute"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal limpa e precisão de movimento",
-    "fracos": "Falta impacto visual em alguns stages intensos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1erxiaoting",
     "name": "Xiaoting",
     "group": "Kep1er",
@@ -3814,17 +3291,14 @@ const idols = [
     "center": "A",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de destaque, vocal e dança equilibrados",
-    "fracos": "Rap linha moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1eryeseoformer",
     "name": "Yeseo (former)",
     "group": "Kep1er",
@@ -3835,17 +3309,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Cute",
-      "Youthful pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Entonação limpa e grande presença cênica",
-    "fracos": "Estabilidade vocal irregular em lives exigentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1eryoungeunformer",
     "name": "Youngeun (former)",
     "group": "Kep1er",
@@ -3856,17 +3327,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, performance coerente",
-    "fracos": "Técnica individual ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "kep1eryujin",
     "name": "Yujin",
     "group": "Kep1er",
@@ -3877,17 +3345,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Dance-Vocal Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança forte, presença de palco",
-    "fracos": "Técnica vocal principal ainda menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiikiiihaum",
     "name": "Haum",
     "group": "KiiiKiii",
@@ -3898,17 +3363,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Performance",
-      "Dance Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa execução de coreografia, presença estável",
-    "fracos": "Técnica vocal e rap ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiikiiijiyu",
     "name": "Jiyu",
     "group": "KiiiKiii",
@@ -3919,17 +3381,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "All-rounder Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Liderança e estabilidade, bom equilíbrio nas três áreas principais",
-    "fracos": "Técnica de rap mais fraca, ainda em construção de presença global"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiikiiikya",
     "name": "Kya",
     "group": "KiiiKiii",
@@ -3940,17 +3399,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque para rookie, flow sólido",
-    "fracos": "Vocais principais e presença de centro menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiikiiileesol",
     "name": "Leesol",
     "group": "KiiiKiii",
@@ -3961,17 +3417,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado, presença cênica forte",
-    "fracos": "Técnica vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiikiiisui",
     "name": "Sui",
     "group": "KiiiKiii",
@@ -3982,17 +3435,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Vocal Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual impactante, vocais razoáveis para rookie",
-    "fracos": "Menos destaque em rap ou dança técnica"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiirasdoyeon",
     "name": "Doyeon",
     "group": "Kiiras",
@@ -4003,17 +3453,14 @@ const idols = [
     "center": "D",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, presença de grupo estável",
-    "fracos": "Técnica individual mais limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiirasharin",
     "name": "Harin",
     "group": "Kiiras",
@@ -4024,17 +3471,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Dance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual muito forte, presença central em concept visuals",
-    "fracos": "Técnica vocal principal ainda menos robusta"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiraskurumi",
     "name": "Kurumi",
     "group": "Kiiras",
@@ -4045,17 +3489,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal emocional, paciência técnica",
-    "fracos": "Dança e rap menos dominantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiraskylie",
     "name": "Kylie",
     "group": "Kiiras",
@@ -4066,17 +3507,14 @@ const idols = [
     "center": "D",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Youth Hip-hop Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque em debut, fluxo natural",
-    "fracos": "Vocais principais ainda moderados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiiraslingling",
     "name": "LingLing",
     "group": "Kiiras",
@@ -4087,17 +3525,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Global All-rounder"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Multilíngue, presença de palco e carisma global",
-    "fracos": "Técnica vocal ainda em refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "kiirasroah",
     "name": "Roah",
     "group": "Kiiras",
@@ -4108,17 +3543,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Vocal & Visual Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, presença de palco para rookie",
-    "fracos": "Técnica vocal/rap/dança ainda em início de trajetória"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lapillusbessie",
     "name": "Bessie",
     "group": "Lapillus",
@@ -4129,17 +3561,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Power Pop",
-      "Confident Youth"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rapper de impacto e boa performer, forte projeção e ritmo",
-    "fracos": "Dicção irregular em partes rápidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lapilluschanty",
     "name": "Chanty",
     "group": "Lapillus",
@@ -4150,17 +3579,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Power Pop",
-      "Confident Youth"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa vocalista, naturalidade e charme de câmera",
-    "fracos": "Coreografia limitada em potência"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lapillushaeun",
     "name": "Haeun",
     "group": "Lapillus",
@@ -4171,17 +3597,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Power Pop",
-      "Confident Youth"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Maknae com destaque crescente, movimentos limpos e boa estabilidade",
-    "fracos": "Expressividade ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lapillusseowon",
     "name": "Seowon",
     "group": "Lapillus",
@@ -4192,17 +3615,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Power Pop",
-      "Confident Youth"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa vocalista e sincronizada, entrosamento forte em grupo",
-    "fracos": "Falta presença solo marcante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lapillusshana",
     "name": "Shana",
     "group": "Lapillus",
@@ -4213,17 +3633,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Power Pop",
-      "Confident Youth"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Líder estável, presença equilibrada e vocais limpos",
-    "fracos": "Falta carisma mais explosivo em conceitos intensos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lapillusyue",
     "name": "Yue",
     "group": "Lapillus",
@@ -4234,17 +3651,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Power Pop",
-      "Confident Youth"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dancer central e destaque performático, excelente controle corporal",
-    "fracos": "Vocais instáveis sob esforço"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lesserafimhongeunchae",
     "name": "Hong Eunchae",
     "group": "Le Sserafim",
@@ -4255,17 +3669,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Visual Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença de palco",
-    "fracos": "Técnica vocal e rap iniciante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lesserafimhuhyunjin",
     "name": "Huh Yunjin",
     "group": "Le Sserafim",
@@ -4276,17 +3687,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal sólido, presença confiante",
-    "fracos": "Rap e dança menos dominantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lesserafimkazuha",
     "name": "Kazuha",
     "group": "Le Sserafim",
@@ -4297,17 +3705,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Performance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado, estética refinada",
-    "fracos": "Técnica vocal principal menos robusta"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lesserafimkimchaewon",
     "name": "Kim Chaewon",
     "group": "Le Sserafim",
@@ -4318,17 +3723,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Pop-Girlcrush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal de top nível, presença de palco forte",
-    "fracos": "Dança/rap menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lesserafimsakura",
     "name": "Sakura",
     "group": "Le Sserafim",
@@ -4339,17 +3741,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, boa execução de palco",
-    "fracos": "Técnica vocal ainda em refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lightsumchowon",
     "name": "Chowon",
     "group": "LIGHTSUM",
@@ -4360,17 +3759,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais estáveis, boa presença de palco",
-    "fracos": "Rap e dança complexa menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lightsumhina",
     "name": "Hina",
     "group": "LIGHTSUM",
@@ -4381,17 +3777,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Dance Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Presença de palco boa, dança competente",
-    "fracos": "Técnica vocal principal média"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lightsumjuhyeon",
     "name": "Juhyeon",
     "group": "LIGHTSUM",
@@ -4402,18 +3795,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Dance Focus",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap e dança promissoras",
-    "fracos": "Vocal principal menos refinado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lightsumnayoung",
     "name": "Nayoung",
     "group": "LIGHTSUM",
@@ -4424,17 +3813,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Performance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, dança e vocal equilibrados",
-    "fracos": "Rap menos destacado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lightsumsangah",
     "name": "Sangah",
     "group": "LIGHTSUM",
@@ -4445,17 +3831,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap & Dance Focus",
-      "Girlcrush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de altíssimo nível, rap forte",
-    "fracos": "Técnica vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "lightsumyujeong",
     "name": "Yujeong",
     "group": "LIGHTSUM",
@@ -4466,17 +3849,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Suporte de grupo estável",
-    "fracos": "Técnica individual ainda em fase de desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "loossemblegowon",
     "name": "Gowon",
     "group": "Loossemble",
@@ -4487,17 +3867,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder",
-      "Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estabilidade de performance",
-    "fracos": "Técnica vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "loossemblehyeju",
     "name": "Hyeju",
     "group": "Loossemble",
@@ -4508,17 +3885,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual e presença frente à câmera",
-    "fracos": "Técnica vocal e rap ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "loossemblehyunjin",
     "name": "Hyunjin",
     "group": "Loossemble",
@@ -4529,17 +3903,14 @@ const idols = [
     "center": "A",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Dance-Focus",
-      "Girlcrush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Domínio de dança, presença de palco forte",
-    "fracos": "Técnica vocal principal ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "loossemblevivi",
     "name": "Vivi",
     "group": "Loossemble",
@@ -4550,17 +3921,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Versatilidade e presença nos vocais de suporte",
-    "fracos": "Rap e dança de nível médio"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "loossembleyeojin",
     "name": "Yeojin",
     "group": "Loossemble",
@@ -4571,17 +3939,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual muito forte, bom vocal para o grupo",
-    "fracos": "Rap linha pouco destacada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "meovvanna",
     "name": "Anna",
     "group": "Meovv",
@@ -4592,17 +3957,14 @@ const idols = [
     "center": "B",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença internacional",
-    "fracos": "Técnica vocal principal ainda em refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "meovvella",
     "name": "Ella",
     "group": "Meovv",
@@ -4613,18 +3975,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual altíssimo nível, presença para câmera",
-    "fracos": "Técnica vocal/rap/dança ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "meovvgawon",
     "name": "Gawon",
     "group": "Meovv",
@@ -4635,18 +3993,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Visual",
-      "Global Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual marcante, desempenho vocal sólido",
-    "fracos": "Rap/dança de apoio menos destacado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "meovvnarin",
     "name": "Narin",
     "group": "Meovv",
@@ -4657,17 +4011,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Vocal Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque, fluxo bom",
-    "fracos": "Técnica vocal principal moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "meovvsooin",
     "name": "Sooin",
     "group": "Meovv",
@@ -4678,17 +4029,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Main Dancer"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Forte nas duas áreas principais, presença de palco",
-    "fracos": "Rap linha menos desenvolvida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "natureaurora",
     "name": "Aurora",
     "group": "Nature",
@@ -4699,17 +4047,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Expressiva, com domínio técnico e visual chamativo, forte presença internacional",
-    "fracos": "Pronúncia coreana ocasionalmente limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "naturechaebin",
     "name": "Chaebin",
     "group": "Nature",
@@ -4720,17 +4065,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Main vocal de timbre limpo e emocional",
-    "fracos": "Menos presença corporal em palco"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "natureharu",
     "name": "Haru",
     "group": "Nature",
@@ -4741,17 +4083,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente dancer, potência e precisão, presença cênica superior",
-    "fracos": "Vocais discretos em performances ao vivo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "natureloha",
     "name": "Loha",
     "group": "Nature",
@@ -4762,17 +4101,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa performer equilibrada, transmite leveza",
-    "fracos": "Falta potência vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "naturelu",
     "name": "Lu",
     "group": "Nature",
@@ -4783,17 +4119,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal agradável e boa coordenação rítmica",
-    "fracos": "Falta de destaque marcante individual"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "naturesaebom",
     "name": "Saebom",
     "group": "Nature",
@@ -4804,17 +4137,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper-dancer híbrida, transmite confiança",
-    "fracos": "Menos estabilidade vocal em faixas intensas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "naturesohee",
     "name": "Sohee",
     "group": "Nature",
@@ -4825,17 +4155,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal estável e presença carismática, ex-IBI com forte experiência de palco",
-    "fracos": "Performance em dança menos energética comparada ao resto"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "naturesunshine",
     "name": "Sunshine",
     "group": "Nature",
@@ -4846,17 +4173,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Performer energética e estável",
-    "fracos": "Respiração irregular em notas longas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "natureuchae",
     "name": "Uchae",
     "group": "Nature",
@@ -4867,17 +4191,14 @@ const idols = [
     "center": "C",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Fresh",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual e dancer consistente, expressão refinada",
-    "fracos": "Projeção vocal mais suave"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "newjeansdanielle",
     "name": "Danielle",
     "group": "NewJeans",
@@ -4888,17 +4209,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual muito forte, presença de palco",
-    "fracos": "Técnica de dança/rap menos evidente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "newjeanshaerin",
     "name": "Haerin",
     "group": "NewJeans",
@@ -4909,17 +4227,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Youth Pop",
-      "Dance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Coreografia fluida, presença natural",
-    "fracos": "Técnica vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "newjeanshanni",
     "name": "Hanni",
     "group": "NewJeans",
@@ -4930,17 +4245,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Voz clara, alcance sólido, apelo multicultural",
-    "fracos": "Rap/dança técnica menor"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "newjeanshyein",
     "name": "Hyein",
     "group": "NewJeans",
@@ -4951,17 +4263,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Pop Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, boa presença de grupo",
-    "fracos": "Técnica vocal/rap/dança ainda iniciando"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "newjeansminji",
     "name": "Minji",
     "group": "NewJeans",
@@ -4972,17 +4281,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader-like",
-      "Pop Next-Gen"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa versatilidade, presença forte no palco",
-    "fracos": "Técnica de rap menos demonstrada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziuayaka",
     "name": "Ayaka",
     "group": "NiziU",
@@ -4993,17 +4299,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente visual, transmite charme e suavidade",
-    "fracos": "Falta técnica vocal e firmeza nos movimentos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziumako",
     "name": "Mako",
     "group": "NiziU",
@@ -5014,17 +4317,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Liderança e presença, estabilidade notável em performances",
-    "fracos": "Falta brilho individual fora do papel de líder"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziumaya",
     "name": "Maya",
     "group": "NiziU",
@@ -5035,17 +4335,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Bom controle vocal, expressão emocional convincente",
-    "fracos": "Baixo impacto dançante, pouca energia em estágios"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziumayuka",
     "name": "Mayuka",
     "group": "NiziU",
@@ -5056,17 +4353,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper e vocal versátil, equilíbrio geral sólido",
-    "fracos": "Falta de impacto visual nos stages"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziumiihi",
     "name": "Miihi",
     "group": "NiziU",
@@ -5077,17 +4371,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potência vocal, timbre limpo e carismático, expressiva",
-    "fracos": "Estabilidade inconsistente em notas longas ao vivo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziunina",
     "name": "Nina",
     "group": "NiziU",
@@ -5098,17 +4389,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Melhor alcance vocal do grupo, controle técnico excelente",
-    "fracos": "Coreografias menos refinadas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziuriku",
     "name": "Riku",
     "group": "NiziU",
@@ -5119,17 +4407,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, tom vocal leve e agradável",
-    "fracos": "Dificuldade em controle de respiração"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziurima",
     "name": "Rima",
     "group": "NiziU",
@@ -5140,17 +4425,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow natural, dicção clara em japonês e inglês",
-    "fracos": "Pode soar forçada em estilos cute"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "niziurio",
     "name": "Rio",
     "group": "NiziU",
@@ -5161,17 +4443,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "Teen Refresh"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente dançarina, presença muito natural, bom flow",
-    "fracos": "Limitações vocais notáveis em faixas mais melódicas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "nmixxbae",
     "name": "Bae",
     "group": "NMIXX",
@@ -5182,17 +4461,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Tall Member"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, estabilidade vocal",
-    "fracos": "Dança/rap menos destacadas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "nmixxhaewon",
     "name": "Haewon",
     "group": "NMIXX",
@@ -5203,17 +4479,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Main Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal refinado para a posição, presença de palco forte",
-    "fracos": "Rap/dança com menor foco técnico"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "nmixxjiwoo",
     "name": "Jiwoo",
     "group": "NMIXX",
@@ -5224,17 +4497,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Rap",
-      "Vocal Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque, entrega articula bem",
-    "fracos": "Técnica vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "nmixxkyujin",
     "name": "Kyujin",
     "group": "NMIXX",
@@ -5245,17 +4515,14 @@ const idols = [
     "center": "S",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Maknae"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível competitivo, presença consistente",
-    "fracos": "Vocal/rap menos destacadas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "nmixxlily",
     "name": "Lily",
     "group": "NMIXX",
@@ -5266,17 +4533,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "International"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente alcance, experiência internacional",
-    "fracos": "Rap quase ausente, dança mediana"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "nmixxsullyoon",
     "name": "Sullyoon",
     "group": "NMIXX",
@@ -5287,17 +4551,14 @@ const idols = [
     "center": "B",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Dance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança excelente, boa presença no palco",
-    "fracos": "Técnica vocal de topo ainda em pequena margem"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "oddyouthkanie",
     "name": "Kanie",
     "group": "ODD YOUTH",
@@ -5308,17 +4569,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "All-rounder",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança competitiva, visual forte",
-    "fracos": "Técnica vocal principal com margem de crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "oddyouthmaika",
     "name": "Maika",
     "group": "ODD YOUTH",
@@ -5329,17 +4587,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Next-Gen Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança, presença de palco forte",
-    "fracos": "Técnica vocal principal ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "oddyouthmyah",
     "name": "Myah",
     "group": "ODD YOUTH",
@@ -5350,17 +4605,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal estável, presença internacional",
-    "fracos": "Rap e dança menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "oddyouthsummer",
     "name": "Summer",
     "group": "ODD YOUTH",
@@ -5371,17 +4623,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Urban Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque para idade/júnior",
-    "fracos": "Vocal e visual menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "oddyouthyeeum",
     "name": "Yeeum",
     "group": "ODD YOUTH",
@@ -5392,17 +4641,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, boa base de desempenho",
-    "fracos": "Técnica geral ainda em fase de desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "pixydajeong",
     "name": "Dajeong",
     "group": "PIXY",
@@ -5413,17 +4659,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Dark Fantasy",
-      "Girl Crush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Maknae com energia e sincronização sólidas",
-    "fracos": "Projeção vocal moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "pixydia",
     "name": "Dia",
     "group": "PIXY",
@@ -5434,17 +4677,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Dark Fantasy",
-      "Girl Crush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocalista principal com ótimo controle e emoção",
-    "fracos": "Movimentos um pouco rígidos em coreos pesadas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "pixyellaformer",
     "name": "Ella (former)",
     "group": "PIXY",
@@ -5455,17 +4695,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Dark Fantasy",
-      "Girl Crush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excepcional presença, uma das vozes mais distintas do grupo",
-    "fracos": "Forçada a se afastar por saúde, estabilidade vocal caiu nas últimas promoções"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "pixylola",
     "name": "Lola",
     "group": "PIXY",
@@ -5476,17 +4713,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dark Fantasy",
-      "Girl Crush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente rapper e performer, presença de palco dominante",
-    "fracos": "Vocais menos potentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "pixysatbyeolformer",
     "name": "Satbyeol (former)",
     "group": "PIXY",
@@ -5497,17 +4731,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Dark Fantasy",
-      "Girl Crush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper e performer estável, contribuiu ao equilíbrio sonoro",
-    "fracos": "Expressividade limitada em close-ups"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "pixysua",
     "name": "Sua",
     "group": "PIXY",
@@ -5518,17 +4749,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Dark Fantasy",
-      "Girl Crush"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Líder e dancer excepcional, precisão e teatralidade notáveis",
-    "fracos": "Dificuldade em manter expressão neutra em conceitos suaves"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "primrosehayun",
     "name": "Hayun",
     "group": "PRIMROSE",
@@ -5539,17 +4767,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Presença de palco delicada, visual suave",
-    "fracos": "Técnica vocal/rap/dança ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "primrosenahyun",
     "name": "Nahyun",
     "group": "PRIMROSE",
@@ -5560,17 +4785,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Pop Ballad"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal líder forte, técnica refinada",
-    "fracos": "Dança e rap menos dominantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "primroserainie",
     "name": "Rainie",
     "group": "PRIMROSE",
@@ -5581,17 +4803,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, apoio vocal sólido",
-    "fracos": "Rap e dança com menor destaque"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "primroseruby",
     "name": "Ruby",
     "group": "PRIMROSE",
@@ -5602,18 +4821,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Dance",
-      "Visual Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap e dança de alto nível, presença de palco muito boa",
-    "fracos": "Técnica vocal principal com mais espaço para crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "purplekisschaein",
     "name": "Chaein",
     "group": "Purple Kiss",
@@ -5624,17 +4839,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de destaque, boa estabilidade vocal",
-    "fracos": "Dança/rap linha média"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "purplekissdosie",
     "name": "Dosie",
     "group": "Purple Kiss",
@@ -5645,17 +4857,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível muito alto",
-    "fracos": "Vocal principal poderia ter mais projeção"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "purplekissnagoeun",
     "name": "Na Goeun",
     "group": "Purple Kiss",
@@ -5666,18 +4875,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Lead Dancer",
-      "Pop-Rock"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica de vocal de topo, presença de palco forte",
-    "fracos": "Rap linha menos desenvolvida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "purplekissireh",
     "name": "Ireh",
     "group": "Purple Kiss",
@@ -5688,17 +4893,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Dancer",
-      "Sub Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Coreografia fluida e presença marcante",
-    "fracos": "Rap e liderança menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "purplekissswan",
     "name": "Swan",
     "group": "Purple Kiss",
@@ -5709,17 +4911,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Maknae"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal potente, timbre único",
-    "fracos": "Dança mais básica, rap praticamente ausente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "purplekissyuki",
     "name": "Yuki",
     "group": "Purple Kiss",
@@ -5730,17 +4929,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Rapper",
-      "Lead Dancer"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap técnico e entrega sólida",
-    "fracos": "Vocal principal limitado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "queenzeyeahyoon",
     "name": "Ahyoon",
     "group": "Queenz Eye",
@@ -5751,17 +4947,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Rap Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap potente, entrega forte",
-    "fracos": "Vocal principal e presença de centro menos definidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "queenzeyejinyul",
     "name": "Jinyul",
     "group": "Queenz Eye",
@@ -5772,17 +4965,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Visual Rookie"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança competente, visual bom",
-    "fracos": "Técnica vocal/rap para desenvolver"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "queenzeyekiirii",
     "name": "Kiirii",
     "group": "Queenz Eye",
@@ -5793,17 +4983,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "International Rookie"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais promissores, apelo internacional",
-    "fracos": "Dança/rap ainda em fase de consolidação"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "queenzeyeseoha",
     "name": "Seoha",
     "group": "Queenz Eye",
@@ -5814,17 +5001,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, presença de grupo",
-    "fracos": "Técnica geral de nível inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "queenzeyeseovin",
     "name": "Seovin",
     "group": "Queenz Eye",
@@ -5835,17 +5019,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais sólidos de suporte, desempenho estável",
-    "fracos": "Dança e rap de nível médio"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "queenzeyewonchae",
     "name": "Wonchae",
     "group": "Queenz Eye",
@@ -5856,18 +5037,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Main Dancer",
-      "Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado, presença frontal, visual forte",
-    "fracos": "Rap e voz principal ainda em refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "resceneliv",
     "name": "Liv",
     "group": "Rescene",
@@ -5878,17 +5055,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Performance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Flow de rap promissor, presença única",
-    "fracos": "Vocais principais menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "rescenemay",
     "name": "May",
     "group": "Rescene",
@@ -5899,17 +5073,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, estilo distinto",
-    "fracos": "Técnica vocal/rap/dança ainda em fases iniciais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "resceneminami",
     "name": "Minami",
     "group": "Rescene",
@@ -5920,17 +5091,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Emotional Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal refinado para o período de estreia",
-    "fracos": "Rap e dança com menos destaque inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "rescenewoni",
     "name": "Woni",
     "group": "Rescene",
@@ -5941,17 +5109,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Pop-Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança, presença de palco forte",
-    "fracos": "Técnica vocal principal ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "rescenezena",
     "name": "Zena",
     "group": "Rescene",
@@ -5962,17 +5127,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance‐Focus",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança acima da média para rookie",
-    "fracos": "Técnica vocal/rap menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "rocketpunchdahyun",
     "name": "Dahyun",
     "group": "Rocket Punch",
@@ -5983,17 +5145,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Color Pop",
-      "Youthful Energy"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Equilibrada entre vocal e rap, potencial notável",
-    "fracos": "Ainda em desenvolvimento técnico, estabilidade variável"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "rocketpunchjuri",
     "name": "Juri",
     "group": "Rocket Punch",
@@ -6004,17 +5163,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Color Pop",
-      "Youthful Energy"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estável e experiente, forte presença vocal e expressiva",
-    "fracos": "Coreografia menos fluida comparada às mais jovens"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "rocketpunchsohee",
     "name": "Sohee",
     "group": "Rocket Punch",
@@ -6025,17 +5181,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Color Pop",
-      "Youthful Energy"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Forte em estilos modernos e expressivos, boa conexão com a câmera",
-    "fracos": "Falta consistência respiratória"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "rocketpunchsuyun",
     "name": "Suyun",
     "group": "Rocket Punch",
@@ -6046,17 +5199,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Color Pop",
-      "Youthful Energy"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Melhor vocalista do grupo, excelente alcance e emoção",
-    "fracos": "Falta presença cênica em partes não vocais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "rocketpunchyeonhee",
     "name": "Yeonhee",
     "group": "Rocket Punch",
@@ -6067,17 +5217,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Color Pop",
-      "Youthful Energy"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Líder sólida e equilibrada, presença forte e expressiva",
-    "fracos": "Falta impacto em notas altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "rocketpunchyunkyoung",
     "name": "Yunkyoung",
     "group": "Rocket Punch",
@@ -6088,17 +5235,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Color Pop",
-      "Youthful Energy"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Principal dançarina, movimentos precisos e carisma de palco",
-    "fracos": "Vocais limitados, pouca variedade expressiva"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynamedohee",
     "name": "Dohee",
     "group": "SAY MY NAME",
@@ -6109,17 +5253,14 @@ const idols = [
     "center": "S",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença de grupo",
-    "fracos": "Técnica vocal/rap/dança ainda emergente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynamehitomi",
     "name": "Hitomi",
     "group": "SAY MY NAME",
@@ -6130,17 +5271,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte e presença global, boas funções vocais",
-    "fracos": "Técnica de rap e dança de destaque ainda em construção"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynamejunhwi",
     "name": "Junhwi",
     "group": "SAY MY NAME",
@@ -6151,17 +5289,14 @@ const idols = [
     "center": "C",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Support Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível",
-    "fracos": "Técnicas principais menos maduras"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynamekanny",
     "name": "Kanny",
     "group": "SAY MY NAME",
@@ -6172,17 +5307,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado para rookie",
-    "fracos": "Técnica vocal principal ainda em refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynamemei",
     "name": "Mei",
     "group": "SAY MY NAME",
@@ -6193,17 +5325,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Pop Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais consistentes, bom desempenho de estreia",
-    "fracos": "Dança e rap menos exploradas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynameseungjoo",
     "name": "Seungjoo",
     "group": "SAY MY NAME",
@@ -6214,17 +5343,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Visual Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial e presença de grupo",
-    "fracos": "Técnica vocal/rap/dança iniciante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynameshuie",
     "name": "Shuie",
     "group": "SAY MY NAME",
@@ -6235,17 +5361,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "New Member",
-      "Support Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança, melhoria visível",
-    "fracos": "Técnica vocal principal ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "saymynamesoha",
     "name": "Soha",
     "group": "SAY MY NAME",
@@ -6256,17 +5379,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Bright Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap entrega boa para rookie",
-    "fracos": "Técnica vocal principal limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberdeniseformer",
     "name": "Denise (former)",
     "group": "SECRET NUMBER",
@@ -6277,17 +5397,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Maknae Support (ex-membro)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa voz para debut",
-    "fracos": "Técnica de dança/rap moderada, saiu em 2022"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberdinda",
     "name": "Dinda",
     "group": "SECRET NUMBER",
@@ -6298,17 +5415,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Support Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível para rookie",
-    "fracos": "Vocais/rap com menos impacto técnico"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberditaformer",
     "name": "Dita (former)",
     "group": "SECRET NUMBER",
@@ -6319,17 +5433,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Sub Vocal (ex-membro)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança excelente, desempenho de palco",
-    "fracos": "Vocal/rap menos dominantes, não mais ativa no grupo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberebin",
     "name": "Ebin",
     "group": "SECRET NUMBER",
@@ -6340,17 +5451,14 @@ const idols = [
     "center": "D",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Rookie"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal líder promissor",
-    "fracos": "Dança/rap menos desenvolvidos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberjinnyformer",
     "name": "Jinny (former)",
     "group": "SECRET NUMBER",
@@ -6361,17 +5469,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Sub Vocal (ex-membro)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque durante participação",
-    "fracos": "Menos impacto vocal principal, ex-membro"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberléaformer",
     "name": "Léa (former)",
     "group": "SECRET NUMBER",
@@ -6382,17 +5487,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Visual (ex-membro)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal forte, visual de impacto",
-    "fracos": "Já ex-membro → não está mais em atividade plena"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberminc",
     "name": "Min C",
     "group": "SECRET NUMBER",
@@ -6403,17 +5505,14 @@ const idols = [
     "center": "D",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Maknae Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque para nova formação",
-    "fracos": "Vocais e dança ainda em maturação"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberminjiformer",
     "name": "Minji (former)",
     "group": "SECRET NUMBER",
@@ -6424,17 +5523,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Sub Vocal (ex-membro)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais estáveis quando ativa",
-    "fracos": "Já ex-membro → atividade encerrada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumbernavi",
     "name": "Navi",
     "group": "SECRET NUMBER",
@@ -6445,17 +5541,14 @@ const idols = [
     "center": "D",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Supporting Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, presença de grupo crescente",
-    "fracos": "Técnica individual ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumbersoodamformer",
     "name": "Soodam (former)",
     "group": "SECRET NUMBER",
@@ -6466,17 +5559,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Performance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Versatilidade como vocal e presença estável",
-    "fracos": "Rap linha menos forte"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "secretnumberzuuformer",
     "name": "Zuu (former)",
     "group": "SECRET NUMBER",
@@ -6487,17 +5577,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Dance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa dança + vocais confiáveis",
-    "fracos": "Rap pouco explorado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistchoiyena",
     "name": "Choi Yena",
     "group": "Soloist",
@@ -6508,17 +5595,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Pop Rock",
-      "Bright Concept"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Performer completa, versátil e carismática, boa rapper melódica",
-    "fracos": "Expressividade vocal menos emocional em baladas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistchuu",
     "name": "Chuu",
     "group": "Soloist",
@@ -6529,17 +5613,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Bright Pop",
-      "R&B"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timidez vocal natural e carisma genuíno, timbre limpo e potente",
-    "fracos": "Coreografias podem parecer suaves demais em conceitos girlcrush"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistjeonsomi",
     "name": "Jeon Somi",
     "group": "Soloist",
@@ -6550,17 +5631,14 @@ const idols = [
     "center": "S",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Pop",
-      "Hip-hop Fusion"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Performer global, carisma forte, domínio total de palco",
-    "fracos": "Por vezes, foco maior em imagem do que em técnica vocal pura"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistjoyuri",
     "name": "Jo Yuri",
     "group": "Soloist",
@@ -6571,17 +5649,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal Pop",
-      "Emotional Ballad"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Controle vocal impecável, projeção forte e expressividade acima da média, boa intérprete",
-    "fracos": "Performance de palco menos energética em coreografias complexas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistkwoneunbi",
     "name": "Kwon Eunbi",
     "group": "Soloist",
@@ -6592,17 +5667,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Mature Pop",
-      "Elegant Concept"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estilo refinado, controle vocal sólido, e consistência em palco",
-    "fracos": "Movimentos podem parecer contidos em faixas de alta energia"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistleechaeyeon",
     "name": "Lee Chaeyeon",
     "group": "Soloist",
@@ -6613,17 +5685,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Performance",
-      "Pop Hip-hop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Uma das dançarinas mais técnicas da 4ª geração, presença poderosa e versátil",
-    "fracos": "Voz mais leve, perde projeção em notas agudas longas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "soloistyves",
     "name": "Yves",
     "group": "Soloist",
@@ -6634,18 +5703,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Art Pop",
-      "R&B",
-      "Conceptual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dancer sofisticada e excelente controle corporal, estilo artístico único",
-    "fracos": "Faixas mais mainstream reduzem seu impacto"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "staycisa",
     "name": "Isa",
     "group": "STAYC",
@@ -6656,17 +5721,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, vocais competentes",
-    "fracos": "Rap/dança técnica menos evidentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "staycj",
     "name": "J",
     "group": "STAYC",
@@ -6677,18 +5739,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Maknae",
-      "Performance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de nível competitivo para posição, presença de palco",
-    "fracos": "Técnica vocal principal e dança ainda em fase de refinamento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "staycseeun",
     "name": "Seeun",
     "group": "STAYC",
@@ -6699,17 +5757,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Support Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de alto nível, presença de palco",
-    "fracos": "Vocais principais abaixo de alguns pares"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "staycsieun",
     "name": "Sieun",
     "group": "STAYC",
@@ -6720,17 +5775,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Visual Front"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais de altíssimo nível, presença de palco forte",
-    "fracos": "Rap praticamente ausente, dança precisa de mais destaque"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "staycsumin",
     "name": "Sumin",
     "group": "STAYC",
@@ -6741,17 +5793,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Vocal-Rapper Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa estabilidade vocal + entrega de rap suportada",
-    "fracos": "Técnica de dança de elite ainda pode evoluir"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "staycyoon",
     "name": "Yoon",
     "group": "STAYC",
@@ -6762,17 +5811,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Maknae"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual e presença interessante",
-    "fracos": "Técnica vocal principal/modulo de rap/dança precisa melhorar"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.behyunbin",
     "name": "Hyunbin",
     "group": "TRI.BE",
@@ -6783,17 +5829,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa rapper e dançarina, ótima presença de palco",
-    "fracos": "Técnica vocal inconsistente em performances ao vivo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.bejia",
     "name": "Jia",
     "group": "TRI.BE",
@@ -6804,17 +5847,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Movimentos limpos e boa sincronia, carisma natural",
-    "fracos": "Falta projeção vocal, timidez em câmeras centrais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.bejinhaformer",
     "name": "Jinha (former)",
     "group": "TRI.BE",
@@ -6825,17 +5865,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Voz suave, muito estável, contribui para o equilíbrio sonoro do grupo",
-    "fracos": "Pouca energia dançante comparada às outras"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.bekelly",
     "name": "Kelly",
     "group": "TRI.BE",
@@ -6846,17 +5883,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente presença e expressão facial, sólida técnica de dança",
-    "fracos": "Timbre vocal limitado, pouco destaque em partes principais"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.bemire",
     "name": "Mire",
     "group": "TRI.BE",
@@ -6867,17 +5901,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa energia, destaque natural no palco, dança precisa",
-    "fracos": "Falta de controle respiratório em partes rápidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.besoeun",
     "name": "Soeun",
     "group": "TRI.BE",
@@ -6888,17 +5919,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Muito estável em vocais, boa conexão com a plateia",
-    "fracos": "Falta versatilidade em conceitos mais intensos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "tri.besongsun",
     "name": "Songsun",
     "group": "TRI.BE",
@@ -6909,17 +5937,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Girl Crush",
-      "Energetic Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estável e refinada no palco, timbre doce com boa projeção, grande controle corporal",
-    "fracos": "Falta impacto vocal em notas agudas potentes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleschaewon",
     "name": "Chaewon",
     "group": "tripleS",
@@ -6930,17 +5955,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Visual (±)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, contribuições seguras em formações",
-    "fracos": "Poucas linhas , pouca exposição solo → nota conservadora"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleschaeyeon",
     "name": "Chaeyeon",
     "group": "tripleS",
@@ -6951,17 +5973,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Sub-Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Entonação estável e presença refinada , boa em partes melódicas",
-    "fracos": "Em climas muito altos pode perder ligeira potência"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesdahyun",
     "name": "Dahyun",
     "group": "tripleS",
@@ -6972,17 +5991,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Emotional line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Entrega emotiva e afinação exemplar nas lives, ótimo controle dinâmico",
-    "fracos": "Dança deliberadamente contida pelo concept, menor exposição de solo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleshayeon",
     "name": "Hayeon",
     "group": "tripleS",
@@ -6993,17 +6009,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Dance (±)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Entrosamento no grupo, presença correta",
-    "fracos": "Dados de solo escassos, rank provisório"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleshyerin",
     "name": "Hyerin",
     "group": "tripleS",
@@ -7014,17 +6027,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Rap support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Ritmo e sincronização, preza a musicalidade no fraseado",
-    "fracos": "Não sai muito do formato de suporte, menos solo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesjiwoo",
     "name": "Jiwoo",
     "group": "tripleS",
@@ -7035,17 +6045,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Marca de dança forte, excelente leitura rítmica e presença de palco",
-    "fracos": "Runs vocais longos menos frequentes no setlist — menos oportunidade de brilhar vocalmente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesjiyeon",
     "name": "Jiyeon",
     "group": "tripleS",
@@ -7056,17 +6063,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "All-round",
-      "Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Bom suporte vocal, posição segura em formações, presença consistente",
-    "fracos": "Falta destaque solo que mostre mais amplitude vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesjoobin",
     "name": "Joobin",
     "group": "tripleS",
@@ -7077,17 +6081,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Dance (±)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Integra bem as coreografias, presença regular",
-    "fracos": "Pouca exposição → nota provisória"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleskaede",
     "name": "Kaede",
     "group": "tripleS",
@@ -7098,17 +6099,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Sub-Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Timing e precisão em dança, funciona bem em passagens sincronizadas",
-    "fracos": "Range vocal menos explorado nas stages, pouco solo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleskotone",
     "name": "Kotone",
     "group": "tripleS",
@@ -7119,17 +6117,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Execução coreográfica consistente, ótima leitura de câmera, muito limpa ao vivo",
-    "fracos": "Alcance vocal em registros graves/baixos ligeiramente restrito"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleskwakyeonji",
     "name": "Kwak Yeonji",
     "group": "tripleS",
@@ -7140,17 +6135,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "All-round"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Energia coreográfica alta, transições e expressão bem resolvidas",
-    "fracos": "Afinação sob fadiga tem pequenos vacilos (observados em uma stage)"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "tripleslynn",
     "name": "Lynn",
     "group": "tripleS",
@@ -7161,17 +6153,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Sub-Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais limpos, boa estabilidade em letras, presença visual elegante",
-    "fracos": "Energia de palco às vezes mais reservada, coreos mais simples"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesmayu",
     "name": "Mayu",
     "group": "tripleS",
@@ -7182,17 +6171,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Sub-Vocal",
-      "Dance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Leitura rítmica segura, contribui bem a harmonias",
-    "fracos": "Projeção e alcance ainda moderados nas stages"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesnakyoung",
     "name": "Nakyoung",
     "group": "tripleS",
@@ -7203,17 +6189,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Sub-Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Afinação segura, entrega consistente nas bridges, boa presença em câmeras",
-    "fracos": "Pouca explosão nos clímaxes, presença de center limitada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesnien",
     "name": "Nien",
     "group": "tripleS",
@@ -7224,17 +6207,14 @@ const idols = [
     "center": "C",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Melhora perceptível em projeção e estabilidade, performa bem em harmonias",
-    "fracos": "Movimentos coreográficos às vezes mais robustos que fluidos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesseoah",
     "name": "SeoAh",
     "group": "tripleS",
@@ -7245,17 +6225,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Cumpre bem as linhas atribuídas, boa conexão visual",
-    "fracos": "Menos destaque solo, rank conservador"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesseoyeon",
     "name": "Seoyeon",
     "group": "tripleS",
@@ -7266,17 +6243,14 @@ const idols = [
     "center": "S",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Center"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Controle de fraseado, sustain e presença de câmera, segura os momentos-chave da era",
-    "fracos": "Em alguns cortes, expressão estática, pouca ênfase em dança intensa"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesshion",
     "name": "Shion",
     "group": "tripleS",
@@ -7287,17 +6261,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Visual (±)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, suporte de performance estável",
-    "fracos": "Poucas lines na era → dados limitados (±)"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplessohyun",
     "name": "Sohyun",
     "group": "tripleS",
@@ -7308,17 +6279,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Dance",
-      "Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente sincronização e limpeza em group-dance, confiável na execução",
-    "fracos": "Voz de apoio, poucas linhas solo para destacar"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplessoomin",
     "name": "Soomin",
     "group": "tripleS",
@@ -7329,18 +6297,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Rap",
-      "Vocal (±)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Performance de grupo limpa, suporte em harmonias",
-    "fracos": "Pouca exposição solo, avaliado conservativamente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplessullin",
     "name": "Sullin",
     "group": "tripleS",
@@ -7351,17 +6315,14 @@ const idols = [
     "center": "D",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Support",
-      "Dance (±)"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Participação de grupo consistente, execução de formação",
-    "fracos": "Exposição limitada em stages, dados de solo escassos (±)"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesxinyu",
     "name": "Xinyu",
     "group": "tripleS",
@@ -7372,17 +6333,14 @@ const idols = [
     "center": "B",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Sub-Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Grande impacto visual e estabilidade vocal nas partes atribuídas",
-    "fracos": "Movimentos coreográficos menos agressivos, projeção variável"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesyooyeon",
     "name": "Yooyeon",
     "group": "tripleS",
@@ -7393,17 +6351,14 @@ const idols = [
     "center": "S",
     "visual": "S",
     "especialidade": "",
-    "conceitos": [
-      "Center",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual line forte, estabilidade vocal segura",
-    "fracos": "Falta dinamismo nas coreografias"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "triplesyubin",
     "name": "Yubin",
     "group": "tripleS",
@@ -7414,17 +6369,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Sub-Vocal",
-      "Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Entrega limpinha nas linhas que tem, presença de apoio sólida",
-    "fracos": "Ainda em crescimento para carregar solos longos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uniselisia",
     "name": "Elisia",
     "group": "UNIS",
@@ -7435,17 +6387,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "International Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais bons, apelo global, filiprima",
-    "fracos": "Dança e rap menos marcantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "unisgehlee",
     "name": "Gehlee",
     "group": "UNIS",
@@ -7456,17 +6405,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Sub Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de destaque, boa versatilidade, filiprima",
-    "fracos": "Técnica de rap/vocal principal menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "unishyeonju",
     "name": "Hyeonju",
     "group": "UNIS",
@@ -7477,17 +6423,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Vocal Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Líder com presença de palco, vocal estável",
-    "fracos": "Dança/rap menos dominantes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uniskotoko",
     "name": "Kotoko",
     "group": "UNIS",
@@ -7498,17 +6441,14 @@ const idols = [
     "center": "A",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial de rap/performances",
-    "fracos": "Técnica geral menos desenvolvida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "unisnana",
     "name": "Nana",
     "group": "UNIS",
@@ -7519,17 +6459,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Sub Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Excelente em dança, presença forte",
-    "fracos": "Vocais principais ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "unisseowon",
     "name": "Seowon",
     "group": "UNIS",
@@ -7540,17 +6477,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível para crescimento",
-    "fracos": "Técnica global ainda emergente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "unisyoona",
     "name": "Yoona",
     "group": "UNIS",
@@ -7561,18 +6495,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Dance Focus",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque relativo para o grupo",
-    "fracos": "Vocal principal e presença de centro menos definidas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "unisyunha",
     "name": "Yunha",
     "group": "UNIS",
@@ -7583,17 +6513,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Dance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocal de qualidade, dance de suporte",
-    "fracos": "Rap linha moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeerchaena",
     "name": "Chaena",
     "group": "USPEER",
@@ -7604,17 +6531,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual forte, presença nos frames",
-    "fracos": "Técnica vocal/rap/dança menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeerdaon",
     "name": "Daon",
     "group": "USPEER",
@@ -7625,17 +6549,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Pop Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais bons, presença estável",
-    "fracos": "Dança/rap ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeerroa",
     "name": "Roa",
     "group": "USPEER",
@@ -7646,17 +6567,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível para rookie",
-    "fracos": "Técnica global ainda emergente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeerseoyu",
     "name": "Seoyu",
     "group": "USPEER",
@@ -7667,17 +6585,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado para rookie",
-    "fracos": "Vocais principais e rap linha média"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeersian",
     "name": "Sian",
     "group": "USPEER",
@@ -7688,17 +6603,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais de qualidade, presença promissora",
-    "fracos": "Ainda desenvolver dança/rap de alto impacto"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeersoee",
     "name": "Soee",
     "group": "USPEER",
@@ -7709,17 +6621,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais sólidos para rookie",
-    "fracos": "Dança/rap menos destacados"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "uspeeryeowon",
     "name": "Yeowon (former)",
     "group": "USPEER",
@@ -7730,17 +6639,14 @@ const idols = [
     "center": "D",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Rap & Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap forte, dança de nível alto, liderança visível",
-    "fracos": "Técnica vocal principal ainda em desenvolvimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vivizeunha",
     "name": "Eunha",
     "group": "VIVIZ",
@@ -7751,17 +6657,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Elegant Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Técnica vocal de destaque, controle refinado",
-    "fracos": "Dança ligeiramente menos dominante"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vivizsinb",
     "name": "SinB",
     "group": "VIVIZ",
@@ -7772,17 +6675,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Vocal & Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Execução de dança de elite, presença de palco forte",
-    "fracos": "Técnica vocal mais moderada comparada à especialização"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vivizumji",
     "name": "Umji",
     "group": "VIVIZ",
@@ -7793,17 +6693,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de impacto, versatilidade vocal-dança",
-    "fracos": "Rap/flow menos explorado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vvupjiyoon",
     "name": "Jiyoon",
     "group": "VVUP",
@@ -7814,17 +6711,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Rookie Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, presença de grupo",
-    "fracos": "Técnica geral ainda emergente"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vvupkim",
     "name": "Kim",
     "group": "VVUP",
@@ -7835,17 +6729,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "International Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais fortes, presença promissora",
-    "fracos": "Rap e dança técnica ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vvuppaan",
     "name": "Paan",
     "group": "VVUP",
@@ -7856,17 +6747,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Main Dancer",
-      "Rap & Performance"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de nível elevado, rap de destaque",
-    "fracos": "Vocais principais menos distintos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "vvupsuyeon",
     "name": "Suyeon",
     "group": "VVUP",
@@ -7877,18 +6765,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Visual",
-      "Dance Support"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual de destaque, boa execução em dança/vocal suporte",
-    "fracos": "Rap linha moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklyjaehee",
     "name": "Jaehee",
     "group": "Weeekly",
@@ -7899,17 +6783,14 @@ const idols = [
     "center": "C",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual natural e expressiva, presença cênica gentil",
-    "fracos": "Falta impacto vocal e físico"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklyjihan",
     "name": "Jihan",
     "group": "Weeekly",
@@ -7920,17 +6801,14 @@ const idols = [
     "center": "A",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual principal, carisma e gestos controlados, melhora vocal notável",
-    "fracos": "Movimentos um pouco contidos em performances fortes"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklyjiyoonformer",
     "name": "Jiyoon (former)",
     "group": "Weeekly",
@@ -7941,17 +6819,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Artista multifuncional, excelente domínio de palco e expressão",
-    "fracos": "Falta consistência respiratória em vocais vivos"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklymonday",
     "name": "Monday",
     "group": "Weeekly",
@@ -7962,17 +6837,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Main vocal com excelente técnica e projeção, versátil e confiante",
-    "fracos": "Expressão facial às vezes contida"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklysoeun",
     "name": "Soeun",
     "group": "Weeekly",
@@ -7983,17 +6855,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Equilibrada, ótima coreografia e presença constante no centro",
-    "fracos": "Falta destaque individual vocal"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklysoojin",
     "name": "Soojin",
     "group": "Weeekly",
@@ -8004,17 +6873,14 @@ const idols = [
     "center": "A",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Líder e main dancer, movimentos extremamente limpos e fluidos, presença magnética",
-    "fracos": "Vocal mediano em notas altas"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "weeeklyzoa",
     "name": "Zoa",
     "group": "Weeekly",
@@ -8025,17 +6891,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Bright Youth",
-      "Refreshing Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Versátil, rap e dança consistentes, presença marcante em câmera",
-    "fracos": "Falta estabilidade vocal sob esforço"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "wooahlucy",
     "name": "Lucy",
     "group": "WOOAH",
@@ -8046,17 +6909,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Visual",
-      "Supporting Vocal"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Visual expressivo, dança de nível para suporte",
-    "fracos": "Técnica vocal/rap ainda crescendo"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "wooahminseo",
     "name": "Minseo",
     "group": "WOOAH",
@@ -8067,17 +6927,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, presença de grupo",
-    "fracos": "Técnica global de topo ainda em fase de construção"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "wooahnana",
     "name": "Nana",
     "group": "WOOAH",
@@ -8088,17 +6945,14 @@ const idols = [
     "center": "S",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "All-Rounder"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança e visual de alto nível, vocal muito estável",
-    "fracos": "Rap linha moderada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "wooahsora",
     "name": "Sora",
     "group": "WOOAH",
@@ -8109,17 +6963,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Rap",
-      "Dance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Rap de destaque, entrega confiável",
-    "fracos": "Vocal principal menos marcado"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "4",
-    "type": "idol",
+    "type": "Idol",
     "id": "wooahwooyeon",
     "name": "Wooyeon",
     "group": "WOOAH",
@@ -8130,17 +6981,14 @@ const idols = [
     "center": "B",
     "visual": "A",
     "especialidade": "",
-    "conceitos": [
-      "Lead Vocal",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais bons, presença forte em palco",
-    "fracos": "Coreografia mais básica que a líder"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "youngpossedoeun",
     "name": "Doeun",
     "group": "YOUNG POSSE",
@@ -8151,18 +6999,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Vocal",
-      "Rap Support",
-      "Youth Pop"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Estabilidade vocal de suporte, presença visível",
-    "fracos": "Técnica de rap/dança ainda menos refinada"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "youngpossejiana",
     "name": "Jiana",
     "group": "YOUNG POSSE",
@@ -8173,17 +7017,14 @@ const idols = [
     "center": "B",
     "visual": "B",
     "especialidade": "",
-    "conceitos": [
-      "Main Vocal",
-      "Visual"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Vocais promissores, visual forte, apelo internacional",
-    "fracos": "Dança/rap linha ainda em aprimoramento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "youngpossejieun",
     "name": "Jieun",
     "group": "YOUNG POSSE",
@@ -8194,17 +7035,14 @@ const idols = [
     "center": "C",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Maknae",
-      "Supporting Line"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Potencial visível, presença de palco para rookie",
-    "fracos": "Técnicas principais (vocal/rap/dança) ainda em fase inicial"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "youngpossesunhye",
     "name": "Sunhye",
     "group": "YOUNG POSSE",
@@ -8215,17 +7053,14 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Leader",
-      "Rap-&-Dance Hybrid"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Boa presença de palco, rap/dança com desempenho forte",
-    "fracos": "Vocais principais ainda em crescimento"
+    "fortes": "",
+    "fracos": ""
   },
   {
     "gen": "5",
-    "type": "idol",
+    "type": "Idol",
     "id": "youngposseyeonjung",
     "name": "Yeonjung",
     "group": "YOUNG POSSE",
@@ -8236,13 +7071,10 @@ const idols = [
     "center": "B",
     "visual": "C",
     "especialidade": "",
-    "conceitos": [
-      "Lead Dancer",
-      "Performance Focus"
-    ],
+    "conceitos": [],
     "generos": [],
-    "fortes": "Dança de alto nível, presença fluida no palco",
-    "fracos": "Técnica de rap/vocal principal menos destacada"
+    "fortes": "",
+    "fracos": ""
   }
 ];
 
@@ -10091,7 +8923,7 @@ const musics = [
 
 //data:producers
 const producers = [
-  // //TESTE, APAGAR
+  //TESTE, APAGAR
   // {
   //   "type": "producer",
   //   "id": "producerproducerteste1",
@@ -10180,73 +9012,7 @@ const producers = [
   //     "HyunA - Ice Cream"
   //   ]
   // },
-  // {
-  //   "type": "producer",
-  //   "id": "producerproducerteste5",
-  //   "name": "Producer Teste 5",
-  //   "conceitos": [
-  //     "Cute",
-  //     "Dark",
-  //     "Conceptual"
-  //   ],
-  //   "generos": [
-  //     "Pop",
-  //     "Tropical",
-  //     "Groove"
-  //   ],
-  //   "musicas": [
-  //     "TXT - LO$ER = LOVER",
-  //     "Red Velvet - Pick-A-Boo",
-  //     "ILLIT - Do The Dance",
-  //     "Enhypen - Given-Taken",
-  //     "TWICE - Dance the Night Away"
-  //   ]
-  // },
-  // {
-  //   "type": "producer",
-  //   "id": "producerproducerteste6",
-  //   "name": "Producer Teste 6",
-  //   "conceitos": [
-  //     "Conceptual",
-  //     "Mature",
-  //     "Elegant"
-  //   ],
-  //   "generos": [
-  //     "Groove",
-  //     "Experimental",
-  //     "Pop"
-  //   ],
-  //   "musicas": [
-  //     "IVE - BANG BANG",
-  //     "NMIXX - Blue Valentine",
-  //     "fromis_9 - Supersonic",
-  //     "VIVIZ - Maniac",
-  //     "Loossemble - Sensitive"
-  //   ]
-  // },
-  // {
-  //   "type": "producer",
-  //   "id": "producerproducerteste7",
-  //   "name": "Producer Teste 7",
-  //   "conceitos": [
-  //     "Girl Crush",
-  //     "Swag",
-  //     "Performance"
-  //   ],
-  //   "generos": [
-  //     "Hip-hop",
-  //     "Experimental",
-  //     "Electro-Synth"
-  //   ],
-  //   "musicas": [
-  //     "aespa - Supernova",
-  //     "NCT 127 - Kick It",
-  //     "IVE - HEYA",
-  //     "Kiiikiii - BTG",
-  //     "Shinee - Don't Call Me"
-  //   ]
-  // },
-  // //TESTE, APAGAR */
+  //TESTE, APAGAR
   {
     "type": "producer",
     "id": "producerartiffect",

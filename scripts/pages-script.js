@@ -60,6 +60,7 @@ const NAV_LINKS = [
   { key: "nav_inicio",      href: "index.html" },
   { key: "nav_draft",       href: "draft-config-page.html" },
   { key: "nav_patchnotes",  href: "patchnotes-page.html" },
+  { key: "nav_feedback",    href: "feedback-page.html" },
 ];
 
 // Calculado uma única vez, enquanto document.currentScript ainda aponta para este

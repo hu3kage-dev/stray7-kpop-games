@@ -229,54 +229,6 @@ h2 {
   display: none;
 }
 
-/* Pool */
-.simPoolSection {
-  margin-left: 220px;
-  margin-right: 220px;
-  max-width: 1180px;
-  margin-top: 24px;
-}
-
-.simPoolHeader {
-  font-weight: bold;
-  font-size: 18px;
-  color: #d8b4fe;
-  margin-bottom: 12px;
-  text-align: left;
-}
-
-.simPoolHeader strong {
-  color: #fff;
-  margin-right: 4px;
-}
-
-.simPoolCards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  min-height: 125px;
-  padding: 16px;
-  border: 2px solid rgba(34, 255, 255, 0.25);
-  border-radius: 16px;
-  background: rgba(0, 255, 255, 0.04);
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-
-.simPoolCardWrap {
-  cursor: grab;
-}
-
-.simPoolCardWrap:active {
-  cursor: grabbing;
-}
-
-/* Cards no Pool */
-.simPoolCards .card {
-  width: 90px;
-  height: 120px;
-}
-
 /* =================
 RESULTADOS
 ====================*/

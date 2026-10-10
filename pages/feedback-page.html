@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stray7 Feedback</title>
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/pages-styles.css">
+  <link rel="stylesheet" href="../css/feedback-styles.css">
+  <script src="../assets/i18n/translations.js"></script>
+  <script src="../data/patchnotes.js"></script>
+  <script src="../scripts/pages-script.js" defer></script>
+  <script src="../scripts/feedback-script.js" defer></script>
+</head>
+<body>
+  <div class="page-header">
+    <h1 data-i18n="feedback_title">Fale com a gente</h1>
+    <p data-i18n="feedback_subtitle">Encontrou um bug, tem uma sugestão ou quer só dar um oi? Mande sua mensagem para a equipe do Stray7.</p>
+  </div>
+
+  <main class="feedback-wrapper">
+    <form id="feedbackForm" class="feedback-card" novalidate>
+
+      <div class="feedback-field" data-field="name">
+        <label for="fbName" data-i18n="feedback_label_name">Nome ou apelido</label>
+        <input type="text" id="fbName" name="name" maxlength="60" autocomplete="nickname"
+               placeholder="Como podemos te chamar?" data-i18n-placeholder="feedback_placeholder_name"
+               aria-describedby="fbNameError">
+        <p class="feedback-error" id="fbNameError" role="alert" hidden></p>
+      </div>
+
+      <div class="feedback-field" data-field="email">
+        <label for="fbEmail" data-i18n="feedback_label_email">E-mail</label>
+        <input type="email" id="fbEmail" name="email" maxlength="120" autocomplete="email" inputmode="email"
+               placeholder="seuemail@exemplo.com" data-i18n-placeholder="feedback_placeholder_email"
+               aria-describedby="fbEmailError">
+        <p class="feedback-error" id="fbEmailError" role="alert" hidden></p>
+      </div>
+
+      <div class="feedback-field" data-field="message">
+        <label for="fbMessage" data-i18n="feedback_label_message">Mensagem</label>
+        <textarea id="fbMessage" name="message" maxlength="2000" rows="6"
+                  placeholder="Escreva aqui seu feedback, sugestão ou problema encontrado..."
+                  data-i18n-placeholder="feedback_placeholder_message"
+                  aria-describedby="fbMessageError"></textarea>
+        <p class="feedback-error" id="fbMessageError" role="alert" hidden></p>
+      </div>
+
+      <!-- Campo isca anti-spam: invisível para pessoas, bots costumam preencher -->
+      <input type="text" name="_gotcha" class="feedback-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button type="submit" id="feedbackSubmit" class="feedback-submit" data-i18n="feedback_btn_send">Enviar</button>
+
+      <p id="feedbackStatus" class="feedback-status" role="status" aria-live="polite" hidden></p>
+    </form>
+  </main>
+
+  <div id="modal" class="modal"></div>
+</body>
+</html>
