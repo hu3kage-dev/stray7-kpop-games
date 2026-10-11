@@ -11,13 +11,15 @@ const PATCHES = [
     version: "v0.4.6",
     title: { pt: "Página de Feedback", en: "Feedback Page" },
     date: "2026-10-10",
-    type: "major",
+    type: "minor",
     sections: [
       {
         type: "new",
         items: [
           { pt: "Adicionada uma página de Feedback, onde os usuários podem enviar sugestões, reportar bugs e entrar em contato com a equipe do projeto.",
             en: "Added a Feedback page where users can submit suggestions, report bugs, and get in touch with the project team." },
+          { pt: "Foram adicionadas fotos para os produtores que ainda não tinham.",
+            en: "Added photos for producers that didn't have it yet." },
         ]
       },
       {
@@ -33,7 +35,7 @@ const PATCHES = [
     version: "v0.4.5",
     title: { pt: "Sistema de Idiomas (PT/EN)", en: "Language System (PT/EN)" },
     date: "2026-08-23",
-    type: "major",
+    type: "minor",
     sections: [
       {
         type: "new",
@@ -211,7 +213,7 @@ const PATCHES = [
           { pt: "Cards de idols, músicas e produtores agora exibem fotos reais (quando disponíveis).",
             en: "Idol, song, and producer cards now show real photos (when available)." },
           { pt: "Placeholders coloridos com nome e identificador foram implementados para os cards sem fotos.",
-            en: "Colored placeholders with name and identifier were implemented for cards without photos." },
+            en: "Coloured placeholders with name and identifier were implemented for cards without photos." },
         ]
       },
     ]
