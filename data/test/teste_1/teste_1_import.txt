@@ -1,0 +1,27 @@
+=== STRAY7 DRAFT ===
+Data: 14/10/2026, 11:28:10
+
+--- JOGADORES (ordem do draft) ---
+  1. 1
+  2. 2
+  Integrantes por time: 5
+
+--- POOL DE IDOLS ---
+  [NMIXX] Haewon  {id:nmixxhaewon}  (Gen 4 | Esp: Vocal)
+  [BABYMONSTER] Ruka  {id:babymonsterruka}  (Gen 5 | Esp: Rap)
+  [ARTMS] Choerry  {id:artmschoerry}  (Gen 5 | Esp: Dance)
+  [izna] Bang Jeemin  {id:iznabangjeemin}  (Gen 5 | Esp: Center)
+  [SAY MY NAME] Mei  {id:saymynamemei}  (Gen 5 | Esp: Dance)
+  [KiiiKiii] Leesol  {id:kiiikiiileesol}  (Gen 5 | Esp: Rap)
+  [tripleS] Jiwoo  {id:triplesjiwoo}  (Gen 5 | Esp: Vocal)
+  [tripleS] Yubin  {id:triplesyubin}  (Gen 5 | Esp: Dance)
+  [NMIXX] Bae  {id:nmixxbae}  (Gen 4 | Esp: Vocal)
+  [AtHeart] Michi  {id:atheartmichi}  (Gen 5 | Esp: Dance)
+
+--- POOL DE MÚSICAS ---
+  Rumor  {id:produce48rumor}  (Fonte: Produce 48)
+  Billionaire  {id:queendompuzzlebillionaire}  (Fonte: Queendom Puzzle)
+
+--- POOL DE PRODUTORES ---
+  MUMW (Makeumine Works)  {id:producermumwmakeumineworks}
+  C'SA (Shin Sia)  {id:producercsashinsia}

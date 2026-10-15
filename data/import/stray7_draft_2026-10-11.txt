@@ -1,22 +1,22 @@
 === STRAY7 DRAFT ===
-Data: 28/05/2026, 13:40:36
+Data: 11/10/2026, 14:18:24
 
 --- JOGADORES (ordem do draft) ---
-  1. b
-  2. a
+  1. A
+  2. B
   Integrantes por time: 3
 
 --- POOL DE IDOLS ---
-  [Unchild] Tina  {id:unchildtina}  (Gen 5 | Esp: Vocal)
-  [Unchild] Evon  {id:unchildevon}  (Gen 5 | Esp: Vocal)
-  [Unchild] Yeeun  {id:unchildyeeun}  (Gen 5 | Esp: Visual)
   [Unchild] Haeun  {id:unchildhaeun}  (Gen 5 | Esp: Dance)
+  [Unchild] Tina  {id:unchildtina}  (Gen 5 | Esp: Vocal)
   [Unchild] Ako  {id:unchildako}  (Gen 5 | Esp: Rap)
   [Unchild] Heekie  {id:unchildheekie}  (Gen 5 | Esp: Rap)
+  [Unchild] Evon  {id:unchildevon}  (Gen 5 | Esp: Vocal)
+  [Unchild] Yeeun  {id:unchildyeeun}  (Gen 5 | Esp: Visual)
 
 --- POOL DE MÚSICAS ---
-  Here I Am  {id:boysplanethereiam}  (Fonte: Boys Planet)
-  Charismatic  {id:queendompuzzlecharismatic}  (Fonte: Queendom Puzzle)
+  It's Me (Pick Me)  {id:produce101season2itsmepickme}  (Fonte: Produce 101 Season 2)
+  Switch  {id:boysplanetswitch}  (Fonte: Boys Planet)
 
 --- POOL DE PRODUTORES ---
   Producer Teste 1  {id:producerproducerteste1}
