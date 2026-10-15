@@ -34,8 +34,8 @@ const PATCHES = [
             en: "Started updating the idol database. Descriptive text fields have been temporarily removed during the data review and will be restored once the process is complete."
           },
           {
-            pt: "O pool pessoal foi removido da <span class='hl'>Fase de Simulação</span>. Agora, os Idols, as Músicas e os Produtores são carregados diretamente nos slots, seguindo a mesma ordem definida na <span class='hl'>Fase de Escolha</span>.",
-            en: "The personal pool has been removed from the <span class='hl'>Simulation Phase</span>. Idols, Songs, and Producers are now loaded directly into the slots, following the same order as in the <span class='hl'>Draft Phase</span>."
+            pt: "O pool pessoal foi removido da <span class='hl'>Fase de Simulação</span>. Agora, os idols, as músicas e os produtores são carregados diretamente nos slots, seguindo a mesma ordem definida na <span class='hl'>Fase de Escolha</span>.",
+            en: "The personal pool has been removed from the <span class='hl'>Simulation Phase</span>. idols, songs, and producers are now loaded directly into the slots, following the same order as in the <span class='hl'>Draft Phase</span>."
           }
         ]
       }
@@ -146,12 +146,17 @@ const PATCHES = [
         ]
       },
       {
-        type: "fix",
+        type: "change",
         items: [
           { 
-            pt: "O filtro em configuração agora suporta seleção por geração e por grupo, permitindo uma personalização mais granular do pool de idols para o draft.",
-            en: "The setup filter now supports selection by generation and by group, allowing more granular customization of the idol pool for the draft." 
+            pt: "O filtro em <span class='hl'>Configuração do Draft</span> agora suporta seleção por geração e por grupo, permitindo uma personalização mais granular do pool de idols para o draft.",
+            en: "The <span class='hl'>Draft Setup</span> filter now supports selection by generation and by group, allowing more granular customization of the idol pool for the draft." 
           },
+        ]
+      },
+      {
+        type: "fix",
+        items: [
           { 
             pt: "Os botões <span class='hl'>Marcar Todos</span> e <span class='hl'>Desmarcar Todos</span> agora respeitam o filtro aplicado.",
             en: "The <span class='hl'>Select All</span> and <span class='hl'>Deselect All</span> buttons now respect the applied filter." 
