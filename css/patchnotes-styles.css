@@ -1,7 +1,9 @@
-/* ========================
-   CORPO DA PÁGINA
-======================== */
+/* =============================================================
+  patchnotes-styles.css
+  Estilos exclusivos de patchnotes.html (notas de atualização).
+================================================================ */
 
+/* CORPO DA PÁGINA */
 .patchnotes-page {
   padding-bottom: 60px;
   max-width: 860px;
@@ -10,9 +12,7 @@
   padding-right: 20px;
 }
 
-/* ========================
-   CARD DE PATCH
-======================== */
+/* Cartão de patch */
 .patch-card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(168,85,247,0.14);
@@ -26,7 +26,7 @@
   border-color: rgba(168, 85, 247, 0.3);
 }
 
-/* Header do card — clicável para expandir */
+/* Header do cartão — clicável para expandir */
 .patch-header {
   display: flex;
   align-items: center;
@@ -164,15 +164,13 @@
 .patch-section-title.remove + .patch-list li::before { color: #f87171; }
 .patch-section-title.balance + .patch-list li::before { color: #fbbf24; }
 
-/* destaque inline */
+/* Destaque inline */
 .hl {
   color: #fff;
   font-weight: 600;
 }
 
-/* ========================
-   EMPTY STATE
-======================== */
+/* Estado vazio */
 .patchnotes-empty {
   text-align: center;
   padding: 60px 20px;
@@ -180,19 +178,12 @@
   font-size: 14px;
 }
 
-/* ========================
-   RESETAR HERANÇA DE CENTRALIZAÇÃO
-======================== */
+/* Resetar herança de centralização */
 .patch-card, .patch-section {
   text-align: left;
 }
 
-/* ========================
-   MEDIA QUERIES
-   (640px acompanha pages-styles.css; 480px é onde o cabeçalho do card
-   realmente fica apertado — abaixo disso o título perdia toda a largura)
-======================== */
-
+/* Mobile */
 @media (max-width: 640px) {
   /* o body já tem padding lateral; evita somar mais 20px de cada lado */
   .patchnotes-page {

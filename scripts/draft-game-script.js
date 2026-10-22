@@ -1,3 +1,12 @@
+// ====================================================================
+// draft-game-script.js — exclusivo de draft-game-page.html
+//   • turnos em cobrinha, pool, boards dos jogadores e encerramento do draft
+//   • regras de drag and drop do draft (o motor do drag e o card/modal ficam em cards-script.js)
+//   • ações rápidas: Ctrl + clique, botão "escolher" do modal e barra de espaço
+//   • botão Exportar Draft no header
+// Depende de pages-script.js (t, aoMudarIdioma, pegarHrefJogo) e de cards-script.js.
+// ====================================================================
+
 // ===================
 // VARIÁVEIS GLOBAIS
 // ===================
@@ -9,33 +18,24 @@ let picks = {};
 let jogouNoTurno = false;
 let escolhaDoTurno = null;
 let avisoTurno = null;
-
-// =====================
-// VARIÁVEIS DE DRAG  
-// =====================
-let draggedItem = null;
-let draggedElement = null;
-let dragOrigin = null;
-let dragPayload = null;
-let ghostCard = null;
+let avisoChave = null;       // chave do aviso na tela, para retraduzi-lo ao trocar de idioma
+let draftIniciado = false;   // true depois que os dados do draft foram carregados
+let draftEncerrado = false;  // true quando todos os boards estão completos
 
 // =====================
 // INICIALIZAÇÃO
 // =====================
 
-//f:onWindowLoad
-window.onload = function () {
+//f:iniciarPaginaDraftGame
+//Carrega o draftData, define a ordem dos turnos e desenha a tela
+function iniciarPaginaDraftGame() {
   inicializarAviso();
+  configurarDragDraft();
   const dados = JSON.parse(localStorage.getItem("draftData"));
   if (!dados) {
-    mostrarAviso(t("aviso_erro_carregar_draft"));
+    mostrarAvisoPorChave("aviso_erro_carregar_draft");
     return;
   }
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      fecharModal();
-    }
-  });
   jogadores = dados.jogadores;
   pool = dados.pool;
   window.config = {
@@ -59,13 +59,23 @@ window.onload = function () {
     draftAtual.ordemBase = ordemBase;
     localStorage.setItem("draftData", JSON.stringify(draftAtual));
   }
+  draftIniciado = true;
+  iniciarAtalhosDraft();
   render();
-};
-
-//f:getItemType
-function getItemType(item) {
-  return item?.type?.toString().toLowerCase();
+  injetarBotaoExportar();
 }
+
+//f:atualizarIdiomaDraftGame
+//Refaz o que depende de idioma: o header é recriado (o botão Exportar volta), e boards, turno e aviso são retraduzidos
+function atualizarIdiomaDraftGame() {
+  injetarBotaoExportar();
+  if (!draftIniciado) return;
+  render();
+  if (avisoChave) mostrarAviso(t(avisoChave));
+}
+
+aoMudarIdioma(atualizarIdiomaDraftGame);
+window.addEventListener("DOMContentLoaded", iniciarPaginaDraftGame);
 
 //f:inicializarAviso
 function inicializarAviso() {
@@ -94,81 +104,51 @@ function inicializarAviso() {
   }
 }
 
-// =====================
-// DRAG QUEEN
-// =====================
-
-//f:criarGhostCard
-function criarGhostCard(card) {
-  let ghost = card.cloneNode(true);
-  const rect = card.getBoundingClientRect();
-  ghost.style.position = "fixed";
-  ghost.style.pointerEvents = "none";
-  ghost.style.opacity = "0.7";
-  ghost.style.zIndex = "10000";
-  ghost.style.boxShadow = "0 8px 16px rgba(0,0,0,0.5)";
-  ghost.style.cursor = "grabbing";
-  ghost.style.width = rect.width + "px";
-  ghost.style.height = rect.height + "px";
-  ghost.style.transform = "translate(-50%, -50%)";
-  document.body.appendChild(ghost);
-  return ghost;
-}
-
-//f:iniciarDrag
-function iniciarDrag(e, item, origem, playerIndex = null, slotIndex = null) {
-  e.preventDefault();
-  if (item.locked) return;
-  draggedItem = item;
-  draggedElement = e.currentTarget;
-  dragOrigin = origem;
-  //criar payload
-  if (origem === "pool") {
-    let poolIndex = pool.findIndex(p => p.id === item.id);
-    dragPayload = { ...item, fromPool: true, poolIndex };
-  } else {
-    dragPayload = { ...item, fromPlayer: playerIndex, fromIndex: slotIndex };
+//f:mostrarAviso
+function mostrarAviso(texto) {
+  if (!avisoTurno) return;
+  if (!texto) {
+    avisoChave = null;
+    avisoTurno.style.display = "none";
+    avisoTurno.innerText = "";
+    return;
   }
-  //criar ghost card que segue o mouse
-  ghostCard = criarGhostCard(draggedElement);
-  //rastrear movimento do mouse
-  document.addEventListener("mousemove", rastrearDrag);
-  document.addEventListener("mouseup", finalizarDrag);
+  avisoTurno.style.display = "flex";
+  avisoTurno.innerText = texto;
 }
 
-//f:rastrearDrag
-function rastrearDrag(e) {
-  if (!ghostCard) return;
-  ghostCard.style.left = e.clientX + "px";
-  ghostCard.style.top = e.clientY + "px";
+//f:mostrarAvisoPorChave
+//Mostra um aviso traduzido guardando a chave, para ele trocar de idioma junto com a página
+function mostrarAvisoPorChave(chave) {
+  mostrarAviso(t(chave));
+  avisoChave = chave;
 }
 
-//f:finalizarDrag
-function finalizarDrag(e) {
-  if (!ghostCard) return;
-  document.removeEventListener("mousemove", rastrearDrag);
-  document.removeEventListener("mouseup", finalizarDrag);
-  //remove ghost card
-  document.body.removeChild(ghostCard);
-  ghostCard = null;
-  //verifica qual elemento está sob o cursor
-  const elementoAlvo = document.elementFromPoint(e.clientX, e.clientY);
-  if (elementoAlvo) {
-    //procura o slot ou pool mais próximo
-    let slot = elementoAlvo.closest(".slot");
-    let poolDiv = elementoAlvo.closest("#pool");
-    if (slot) {
-      //drop em um slot
-      executarDropNoSlot(slot, dragPayload);
-    } else if (poolDiv) {
-      //drop no pool (devolve item)
-      executarDropNoPool(dragPayload);
+// =====================
+// DRAG QUEEN (regras do draft)
+// =====================
+
+//f:configurarDragDraft
+//Registra no motor de drag (cards-script.js) o que pode ser arrastado e o que acontece ao soltar
+function configurarDragDraft() {
+  configurarDrag({
+    podeArrastar: (item) => !item.locked,
+    criarPayload(item, origem, playerIndex, slotIndex) {
+      if (item.locked) return null;
+      if (origem === "pool") {
+        const poolIndex = pool.findIndex(p => p.id === item.id);
+        return { ...item, fromPool: true, poolIndex };
+      }
+      return { ...item, fromPlayer: playerIndex, fromIndex: slotIndex };
+    },
+    aoSoltar(elementoAlvo, payload) {
+      //procura o slot ou pool mais próximo
+      const slot = elementoAlvo.closest(".slot");
+      const poolDiv = elementoAlvo.closest("#pool");
+      if (slot) executarDropNoSlot(slot, payload);        //drop em um slot
+      else if (poolDiv) executarDropNoPool(payload);      //drop no pool (devolve item)
     }
-  }
-  draggedItem = null;
-  draggedElement = null;
-  dragOrigin = null;
-  dragPayload = null;
+  });
 }
 
 // =====================
@@ -205,7 +185,7 @@ function criarDropZone(playerIndex, tipo) {
     let item = lista[i];
     //render card
     if (item) {
-      let card = criarCard(item, "board", playerIndex, i);
+      let card = criarCardDraft(item, "board", playerIndex, i);
       slot.appendChild(card);
     }
     slotsContainer.appendChild(slot);
@@ -248,9 +228,15 @@ function executarDropNoSlot(slot, data) {
     return;
   }
   //vindo do pool
-  if (data.fromPool) {
+  if (data.fromPool) colocarDoPoolNoBoard(data, playerIndex, tipo);
+}
+
+//f:colocarDoPoolNoBoard
+//Move um item do pool para o board do jogador: primeiro slot vazio (idol) ou slot único (música/produtor);
+//se estiver cheio, troca pelo primeiro item destravado. Retorna true se o item foi colocado.
+function colocarDoPoolNoBoard(data, playerIndex, tipo) {
   let itemNovo = data;
-  if (getItemType(itemNovo) !== tipo) return;
+  if (getItemType(itemNovo) !== tipo) return false;
   // Captura o index original ANTES de qualquer splice
   let originalIndex = data.poolIndex;
   let remocaoAntiga = null;
@@ -269,7 +255,7 @@ function executarDropNoSlot(slot, data) {
       let indexSwap = lista.findIndex(x => x && !x.locked);
       if (indexSwap === -1) {
         if (remocaoAntiga) restaurarEscolhaDoTurno(remocaoAntiga, playerIndex);
-        return;
+        return false;
       }
       let itemSubstituido = lista[indexSwap];
       // Remove o novo do pool primeiro para não deslocar o index do substituído
@@ -285,7 +271,7 @@ function executarDropNoSlot(slot, data) {
     let atual = lista[0];
     if (atual && atual.locked) {
       if (remocaoAntiga) restaurarEscolhaDoTurno(remocaoAntiga, playerIndex);
-      return;
+      return false;
     }
     if (atual) {
       pool = pool.filter(p => p.id !== itemNovo.id);
@@ -302,7 +288,7 @@ function executarDropNoSlot(slot, data) {
   escolhaDoTurno = itemNovo;
   jogouNoTurno = true;
   render();
-}
+  return true;
 }
 
 //f:executarDropNoPool
@@ -324,18 +310,6 @@ function executarDropNoPool(data) {
     lista[data.fromIndex] = null;
     render();
   }
-}
-
-//f:mostrarAviso
-function mostrarAviso(texto) {
-  if (!avisoTurno) return;
-  if (!texto) {
-    avisoTurno.style.display = "none";
-    avisoTurno.innerText = "";
-    return;
-  }
-  avisoTurno.style.display = "flex";
-  avisoTurno.innerText = texto;
 }
 
 // =====================
@@ -373,61 +347,10 @@ function jogadorAtual() {
   return ordem[turno];
 }
 
-//f:adicionarItem
-function adicionarItem(item) {
-  let player = jogadorAtual();
-  if (!podeAdicionarItem(player, item)) return;
-  if (!picks[player]) {
-    picks[player] = {
-      idol: Array(config.integrantes).fill(null),
-      music: [null],
-      producer: [null]
-    };
-  }
-  if (escolhaDoTurno) {
-    desfazerEscolhaDoTurno(player);
-  }
-  const itemType = getItemType(item);
-  let lista = picks[player][itemType];
-  // Recalcula posição após possível desfazer
-  item.originalPoolIndex = pool.findIndex(p => p.id === item.id);
-  if (itemType === "idol") {
-    let vazio = lista.findIndex(x => !x);
-    if (vazio !== -1) {
-      lista[vazio] = item;
-    } else {
-      let indexSwap = lista.findIndex(x => x && !x.locked);
-      if (indexSwap === -1) return;
-      let itemSubstituido = lista[indexSwap];
-      pool = pool.filter(p => p.id !== item.id);
-      let insertIndex = itemSubstituido.originalPoolIndex !== undefined
-        ? Math.min(itemSubstituido.originalPoolIndex, pool.length)
-        : pool.length;
-      pool.splice(insertIndex, 0, itemSubstituido);
-      lista[indexSwap] = item;
-    }
-  } else {
-    let atual = lista[0];
-    if (atual && atual.locked) return;
-    if (atual) {
-      pool = pool.filter(p => p.id !== item.id);
-      let insertIndex = atual.originalPoolIndex !== undefined
-        ? Math.min(atual.originalPoolIndex, pool.length)
-        : pool.length;
-      pool.splice(insertIndex, 0, atual);
-    }
-    lista[0] = item;
-  }
-  pool = pool.filter(p => p.id !== item.id);
-  escolhaDoTurno = item;
-  jogouNoTurno = true;
-  render();
-}
-
 //f:encerrarTurno
 function encerrarTurno() {
   if (!escolhaDoTurno) {
-    mostrarAviso(t("aviso_escolha_card"));
+    mostrarAvisoPorChave("aviso_escolha_card");
     return;
   }
   let player = jogadorAtual();
@@ -451,33 +374,6 @@ function encerrarTurno() {
   }
   mostrarAviso("");
   render();
-}
-
-//f:podeAdicionarItem
-function podeAdicionarItem(playerIndex, item) {
-  let data = picks[playerIndex];
-if (!data) return true;
-let lista = [
-  ...(data.idol || []),
-  ...(data.music || []),
-  ...(data.producer || [])
-];
-  let idols = lista.filter(i => i && getItemType(i) === "idol").length;
-  let temMusic = lista.some(i => i && getItemType(i) === "music");
-  let temProducer = lista.some(i => i && getItemType(i) === "producer");
-  const itemType = getItemType(item);
-  if (itemType === "idol") {
-    if (idols >= config.integrantes) return false;
-  }
-  if (itemType === "music") {
-    if (!config.usarMusica) return false;
-    if (temMusic) return false;
-  }
-  if (itemType === "producer") {
-    if (!config.usarProdutor) return false;
-    if (temProducer) return false;
-  }
-  return true;
 }
 
 //f:atualizarTurnoUI
@@ -589,234 +485,189 @@ function renderPool() {
   if (!poolDiv) return;
   poolDiv.innerHTML = "";
   pool.forEach(item => {
-    let card = criarCard(item, "pool");
+    let card = criarCardDraft(item, "pool");
     poolDiv.appendChild(card);
   });
 }
 
 // =====================
-// IMAGENS
+// CARDS DO DRAFT
 // =====================
 
-//f:getCardImageCandidates
-function getCardImageCandidates(item) {
-  const sanitize = (text) => text
-    .toString()
-    .trim()
-    .normalize("NFD") // remove acentos
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "") // remove caracteres especiais e espaços
-    .replace(/^-+|-+$/g, ""); // remove hífen nas pontas
-    const itemType = getItemType(item);
-    const candidates = [];
-    const idSlug = sanitize(item.id);
-    const nameSlug = item.name;
-    
-    if (itemType === "idol") {
-      const groupSlug = item.group;
-      const query = encodeURIComponent(`${groupSlug} ${nameSlug}`);
-      candidates.push(`../assets/draft-cards/idol_${idSlug}.jpg`);
-      candidates.push(`../assets/draft-cards/idol_${idSlug}.png`);
-      candidates.push(`../assets/draft-cards/idol_${idSlug}.jpeg`);
-      candidates.push(`https://dummyimage.com/160x200/ffff00/000000&text=${query}`);
-      candidates.push(`https://via.placeholder.com/160x200/ffff00/000000?text=${query}`);
-      return candidates;
-    }
-
-  if (itemType === "music") {
-    const fonteSlug = sanitize(item.fonte || "");
-    const query = encodeURIComponent(`${fonteSlug} ${nameSlug}`);
-    if (fonteSlug) {
-      candidates.push(`../assets/draft-cards/music_${idSlug}.jpg`);
-      candidates.push(`../assets/draft-cards/music_${idSlug}.png`);
-      candidates.push(`../assets/draft-cards/music_${idSlug}.jpeg`);
-    }
-    candidates.push(`https://dummyimage.com/160x200/0000ff/ffffff&text=${query}`);
-    candidates.push(`https://via.placeholder.com/160x200/0000ff/ffffff?text=${query}`);
-    return candidates;
-  }
-
-  if (itemType === "producer") {
-    const query = encodeURIComponent(`Producer ${nameSlug}`);
-    candidates.push(`../assets/draft-cards/producer_${idSlug}.jpg`);
-    candidates.push(`../assets/draft-cards/producer_${idSlug}.png`);
-    candidates.push(`../assets/draft-cards/producer_${idSlug}.jpeg`);
-    candidates.push(`https://dummyimage.com/160x200/800080/ffffff&text=${query}`);
-    candidates.push(`https://via.placeholder.com/160x200/800080/ffffff?text=${query}`);
-    return candidates;
-  }
-
-  candidates.push(`../assets/draft-cards/${itemType}_${idSlug}.jpg`);
-  candidates.push(`../assets/draft-cards/${itemType}_${idSlug}.png`);
-  candidates.push(`../assets/draft-cards/${itemType}_${idSlug}.jpeg`);
-
-  return candidates;
-}
-
-// =====================
-// CARD
-// =====================
-
-//f:getCardImageSrc
-function getCardImageSrc(item) {
-  return getCardImageCandidates(item)[0];
-}
-
-//f:criarCard
-function criarCard(item, origem = "pool", playerIndex = null, slotIndex = null) {
-  let card = document.createElement("div");
-  card.className = "card";
-  // Limpa aspas extras dos dados
-  const cleanText = (text) => {
-    if (!text) return "";
-    return text.replace(/\"{3}/g, '"').replace(/^["']|["']$/g, "").trim();
-  };
-  const itemType = getItemType(item);
-  // Type colour coded lyrics
-  if (itemType === "idol") {
-    card.classList.add("card-idol");
-  } else if (itemType === "music") {
-    card.classList.add("card-music");
-  } else if (itemType === "producer") {
-    card.classList.add("card-producer");
-  }
-  if (item.locked) {
-    card.classList.add("locked");
-  }
-  // Imagem com fallback chain
-  const imageCandidates = getCardImageCandidates(item);
-  let candidateIndex = 0;
-  let img = document.createElement("img");
-  img.src = imageCandidates[candidateIndex];
-  img.onerror = () => {
-    candidateIndex += 1;
-    if (candidateIndex < imageCandidates.length) {
-      img.src = imageCandidates[candidateIndex];
-      return;
-    }
-    const fallbackType = getItemType(item);
-    const fallbackName = item.name
-      .toString()
-      .replace(/\s+/g, "_")
-      .replace(/[^a-zA-Z0-9_\-]/g, "");
-    img.onerror = null;
-    if (fallbackType === "idol") {
-      const fallbackGroup = item.group
-        .toString()
-        .replace(/\s+/g, "_")
-        .replace(/[^a-zA-Z0-9_\-]/g, "");
-      img.src = `../assets/draft-cards/idol_${fallbackGroup}_${fallbackName}.jpg`;
-    } else {
-      img.src = `../assets/draft-cards/${fallbackType}_${fallbackName}.jpg`;
-    }
-  };
-  let label = document.createElement("div");
-  label.className = "cardLabel";
-  // Estruturar informações baseado no tipo
-  if (itemType === "idol") {
-    label.innerHTML = `<div class="cardInfo">${cleanText(item.group)}</div><div class="cardName">${item.name}</div>`;
-  } else if (itemType === "music") {
-    label.innerHTML = `<div class="cardInfo">${cleanText(item.fonte)}</div><div class="cardName">${item.name}</div>`;
-  } else if (itemType === "producer") {
-    label.innerHTML = `<div class="cardInfo">${itemType}</div><div class="cardName">${item.name}</div>`;
-  } else {
-    label.innerText = item.name;
-  }
-  card.appendChild(img);
-  card.appendChild(label);
-  // Drag
-  if (!item.locked) {
-    card.style.cursor = "grab";
-    card.addEventListener("mousedown", (e) => {
-      if (e.button === 0) {
-        iniciarDrag(e, item, origem, playerIndex, slotIndex);
-      }
-    });
-    card.addEventListener("mouseenter", () => {
-      if (!draggedElement) {
-        card.style.cursor = "grab";
-      }
-    });
-  }
-  // Modal
-  card.addEventListener("click", (e) => {
-    //evita abrir modal se estiver fazendo drag
-    if (!draggedElement) {
-      abrirModal(item);
-    }
+//f:criarCardDraft
+//Cria um card do pool ou de um board: Ctrl + clique escolhe o card; clique simples abre o modal
+function criarCardDraft(item, origem, playerIndex = null, slotIndex = null) {
+  return criarCard(item, {
+    bloqueado: !!item.locked,
+    origem, playerIndex, slotIndex,
+    aoClicar: (e) => {
+      if (!e.ctrlKey || origem !== "pool") return false;
+      if (!escolherCardDoPool(item)) mostrarAvisoPorChave("aviso_sem_slot");
+      return true;
+    },
+    // o botão "escolher" do modal só aparece quando a escolha é possível
+    opcoesModal: () => (origem === "pool" && podeEscolherCard(item))
+      ? { escolher: () => escolherCardPeloModal(item) }
+      : {}
   });
-  return card;
+}
+
+//f:podeEscolherCard
+//Indica se o card do pool pode ir para o board do jogador ativo agora
+function podeEscolherCard(item) {
+  if (!draftIniciado || draftEncerrado || item.locked) return false;
+  const tipo = getItemType(item);
+  if (tipo === "music" && !config.usarMusica) return false;
+  if (tipo === "producer" && !config.usarProdutor) return false;
+  const lista = picks[jogadorAtual()]?.[tipo];
+  if (!lista) return false;
+  if (tipo === "idol") return lista.some(x => !x) || lista.some(x => x && !x.locked);
+  return !(lista[0] && lista[0].locked);
+}
+
+//f:escolherCardDoPool
+//Move o card do pool para o primeiro slot disponível do board do jogador ativo (como um "quick drag")
+function escolherCardDoPool(item) {
+  if (!podeEscolherCard(item)) return false;
+  const poolIndex = pool.findIndex(p => p.id === item.id);
+  if (poolIndex === -1) return false;
+  return colocarDoPoolNoBoard({ ...item, fromPool: true, poolIndex }, jogadorAtual(), getItemType(item));
+}
+
+//f:escolherCardPeloModal
+//Botão "escolher" do modal: fecha o modal, move o card e leva a página até o board do jogador ativo
+function escolherCardPeloModal(item) {
+  fecharModal();
+  if (escolherCardDoPool(item)) centralizarBoardAtivo();
+}
+
+//f:centralizarBoardAtivo
+//Rola a página para centralizar a linha do jogador ativo na tela
+function centralizarBoardAtivo() {
+  const linha = document.querySelector(".playerRow.activePlayer");
+  if (linha) linha.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 // =====================
-// MODAL
+// ATALHOS DE TECLADO
 // =====================
 
-//f:abrirModal
-function abrirModal(item) {
-  let modal = document.getElementById("modal");
-  if (!modal) return;
-  modal.style.display = "flex";
-  const itemType = getItemType(item);
-  const cleanText = val => {
-    if (!val || (Array.isArray(val) && !val.length)) return "-";
-    if (Array.isArray(val)) return val.join(", ");
-    return val.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
-  };
-  const listText = val => {
-    if (!val || (Array.isArray(val) && !val.length)) return "-";
-    if (Array.isArray(val)) return val.join("<br>");
-    return val.toString().replace(/"{3}/g, '"').replace(/^['"]|['"]$/g, "").trim();
-  };
-  let bodyContent = "";
-  if (itemType === "idol") {
-    bodyContent = `
-      <p><b>${t("modal_grupo")}:</b> ${cleanText(item.group)}</p>
-      <p><b>${t("modal_aniversario")}:</b> ${cleanText(item.aniversario)}</p>
-      <p><b>${t("modal_vocal")}:</b> ${cleanText(item.vocal)}</p>
-      <p><b>${t("modal_dance")}:</b> ${cleanText(item.dance)}</p>
-      <p><b>${t("modal_rap")}:</b> ${cleanText(item.rap)}</p>
-      <p><b>${t("modal_center")}:</b> ${cleanText(item.center)}</p>
-      <p><b>${t("modal_visual")}:</b> ${cleanText(item.visual)}</p>
-      <p><b>${t("modal_especialidade")}:</b> ${cleanText(item.especialidade)}</p>
-      <p><b>${t("modal_conceitos_predominantes")}:</b> ${cleanText(item.conceitos)}</p>
-      <p><b>${t("modal_generos_predominantes")}:</b> ${cleanText(item.generos)}</p>
-      <p><b>${t("modal_pontos_fortes")}:</b> ${cleanText(item.fortes)}</p>
-      <p><b>${t("modal_pontos_fracos")}:</b> ${cleanText(item.fracos)}</p>
-    `;
-  } else if (itemType === "music") {
-    bodyContent = `
-      <p><b>${t("modal_fonte")}:</b> ${cleanText(item.fonte)}</p>
-      <p><b>${t("modal_conceitos_originais")}:</b> ${cleanText(item.conceitos)}</p>
-      <p><b>${t("modal_generos_originais")}:</b> ${cleanText(item.generos)}</p>
-    `;
-  } else if (itemType === "producer") {
-    bodyContent = `
-      <p><b>${t("modal_conceitos_predominantes")}:</b> ${cleanText(item.conceitos)}</p>
-      <p><b>${t("modal_generos_predominantes")}:</b> ${cleanText(item.generos)}</p>
-      <p><b>${t("modal_musicas_conhecidas")}:</b><br> ${listText(item.musicas)}</p>
-    `;
-  } else {
-    bodyContent = `<p><b>Tipo:</b> ${itemType}</p>`;
+let espacoTratado = false;   // true entre o keydown e o keyup de um espaço que acionou o botão
+
+//f:iniciarAtalhosDraft
+//Registra a barra de espaço como atalho do botão Encerrar Turno
+function iniciarAtalhosDraft() {
+  document.addEventListener("keydown", tratarTeclaDraft);
+  document.addEventListener("keyup", tratarSoltarTeclaDraft);
+}
+
+//f:tratarTeclaDraft
+//Espaço aciona o botão de encerrar turno, exceto com o modal aberto, durante um arrasto ou ao digitar em um campo.
+//Combinações com Ctrl/Alt/Meta/Shift passam direto (Ctrl+C e Ctrl+V continuam funcionando).
+function tratarTeclaDraft(e) {
+  if (e.code !== "Space") return;
+  if (e.repeat && espacoTratado) { e.preventDefault(); return; }   // segurar a tecla não rola a página nem repete
+  if (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) return;
+  if (draftEncerrado || modalAberto() || draggedElement) return;
+  if (e.target.closest && e.target.closest("input, textarea, select, [contenteditable]")) return;
+  const botao = document.querySelector("#turnActions button");
+  if (!botao) return;
+  e.preventDefault();
+  espacoTratado = true;
+  // tira o foco de um botão focado, senão o próprio espaço o ativaria de novo ao soltar a tecla
+  if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
+  botao.click();
+}
+
+//f:tratarSoltarTeclaDraft
+//Impede que o espaço ative, ao soltar, o botão que estava focado
+function tratarSoltarTeclaDraft(e) {
+  if (e.code === "Space" && espacoTratado) {
+    espacoTratado = false;
+    e.preventDefault();
   }
-  modal.innerHTML = `
-  <div class="modalContent">
-    <img src="${getCardImageSrc(item)}" class="modalImg"
-         onerror="this.onerror=null;this.src='';">
-    <div class="modalBody">
-      <span class="closeBtn" onclick="fecharModal()">✕</span>
-      <h2>${cleanText(item.name)}</h2>
-      ${bodyContent}
-    </div>
-  </div>
-  `;
-  modal.onclick = (e) => { if (e.target === modal) fecharModal(); };
 }
 
-//f:fecharModal
-function fecharModal() {
-  document.getElementById("modal").style.display = "none";
+// =====================
+// EXPORTAR DRAFT
+// =====================
+
+//f:injetarBotaoExportar
+//Coloca o botão Exportar Draft no header (o header é recriado a cada troca de idioma, então isto roda de novo)
+function injetarBotaoExportar() {
+  const headerRight = document.querySelector(".header-right");
+  if (!headerRight || document.getElementById("btnExportarDraft")) return;
+  const btn = document.createElement("button");
+  btn.id = "btnExportarDraft";
+  btn.setAttribute("data-i18n", "btn_exportar_draft");
+  btn.textContent = t("btn_exportar_draft");
+  btn.onclick = exportarDraft;
+  headerRight.insertBefore(btn, headerRight.firstChild);
+}
+
+//f:exportarDraft
+function exportarDraft() {
+  const raw = localStorage.getItem("draftData");
+  if (!raw) { alert(t("alert_nenhum_draft")); return; }
+  const { integrantes, pool } = JSON.parse(raw);
+
+  // ler ordem real do DOM (sorteada pelo draft-game-script.js)
+  // fallback para localStorage se o board não estiver disponível
+  const playerRows = document.querySelectorAll("#playersBoard .playerRow");
+  let jogadores;
+  if (playerRows.length > 0) {
+    jogadores = Array.from(playerRows).map(row => row.querySelector(".playerName")?.textContent?.trim()).filter(Boolean);
+  } else {
+    jogadores = JSON.parse(raw).jogadores;
+  }
+
+  const tipoLabel = { idol: "Idol", music: "Música", producer: "Produtor" };
+
+  const idols     = pool.filter(i => i.type?.toLowerCase() === "idol");
+  const musicas   = pool.filter(i => i.type?.toLowerCase() === "music");
+  const produtores= pool.filter(i => i.type?.toLowerCase() === "producer");
+
+  const linhas = [];
+
+  linhas.push("=== STRAY7 DRAFT ===");
+  linhas.push(`Data: ${new Date().toLocaleString("pt-BR")}`);
+  linhas.push("");
+
+  linhas.push("--- JOGADORES (ordem do draft) ---");
+  jogadores.forEach((nome, i) => linhas.push(`  ${i + 1}. ${nome}`));
+  linhas.push(`  Integrantes por time: ${integrantes}`);
+  linhas.push("");
+
+  linhas.push("--- POOL DE IDOLS ---");
+  if (idols.length === 0) {
+    linhas.push("  (nenhum)");
+  } else {
+    idols.forEach(idol => {
+      linhas.push(`  [${idol.group}] ${idol.name}  {id:${idol.id}}  (Gen ${idol.gen || "?"} | Esp: ${idol.especialidade || "-"})`);
+    });
+  }
+  linhas.push("");
+
+  if (musicas.length > 0) {
+    linhas.push("--- POOL DE MÚSICAS ---");
+    musicas.forEach(m => linhas.push(`  ${m.name}  {id:${m.id}}${m.fonte ? "  (Fonte: " + m.fonte + ")" : ""}`));
+    linhas.push("");
+  }
+
+  if (produtores.length > 0) {
+    linhas.push("--- POOL DE PRODUTORES ---");
+    produtores.forEach(p => linhas.push(`  ${p.name}  {id:${p.id}}`));
+    linhas.push("");
+  }
+
+  const texto = linhas.join("\n");
+  const blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement("a");
+  a.href     = url;
+  a.download = `stray7_draft_${new Date().toISOString().slice(0,10)}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 // =====================
@@ -860,7 +711,8 @@ function encerrarDraft() {
       (p[tipo] || []).forEach(c => { if (c && !pickOrder[pi].find(x => x.id === c.id)) pickOrder[pi].push(c); });
     });
   });
-  mostrarAviso(t("aviso_draft_encerrado"));
+  mostrarAvisoPorChave("aviso_draft_encerrado");
+  draftEncerrado = true;
   localStorage.setItem("simulacaoData", JSON.stringify({
     jogadores,
     ordem: ordem.slice(0, jogadores.length),
@@ -870,6 +722,7 @@ function encerrarDraft() {
   }));
   const btn = document.querySelector("#gameScreen button");
   if (btn) {
+    btn.dataset.i18n = "btn_fase_simulacao";   // sem isso, trocar o idioma devolveria o texto "Encerrar turno"
     btn.innerText = t("btn_fase_simulacao");
     btn.style.backgroundColor = "#7e22ce";
     btn.onclick = () => { 

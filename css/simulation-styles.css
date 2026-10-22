@@ -1,6 +1,7 @@
-/* =====================
-  simulacao.html
-===================== */
+/* ===============================================================
+  simulation-styles.css
+  Estilos exclusivos de simulation.html (fase de simulação).
+================================================================== */
 
 h2 {
   margin-top: 18px;
@@ -22,8 +23,6 @@ h2 {
   gap: 15px;
   padding: 10px;
   border-top: 2px solid #444;
-  /* remover isso depois
-  border-bottom: 2px solid #444;*/
   width: 100%;
 }
 
@@ -50,7 +49,7 @@ h2 {
 }
 
 /* Board */
-.simIdolBoard { /* Board */
+.simIdolBoard {
   display: flex;
   flex-direction: column;
   border: 2px solid;
@@ -128,22 +127,6 @@ h2 {
   gap: 3px;
 }
 
-.roleSelect {
-  width: 90px;
-  font-size: 10px;
-  background: rgba(45, 36, 69, 0.8);
-  color: #f4efff;
-  border: 1px solid rgba(168, 85, 247, 0.18);
-  border-radius: 3px;
-  padding: 2px 3px;
-  cursor: pointer;
-}
-
-.roleSelect:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .simBoardSlot {
   width: 160px;
   height: 200px;
@@ -169,12 +152,11 @@ h2 {
   background-color: #7f56d9;
   border: none;
   color: white;
-  padding: 12px 24px;
+  padding: 10px 12px;
   border-radius: 999px;
   cursor: pointer;
-  white-space: nowrap;
-  align-self: center;
-  flex-shrink: 0;
+  align-self: stretch;
+  width: 100%;
   font-size: 13px;
   transition: background-color 0.2s ease;
   margin: 0;
@@ -199,22 +181,23 @@ h2 {
 
 .btnTravarWrapper {
   position: relative;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: max-content;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: 100%;
 }
 
 /* Mensagem de erro */
+/* Flutua logo abaixo do botão, sem empurrar o layout; fundo sólido para ficar legível sobre qualquer coisa */
 .simMensagemErro {
   position: absolute;
-  bottom: calc(100% + 8px);
+  top: calc(100% + 8px);
   left: 0;
   width: 100%;
-  background: rgba(255, 91, 94, 0.16);
-  border: 1px solid rgba(255, 91, 94, 0.4);
+  z-index: 30;
+  background: #2b1519;
+  border: 1px solid rgba(255, 91, 94, 0.55);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   color: #ffd7d7;
   font-size: 12px;
   padding: 8px 10px;
@@ -222,14 +205,10 @@ h2 {
   text-align: center;
   line-height: 1.3;
   box-sizing: border-box;
-  z-index: 2;
   display: none;
 }
 
-/* =================
-RESULTADOS
-====================*/
-
+/* Resultados */
 #resultadoContainer {
   margin-top: 20px;
   background: #222;
@@ -257,4 +236,493 @@ RESULTADOS
 .resultadoLinha .score {
   width: 80px;
   text-align: right;
+}
+
+/* =====================
+  TROCA DE GÊNERO
+  (chave "Mudar gênero" no produtor + painel Entra/Sai na música)
+===================== */
+
+/* Chave Não | Sim */
+.genSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.genSwitchLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: #d8b4fe;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tamanho fixo: a chave ocupa o mesmo espaço em qualquer idioma */
+.genSwitchGroup {
+  flex-shrink: 0;
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 68px;
+  padding: 2px;
+  border-radius: 999px;
+  background: #14101f;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.genSwitchOpt {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #b9b3c8;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  flex: 1 1 0;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.genSwitchOpt:hover:not(:disabled):not(.active) {
+  color: #f4efff;
+  background: rgba(168, 85, 247, 0.14);
+}
+
+.genSwitchOpt.active.on {
+  background: linear-gradient(135deg, #7f56d9, #a855f7);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(127, 86, 217, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.genSwitchOpt.active.off {
+  background: #3d3a4d;
+  color: #e5e0f2;
+}
+
+.genSwitchOpt:focus-visible,
+.simDropBtn:focus-visible,
+.simDropOpt:focus-visible {
+  outline: 2px solid #d8b4fe;
+  outline-offset: 1px;
+}
+
+.genSwitchOpt:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Painel abaixo do card (posição na idol, troca de gênero na música, ações no produtor) */
+.simPanel {
+  width: 160px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  background: rgba(45, 36, 69, 0.55);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+}
+
+/* O painel da troca de gênero entra com uma animação leve só quando a chave é ligada
+   (o JS põe a classe "entrando" apenas nesse render, para o painel não piscar nos demais) */
+.genPanel.entrando {
+  animation: genPanelIn 0.2s ease;
+}
+
+@keyframes genPanelIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.simPanelTitle {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #d8b4fe;
+}
+
+/* Aviso "Posição registrada!" (painel da posição depois de travar) */
+.simStatusRegistrado {
+  font-size: 11px;
+  font-weight: 700;
+  color: #d8b4fe;
+}
+
+/* Atributos e especialidade (painel da posição) */
+.simPanelInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #b9b3c8;
+}
+
+.simInfoLinha b {
+  font-weight: 600;
+  color: #d8b4fe;
+}
+
+.simInfoLinha[title] {
+  cursor: help;
+}
+
+/* Valor de conceitos/gêneros: sempre uma linha só, para todos os painéis terem a mesma altura */
+.simInfoValor {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Caixa só com as ações (partida sem produtor) */
+.simActionsBox {
+  border: 2px solid purple;
+}
+
+/* Carrossel de dicas (painel do produtor) */
+.simDicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.simDicaTexto {
+  width: 100%;
+  min-height: 84px;   /* cabe 6 linhas: a altura não muda quando a dica troca */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  color: #d7d1e9;
+  background: #14101f;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 6px;
+}
+
+.simDicaTexto.entrando {
+  animation: simDicaIn 0.35s ease;
+}
+
+@keyframes simDicaIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.simDicaPontos {
+  display: flex;
+  gap: 5px;
+}
+
+.simDicaPonto {
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.28);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.simDicaPonto:hover {
+  background: rgba(168, 85, 247, 0.6);
+}
+
+.simDicaPonto.active {
+  background: #a855f7;
+  transform: scale(1.3);
+}
+
+.simDicaPonto:focus-visible {
+  outline: 2px solid #d8b4fe;
+  outline-offset: 2px;
+}
+
+/* Menu suspenso estilizado */
+.simDrop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.simDropLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #b9b3c8;
+}
+
+.simDropIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.simDrop.in  .simDropIcon { background: rgba(52, 211, 153, 0.18); color: #34d399; }
+.simDrop.out .simDropIcon { background: rgba(255, 91, 94, 0.18);  color: #ff7b7e; }
+
+.simDropBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 11px;
+  color: #f4efff;
+  background: #14101f;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.simDropBtn:hover:not(:disabled),
+.simDrop.open .simDropBtn {
+  border-color: #a855f7;
+}
+
+.simDrop.open .simDropBtn {
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.25);
+}
+
+.simDropBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.simDropValue.placeholder {
+  color: #8f88a3;
+}
+
+.simDropChevron {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-left: 6px;
+  border-right: 2px solid #b9b3c8;
+  border-bottom: 2px solid #b9b3c8;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.18s ease;
+}
+
+.simDrop.open .simDropChevron {
+  transform: rotate(-135deg) translateY(-2px);
+}
+
+.simDropMenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  max-height: 190px;
+  overflow-y: auto;
+  background: #14101f;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+.simDrop.open .simDropMenu {
+  display: block;
+}
+
+.simDropOpt {
+  padding: 6px 8px;
+  font-size: 11px;
+  color: #e5e0f2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.simDropOpt:hover,
+.simDropOpt:focus {
+  background: rgba(168, 85, 247, 0.22);
+  color: #fff;
+}
+
+.simDropOpt.selected {
+  background: rgba(127, 86, 217, 0.45);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Chance de sucesso */
+.genChance {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.genChanceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10px;
+  color: #b9b3c8;
+}
+
+.genChanceValue {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.genChanceBar {
+  height: 5px;
+  border-radius: 999px;
+  background: #14101f;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  overflow: hidden;
+}
+
+.genChanceFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7f56d9, #c084fc);
+  transition: width 0.25s ease;
+}
+
+.genChanceInfo {
+  font-size: 9px;
+  line-height: 1.35;
+  color: #8f88a3;
+}
+
+.genHint {
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: center;
+  color: #8f88a3;
+}
+
+/* Resultado depois de travar */
+.genResult {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.genResultHead {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.genResult.success .genResultHead { color: #34d399; }
+.genResult.fail    .genResultHead { color: #ff7b7e; }
+.genResult.pending .genResultHead { color: #d8b4fe; }
+
+.genResultSwap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.genChip {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.genChip.in {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+.genChip.out {
+  color: #ff7b7e;
+  background: rgba(255, 91, 94, 0.12);
+  border-color: rgba(255, 91, 94, 0.4);
+}
+
+.genResult.fail .genChip {
+  opacity: 0.5;
+}
+
+.genResultMeta {
+  font-size: 10px;
+  line-height: 1.35;
+  color: #b9b3c8;
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .simSection {
+    width: 100% !important;
+  }
+
+  .simPlayerRow {
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .simMeta,
+  .simIdolBoard,
+  .simExtras,
+  .btnTravarWrapper {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .simExtras {
+    flex-direction: column !important;
+  }
+
+  .simExtraBox,
+  .btnTravar {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .genPanel.entrando,
+  .simDicaTexto.entrando { animation: none; }
+  .genSwitchOpt,
+  .simDicaPonto,
+  .simDropBtn,
+  .simDropChevron,
+  .genChanceFill { transition: none; }
 }

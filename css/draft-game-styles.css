@@ -1,0 +1,316 @@
+/* =====================================================================
+  draft-game-styles.css
+  Estilos exclusivos de draft-game-page.html (tela do draft, boards, slots e pool).
+===================================================================== */
+
+/* Título */
+#gameScreen {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#gameScreen h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #e7d4ff;
+}
+
+#gameScreen h2 {
+  margin-top: 36px;
+  color: #d8b4fe;
+}
+
+#btnExportarDraft {
+  background: rgba(168,85,247,0.15);
+  border: 1px solid rgba(168,85,247,0.4);
+  color: #d4b4ff;
+  font-size: 11px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  margin: 0;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+#btnExportarDraft:hover {
+  background: rgba(168,85,247,0.28);
+  border-color: rgba(168,85,247,0.7);
+  color: #f0e6ff;
+}
+
+#turnActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 220px 0px 220px;
+  padding: 18px;
+  min-height: 70px;
+  min-width: 120px;
+  border: 1px solid rgba(168,85,247,0.14);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+}
+
+#turnActions #avisoTurno {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+#turnActions h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #e7d4ff;
+  flex: 1 1 auto;
+  min-width: 220px;
+}
+
+#turnActions button {
+  margin: 0;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+/* Linha de separação do turno */
+#gameScreen > hr {
+  border: none;
+  border-top: 1px solid rgba(168, 85, 247, 0.18);
+  margin: 18px 0;
+}
+
+#gameScreen h2 {
+  margin-top: 18px;
+}
+
+#pool {
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 16px;
+  min-height: 240px;
+  border: 2px solid rgba(34, 255, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(0, 255, 255, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+/* Linha do Jogador */
+.playerRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 2px solid #444;
+  width: 100%;
+}
+
+.playerMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 4px;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.playerOrder {
+  font-weight: bold;
+  color: #a855f7;
+  font-size: 24px;
+}
+
+.playerName {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Jogador Atual */
+.activePlayer {
+  background: rgba(174, 0, 255, 0.1);
+}
+
+/* Board */
+#playersBoard {
+  width: 100%;
+}
+
+.playerBlocks {
+  display: flex;
+  flex: 1;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-width: 0;
+}
+
+.board { 
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-radius: 6px;
+  flex: 1;
+  padding: 8px;
+  min-width: 0;
+  background: #111;
+}
+
+.boardTitle { 
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.musicBoard,
+.producerBoard {
+  flex: 0 0 auto;
+  min-width: 0;
+  width: auto;
+}
+
+/* Boards colour coded lyrics */
+.idolBoard {
+  border-color: yellow;
+}
+
+.musicBoard {
+  border-color: navy;
+}
+
+.producerBoard {
+  border-color: purple;
+}
+
+/* Slots */
+.slotsContainer {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  overflow: visible;
+}
+
+.idolBoard .slotsContainer {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.musicBoard .slotsContainer,
+.producerBoard .slotsContainer {
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.board .slot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 0 0 90px;
+  align-content: flex-start;
+  background: #0a0a0a;
+  width: 90px;
+  height: 120px;
+  border: 2px dashed #555;
+}
+
+/* Slots colour coded lyrics */
+.idolBoard .slot {
+  border-color: yellow;
+}
+
+.musicBoard .slot {
+  border-color: navy;
+}
+
+.producerBoard .slot {
+  border-color: purple;
+}
+
+/* Pool */
+#pool {
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 16px;
+  min-height: 240px;
+  border: 2px solid rgba(34, 255, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(0, 255, 255, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+#pool .card {
+  width: 160px;
+  height: 200px;
+}
+
+
+/* Mobile */
+@media (max-width: 900px) {
+  .playerRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .playerBlocks {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Tela de draft: turno, jogadores e seus boards passam para uma coluna. */
+
+  #gameScreen {
+    width: 100%;
+  }
+
+  #turnActions {
+    margin: 18px 0 0;
+    padding: 14px;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #turnActions h1,
+  #turnActions button {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .playerRow,
+  .playerBlocks {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .playerMeta,
+  .board,
+  .musicBoard,
+  .producerBoard {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  #pool {
+    box-sizing: border-box;
+    padding: 12px;
+  }
+
+  #pool .card {
+    width: min(160px, 100%);
+  }
+}

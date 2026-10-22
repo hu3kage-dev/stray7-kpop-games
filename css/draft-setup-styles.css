@@ -1,0 +1,614 @@
+/* ========================================================================================
+  draft-setup-styles.css
+  Estilos exclusivos de draft-setup-page.html (configuração do draft, filtros, tutoriais).
+=========================================================================================== */
+
+/* Configuração */
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.config-block {
+  background: rgba(255,255,255,0.03);
+  padding: 24px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(168,85,247,0.14);
+}
+
+/* Bloco 1 */
+.config-block h3 {
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 5px;
+  margin-top: 0;
+  color: #a855f7;
+}
+
+.config-block ul {
+  text-align: left;
+  padding-left: 18px;
+  color: #d7d1e9;
+}
+
+.config-block li {
+  margin-bottom: 10px;
+}
+
+.config-block p,
+.config-block label,
+.players-label,
+.half-container span {
+  color: #d7d1e9;
+}
+
+.config-block blockquote,
+.config-block strong {
+  color: #fff;
+}
+
+/* Tutoriais */
+.tut-config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.tut-config-block {
+  background: rgba(255,255,255,0.03);
+  padding: 24px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(168,85,247,0.14);
+}
+
+.tut-config-block.block-1 {
+  text-align: left;
+}
+
+.tut-config-block h3 {
+  text-align: left;
+  margin-top: 0;
+  color: #a855f7;
+}
+
+.tut-config-block ul {
+  text-align: left;
+  padding-left: 18px;
+  color: #d7d1e9;
+}
+
+.tut-config-block li {
+  margin-bottom: 10px;
+}
+
+.tut-config-block p,
+.tut-config-block label {
+  color: #d7d1e9;
+}
+
+.tut-config-block blockquote,
+.tut-config-block strong {
+  color: #fff;
+}
+
+.tut-code {
+  display: block;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(168,85,247,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #b8e4ff;
+  word-break: break-all;
+  margin: 4px 0;
+}
+
+/* Modal Tutorial */
+.modal-tutorial {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.82);
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.modal-tutorial-content {
+  position: relative;
+  background: #13101c;
+  border: 1px solid rgba(168,85,247,0.22);
+  border-radius: 24px;
+  padding: 32px 28px 28px;
+  width: min(96vw, 1100px);
+  max-height: 88vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-tutorial-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: rgba(168,85,247,0.15);
+  border: 1px solid rgba(168,85,247,0.35);
+  color: #d4b4ff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 0 12px 12px;
+  z-index: 1;
+}
+
+.modal-tutorial-close:hover {
+  background: rgba(168,85,247,0.3);
+  color: #fff;
+}
+
+.tut-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tut-btn-row .btn-tutorial {
+  margin-top: 0;
+  flex: 1;
+}
+
+/* Botão expandir tutorial no bloco 1 */
+.btn-tutorial {
+  margin-top: auto;
+  align-self: flex-start;
+  background: rgba(168,85,247,0.12);
+  border: 1px solid rgba(168,85,247,0.3);
+  color: #d4b4ff;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-tutorial:hover {
+  background: rgba(168,85,247,0.25);
+  border-color: rgba(168,85,247,0.6);
+  color: #f0e6ff;
+}
+
+/* Bloco 2 */
+.b2-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.8fr);
+  flex: 1;
+  gap: 18px;
+  text-align: left;
+}
+
+.b2-left {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  gap: 16px;
+  min-width: 0;
+}
+
+.b2-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 220px);
+  align-items: center;
+  gap: 10px;
+  white-space: normal;
+}
+
+.b2-field label {
+  text-align: left;
+  color: #d7d1e9;
+}
+
+.b2-field input[type="number"] {
+  width: 100%;
+  min-width: auto;
+  max-width: auto;
+  padding: 10px;
+  margin: 0;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  background: rgba(255,255,255,0.04);
+}
+
+/* Inputs */
+.players-label {
+  color: #d7d1e9;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.b2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  min-width: 0;
+  max-height: 300px;
+}
+
+.players-scroll-box {
+  flex: 1;
+  max-height: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(168, 85, 247, 0.14);
+  padding: 14px;
+  background: rgba(255,255,255,0.02);
+  min-height: 0;
+}
+
+.players-scroll-box .playerNameInput {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Botões */
+.btn-iniciar-draft {
+  background-color: #6e49a9;
+  color: white;
+  padding: 14px 18px;
+  cursor: pointer;
+  border-radius: 999px;
+  width: 100%;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.btn-iniciar-draft:hover {
+  background-color: #593b8c;
+}
+
+.b2-left .btn-iniciar-draft {
+  margin-top: auto;
+  width: 100%;
+}
+
+.btn-importar-draft {
+  display: block;
+  width: 100%;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px dashed rgba(168,85,247,0.45);
+  background: rgba(168,85,247,0.07);
+  color: #c9a8f7;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.btn-importar-draft:hover {
+  background: rgba(168,85,247,0.18);
+  border-color: rgba(168,85,247,0.65);
+  color: #f0e6ff;
+}
+
+/* Bloco 3 */
+
+/* Filtro */
+#idolFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(168,85,247,0.18);
+  border-radius: 14px;
+}
+
+.idol-filter-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.idol-filter-label {
+  color: #b8b8c8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 5px;
+  flex: 0 0 78px;
+  text-align: left;
+}
+
+.idol-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.filter-pill {
+  padding: 4px 10px;
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid rgba(168,85,247,0.22);
+  background: rgba(255,255,255,0.04);
+  color: #c4b8e0;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  letter-spacing: 0.4px;
+}
+
+.filter-pill:hover {
+  background: rgba(168,85,247,0.14);
+  color: #e0d4ff;
+  border-color: rgba(168,85,247,0.4);
+}
+
+.filter-pill.active {
+  background: rgba(168,85,247,0.28);
+  color: #f0e6ff;
+  border-color: rgba(168,85,247,0.7);
+}
+
+.idol-filter-actions {
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.idol-filter-import {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Botões */
+.btn-importar-db,
+.btn-exportar-db {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  line-height: inherit;
+  border-radius: 999px;
+  border: 1px dashed rgba(168,85,247,0.5);
+  background: rgba(168,85,247,0.08);
+  color: #d4b4ff;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.btn-importar-db:hover,
+.btn-exportar-db:hover {
+  background: rgba(168,85,247,0.2);
+  border-color: rgba(168,85,247,0.7);
+  color: #f0e6ff;
+}
+
+/* Exportar é um <button> (e não um <label>): zera o que vem do estilo global de button
+   e usa a mesma cor que o label de importar recebe de ".config-block label" */
+.btn-exportar-db {
+  width: auto;
+  margin: 0;
+  box-shadow: none;
+  color: #d7d1e9;
+}
+
+.import-db-status {
+  font-size: 11px;
+  color: #7be97b;
+  white-space: nowrap;
+}
+
+.idol-filter-mark-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.idol-filter-mark-btns button {
+  padding: 6px 14px;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Containers */
+#groupsContainer {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#groupsContainer > div {
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(168,85,247,0.12);
+}
+
+#groupsContainer div div {
+  margin-left: 15px;
+}
+
+.scroll-box {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid rgba(168,85,247,0.12);
+  padding: 14px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Bloco 4 */
+#producerContainer,
+#musicContainer {
+  margin-top: 10px;
+}
+
+#musicContainer > div {
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(168,85,247,0.12);
+  margin-bottom: 8px;
+}
+
+#musicContainer > div > div {
+  margin-left: 15px;
+}
+
+.half-container {
+  display: flex;
+  height: 100%;
+  gap: 12px;
+}
+
+.half-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-container .scroll-box {
+  flex: 1;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .config-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .block-2 {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .tut-config-grid {
+    grid-template-columns: 1fr;
+    width: min(100%, 560px);
+  }
+
+  .config-grid {
+    width: min(92%, 560px);
+  }
+
+  .config-block {
+    padding: 18px;
+  }
+
+  .b2-body {
+    grid-template-columns: 1fr;
+  }
+
+  .b2-right {
+    max-height: none;
+  }
+
+  .players-scroll-box {
+    min-height: 150px;
+  }
+
+  .b2-field {
+    grid-template-columns: minmax(0, 1fr) minmax(110px, 180px);
+  }
+
+  /* Bloco 1: os acessos aos tutoriais ocupam uma linha cada. */
+
+  .tut-btn-row {
+    flex-direction: column;
+  }
+
+  .tut-btn-row .btn-tutorial {
+    width: 100%;
+  }
+
+  /* Bloco 3: ações e cartões de grupos passam para uma única coluna. */
+
+  .idol-filter-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .idol-filter-import,
+  .idol-filter-mark-btns {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-importar-db,
+  .btn-exportar-db,
+  .idol-filter-mark-btns button {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+  }
+
+  .import-db-status {
+    white-space: normal;
+  }
+
+  #groupsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  #groupsContainer > div,
+  #groupsContainer div div {
+    overflow-wrap: anywhere;
+  }
+
+  /* Bloco 4: músicas e produtores são exibidos um abaixo do outro. */
+
+  .half-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .half-container > div {
+    min-width: 0;
+  }
+
+  .modal-tutorial {
+    padding: 14px;
+  }
+
+  .modal-tutorial-content {
+    width: 100%;
+    max-height: 92vh;
+    padding: 24px 18px 18px;
+  }
+}

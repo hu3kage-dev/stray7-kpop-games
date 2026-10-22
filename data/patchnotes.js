@@ -1,12 +1,69 @@
-// ========================
+// =======================================================================================================
 // DADOS DE PATCH NOTES
 // Adicione novos patches aqui, do mais recente para o mais antigo.
 // Tipos de patch: "major" | "minor" | "fix" | "hotfix"
 // Tipos de seção: "new" | "change" | "fix" | "remove" | "balance"
+// Este arquivo só guarda dados (as demais páginas leem a versão mais recente para o badge do header).
+// O desenho da lista fica em patchnotes-script.js.
 // title e cada item de "items" são objetos { pt, en } — adicione ambos os idiomas.
 // O label da seção (Novo/Correções/etc.) vem automaticamente do "type" via t(), não precisa declarar.
-// ========================
+// =======================================================================================================
 const PATCHES = [
+  {
+    version: "v0.5.0",
+    title: { pt: "Troca de Gênero", en: "Genre Swap" },
+    date: "2026-10-22",
+    type: "major",
+    sections: [
+      {
+        type: "new",
+        items: [
+          {
+            pt: "A <span class='hl'>Troca de Gênero</span> foi adicionada à simulação, permitindo que os jogadores tentem alterar um gênero da música durante a <span class='hl'>Fase de Simulação</span>.",
+            en: "Added <span class='hl'>Genre Swap</span> functionality to the simulation, allowing players to try to change one genre of the song during the <span class='hl'>Simulation Phase</span>."
+          },
+          {
+            pt: "Novos painéis de escolha de posição foram adicionados à <span class='hl'>Fase de Simulação</span>, mostrando informações importantes antes exclusivas dos modais.",
+            en: "New position selection panels were added to the <span class='hl'>Simulation Phase</span>, displaying important information that was previously exclusive to the modals."
+          },
+          {
+            pt: "Um painel de troca de gênero foi adicionado, assim como um painel com dicas e um novo layout para o botão de <span class='hl'>Travar Escolha</span>.",
+            en: "A genre swap panel was added, along with a tips panel and a new layout for the <span class='hl'>Lock In</span> button."
+          },
+          {
+            pt: "Novos atalhos de teclado (ctrl+click seleciona um Card, Barra de Espaço encerra o turno) e um botão de escolha do Card foram adicionados em <span class='hl'>Fase de Escolha</span> para facilitar a seleção de idols, músicas e produtores.",
+            en: "New keyboard shortcuts (ctrl+click to select a Card, Space bar to end the turn) and a card selection button were added in the <span class='hl'>Draft Phase</span> to facilitate the selection of idols, songs, and producers."
+          },
+          {
+            pt: "Um novo botão para <span class='hl'>Exportar Database</span> foi adicionado em <span class='hl'>Configuração do Draft</span>. Ele gera três arquivos .csv separados para idols, músicas e produtores.",
+            en: "Added a new <span class='hl'>Export Database</span> button to export the database in <span class='hl'>Draft Setup</span>. It will generate three separate .csv files for idols, songs, and producers."
+          },
+        ]
+      },
+      {
+        type: "change",
+        items: [
+          {
+            pt: "O tutorial de importação foi melhorado e agora inclui uma lista de Conceitos e Gêneros válidos para os cálculos de pontuação.",
+            en: "The import tutorial has been improved and now includes a list of valid Concepts and Genres for the scoring calculations."
+          },
+        ]
+      },
+      {
+        type: "fix",
+        items: [
+          {
+            pt: "Ajustado um problema de importação com IDs duplicadas. Agora, ao importar um dado com uma ID já existente, o sistema substitui o dado existente, evitando a quebra da <span class='hl'>Fase de Escolha</span>.",
+            en: "Fixed an issue with ID duplication during import. Now, when importing data with an existing ID, the system replaces the existing data, preventing the <span class='hl'>Draft Phase</span> from breaking."
+          },
+          {
+            pt: "Os Cards agora encaixam perfeitamente nos slots, sem deixar a borda pontilhada visível.",
+            en: "The cards now fit perfectly into the slots, without leaving visible the dotted border."
+          },
+        ]
+      }
+    ]
+  },
   {
     version: "v0.4.6",
     title: { pt: "Página de Feedback", en: "Feedback Page" },
@@ -17,8 +74,8 @@ const PATCHES = [
         type: "new",
         items: [
           {
-            pt: "Adicionada uma página de Feedback, onde os usuários podem enviar sugestões, reportar bugs e entrar em contato com a equipe do projeto.",
-            en: "Added a Feedback page where users can submit suggestions, report bugs, and contact the project team."
+            pt: "Adicionada uma página de feedback, onde os usuários podem enviar sugestões, reportar bugs e entrar em contato com a equipe do projeto.",
+            en: "Added a feedback page where users can submit suggestions, report bugs, and contact the project team."
           },
           {
             pt: "Adicionadas fotos aos produtores que ainda não possuíam imagens.",
@@ -430,73 +487,3 @@ const PATCHES = [
     ]
   }
 ];
-
-// ========================
-// RENDER DA PÁGINA DE PATCH NOTES
-// ========================
-function renderPatchNotes() {
-  const lang = (typeof currentLanguage !== "undefined" ? currentLanguage : "pt");
-  const tr = (obj) => obj?.[lang] || obj?.pt || "";
-  const tt = (chave) => (typeof t === "function" ? t(chave) : chave);
-
-  const tagKeys = {
-    major:  "patch_tag_major",
-    minor:  "patch_tag_minor",
-    fix:    "patch_tag_fix",
-    hotfix: "patch_tag_hotfix",
-  };
-  const sectionKeys = {
-    new:     "patch_section_new",
-    change:  "patch_section_change",
-    fix:     "patch_section_fix",
-    remove:  "patch_section_remove",
-    balance: "patch_section_balance",
-  };
-
-  const old = document.querySelector(".patchnotes-page");
-  if (old) old.remove();
-
-  const page = document.createElement("div");
-  page.className = "patchnotes-page";
-
-  if (!PATCHES.length) {
-    page.innerHTML += `<div class="patchnotes-empty">${tt("patchnotes_empty")}</div>`;
-  } else {
-    PATCHES.forEach((patch, i) => {
-      const card = document.createElement("div");
-      card.className = "patch-card" + (i === 0 ? " open" : "");
-
-      const sectionsHTML = patch.sections.map(sec => `
-        <div class="patch-section">
-          <div class="patch-section-title ${sec.type}">${tt(sectionKeys[sec.type] || sec.type)}</div>
-          <ul class="patch-list">
-            ${sec.items.map(item => `<li>${tr(item)}</li>`).join("")}
-          </ul>
-        </div>
-      `).join("");
-
-      card.innerHTML = `
-        <div class="patch-header">
-          <div class="patch-header-left">
-            <span class="patch-version">${patch.version}</span>
-            <span class="patch-title">${tr(patch.title)}</span>
-          </div>
-          <span class="patch-tag tag-${patch.type}">${tt(tagKeys[patch.type] || patch.type)}</span>
-          <span class="patch-date">${patch.date}</span>
-          <span class="patch-chevron">▼</span>
-        </div>
-        <div class="patch-body">
-          ${sectionsHTML}
-        </div>
-      `;
-
-      card.querySelector(".patch-header").addEventListener("click", () => {
-        card.classList.toggle("open");
-      });
-
-      page.appendChild(card);
-    });
-  }
-
-  document.body.appendChild(page);
-}

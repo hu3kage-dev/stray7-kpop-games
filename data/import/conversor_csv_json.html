@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSV → JSON Converter</title>
 <style>
   .content {
@@ -29,6 +30,7 @@
   }
 </style>
 <link rel="stylesheet" href="../../css/pages-styles.css">
+
 <script src="../../assets/i18n/translations.js"></script>
 <script src="../../data/patchnotes.js"></script>
 <script src="../../scripts/pages-script.js" defer></script>
@@ -120,25 +122,26 @@ function parseArray(valor) {
 // Tabela de aliases de colunas (pt-BR / en-US) aceitos na importação.
 // Mantenha esta tabela sincronizada com a mesma constante em pages-script.js.
 const CONV_CSV_ALIASES = {
+  tipo:                   ["tipo", "type"],
   id:                     ["id"],
   nome:                   ["nome", "name"],
   grupo:                  ["grupo", "group"],
   geracao:                ["geracao", "gen", "generation"],
   aniversario:            ["aniversario", "birthday", "birthdate", "dob"],
-  vocal:                  ["vocal"],
-  dance:                  ["dance", "danca"],
-  rap:                    ["rap"],
+  vocal:                  ["vocal", "vocalist", "vocalista"],
+  dance:                  ["dance", "dancer", "danca"],
+  rap:                    ["rap", "rapper"],
   center:                 ["center", "centro"],
   visual:                 ["visual"],
   especialidade:          ["especialidade", "specialty", "speciality", "position"],
-  conceitosPredominantes: ["conceitospredominantes", "mainconcepts", "predominantconcepts"],
-  generosPredominantes:   ["generospredominantes", "maingenres", "predominantgenres"],
-  pontosFortes:           ["pontosfortes", "strengths", "strongpoints"],
-  pontosFracos:           ["pontosfracos", "weaknesses", "weakpoints"],
+  conceitosPredominantes: ["conceitos", "concepts", "conceitospredominantes", "mainconcepts", "predominantconcepts"],
+  generosPredominantes:   ["generos", "genres", "generospredominantes", "maingenres", "predominantgenres"],
+  pontosFortes:           ["pontosfortes", "strengths", "strongpoints", "fortes"],
+  pontosFracos:           ["pontosfracos", "weaknesses", "weakpoints", "fracos"],
   fonte:                  ["fonte", "source"],
-  conceitosOriginais:     ["conceitosoriginais", "originalconcepts"],
-  generosOriginais:       ["generosoriginais", "originalgenres"],
-  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics"]
+  conceitosOriginais:     ["conceitos", "concepts", "conceitosoriginais", "originalconcepts"],
+  generosOriginais:       ["generos", "genres", "generosoriginais", "originalgenres"],
+  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics", "musicas"]
 };
 
 //f:convPegarCampo — retorna o primeiro valor não-vazio dentre os aliases pt/en aceitos
@@ -152,7 +155,7 @@ function convPegarCampo(obj, aliases) {
 // Tipo canônico de cada aba — não depende da coluna "Tipo" do CSV,
 // já que o próprio botão clicado já identifica a categoria.
 const TIPO_CANONICO = {
-  idols: "Idol",
+  idols: "idol",
   songs: "music",
   producers: "producer"
 };
