@@ -449,6 +449,7 @@
   text-align: left;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start; /* cada fileira ocupa só a altura do maior grupo; a sobra de altura do bloco fica vazia embaixo */
   gap: 16px;
 }
 
