@@ -1,4 +1,3271 @@
 //data:idols
+/*const idols = [
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "aespakarina",
+    "name": "Karina",
+    "group": "aespa",
+    "aniversario": "11-04-2000",
+    "vocal": "B",
+    "dance": "S",
+    "rap": "B",
+    "center": "A",
+    "visual": "S",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental"
+    ],
+    "fortes": "Presença cênica, precisão e impacto em performances poderosas",
+    "fracos": "Dificuldade em adaptar-se a conceitos leves ou cute"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "aespagiselle",
+    "name": "Giselle",
+    "group": "aespa",
+    "aniversario": "30-10-2000",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "A",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Conceptual",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental"
+    ],
+    "fortes": "Flow estável, versatilidade em rap e feature vocals",
+    "fracos": "Projeção vocal limitada, dança menos técnica que as demais"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "aespawinter",
+    "name": "Winter",
+    "group": "aespa",
+    "aniversario": "01-01-2001",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental"
+    ],
+    "fortes": "Estabilidade vocal de elite, dicção clara, consistência ao vivo",
+    "fracos": "Coreografias muito pesadas podem reduzir projeção vocal"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "aespaningning",
+    "name": "NingNing",
+    "group": "aespa",
+    "aniversario": "23-10-2002",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental"
+    ],
+    "fortes": "Alcance vocal excepcional, timbre único, técnica avançada",
+    "fracos": "Presença de palco por vezes discreta, menos foco em dance"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "artmsjinsoul",
+    "name": "JinSoul",
+    "group": "ARTMS",
+    "aniversario": "13-06-1997",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Synthpop"
+    ],
+    "fortes": "Rapper melódica com ótimo controle vocal, timbre distinto",
+    "fracos": "Execução menos fluida em coreografias muito técnicas"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "artmshaseul",
+    "name": "HaSeul",
+    "group": "ARTMS",
+    "aniversario": "18-08-1997",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Controle vocal limpo, excelente suporte respiratório",
+    "fracos": "Expressividade corporal e dança mais contida"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "artmskimlip",
+    "name": "Kim Lip",
+    "group": "ARTMS",
+    "aniversario": "10-02-1999",
+    "vocal": "A",
+    "dance": "S",
+    "rap": "D",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Synthpop"
+    ],
+    "fortes": "Timbre expressivo, técnica vocal refinada, harmonia e emoção",
+    "fracos": "Projeção vocal variável ao vivo em performances muito coreografadas"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "artmsheejin",
+    "name": "HeeJin",
+    "group": "ARTMS",
+    "aniversario": "19-10-2000",
+    "vocal": "A",
+    "dance": "S",
+    "rap": "C",
+    "center": "S",
+    "visual": "A",
+    "especialidade": "All-Rounder",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Synthpop"
+    ],
+    "fortes": "All-rounder completa, força cênica, carisma e precisão coreográfica",
+    "fracos": "Pode sobrecarregar-se em lineups longas por intensidade constante"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "artmschoerry",
+    "name": "Choerry",
+    "group": "ARTMS",
+    "aniversario": "04-06-2001",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Synthpop"
+    ],
+    "fortes": "Energia cênica contagiante, versatilidade e presença natural",
+    "fracos": "Técnica vocal limitada em notas graves"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartmichi",
+    "name": "Michi",
+    "group": "AtHeart",
+    "aniversario": "06-05-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Execução de performance muito polida, controle corporal e presença de palco (destaque nas stages)",
+    "fracos": "Em trechos vocais complexos pode perder estabilidade pela intensidade da dança"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartarin",
+    "name": "Arin",
+    "group": "AtHeart",
+    "aniversario": "01-07-2007",
+    "vocal": "B",
+    "dance": "S",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Flow e entrega rap consistente, presença carismática, boa versatilidade rítmica",
+    "fracos": "Técnica vocal menos expressiva em notas longas, timbre médio"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartkatelyn",
+    "name": "Katelyn",
+    "group": "AtHeart",
+    "aniversario": "24-07-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Forte projeção vocal ao vivo, timbre marcante, rosto/visual com apelo alto (possível titular visual)",
+    "fracos": "Menos foco em rap, movimentos muito técnicos podem reduzir consistência vocal"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartbome",
+    "name": "Bome",
+    "group": "AtHeart",
+    "aniversario": "26-11-2007",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Boa estabilidade vocal e controle em runs, interpretação musical sensível",
+    "fracos": "Coreografias mais pesadas afetam ligeiramente a projeção"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartseohyeon",
+    "name": "Seohyeon",
+    "group": "AtHeart",
+    "aniversario": "12-09-2008",
+    "vocal": "A",
+    "dance": "A",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Excelente sincronização de grupo, bom suporte em harmonias e estabilidade em lives",
+    "fracos": "Ainda em crescimento para solo vocal de destaque, presença solo moderada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartaurora",
+    "name": "Aurora",
+    "group": "AtHeart",
+    "aniversario": "04-07-2009",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Visual diferenciado e expressividade gestual, encaixa bem em passes atmosféricos",
+    "fracos": "Projeção vocal e rap moderados, menos consistente em partes técnicas"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "atheartnahyun",
+    "name": "Nahyun",
+    "group": "AtHeart",
+    "aniversario": "03-09-2009",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Boa química em formações de grupo, consistente em linhas de apoio e adlibs",
+    "fracos": "Não se destaca tecnicamente em vocal principal ou rap, presença visual média"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterruka",
+    "name": "Ruka",
+    "group": "BABYMONSTER",
+    "aniversario": "20-03-2002",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "S",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-hop"
+    ],
+    "fortes": "Execução de dança de elite, presença forte no palco",
+    "fracos": "Técnica vocal média em alta intensidade"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterpharita",
+    "name": "Pharita",
+    "group": "BABYMONSTER",
+    "aniversario": "26-08-2005",
+    "vocal": "A",
+    "dance": "C",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "Emotional",
+      "Hip-hop"
+    ],
+    "fortes": "Vocal principal muito forte, domínio de inglês/tailandês",
+    "fracos": "Rap e coreografia menos marcantes"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterasa",
+    "name": "Asa",
+    "group": "BABYMONSTER",
+    "aniversario": "17-04-2006",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "S",
+    "center": "B",
+    "visual": "S",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-hop"
+    ],
+    "fortes": "Flow limpo, rap de destaque, boa entrega",
+    "fracos": "Vocal principal menos refinado"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterahyeon",
+    "name": "Ahyeon",
+    "group": "BABYMONSTER",
+    "aniversario": "11-04-2007",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "S",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "All-Rounder",
+    "conceitos": [
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-hop"
+    ],
+    "fortes": "Visual forte, vocal bom, versatilidade",
+    "fracos": "Dança e rap menos consistentes"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterrami",
+    "name": "Rami",
+    "group": "BABYMONSTER",
+    "aniversario": "17-10-2007",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Emotional",
+      "Hip-hop"
+    ],
+    "fortes": "Vocal estável, cresce no palco",
+    "fracos": "Rap e dança com menor destaque"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterrora",
+    "name": "Rora",
+    "group": "BABYMONSTER",
+    "aniversario": "14-08-2008",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-hop"
+    ],
+    "fortes": "Boa presença corporal, dança sólida",
+    "fracos": "Vocal principal falta refinamento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "babymonsterchiquita",
+    "name": "Chiquita",
+    "group": "BABYMONSTER",
+    "aniversario": "17-02-2009",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "A",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Girl Crush",
+      "Swag"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-hop"
+    ],
+    "fortes": "Boa expressividade e carisma",
+    "fracos": "Técnica vocal/rap iniciante, presença menor"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "fiftyfiftykeena",
+    "name": "Keena",
+    "group": "FIFTY FIFTY",
+    "aniversario": "09-07-2002",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Rap strong, entrega internacional",
+    "fracos": "Vocal principal menos desenvolvido"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "fiftyfiftychanellemoon",
+    "name": "Chanelle Moon",
+    "group": "FIFTY FIFTY",
+    "aniversario": "14-06-2003",
+    "vocal": "A",
+    "dance": "A",
+    "rap": "B",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Girl Crush"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Vocais estáveis, presença de palco boa",
+    "fracos": "Dança e rap menos destacados"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "fiftyfiftyyewon",
+    "name": "Yewon",
+    "group": "FIFTY FIFTY",
+    "aniversario": "18-03-2005",
+    "vocal": "B",
+    "dance": "C",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Dança técnica, boa execução",
+    "fracos": "Vocais principais com menor amplitude"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "fiftyfiftyhana",
+    "name": "Hana",
+    "group": "FIFTY FIFTY",
+    "aniversario": "05-09-2006",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Visual forte, presença marcante em palco",
+    "fracos": "Técnica vocal moderada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "fiftyfiftyathena",
+    "name": "Athena",
+    "group": "FIFTY FIFTY",
+    "aniversario": "15-03-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Desenvolvimento contínuo",
+    "fracos": "Técnica vocal e rap ainda em crescimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartscarmen",
+    "name": "Carmen",
+    "group": "Hearts2Hearts",
+    "aniversario": "28-03-2006",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Técnica vocal boa, multinacional qualificação",
+    "fracos": "Ainda em crescimento em dance e rap"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsjiwoo",
+    "name": "Jiwoo",
+    "group": "Hearts2Hearts",
+    "aniversario": "07-09-2006",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "C",
+    "center": "B",
+    "visual": "S",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Vocais estáveis, presença forte, visual marcante",
+    "fracos": "Rap/flow ainda limitado"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsyuha",
+    "name": "Yuha",
+    "group": "Hearts2Hearts",
+    "aniversario": "12-04-2007",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Dança de qualidade, vocais consistentes",
+    "fracos": "Rap linha menos destacada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsstella",
+    "name": "Stella",
+    "group": "Hearts2Hearts",
+    "aniversario": "18-06-2007",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Visual expressivo, boa performance em palco",
+    "fracos": "Vocais principais e rap ainda em desenvolvimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsjuun",
+    "name": "Juun",
+    "group": "Hearts2Hearts",
+    "aniversario": "03-12-2008",
+    "vocal": "B",
+    "dance": "S",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Dança boa, presença juvenil",
+    "fracos": "Técnica vocal/rap menos refinada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsana",
+    "name": "A-na",
+    "group": "Hearts2Hearts",
+    "aniversario": "20-12-2008",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "S",
+    "visual": "S",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Presença de grupo estável",
+    "fracos": "Pouco destaque em solo técnico"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsian",
+    "name": "Ian",
+    "group": "Hearts2Hearts",
+    "aniversario": "09-10-2009",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "S",
+    "visual": "S",
+    "especialidade": "Center",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Projeção para grupo futuro",
+    "fracos": "Técnica ainda emergente em várias posições"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "hearts2heartsyeon",
+    "name": "Ye-on",
+    "group": "Hearts2Hearts",
+    "aniversario": "19-04-2010",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "Potencial de crescimento",
+    "fracos": "Trabalho técnico ainda em fase inicial"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ifeyewonhwayeon",
+    "name": "Won Hwayeon",
+    "group": "ifeye",
+    "aniversario": "24-06-2006",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Vocal promissor, timbre limpo",
+    "fracos": "Dança e rap menos destacados"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ifeyetaerin",
+    "name": "Taerin",
+    "group": "ifeye",
+    "aniversario": "03-07-2006",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Dança muito boa, presença coreográfica forte",
+    "fracos": "Técnica vocal principal mediana"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ifeyerahee",
+    "name": "Rahee",
+    "group": "ifeye",
+    "aniversario": "06-12-2007",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Versatilidade e suporte estável",
+    "fracos": "Especialização técnica ainda em crescimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ifeyekasia",
+    "name": "Kasia",
+    "group": "ifeye",
+    "aniversario": "15-02-2008",
+    "vocal": "C",
+    "dance": "A",
+    "rap": "B",
+    "center": "A",
+    "visual": "C",
+    "especialidade": "Center",
+    "conceitos": [
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Rap sólida, boa presença de palco",
+    "fracos": "Técnica vocal principal ainda em evolução"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ifeyemeu",
+    "name": "Meu",
+    "group": "ifeye",
+    "aniversario": "09-06-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Boa dança, presença de palco agradável",
+    "fracos": "Alcance vocal mais limitado"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ifeyesasha",
+    "name": "Sasha",
+    "group": "ifeye",
+    "aniversario": "20-05-2009",
+    "vocal": "A",
+    "dance": "A",
+    "rap": "B",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "All-Rounder",
+    "conceitos": [
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Visual forte, expressividade para câmera",
+    "fracos": "Técnica vocal e rap iniciante"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "illityunah",
+    "name": "Yunah",
+    "group": "ILLIT",
+    "aniversario": "15-01-2004",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "illitminju",
+    "name": "Minju",
+    "group": "ILLIT",
+    "aniversario": "11-05-2004",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "illitmoka",
+    "name": "Moka",
+    "group": "ILLIT",
+    "aniversario": "08-10-2004",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "illitwonhee",
+    "name": "Wonhee",
+    "group": "ILLIT",
+    "aniversario": "26-06-2007",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "R&B"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "illitiroha",
+    "name": "Iroha",
+    "group": "ILLIT",
+    "aniversario": "04-02-2008",
+    "vocal": "B",
+    "dance": "S",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Dança de qualidade, vocal em constante melhora, versátil",
+    "fracos": ""
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "ivegaeul",
+    "name": "Gaeul",
+    "group": "IVE",
+    "aniversario": "24-09-2002",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Flow limpo e preciso, boa leitura rítmica, suporte vocal consistente",
+    "fracos": "Falta destaque visual nas performances em grupo"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "iveanyujin",
+    "name": "An Yujin",
+    "group": "IVE",
+    "aniversario": "01-09-2003",
+    "vocal": "S",
+    "dance": "A",
+    "rap": "D",
+    "center": "A",
+    "visual": "S",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Liderança e carisma natural, estabilidade vocal e energia de palco",
+    "fracos": "Flow de rap limitado, estilo vocal pouco versátil"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "iverei",
+    "name": "Rei",
+    "group": "IVE",
+    "aniversario": "03-02-2004",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Timbre único, flow melódico e distintivo, composição própria",
+    "fracos": "Resistência limitada em lives longas, coreografia precisa porém contida"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "ivejangwonyoung",
+    "name": "Jang Wonyoung",
+    "group": "IVE",
+    "aniversario": "31-08-2004",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "S",
+    "visual": "S",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Center carismática, postura e expressão excepcionais",
+    "fracos": "Falta potência vocal, dificuldade em conceitos mais maduros"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "iveliz",
+    "name": "Liz",
+    "group": "IVE",
+    "aniversario": "21-11-2004",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Groove"
+    ],
+    "fortes": "Controle vocal notável, alcance médio-alto excelente",
+    "fracos": "Energia performática irregular, expressão limitada em girlcrush"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "iveleeseo",
+    "name": "Leeseo",
+    "group": "IVE",
+    "aniversario": "21-02-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Boa presença, melhora técnica contínua, brilho em refrões",
+    "fracos": "Falta de consistência vocal em notas altas, menor estabilidade em palco"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznamai",
+    "name": "Mai",
+    "group": "izna",
+    "aniversario": "28-10-2004",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Vocal estável para rookie, visual marcante",
+    "fracos": "Dança e rap ainda em fase de evolução"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznabangjeemin",
+    "name": "Bang Jeemin",
+    "group": "izna",
+    "aniversario": "08-05-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "S",
+    "visual": "A",
+    "especialidade": "Center",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Dança de nível elevado para rookie, presença de palco boa",
+    "fracos": "Técnica vocal ainda menos refinada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznayoonjiyoon",
+    "name": "Yoon Jiyoon (former)",
+    "group": "izna",
+    "aniversario": "14-07-2005",
+    "vocal": "S",
+    "dance": "C",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Forte background de survival show, presença cênica, bons momentos em stages iniciais",
+    "fracos": "Saiu do grupo (reportado em agosto/2025), marca presença histórica mas não é mais ativa na formação atual"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznakoko",
+    "name": "Koko",
+    "group": "izna",
+    "aniversario": "14-11-2006",
+    "vocal": "B",
+    "dance": "S",
+    "rap": "A",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Rap de destaque, entrega lírica clara",
+    "fracos": "Técnica vocal principal e dança ainda em desenvolvimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznaryusarang",
+    "name": "Ryu Sarang",
+    "group": "izna",
+    "aniversario": "18-04-2007",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Projeção vocal boa para rookie, dance de suporte competente",
+    "fracos": "Rap menos desenvolvido"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznachoijungeun",
+    "name": "Choi Jungeun",
+    "group": "izna",
+    "aniversario": "04-08-2007",
+    "vocal": "A",
+    "dance": "A",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Groove"
+    ],
+    "fortes": "Visual forte, presença de câmera",
+    "fracos": "Técnica vocal principal e rap ainda iniciante"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "iznajeongsaebi",
+    "name": "Jeong Saebi",
+    "group": "izna",
+    "aniversario": "22-01-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Elegant",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Potencial de crescimento, presença de grupo crescente",
+    "fracos": "Técnica geral ainda em fase inicial"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "kiiikiiileesol",
+    "name": "Leesol",
+    "group": "KiiiKiii",
+    "aniversario": "18-09-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "A",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Dança de nível elevado, presença cênica forte",
+    "fracos": "Técnica vocal principal menos refinada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "kiiikiiisui",
+    "name": "Sui",
+    "group": "KiiiKiii",
+    "aniversario": "10-04-2006",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Visual impactante, vocais razoáveis para rookie",
+    "fracos": "Menos destaque em rap ou dança técnica"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "kiiikiiijiyu",
+    "name": "Jiyu",
+    "group": "KiiiKiii",
+    "aniversario": "14-05-2006",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "B",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Liderança e estabilidade, bom equilíbrio nas três áreas principais",
+    "fracos": "Técnica de rap mais fraca, ainda em construção de presença global"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "kiiikiiihaum",
+    "name": "Haum",
+    "group": "KiiiKiii",
+    "aniversario": "14-11-2006",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Boa execução de coreografia, presença estável",
+    "fracos": "Técnica vocal e rap ainda em desenvolvimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "kiiikiiikya",
+    "name": "Kya",
+    "group": "KiiiKiii",
+    "aniversario": "18-12-2010",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "A",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Rap de destaque para rookie, flow sólido",
+    "fracos": "Vocais principais e presença de centro menos evidentes"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "lesserafimsakura",
+    "name": "Sakura",
+    "group": "LE SSERAFIM",
+    "aniversario": "19-03-1998",
+    "vocal": "C",
+    "dance": "C",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "lesserafimkimchaewon",
+    "name": "Kim Chaewon",
+    "group": "LE SSERAFIM",
+    "aniversario": "01-08-2000",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "lesserafimhuhyunjin",
+    "name": "Huh Yunjin",
+    "group": "LE SSERAFIM",
+    "aniversario": "08-10-2001",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Groove"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "lesserafimkazuha",
+    "name": "Kazuha",
+    "group": "LE SSERAFIM",
+    "aniversario": "09-08-2003",
+    "vocal": "C",
+    "dance": "A",
+    "rap": "C",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "lesserafimhongeunchae",
+    "name": "Hong Eunchae",
+    "group": "LE SSERAFIM",
+    "aniversario": "10-11-2006",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "meovvsooin",
+    "name": "Sooin",
+    "group": "MEOVV",
+    "aniversario": "12-04-2005",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Forte nas duas áreas principais, presença de palco",
+    "fracos": "Rap linha menos desenvolvida"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "meovvgawon",
+    "name": "Gawon",
+    "group": "MEOVV",
+    "aniversario": "27-04-2005",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "S",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Visual marcante, desempenho vocal sólido",
+    "fracos": "Rap/dança de apoio menos destacado"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "meovvanna",
+    "name": "Anna",
+    "group": "MEOVV",
+    "aniversario": "17-11-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "S",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Visual forte, presença internacional",
+    "fracos": "Técnica vocal principal ainda em refinamento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "meovvnarin",
+    "name": "Narin",
+    "group": "MEOVV",
+    "aniversario": "15-08-2007",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "S",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Rap de destaque, fluxo bom",
+    "fracos": "Técnica vocal principal moderada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "meovvella",
+    "name": "Ella",
+    "group": "MEOVV",
+    "aniversario": "01-12-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "S",
+    "visual": "S",
+    "especialidade": "Center",
+    "conceitos": [
+      "Elegant",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Groove"
+    ],
+    "fortes": "Visual altíssimo nível, presença para câmera",
+    "fracos": "Técnica vocal/rap/dança ainda em fase inicial"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "newjeansminji",
+    "name": "Minji",
+    "group": "NewJeans",
+    "aniversario": "07-05-2004",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "R&B"
+    ],
+    "fortes": "Boa versatilidade, presença forte no palco",
+    "fracos": "Técnica de rap menos demonstrada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "newjeanshanni",
+    "name": "Hanni",
+    "group": "NewJeans",
+    "aniversario": "06-10-2004",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "C",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Center",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "R&B"
+    ],
+    "fortes": "Voz clara, alcance sólido, apelo multicultural",
+    "fracos": "Rap/dança técnica menor"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "newjeansdanielle",
+    "name": "Danielle",
+    "group": "NewJeans",
+    "aniversario": "11-04-2005",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "R&B"
+    ],
+    "fortes": "Visual muito forte, presença de palco",
+    "fracos": "Técnica de dança/rap menos evidente"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "newjeanshaerin",
+    "name": "Haerin",
+    "group": "NewJeans",
+    "aniversario": "15-05-2006",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "R&B"
+    ],
+    "fortes": "Coreografia fluida, presença natural",
+    "fracos": "Técnica vocal principal menos refinada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "newjeanshyein",
+    "name": "Hyein",
+    "group": "NewJeans",
+    "aniversario": "21-04-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "R&B"
+    ],
+    "fortes": "Potencial visível, boa presença de grupo",
+    "fracos": "Técnica vocal/rap/dança ainda iniciando"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "nmixxlily",
+    "name": "Lily",
+    "group": "NMIXX",
+    "aniversario": "17-10-2002",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Experimental"
+    ],
+    "fortes": "Excelente alcance, experiência internacional",
+    "fracos": "Rap quase ausente, dança mediana"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "nmixxhaewon",
+    "name": "Haewon",
+    "group": "NMIXX",
+    "aniversario": "25-02-2003",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "C",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Experimental"
+    ],
+    "fortes": "Vocal refinado para a posição, presença de palco forte",
+    "fracos": "Rap/dança com menor foco técnico"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "nmixxsullyoon",
+    "name": "Sullyoon",
+    "group": "NMIXX",
+    "aniversario": "26-01-2004",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "S",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Dança excelente, boa presença no palco",
+    "fracos": "Técnica vocal de topo ainda em pequena margem"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "nmixxbae",
+    "name": "Bae",
+    "group": "NMIXX",
+    "aniversario": "28-12-2004",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "C",
+    "visual": "C",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Visual forte, estabilidade vocal",
+    "fracos": "Dança/rap menos destacadas"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "nmixxjiwoo",
+    "name": "Jiwoo",
+    "group": "NMIXX",
+    "aniversario": "13-04-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "A",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Rap de destaque, entrega articula bem",
+    "fracos": "Técnica vocal principal menos refinada"
+  },
+  {
+    "gen": "4",
+    "type": "idol",
+    "id": "nmixxkyujin",
+    "name": "Kyujin",
+    "group": "NMIXX",
+    "aniversario": "26-05-2006",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "A",
+    "center": "S",
+    "visual": "B",
+    "especialidade": "All-Rounder",
+    "conceitos": [
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Dança de nível competitivo, presença consistente",
+    "fracos": "Vocal/rap menos destacadas"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdaykukchorok",
+    "name": "Kuk Chorok",
+    "group": "OURBIRTHDAY",
+    "aniversario": "28-07-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdayshinhyewon",
+    "name": "Shin Hyewon",
+    "group": "OURBIRTHDAY",
+    "aniversario": "05-10-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdaychohyejin",
+    "name": "Cho Hyejin",
+    "group": "OURBIRTHDAY",
+    "aniversario": "24-10-2007",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdayu",
+    "name": "U",
+    "group": "OURBIRTHDAY",
+    "aniversario": "21-08-2008",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdaybaby",
+    "name": "Baby",
+    "group": "OURBIRTHDAY",
+    "aniversario": "10-02-2009",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdayachiraya",
+    "name": "Achiraya",
+    "group": "OURBIRTHDAY",
+    "aniversario": "18-08-2009",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "ourbirthdaykilala",
+    "name": "Kilala",
+    "group": "OURBIRTHDAY",
+    "aniversario": "17-12-2010",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Hip-Hop"
+    ],
+    "fortes": "",
+    "fracos": ""
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "rescenewoni",
+    "name": "Woni",
+    "group": "RESCENE",
+    "aniversario": "25-05-2004",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "S",
+    "especialidade": "Center",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Boa dança, presença de palco forte",
+    "fracos": "Técnica vocal principal ainda em crescimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "resceneliv",
+    "name": "Liv",
+    "group": "RESCENE",
+    "aniversario": "11-10-2006",
+    "vocal": "A",
+    "dance": "C",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Flow de rap promissor, presença única",
+    "fracos": "Vocais principais menos evidentes"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "resceneminami",
+    "name": "Minami",
+    "group": "RESCENE",
+    "aniversario": "29-11-2006",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Vocal refinado para o período de estreia",
+    "fracos": "Rap e dança com menos destaque inicial"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "rescenemay",
+    "name": "May",
+    "group": "RESCENE",
+    "aniversario": "19-08-2008",
+    "vocal": "B",
+    "dance": "C",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Visual forte, estilo distinto",
+    "fracos": "Técnica vocal/rap/dança ainda em fases iniciais"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "rescenezena",
+    "name": "Zena",
+    "group": "RESCENE",
+    "aniversario": "27-11-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Dança acima da média para rookie",
+    "fracos": "Técnica vocal/rap menos refinada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynamehitomi",
+    "name": "Hitomi",
+    "group": "SAY MY NAME",
+    "aniversario": "06-10-2001",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Visual forte e presença global, boas funções vocais",
+    "fracos": "Técnica de rap e dança de destaque ainda em construção"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynameshuie",
+    "name": "Shuie",
+    "group": "SAY MY NAME",
+    "aniversario": "06-06-2004",
+    "vocal": "C",
+    "dance": "C",
+    "rap": "A",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Boa dança, melhoria visível",
+    "fracos": "Técnica vocal principal ainda em crescimento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynamemei",
+    "name": "Mei",
+    "group": "SAY MY NAME",
+    "aniversario": "27-09-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Vocais consistentes, bom desempenho de estreia",
+    "fracos": "Dança e rap menos exploradas"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynamekanny",
+    "name": "Kanny",
+    "group": "SAY MY NAME",
+    "aniversario": "26-12-2005",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Dança de nível elevado para rookie",
+    "fracos": "Técnica vocal principal ainda em refinamento"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynamesoha",
+    "name": "Soha",
+    "group": "SAY MY NAME",
+    "aniversario": "26-07-2006",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Rap entrega boa para rookie",
+    "fracos": "Técnica vocal principal limitada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynamedohee",
+    "name": "Dohee",
+    "group": "SAY MY NAME",
+    "aniversario": "09-12-2006",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "S",
+    "visual": "A",
+    "especialidade": "Center",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Visual forte, presença de grupo",
+    "fracos": "Técnica vocal/rap/dança ainda emergente"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynamejunhwi",
+    "name": "Junhwi",
+    "group": "SAY MY NAME",
+    "aniversario": "11-06-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "C",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Potencial visível",
+    "fracos": "Técnicas principais menos maduras"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "saymynameseungjoo",
+    "name": "Seungjoo",
+    "group": "SAY MY NAME",
+    "aniversario": "24-09-2010",
+    "vocal": "B",
+    "dance": "C",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Groove",
+      "Pop"
+    ],
+    "fortes": "Potencial e presença de grupo",
+    "fracos": "Técnica vocal/rap/dança iniciante"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesyooyeon",
+    "name": "Yooyeon",
+    "group": "tripleS",
+    "aniversario": "09-02-2001",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "S",
+    "visual": "S",
+    "especialidade": "Center",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Visual line forte, estabilidade vocal segura",
+    "fracos": "Falta dinamismo nas coreografias"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesmayu",
+    "name": "Mayu",
+    "group": "tripleS",
+    "aniversario": "12-05-2002",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Leitura rítmica segura, contribui bem a harmonias",
+    "fracos": "Projeção e alcance ainda moderados nas stages"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesxinyu",
+    "name": "Xinyu",
+    "group": "tripleS",
+    "aniversario": "25-05-2002",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "S",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Grande impacto visual e estabilidade vocal nas partes atribuídas",
+    "fracos": "Movimentos coreográficos menos agressivos, projeção variável"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesnakyoung",
+    "name": "Nakyoung",
+    "group": "tripleS",
+    "aniversario": "13-10-2002",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "All-Rounder",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-Hop",
+      "Synthpop"
+    ],
+    "fortes": "Afinação segura, entrega consistente nas bridges, boa presença em câmeras",
+    "fracos": "Pouca explosão nos clímaxes, presença de center limitada"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplessohyun",
+    "name": "Sohyun",
+    "group": "tripleS",
+    "aniversario": "13-10-2002",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "All-Rounder",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Excelente sincronização e limpeza em group-dance, confiável na execução",
+    "fracos": "Voz de apoio, poucas linhas solo para destacar"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesdahyun",
+    "name": "Dahyun",
+    "group": "tripleS",
+    "aniversario": "08-01-2003",
+    "vocal": "S",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Entrega emotiva e afinação exemplar nas lives, ótimo controle dinâmico",
+    "fracos": "Dança deliberadamente contida pelo concept, menor exposição de solo"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesnien",
+    "name": "Nien",
+    "group": "tripleS",
+    "aniversario": "02-06-2003",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "C",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-Hop",
+      "Synthpop"
+    ],
+    "fortes": "Melhora perceptível em projeção e estabilidade, performa bem em harmonias",
+    "fracos": "Movimentos coreográficos às vezes mais robustos que fluidos"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesseoyeon",
+    "name": "Seoyeon",
+    "group": "tripleS",
+    "aniversario": "06-08-2003",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "S",
+    "visual": "A",
+    "especialidade": "Center",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Controle de fraseado, sustain e presença de câmera, segura os momentos-chave da era",
+    "fracos": "Em alguns cortes, expressão estática, pouca ênfase em dança intensa"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesjiyeon",
+    "name": "Jiyeon",
+    "group": "tripleS",
+    "aniversario": "13-02-2004",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Bom suporte vocal, posição segura em formações, presença consistente",
+    "fracos": "Falta destaque solo que mostre mais amplitude vocal"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleskotone",
+    "name": "Kotone",
+    "group": "tripleS",
+    "aniversario": "10-03-2004",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-Hop",
+      "Synthpop"
+    ],
+    "fortes": "Execução coreográfica consistente, ótima leitura de câmera, muito limpa ao vivo",
+    "fracos": "Alcance vocal em registros graves/baixos ligeiramente restrito"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleschaeyeon",
+    "name": "Chaeyeon",
+    "group": "tripleS",
+    "aniversario": "04-12-2004",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Entonação estável e presença refinada , boa em partes melódicas",
+    "fracos": "Em climas muito altos pode perder ligeira potência"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesyubin",
+    "name": "Yubin",
+    "group": "tripleS",
+    "aniversario": "03-02-2005",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-Hop",
+      "Synthpop"
+    ],
+    "fortes": "Entrega limpinha nas linhas que tem, presença de apoio sólida",
+    "fracos": "Ainda em crescimento para carregar solos longos"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesjiwoo",
+    "name": "Jiwoo",
+    "group": "tripleS",
+    "aniversario": "24-10-2005",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "C",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Emotional",
+      "Synthpop"
+    ],
+    "fortes": "Marca de dança forte, excelente leitura rítmica e presença de palco",
+    "fracos": "Runs vocais longos menos frequentes no setlist — menos oportunidade de brilhar vocalmente"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleskaede",
+    "name": "Kaede",
+    "group": "tripleS",
+    "aniversario": "20-12-2005",
+    "vocal": "A",
+    "dance": "S",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Timing e precisão em dança, funciona bem em passagens sincronizadas",
+    "fracos": "Range vocal menos explorado nas stages, pouco solo"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesshion",
+    "name": "Shion",
+    "group": "tripleS",
+    "aniversario": "03-04-2006",
+    "vocal": "A",
+    "dance": "B",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "R&B",
+      "Synthpop"
+    ],
+    "fortes": "Visual expressivo, suporte de performance estável",
+    "fracos": "Poucas lines na era → dados limitados (±)"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleslynn",
+    "name": "Lynn",
+    "group": "tripleS",
+    "aniversario": "12-04-2006",
+    "vocal": "C",
+    "dance": "A",
+    "rap": "C",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Groove",
+      "Synthpop"
+    ],
+    "fortes": "Vocais limpos, boa estabilidade em letras, presença visual elegante",
+    "fracos": "Energia de palco às vezes mais reservada, coreos mais simples"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplessullin",
+    "name": "Sullin",
+    "group": "tripleS",
+    "aniversario": "30-11-2006",
+    "vocal": "C",
+    "dance": "C",
+    "rap": "D",
+    "center": "D",
+    "visual": "B",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "R&B",
+      "Synthpop"
+    ],
+    "fortes": "Participação de grupo consistente, execução de formação",
+    "fracos": "Exposição limitada em stages, dados de solo escassos (±)"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleshyerin",
+    "name": "Hyerin",
+    "group": "tripleS",
+    "aniversario": "12-04-2007",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-Hop",
+      "Synthpop"
+    ],
+    "fortes": "Ritmo e sincronização, preza a musicalidade no fraseado",
+    "fracos": "Não sai muito do formato de suporte, menos solo"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleschaewon",
+    "name": "Chaewon",
+    "group": "tripleS",
+    "aniversario": "02-05-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Visual forte, contribuições seguras em formações",
+    "fracos": "Poucas linhas , pouca exposição solo → nota conservadora"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleshayeon",
+    "name": "Hayeon",
+    "group": "tripleS",
+    "aniversario": "01-08-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-Hop",
+      "Synthpop"
+    ],
+    "fortes": "Entrosamento no grupo, presença correta",
+    "fracos": "Dados de solo escassos, rank provisório"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplessoomin",
+    "name": "Soomin",
+    "group": "tripleS",
+    "aniversario": "03-10-2007",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Performance de grupo limpa, suporte em harmonias",
+    "fracos": "Pouca exposição solo, avaliado conservativamente"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "tripleskwakyeonji",
+    "name": "Kwak Yeonji",
+    "group": "tripleS",
+    "aniversario": "08-01-2008",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Energia coreográfica alta, transições e expressão bem resolvidas",
+    "fracos": "Afinação sob fadiga tem pequenos vacilos (observados em uma stage)"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesjoobin",
+    "name": "Joobin",
+    "group": "tripleS",
+    "aniversario": "16-01-2009",
+    "vocal": "B",
+    "dance": "C",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Integra bem as coreografias, presença regular",
+    "fracos": "Pouca exposição → nota provisória"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "triplesseoah",
+    "name": "SeoAh",
+    "group": "tripleS",
+    "aniversario": "11-06-2010",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "C",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Conceptual",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Synthpop"
+    ],
+    "fortes": "Cumpre bem as linhas atribuídas, boa conexão visual",
+    "fracos": "Menos destaque solo, rank conservador"
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "unchildyeeun",
+    "name": "Yeeun",
+    "group": "UNCHILD",
+    "aniversario": "21-12-2006",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "A",
+    "visual": "A",
+    "especialidade": "Visual",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Cativa a audiência com seu visual e carisma, boa leitura de câmera e presença natural em palco, estabilidade sólida para linhas de apoio.",
+    "fracos": "Ainda é inexperiente, falta refinamento técnico em vocal e dança, pouca potência em performances mais intensas."
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "unchildheekie",
+    "name": "Heekie",
+    "group": "UNCHILD",
+    "aniversario": "17-03-2007",
+    "vocal": "B",
+    "dance": "A",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Entrega de rap equilibrada, boa estabilidade geral nas performances, presença energética e consistente em coreografias.",
+    "fracos": "Ainda carece de identidade vocal mais marcante, impacto visual moderado comparado às integrantes centrais."
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "unchildtina",
+    "name": "Tina",
+    "group": "UNCHILD",
+    "aniversario": "09-03-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "C",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Timbre vocal agradável e estável, boa adaptabilidade entre linhas melódicas e performáticas, presença equilibrada.",
+    "fracos": "Ainda falta estabilidade vocal em performances mais intensas, expressividade facial pode evoluir mais."
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "unchildako",
+    "name": "Ako",
+    "group": "UNCHILD",
+    "aniversario": "08-07-2008",
+    "vocal": "C",
+    "dance": "B",
+    "rap": "B",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Rap",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Boa dicção e timing em rap, energia jovem combina bem com conceitos experimentais, dança estável para rookie.",
+    "fracos": "Vocais ainda limitados tecnicamente, presença de palco menos dominante em partes centrais."
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "unchildevon",
+    "name": "Evon",
+    "group": "UNCHILD",
+    "aniversario": "11-07-2008",
+    "vocal": "B",
+    "dance": "B",
+    "rap": "D",
+    "center": "B",
+    "visual": "B",
+    "especialidade": "Vocal",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Vocais limpos e consistentes, boa harmonia em grupo, transmite leveza e estabilidade nas stages.",
+    "fracos": "Rap pouco desenvolvido, impacto performático ainda discreto em músicas mais agressivas."
+  },
+  {
+    "gen": "5",
+    "type": "idol",
+    "id": "unchildhaeun",
+    "name": "Haeun",
+    "group": "UNCHILD",
+    "aniversario": "16-01-2009",
+    "vocal": "B",
+    "dance": "S",
+    "rap": "B",
+    "center": "A",
+    "visual": "B",
+    "especialidade": "Dance",
+    "conceitos": [
+      "Performance",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Groove"
+    ],
+    "fortes": "Destaque absoluto em dança, excelente controle corporal e sincronização, presença forte em performances energéticas.",
+    "fracos": "Vocais ainda menos refinados tecnicamente, pode perder estabilidade vocal em coreografias muito intensas."
+  }
+];
+*/
 const idols = [
   {
     "gen": "4",
@@ -7172,7 +10439,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanetbratattitude",
     "name": "Brat Attitude",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Girl Crush",
       "Performance",
@@ -7188,7 +10455,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanetchains",
     "name": "Chains",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Dark",
       "Dreamcore",
@@ -7204,7 +10471,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanetholasolar",
     "name": "HOLA SOLAR",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -7220,7 +10487,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanethowtofly",
     "name": "How To Fly",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Conceptual",
       "Cute",
@@ -7236,7 +10503,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanetluckymacho",
     "name": "Lucky MACHO",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Girl Crush",
       "Performance",
@@ -7252,7 +10519,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanetmaindish",
     "name": "MAIN DISH",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Dark",
       "Girl Crush",
@@ -7268,7 +10535,7 @@ const musics = [
     "type": "music",
     "id": "boysiiplanetneverbeen2heaven",
     "name": "Never Been 2 Heaven",
-    "fonte": "Boys II Planet",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Conceptual",
       "Cute",
@@ -7282,9 +10549,9 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "boysiiplanetsuperhigh",
-    "name": "Super HIGH",
-    "fonte": "Boys II Planet",
+    "id": "boysiiplanetsugarhigh",
+    "name": "Sugar HIGH",
+    "fonte": "BOYS II PLANET",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -7300,7 +10567,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetengarde",
     "name": "En Garde",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Conceptual",
       "Elegant",
@@ -7316,7 +10583,7 @@ const musics = [
     "type": "music",
     "id": "boysplanethereiam",
     "name": "Here I Am",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -7332,7 +10599,7 @@ const musics = [
     "type": "music",
     "id": "boysplanethotsummer",
     "name": "Hot Summer",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Conceptual",
       "Elegant",
@@ -7348,7 +10615,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetjellypop",
     "name": "Jelly Pop",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Cute",
       "Performance",
@@ -7364,7 +10631,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetnotalone",
     "name": "Not Alone",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -7380,7 +10647,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetoverme",
     "name": "Over Me",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Elegant",
       "Mature",
@@ -7396,7 +10663,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetsaymyname",
     "name": "Say My Name",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -7412,7 +10679,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetsupercharger",
     "name": "SuperCharger",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Girl Crush",
       "Performance",
@@ -7428,7 +10695,7 @@ const musics = [
     "type": "music",
     "id": "boysplanetswitch",
     "name": "Switch",
-    "fonte": "Boys Planet",
+    "fonte": "BOYS PLANET",
     "conceitos": [
       "Cute",
       "Swag",
@@ -7458,8 +10725,8 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "girlsplanet999ooo",
-    "name": "O.O.O",
+    "id": "girlsplanet999ooooveroverover",
+    "name": "O.O.O (Over & Over & Over)",
     "fonte": "Girls Planet 999",
     "conceitos": [
       "Conceptual",
@@ -7523,7 +10790,7 @@ const musics = [
   {
     "type": "music",
     "id": "girlsplanet999umelove",
-    "name": "U+ME=LOVE",
+    "name": "U+Me=LOVE",
     "fonte": "Girls Planet 999",
     "conceitos": [
       "Dreamcore",
@@ -7618,9 +10885,9 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "iland2nadrip",
+    "id": "iland2drip",
     "name": "DRIP",
-    "fonte": "I-Land 2 N/a",
+    "fonte": "I-LAND2",
     "conceitos": [
       "Mature",
       "Performance",
@@ -7634,9 +10901,9 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "iland2nafakeit",
+    "id": "iland2fakeit",
     "name": "FAKE IT",
-    "fonte": "I-Land 2 N/a",
+    "fonte": "I-LAND2",
     "conceitos": [
       "Conceptual",
       "Elegant",
@@ -7650,9 +10917,9 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "iland2nafinallovesong",
-    "name": "Final Love Song",
-    "fonte": "I-Land 2 N/a",
+    "id": "iland2finallovesong",
+    "name": "FINAL LOVE SONG",
+    "fonte": "I-LAND2",
     "conceitos": [
       "Conceptual",
       "Mature",
@@ -7666,9 +10933,9 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "iland2naiwaly",
+    "id": "iland2iwaly",
     "name": "IWALY",
-    "fonte": "I-Land 2 N/a",
+    "fonte": "I-LAND2",
     "conceitos": [
       "Conceptual",
       "Performance",
@@ -7682,8 +10949,24 @@ const musics = [
   },
   {
     "type": "music",
+    "id": "idolschoolhighfive",
+    "name": "HIGH FIVE",
+    "fonte": "Idol School",
+    "conceitos": [
+      "Conceptual",
+      "Cute",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Emotional",
+      "Pop",
+      "Synthpop"
+    ]
+  },
+  {
+    "type": "music",
     "id": "idolschoolmagical",
-    "name": "Magical",
+    "name": "MAGICAL",
     "fonte": "Idol School",
     "conceitos": [
       "Dreamcore",
@@ -7746,24 +11029,8 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "idolschoolhighfive",
-    "name": "High Five",
-    "fonte": "Idol School",
-    "conceitos": [
-      "Conceptual",
-      "Cute",
-      "Dreamcore"
-    ],
-    "generos": [
-      "Emotional",
-      "Pop",
-      "Synthpop"
-    ]
-  },
-  {
-    "type": "music",
     "id": "myteenagegirldreaming",
-    "name": "Dreaming",
+    "name": "DREAMING",
     "fonte": "My Teenage Girl",
     "conceitos": [
       "Cute",
@@ -7779,7 +11046,7 @@ const musics = [
   {
     "type": "music",
     "id": "myteenagegirllions",
-    "name": "Lions",
+    "name": "LIONS",
     "fonte": "My Teenage Girl",
     "conceitos": [
       "Elegant",
@@ -7795,7 +11062,7 @@ const musics = [
   {
     "type": "music",
     "id": "myteenagegirlsamesamedifferent",
-    "name": "Same Same Different",
+    "name": "SAME SAME DIFFERENT",
     "fonte": "My Teenage Girl",
     "conceitos": [
       "Girl Crush",
@@ -7811,7 +11078,7 @@ const musics = [
   {
     "type": "music",
     "id": "myteenagegirlsonicboom",
-    "name": "Sonic Boom",
+    "name": "SONIC BOOM",
     "fonte": "My Teenage Girl",
     "conceitos": [
       "Dark",
@@ -7827,7 +11094,7 @@ const musics = [
   {
     "type": "music",
     "id": "myteenagegirlsun",
-    "name": "Sun",
+    "name": "SUN",
     "fonte": "My Teenage Girl",
     "conceitos": [
       "Cute",
@@ -7858,22 +11125,6 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "niziprojectboomboomboom",
-    "name": "Boom Boom Boom",
-    "fonte": "Nizi Project",
-    "conceitos": [
-      "Elegant",
-      "Performance",
-      "Swag"
-    ],
-    "generos": [
-      "EDM",
-      "Experimental",
-      "Groove"
-    ]
-  },
-  {
-    "type": "music",
     "id": "niziprojectbeyondtherainbow",
     "name": "Beyond the Rainbow",
     "fonte": "Nizi Project",
@@ -7890,8 +11141,24 @@ const musics = [
   },
   {
     "type": "music",
+    "id": "niziprojectboomboomboom",
+    "name": "Boom Boom Boom",
+    "fonte": "Nizi Project",
+    "conceitos": [
+      "Elegant",
+      "Performance",
+      "Swag"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
     "id": "niziprojectmakeyouhappy",
-    "name": "Make You Happy",
+    "name": "Make you happy",
     "fonte": "Nizi Project",
     "conceitos": [
       "Cute",
@@ -7987,7 +11254,7 @@ const musics = [
   {
     "type": "music",
     "id": "produce101pickme",
-    "name": "Pick Me",
+    "name": "PICK ME",
     "fonte": "Produce 101",
     "conceitos": [
       "Conceptual",
@@ -8018,25 +11285,9 @@ const musics = [
   },
   {
     "type": "music",
-    "id": "produce101japanthegirlsleaphigh",
-    "name": "Leap High!",
-    "fonte": "Produce 101 Japan The Girls",
-    "conceitos": [
-      "Conceptual",
-      "Cute",
-      "Teen Crush"
-    ],
-    "generos": [
-      "EDM",
-      "Experimental",
-      "Groove"
-    ]
-  },
-  {
-    "type": "music",
     "id": "produce101japanthegirlsme",
     "name": "&ME",
-    "fonte": "Produce 101 Japan The Girls",
+    "fonte": "PRODUCE 101 JAPAN THE GIRLS",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8052,7 +11303,7 @@ const musics = [
     "type": "music",
     "id": "produce101japanthegirlsatoz",
     "name": "AtoZ",
-    "fonte": "Produce 101 Japan The Girls",
+    "fonte": "PRODUCE 101 JAPAN THE GIRLS",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8068,7 +11319,7 @@ const musics = [
     "type": "music",
     "id": "produce101japanthegirlsbaddie",
     "name": "Baddie",
-    "fonte": "Produce 101 Japan The Girls",
+    "fonte": "PRODUCE 101 JAPAN THE GIRLS",
     "conceitos": [
       "Dark",
       "Girl Crush",
@@ -8082,9 +11333,25 @@ const musics = [
   },
   {
     "type": "music",
+    "id": "produce101japanthegirlsleaphigh",
+    "name": "LEAP HIGH!",
+    "fonte": "PRODUCE 101 JAPAN THE GIRLS",
+    "conceitos": [
+      "Conceptual",
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Groove"
+    ]
+  },
+  {
+    "type": "music",
     "id": "produce101japanthegirlspopcorn",
     "name": "Popcorn",
-    "fonte": "Produce 101 Japan The Girls",
+    "fonte": "PRODUCE 101 JAPAN THE GIRLS",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8099,8 +11366,8 @@ const musics = [
   {
     "type": "music",
     "id": "produce101japanthegirlstoxic",
-    "name": "Toxic",
-    "fonte": "Produce 101 Japan The Girls",
+    "name": "TOXIC",
+    "fonte": "PRODUCE 101 JAPAN THE GIRLS",
     "conceitos": [
       "Dark",
       "Girl Crush",
@@ -8116,7 +11383,7 @@ const musics = [
     "type": "music",
     "id": "produce101season2always",
     "name": "Always",
-    "fonte": "Produce 101 Season 2",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -8131,8 +11398,8 @@ const musics = [
   {
     "type": "music",
     "id": "produce101season2handsonme",
-    "name": "Hands On Me",
-    "fonte": "Produce 101 Season 2",
+    "name": "Hands on Me",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Elegant",
       "Mature",
@@ -8148,7 +11415,7 @@ const musics = [
     "type": "music",
     "id": "produce101season2iknowyouknow",
     "name": "I Know You Know",
-    "fonte": "Produce 101 Season 2",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8163,8 +11430,8 @@ const musics = [
   {
     "type": "music",
     "id": "produce101season2itsmepickme",
-    "name": "It's Me (Pick Me)",
-    "fonte": "Produce 101 Season 2",
+    "name": "It's Me (PICK ME)",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -8179,8 +11446,8 @@ const musics = [
   {
     "type": "music",
     "id": "produce101season2never",
-    "name": "Never",
-    "fonte": "Produce 101 Season 2",
+    "name": "NEVER",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Conceptual",
       "Elegant",
@@ -8196,7 +11463,7 @@ const musics = [
     "type": "music",
     "id": "produce101season2ohlittlegirl",
     "name": "Oh Little Girl",
-    "fonte": "Produce 101 Season 2",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Cute",
       "Swag",
@@ -8212,7 +11479,7 @@ const musics = [
     "type": "music",
     "id": "produce101season2openup",
     "name": "Open Up",
-    "fonte": "Produce 101 Season 2",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Dark",
       "Elegant",
@@ -8228,7 +11495,7 @@ const musics = [
     "type": "music",
     "id": "produce101season2showtime",
     "name": "Show Time",
-    "fonte": "Produce 101 Season 2",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Conceptual",
       "Performance",
@@ -8244,7 +11511,7 @@ const musics = [
     "type": "music",
     "id": "produce101season2superhot",
     "name": "Super Hot",
-    "fonte": "Produce 101 Season 2",
+    "fonte": "PRODUCE 101 season2",
     "conceitos": [
       "Conceptual",
       "Performance",
@@ -8260,7 +11527,7 @@ const musics = [
     "type": "music",
     "id": "produce481000",
     "name": "1000%",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Conceptual",
       "Cute",
@@ -8276,7 +11543,7 @@ const musics = [
     "type": "music",
     "id": "produce48aswedream",
     "name": "As We Dream",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8292,7 +11559,7 @@ const musics = [
     "type": "music",
     "id": "produce48iam",
     "name": "IAM",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Dark",
       "Mature",
@@ -8307,8 +11574,8 @@ const musics = [
   {
     "type": "music",
     "id": "produce48nekkoyapickme",
-    "name": "Nekkoya (Pick Me)",
-    "fonte": "Produce 48",
+    "name": "NEKKOYA (PICK ME)",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Conceptual",
       "Performance",
@@ -8324,7 +11591,7 @@ const musics = [
     "type": "music",
     "id": "produce48rollinrollin",
     "name": "Rollin' Rollin'",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8340,7 +11607,7 @@ const musics = [
     "type": "music",
     "id": "produce48rumor",
     "name": "Rumor",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Dark",
       "Mature",
@@ -8356,7 +11623,7 @@ const musics = [
     "type": "music",
     "id": "produce48seeyouagain",
     "name": "See You Again",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8372,7 +11639,7 @@ const musics = [
     "type": "music",
     "id": "produce48toreachyou",
     "name": "To Reach You",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8388,7 +11655,7 @@ const musics = [
     "type": "music",
     "id": "produce48wetogether",
     "name": "We Together",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Conceptual",
       "Cute",
@@ -8404,7 +11671,7 @@ const musics = [
     "type": "music",
     "id": "produce48youreinlovearentyou",
     "name": "You're In Love, Aren't You?",
-    "fonte": "Produce 48",
+    "fonte": "PRODUCE48",
     "conceitos": [
       "Conceptual",
       "Elegant",
@@ -8420,7 +11687,7 @@ const musics = [
     "type": "music",
     "id": "producex101boyness",
     "name": "Boyness",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Dreamcore",
       "Elegant",
@@ -8436,7 +11703,7 @@ const musics = [
     "type": "music",
     "id": "producex101dreamforyou",
     "name": "Dream For You",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -8452,7 +11719,7 @@ const musics = [
     "type": "music",
     "id": "producex101mondaytosunday",
     "name": "Monday to Sunday",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8468,7 +11735,7 @@ const musics = [
     "type": "music",
     "id": "producex101move",
     "name": "MOVE",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Dark",
       "Mature",
@@ -8484,7 +11751,7 @@ const musics = [
     "type": "music",
     "id": "producex101prettygirl",
     "name": "Pretty Girl",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8500,7 +11767,7 @@ const musics = [
     "type": "music",
     "id": "producex101superspecialgirl",
     "name": "Super Special Girl",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Cute",
       "Performance",
@@ -8516,7 +11783,7 @@ const musics = [
     "type": "music",
     "id": "producex101tomyworld",
     "name": "To My World",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Dark",
       "Mature",
@@ -8532,7 +11799,7 @@ const musics = [
     "type": "music",
     "id": "producex101ugotit",
     "name": "U GOT IT",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Dark",
       "Mature",
@@ -8548,7 +11815,7 @@ const musics = [
     "type": "music",
     "id": "producex101x1ma",
     "name": "X1-MA",
-    "fonte": "Produce X 101",
+    "fonte": "PRODUCE X 101",
     "conceitos": [
       "Conceptual",
       "Performance",
@@ -8563,8 +11830,8 @@ const musics = [
   {
     "type": "music",
     "id": "queendompuzzlebadblood",
-    "name": "Bad Blood",
-    "fonte": "Queendom Puzzle",
+    "name": "BAD BLOOD",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Conceptual",
       "Mature",
@@ -8580,7 +11847,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzlebillionaire",
     "name": "Billionaire",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Girl Crush",
       "Performance",
@@ -8596,7 +11863,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzlecharismatic",
     "name": "Charismatic",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Cute",
       "Performance",
@@ -8612,7 +11879,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzleglowup",
     "name": "Glow-up",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Girl Crush",
       "Performance",
@@ -8628,7 +11895,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzleidgaidontgivea",
     "name": "i DGA (i DONT GIVE A)",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Girl Crush",
       "Performance",
@@ -8644,7 +11911,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzleido",
     "name": "I Do",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Conceptual",
       "Cute",
@@ -8660,7 +11927,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzlelastpiece",
     "name": "Last Piece",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Dark",
       "Girl Crush",
@@ -8676,7 +11943,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzleoverwater",
     "name": "Overwater",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Conceptual",
       "Dreamcore",
@@ -8692,7 +11959,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzlepuzzlin",
     "name": "PUZZLIN'",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Cute",
       "Dreamcore",
@@ -8708,7 +11975,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzleriseup",
     "name": "RISE UP",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Conceptual",
       "Cute",
@@ -8723,8 +11990,8 @@ const musics = [
   {
     "type": "music",
     "id": "queendompuzzlesnap",
-    "name": "Snap",
-    "fonte": "Queendom Puzzle",
+    "name": "SNAP",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Dark",
       "Girl Crush",
@@ -8740,7 +12007,7 @@ const musics = [
     "type": "music",
     "id": "queendompuzzleweb",
     "name": "WEB",
-    "fonte": "Queendom Puzzle",
+    "fonte": "QUEENDOM PUZZLE",
     "conceitos": [
       "Dark",
       "Mature",
@@ -8882,6 +12149,22 @@ const musics = [
   },
   {
     "type": "music",
+    "id": "universeticketcamera",
+    "name": "Camera",
+    "fonte": "Universe Ticket",
+    "conceitos": [
+      "Cute",
+      "Swag",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Hip-hop",
+      "Pop"
+    ]
+  },
+  {
+    "type": "music",
     "id": "universeticketcomewithmeuniverse",
     "name": "Come with me? (Universe)",
     "fonte": "Universe Ticket",
@@ -8899,7 +12182,7 @@ const musics = [
   {
     "type": "music",
     "id": "universeticketdopamine",
-    "name": "Dopamine",
+    "name": "DOPAMINE",
     "fonte": "Universe Ticket",
     "conceitos": [
       "Dark",
@@ -8926,22 +12209,6 @@ const musics = [
       "Emotional",
       "Experimental",
       "Synthpop"
-    ]
-  },
-  {
-    "type": "music",
-    "id": "universeticketcamera",
-    "name": "Camera",
-    "fonte": "Universe Ticket",
-    "conceitos": [
-      "Cute",
-      "Swag",
-      "Teen Crush"
-    ],
-    "generos": [
-      "Experimental",
-      "Hip-hop",
-      "Pop"
     ]
   },
   {
@@ -8979,7 +12246,7 @@ const musics = [
   {
     "type": "music",
     "id": "universeticketwhateva",
-    "name": "Whateva",
+    "name": "WHATEVA",
     "fonte": "Universe Ticket",
     "conceitos": [
       "Cute",
@@ -9017,8 +12284,8 @@ const producers = [
     "id": "producer13kor",
     "name": "13 (KOR)",
     "conceitos": [
-      "Mature",
       "Dark",
+      "Mature",
       "Performance"
     ],
     "generos": [
@@ -9028,10 +12295,10 @@ const producers = [
     ],
     "musicas": [
       "LE SSERAFIM - FEARLESS",
-      "Produce 48 - Rumor",
-      "LE SSERAFIM - Eve, Psyche and the Bluebeard's Wife",
+      "PRODUCE8 - Rumor",
+      "LE SSERAFIM - Eve, Psyche and the Bluebeard's wife",
       "TAEMIN - Criminal",
-      "BTOB - I'll Be Your Man"
+      "BTOB - I'll be your man"
     ]
   },
   {
@@ -9039,21 +12306,21 @@ const producers = [
     "id": "producerartiffect",
     "name": "ARTiffect",
     "conceitos": [
-      "Performance",
+      "Elegant",
       "Girl Crush",
-      "Elegant"
+      "Performance"
     ],
     "generos": [
-      "Groove",
       "Experimental",
+      "Groove",
       "Rock"
     ],
     "musicas": [
-      "NMIXX - Know About Me",
+      "NMIXX - KNOW ABOUT ME",
       "Red Velvet - Feel My Rythm",
       "KAI - Peaches",
-      "Riize - Get a Guitar",
-      "SEVENTEEN - Maestro"
+      "RIIZE - Get A Guitar",
+      "SEVENTEEN - MAESTRO"
     ]
   },
   {
@@ -9062,13 +12329,13 @@ const producers = [
     "name": "Artronic Waves",
     "conceitos": [
       "Conceptual",
-      "Teen Crush",
-      "Dark"
+      "Dark",
+      "Teen Crush"
     ],
     "generos": [
-      "Synthpop",
       "EDM",
-      "Emotional"
+      "Emotional",
+      "Synthpop"
     ],
     "musicas": [
       "tripleS - Rising",
@@ -9084,20 +12351,20 @@ const producers = [
     "name": "Black Eyed Pilseung",
     "conceitos": [
       "Cute",
-      "Teen Crush",
-      "Dreamcore"
+      "Dreamcore",
+      "Teen Crush"
     ],
     "generos": [
-      "Pop",
       "Emotional",
+      "Pop",
       "R&B"
     ],
     "musicas": [
-      "TWICE - Likey",
-      "ITZY - Cake",
-      "STAYC - Stereotype",
+      "TWICE - LIKEY",
+      "ITZY - CAKE",
+      "STAYC - STEREOTYPE",
       "CHUNG HA - Gotta Go",
-      "Apink - I'm So Sick"
+      "Apink - I'm so sick"
     ]
   },
   {
@@ -9105,20 +12372,20 @@ const producers = [
     "id": "producerbravesound",
     "name": "Brave Sound",
     "conceitos": [
-      "Mature",
+      "Cute",
       "Elegant",
-      "Cute"
+      "Mature"
     ],
     "generos": [
-      "Tropical",
       "Groove",
-      "Pop"
+      "Pop",
+      "Tropical"
     ],
     "musicas": [
       "AOA - Miniskirt",
       "SISTAR19 - Ma Boy",
       "Brave Girls - Rollin'",
-      "BIGBANG - Lies",
+      "BIGBANG - LIES",
       "HyunA - Ice Cream"
     ]
   },
@@ -9132,15 +12399,15 @@ const producers = [
       "Teen Crush"
     ],
     "generos": [
-      "R&B",
       "Groove",
-      "Pop"
+      "Pop",
+      "R&B"
     ],
     "musicas": [
       "IVE - BANG BANG",
       "NMIXX - Blue Valentine",
       "fromis_9 - Supersonic",
-      "VIVIZ - Maniac",
+      "VIVIZ - MANIAC",
       "Loossemble - Sensitive"
     ]
   },
@@ -9149,21 +12416,21 @@ const producers = [
     "id": "producercazziopeia",
     "name": "Cazzi Opeia",
     "conceitos": [
-      "Teen Crush",
+      "Cute",
       "Dark",
-      "Cute"
+      "Teen Crush"
     ],
     "generos": [
-      "Pop",
       "EDM",
+      "Pop",
       "Synthpop"
     ],
     "musicas": [
       "TXT - LO$ER = LOVER",
       "Red Velvet - Pick-A-Boo",
-      "ILLIT - Do The Dance",
+      "ILLIT - Do the Dance",
       "ENHYPEN - Given-Taken",
-      "TWICE - Dance the Night Away"
+      "TWICE - Dance The Night Away"
     ]
   },
   {
@@ -9176,9 +12443,9 @@ const producers = [
       "Swag"
     ],
     "generos": [
+      "EDM",
       "Experimental",
-      "Hip-hop",
-      "EDM"
+      "Hip-hop"
     ],
     "musicas": [
       "aespa - Supernova",
@@ -9193,21 +12460,21 @@ const producers = [
     "id": "producerdevinechannel",
     "name": "Devine Channel",
     "conceitos": [
+      "Elegant",
       "Performance",
-      "Swag",
-      "Elegant"
+      "Swag"
     ],
     "generos": [
-      "Hip-hop",
       "EDM",
-      "Experimental"
+      "Experimental",
+      "Hip-hop"
     ],
     "musicas": [
-      "BTS - Fire",
-      "KANGDANIEL - What Are You Up To",
-      "TAEYONG (NCT) - Shalala",
+      "BTS - FIRE",
+      "KANGDANIEL - What are you up to",
+      "TAEYONG - SHALALA",
       "VIXX - Shangri-La",
-      "Produce 101 Season 2 - Open Up"
+      "PRODUCE 101 season2 - Open Up"
     ]
   },
   {
@@ -9220,16 +12487,16 @@ const producers = [
       "Performance"
     ],
     "generos": [
-      "Pop",
       "Groove",
+      "Pop",
       "Tropical"
     ],
     "musicas": [
       "SISTAR - Loving U",
       "Girl's Day - Something",
-      "MAMAMOO - You're the Best",
-      "Apink - Mr.Chu",
-      "MOMOLAND - Wonderful Love"
+      "MAMAMOO - You're the best",
+      "Apink - Mr. Chu",
+      "MOMOLAND - Wonderful love"
     ]
   },
   {
@@ -9238,20 +12505,20 @@ const producers = [
     "name": "E-Tribe",
     "conceitos": [
       "Cute",
-      "Teen Crush",
-      "Performance"
+      "Performance",
+      "Teen Crush"
     ],
     "generos": [
-      "Pop",
+      "EDM",
       "Groove",
-      "EDM"
+      "Pop"
     ],
     "musicas": [
       "Girls' Generation - Gee",
-      "LEE HYORI feat. Nassun - U-Go-Girl",
+      "Lee Hyori feat. Nassun - U-Go-Girl",
       "SUPER JUNIOR - It's You",
       "miss A - Hush",
-      "T-ARA - Yayaya"
+      "T-ARA - yayaya"
     ]
   },
   {
@@ -9259,21 +12526,21 @@ const producers = [
     "id": "producereone",
     "name": "e.one",
     "conceitos": [
-      "Elegant",
+      "Cute",
       "Dreamcore",
-      "Cute"
+      "Elegant"
     ],
     "generos": [
-      "Synthpop",
       "Emotional",
-      "Groove"
+      "Groove",
+      "Synthpop"
     ],
     "musicas": [
-      "ME:I - Muse",
+      "ME:I - MUSE",
       "Wanna One - Wanna",
-      "WJSN - Secret",
-      "APRIL - APRIL Story",
-      "KickFlip - Like a Monster"
+      "WJSN (COSMIC GIRLS) - Secret",
+      "APRIL - April Story",
+      "KickFlip - Like A Monster"
     ]
   },
   {
@@ -9291,7 +12558,7 @@ const producers = [
       "Synthpop"
     ],
     "musicas": [
-      "IU feat. Suga - Eight",
+      "IU feat. SUGA - eight",
       "Agust D - Daecwhita",
       "PLAVE - Dash",
       "tripleS - Girls Never Die",
@@ -9303,21 +12570,21 @@ const producers = [
     "id": "producerfull8loom",
     "name": "Full8loom",
     "conceitos": [
+      "Cute",
       "Dreamcore",
-      "Elegant",
-      "Cute"
+      "Elegant"
     ],
     "generos": [
-      "Pop",
       "Groove",
+      "Pop",
       "Synthpop"
     ],
     "musicas": [
       "GOT7 - Lullaby",
-      "WJSN - Save Me, Save You",
+      "WJSN (COSMIC GIRLS) - SAVE ME, SAVE YOU",
       "TWICE - The Best Thing I Ever Did",
       "Kep1er - Up!",
-      "IZ*ONE - D-D-Dance"
+      "IZ*ONE - D-D-DANCE"
     ]
   },
   {
@@ -9326,8 +12593,8 @@ const producers = [
     "name": "GALACTIKA*",
     "conceitos": [
       "Girl Crush",
-      "Teen Crush",
-      "Performance"
+      "Performance",
+      "Teen Crush"
     ],
     "generos": [
       "EDM",
@@ -9338,7 +12605,7 @@ const producers = [
       "ITZY - DALLA DALLA",
       "ITZY - WANNABE",
       "ITZY - LOCO",
-      "LIGHTSUM - Alive",
+      "LIGHTSUM - ALIVE",
       "BAE173 - Crush on U"
     ]
   },
@@ -9352,9 +12619,9 @@ const producers = [
       "Performance"
     ],
     "generos": [
-      "Synthpop",
       "Experimental",
-      "Groove"
+      "Groove",
+      "Synthpop"
     ],
     "musicas": [
       "LOONA - Butterfly",
@@ -9369,20 +12636,20 @@ const producers = [
     "id": "producerjamfactory",
     "name": "JamFactory",
     "conceitos": [
-      "Performance",
       "Cute",
-      "Girl Crush"
+      "Girl Crush",
+      "Performance"
     ],
     "generos": [
-      "Pop",
+      "EDM",
       "Groove",
-      "EDM"
+      "Pop"
     ],
     "musicas": [
       "EXO - Growl",
       "Red Velvet - Dumb Dumb",
-      "NCT 127 - Touch",
-      "NCT Dream - Hot Sauce",
+      "NCT 127 - TOUCH",
+      "NCT DREAM - Hot Sauce",
       "Girls' Generation - Lion Heart"
     ]
   },
@@ -9392,13 +12659,13 @@ const producers = [
     "name": "Joombas Music Group",
     "conceitos": [
       "Girl Crush",
-      "Teen Crush",
-      "Performance"
+      "Performance",
+      "Teen Crush"
     ],
     "generos": [
       "EDM",
-      "Pop",
-      "Experimental"
+      "Experimental",
+      "Pop"
     ],
     "musicas": [
       "aespa - Drama",
@@ -9414,18 +12681,18 @@ const producers = [
     "name": "JYP",
     "conceitos": [
       "Cute",
-      "Teen Crush",
-      "Performance"
+      "Performance",
+      "Teen Crush"
     ],
     "generos": [
-      "Pop",
       "Groove",
+      "Pop",
       "R&B"
     ],
     "musicas": [
       "Wonder Girls - Tell Me",
       "TWICE - What is Love?",
-      "miss A - Bad Girl Good Girl",
+      "miss A - Bad Girl, Good Girl",
       "2PM - Heartbeat",
       "TWICE - Signal"
     ]
@@ -9440,15 +12707,15 @@ const producers = [
       "Swag"
     ],
     "generos": [
-      "Pop",
       "EDM",
+      "Pop",
       "R&B"
     ],
     "musicas": [
       "aespa - Supernova",
       "Red Velvet - Red Flavor",
       "Red Velvet - Psycho",
-      "Girls Generation - Into the New World",
+      "Girls' Generation - Into the New World",
       "EXO - Monster"
     ]
   },
@@ -9457,9 +12724,9 @@ const producers = [
     "id": "producerkush",
     "name": "KUSH",
     "conceitos": [
-      "Swag",
       "Girl Crush",
-      "Performance"
+      "Performance",
+      "Swag"
     ],
     "generos": [
       "Hip-hop",
@@ -9467,11 +12734,11 @@ const producers = [
       "Tropical"
     ],
     "musicas": [
-      "2NE1 - I Don't Care",
+      "2NE1 - I DON'T CARE",
       "Saja Boys - Soda Pop",
       "Saja Boys - Your Idol",
-      "Jisoo - FLOWER",
-      "Taeyang feat. Lisa - Shoong!"
+      "JISOO - FLOWER",
+      "TAEYANG feat. LISA - Shoong!"
     ]
   },
   {
@@ -9480,18 +12747,18 @@ const producers = [
     "name": "lalala studio",
     "conceitos": [
       "Dark",
-      "Teen Crush",
-      "Girl Crush"
+      "Girl Crush",
+      "Teen Crush"
     ],
     "generos": [
       "Experimental",
-      "Synthpop",
-      "Rock"
+      "Rock",
+      "Synthpop"
     ],
     "musicas": [
       "ILLIT - Magnetic",
-      "LE SSERAFIM - Antifragile",
-      "TXT -  0X1=LOVESONG (I Know I Love You)",
+      "LE SSERAFIM - ANTIFRAGILE",
+      "TXT feat. Seori -  0X1=LOVESONG (I Know I Love You)",
       "ENHYPEN - FEVER",
       "ENHYPEN - Drunk-Dazed"
     ]
@@ -9501,14 +12768,14 @@ const producers = [
     "id": "producerldnnoise",
     "name": "LDN Noise",
     "conceitos": [
-      "Swag",
+      "Girl Crush",
       "Performance",
-      "Girl Crush"
+      "Swag"
     ],
     "generos": [
-      "Synthpop",
       "EDM",
-      "Groove"
+      "Groove",
+      "Synthpop"
     ],
     "musicas": [
       "SHINee - View",
@@ -9524,8 +12791,8 @@ const producers = [
     "name": "Lee Sooman",
     "conceitos": [
       "Conceptual",
-      "Performance",
-      "Cute"
+      "Cute",
+      "Performance"
     ],
     "generos": [
       "EDM",
@@ -9535,7 +12802,7 @@ const producers = [
     "musicas": [
       "aespa - Next Level",
       "SuperM - Jopping",
-      "Girls' Generation - Forever 1",
+      "Girls' Generation - FOREVER 1",
       "Girls' Generation - Genie",
       "Red Velvet - Happiness"
     ]
@@ -9550,14 +12817,14 @@ const producers = [
       "Performance"
     ],
     "generos": [
-      "Rock",
       "EDM",
-      "Hip-hop"
+      "Hip-hop",
+      "Rock"
     ],
     "musicas": [
       "Dreamcatcher - BOCA",
       "Dreamcatcher - Scream",
-      "ATEEZ - Wonderland",
+      "ATEEZ - WONDERLAND",
       "ATEEZ - Answer",
       "ifeye - NERDY"
     ]
@@ -9567,14 +12834,14 @@ const producers = [
     "id": "producermonotree",
     "name": "MonoTree",
     "conceitos": [
-      "Dreamcore",
       "Conceptual",
+      "Dreamcore",
       "Elegant"
     ],
     "generos": [
-      "Synthpop",
+      "Emotional",
       "Pop",
-      "Emotional"
+      "Synthpop"
     ],
     "musicas": [
       "LOONA - Butterfly",
@@ -9589,21 +12856,21 @@ const producers = [
     "id": "producermoonshine",
     "name": "Moonshine",
     "conceitos": [
-      "Performance",
+      "Cute",
       "Girl Crush",
-      "Cute"
+      "Performance"
     ],
     "generos": [
       "EDM",
-      "Synthpop",
-      "Groove"
+      "Groove",
+      "Synthpop"
     ],
     "musicas": [
-      "TWICE - Dance the Night Away",
+      "TWICE - Dance The Night Away",
       "Red Velvet - Peek-A-Boo",
-      "Irene & Seulgi - Naughty",
+      "Red Velvet IRENE & SEULGI - Naughty",
       "aespa - Spicy",
-      "TWICE - Fancy"
+      "TWICE - FANCY"
     ]
   },
   {
@@ -9612,19 +12879,19 @@ const producers = [
     "name": "MUMW (Makeumine Works)",
     "conceitos": [
       "Dark",
-      "Teen Crush",
-      "Performance"
+      "Performance",
+      "Teen Crush"
     ],
     "generos": [
-      "Synthpop",
       "Pop",
-      "Rock"
+      "Rock",
+      "Synthpop"
     ],
     "musicas": [
       "NCT 127 - Simon Says",
-      "STAYC - Poppy",
-      "Boys Planet - Switch",
-      "Yena - Lxxk 2 U",
+      "STAYC - POPPY",
+      "BOYS PLANET - Switch",
+      "YENA - Lxxk 2 U",
       "ITZY - Boys Like You"
     ]
   },
@@ -9633,20 +12900,20 @@ const producers = [
     "id": "producernine",
     "name": "NiNE",
     "conceitos": [
-      "Performance",
+      "Dreamcore",
       "Girl Crush",
-      "Dreamcore"
+      "Performance"
     ],
     "generos": [
-      "Groove",
       "EDM",
+      "Groove",
       "Hip-hop"
     ],
     "musicas": [
       "BABYMONSTER - CHOOM",
-      "Billlie - Zap",
-      "Produce 101 Japan the Girls - Baddie",
-      "WJSN - Bloom Hour",
+      "Billlie - ZAP",
+      "PRODUCE 101 JAPAN THE GIRLS - Baddie",
+      "WJSN (COSMIC GIRLS) - Bloom Hour",
       "TREASURE - DARARI"
     ]
   },
@@ -9655,9 +12922,9 @@ const producers = [
     "id": "produceronclassa",
     "name": "ONCLASSA",
     "conceitos": [
+      "Dreamcore",
       "Girl Crush",
-      "Performance",
-      "Dreamcore"
+      "Performance"
     ],
     "generos": [
       "EDM",
@@ -9678,20 +12945,20 @@ const producers = [
     "name": "Papermaker",
     "conceitos": [
       "Conceptual",
-      "Performance",
-      "Girl Crush"
+      "Girl Crush",
+      "Performance"
     ],
     "generos": [
       "EDM",
-      "Synthpop",
-      "R&B"
+      "R&B",
+      "Synthpop"
     ],
     "musicas": [
-      "Boys Planet - Here I Am",
-      "VIVIZ - Bop Bop",
+      "BOYS PLANET - Here I Am",
+      "VIVIZ - BOP BOP",
       "Girls Planet 999 - Snake",
       "Universe Ticket - Rush Hour",
-      "WANNA ONE - Beautiful"
+      "Wanna One - Beautiful"
     ]
   },
   {
@@ -9699,8 +12966,8 @@ const producers = [
     "id": "producerpdogg",
     "name": "Pdogg",
     "conceitos": [
-      "Emotional",
       "Dreamcore",
+      "Performance",
       "Teen Crush"
     ],
     "generos": [
@@ -9710,9 +12977,9 @@ const producers = [
     ],
     "musicas": [
       "BTS - FAKE LOVE",
-      "TXT - Crown",
-      "Nayeon - ABCD",
-      "BTS - Boy With Love",
+      "TXT - CROWN",
+      "NAYEON - ABCD",
+      "BTS - Boy With Luv",
       "ILLIT - Almond Chocolate"
     ]
   },
@@ -9721,19 +12988,19 @@ const producers = [
     "id": "producerrbw",
     "name": "RBW",
     "conceitos": [
-      "Girl Crush",
+      "Dark",
       "Elegant",
-      "Dark"
+      "Girl Crush"
     ],
     "generos": [
+      "Groove",
       "R&B",
-      "Synthpop",
-      "Groove"
+      "Synthpop"
     ],
     "musicas": [
-      "MAMAMOO - Hip",
+      "MAMAMOO - HIP",
       "MAMAMOO - Starry Night",
-      "MAMAMOO - Décalcomanie",
+      "MAMAMOO - Decalcomanie",
       "ONEUS - Valkyrie",
       "Cherry Bullet - Love So Sweet"
     ]
@@ -9743,9 +13010,9 @@ const producers = [
     "id": "producerryansjhun",
     "name": "Ryan S. Jhun",
     "conceitos": [
+      "Dreamcore",
       "Elegant",
-      "Teen Crush",
-      "Dreamcore"
+      "Teen Crush"
     ],
     "generos": [
       "EDM",
@@ -9757,7 +13024,7 @@ const producers = [
       "OH MY GIRL - Dun Dun Dance",
       "IVE - LOVE DIVE",
       "IU - Celebrity",
-      "Taeyeon - I"
+      "TAEYEON feat. Verbal Jint - I"
     ]
   },
   {
@@ -9765,14 +13032,14 @@ const producers = [
     "id": "producersaay",
     "name": "Saay",
     "conceitos": [
-      "Mature",
       "Elegant",
-      "Girl Crush"
+      "Girl Crush",
+      "Mature"
     ],
     "generos": [
-      "R&B",
+      "EDM",
       "Pop",
-      "EDM"
+      "R&B"
     ],
     "musicas": [
       "VIVIZ - LOVEADE",
@@ -9787,20 +13054,20 @@ const producers = [
     "id": "producershinsadongtiger",
     "name": "Shinsadong Tiger",
     "conceitos": [
-      "Mature",
       "Cute",
-      "Girl Crush"
+      "Girl Crush",
+      "Mature"
     ],
     "generos": [
       "EDM",
-      "Pop",
-      "Groove"
+      "Groove",
+      "Pop"
     ],
     "musicas": [
-      "EXID - Up & Down",
+      "EXID - UP&DOWN",
       "MOMOLAND - BBoom BBoom",
       "T-ARA - Roly-Poly",
-      "BEAST - Fiction",
+      "BEAST - FICTION",
       "Apink - NoNoNo"
     ]
   },
@@ -9809,14 +13076,14 @@ const producers = [
     "id": "producersweetune",
     "name": "Sweetune",
     "conceitos": [
-      "Performance",
       "Cute",
+      "Performance",
       "Teen Crush"
     ],
     "generos": [
-      "Synthpop",
+      "Groove",
       "Pop",
-      "Groove"
+      "Synthpop"
     ],
     "musicas": [
       "KARA - Mister",
@@ -9832,21 +13099,20 @@ const producers = [
     "name": "Teddy",
     "conceitos": [
       "Girl Crush",
-      "Swag",
-      "Performance"
+      "Performance",
+      "Swag"
     ],
     "generos": [
-      "Hip-hop",
       "EDM",
+      "Hip-hop",
       "Pop"
     ],
     "musicas": [
-      "BLACKPINK - Dddu-Du Ddu-Du",
-      "2NE1 - I Am the Best",
-      "BIGBANG - Bang Bang Bang",
-      "HUNTR",
-      "X - Golden",
-      "MEOVV - Hands Up"
+      "BLACKPINK - DDU-DU DDU-DU",
+      "2NE1 - I AM THE BEST",
+      "BIGBANG - BANG BANG BANG",
+      "HUNTRX - Golden",
+      "MEOVV - HANDS UP"
     ]
   },
   {
@@ -9854,8 +13120,8 @@ const producers = [
     "id": "producerthemuze",
     "name": "The Muze",
     "conceitos": [
-      "Dreamcore",
       "Cute",
+      "Dreamcore",
       "Teen Crush"
     ],
     "generos": [
@@ -9881,14 +13147,14 @@ const producers = [
       "Performance"
     ],
     "generos": [
-      "Synthpop",
+      "Groove",
       "R&B",
-      "Groove"
+      "Synthpop"
     ],
     "musicas": [
       "tripleS - Girls Never Die",
-      "tripleS Lovelution - Girls' Capitalism",
-      "GOT7 - Eclipse",
+      "tripleS LOVElution - Girls' Capitalism",
+      "GOT7 - ECLIPSE",
       "PSY feat. SUGA - That That",
       "Universe Ticket - Dream of Girls"
     ]
@@ -9903,16 +13169,16 @@ const producers = [
       "Elegant"
     ],
     "generos": [
-      "R&B",
       "Groove",
+      "R&B",
       "Synthpop"
     ],
     "musicas": [
-      "I-LAND 2 Na - IWALY",
+      "I-LAND2 - IWALY",
       "I.O.I - Suddenly",
-      "ALLDAY PROJECT - One More Time",
+      "ALLDAY PROJECT - ONE MORE TIME",
       "izna - SIGN",
-      "Baby DONT Cry - I Don't Care"
+      "Baby DONT Cry - I DONT CARE"
     ]
   },
   {
@@ -9920,21 +13186,21 @@ const producers = [
     "id": "produceryg",
     "name": "YG",
     "conceitos": [
-      "Swag",
       "Girl Crush",
-      "Performance"
+      "Performance",
+      "Swag"
     ],
     "generos": [
-      "Hip-hop",
       "EDM",
+      "Hip-hop",
       "Pop"
     ],
     "musicas": [
       "BABYMONSTER - DRIP",
       "BABYMONSTER - SHEESH",
-      "G-Dragon - Without You",
-      "PSY - Gangnam Style",
-      "BABYMONSTER - Batter Up"
+      "G-DRAGON - Without You",
+      "PSY - GANGNAM STYLE",
+      "BABYMONSTER - BATTER UP"
     ]
   }
 ];

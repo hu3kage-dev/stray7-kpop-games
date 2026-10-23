@@ -1,8 +1,8 @@
-Tipo,ID,Nome,Fonte,Conceitos Originais,Gêneros Originais
-music,testemusicamusicateste1,Música Teste 1,Teste Música,Conceptual / Dreamcore / Elegant,R&B / Emotional / Electro-Synth 
-music,testemusicamusicateste2,Música Teste 2,Teste Música,Conceptual / Dreamcore / Performance,EDM / Pop / Experimental
-music,testemusicamusicateste3,Música Teste 3,Teste Música,Teen Crush / Cute / Performance,Pop / Electro-Synth / Experimental
-music,testemusicamusicateste4,Música Teste 4,Teste Música,Cute / Teen Crush / Performance,Pop / Groove / Electro-Synth
-music,testemusicamusicateste5,Música Teste 5,Teste Música,Girl Crush / Mature / Dark,Hip-hop / Groove / Experimental
-music,testemusicamusicateste6,Música Teste 6,Teste Música,Dreamcore / Elegant / Performance,Electro-Synth / Pop / Groove
-music,testemusicamusicateste7,Música Teste 7,Teste Música,Dreamcore / Elegant / Conceptual,Emotional / R&B / Electro-Synth
+Type,ID,Name,Source,Original Concepts,Original Genres
+music,girlsplanet999anotherdream,Another Dream,Girls Planet 999,Conceptual / Dreamcore / Elegant,Emotional / R&B / Synthpop
+music,girlsplanet999ooo,O.O.O,Girls Planet 999,Conceptual / Dreamcore / Performance,EDM / Experimental / Pop
+music,girlsplanet999shine,Shine,Girls Planet 999,Cute / Performance / Teen Crush,Experimental / Pop / Synthpop
+music,girlsplanet999shoot,Shoot!,Girls Planet 999,Cute / Performance / Teen Crush,Groove / Pop / Synthpop
+music,girlsplanet999snake,Snake,Girls Planet 999,Dark / Girl Crush / Mature,Experimental / Groove / Hip-hop
+music,girlsplanet999umelove,U+ME=LOVE,Girls Planet 999,Dreamcore / Elegant / Performance,Groove / Pop / Synthpop
+music,girlsplanet999utopia,Utopia,Girls Planet 999,Conceptual / Dreamcore / Elegant,Emotional / R&B / Synthpop
