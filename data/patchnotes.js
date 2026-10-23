@@ -47,6 +47,10 @@ const PATCHES = [
             pt: "O tutorial de importação foi melhorado e agora inclui uma lista de Conceitos e Gêneros válidos para os cálculos de pontuação.",
             en: "The import tutorial has been improved and now includes a list of valid Concepts and Genres for the scoring calculations."
           },
+          {
+            pt: "A database de produtores foi atualizada, incluindo novos produtores e informações atualizadas.",
+            en: "The producers database has been updated with new producers and updated information."
+          },
         ]
       },
       {

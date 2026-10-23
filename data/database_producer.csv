@@ -1,42 +1,43 @@
 Tipo,ID,Nome,Conceitos Predominantes,Gêneros Predominantes,Músicas Conhecidas
-producer,producerartiffect,ARTiffect,Performance / ,Groove / Experimental / Rock,NMIXX - Know About Me / Red Velvet - Feel My Rythm / Kai - Peaches / Riize - Get a Guitar / Seventeen - Maestro
-producer,producerartronicwaves,Artronic Waves,Conceptual / Teen Crush / Dark,Electro-Synth / EDM / Rock,tripleS - Rising / LOONA Olivia Hye - Egoist / ARTMS - Icarus / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In
-producer,producerblackeyedpilseung,Black Eyed Pilseung,Cute / Teen Crush / Dreamcore,Pop / Emotional / R&B,TWICE - Likey / Itzy - Cake / STAYC - Stereotype / ChungHa - Gotta Go / Apink - I'm So Sick
+producer,producer13kor,13 (KOR),Mature / Dark / Performance,EDM / Rock / Synthpop,"LE SSERAFIM - FEARLESS / Produce 48 - Rumor / LE SSERAFIM - Eve, Psyche and the Bluebeard's Wife / TAEMIN - Criminal / BTOB - I'll Be Your Man"
+producer,producerartiffect,ARTiffect,Performance / Girl Crush / Elegant,Groove / Experimental / Rock,NMIXX - Know About Me / Red Velvet - Feel My Rythm / KAI - Peaches / Riize - Get a Guitar / SEVENTEEN - Maestro
+producer,producerartronicwaves,Artronic Waves,Conceptual / Teen Crush / Dark,Synthpop / EDM / Emotional,tripleS - Rising / LOONA Olivia Hye - Egoist / ARTMS - Icarus / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In
+producer,producerblackeyedpilseung,Black Eyed Pilseung,Cute / Teen Crush / Dreamcore,Pop / Emotional / R&B,TWICE - Likey / ITZY - Cake / STAYC - Stereotype / CHUNG HA - Gotta Go / Apink - I'm So Sick
 producer,producerbravesound,Brave Sound,Mature / Elegant / Cute,Tropical / Groove / Pop,AOA - Miniskirt / SISTAR19 - Ma Boy / Brave Girls - Rollin' / BIGBANG - Lies / HyunA - Ice Cream
-producer,producercazziopeia,Cazzi Opeia,,,TXT - LO$ER = LOVER / Red Velvet - Pick-A-Boo / ILLIT - Do The Dance / Enhypen - Given-Taken / TWICE - Dance the Night Away
-producer,producercsashinsia,C'SA (Shin Sia),,,IVE - BANG BANG / NMIXX - Blue Valentine / fromis_9 - Supersonic / VIVIZ - Maniac / Loossemble - Sensitive
-producer,producerdemjointz,Dem Jointz,Girl Crush / ,,aespa - Supernova / NCT 127 - Kick It / IVE - HEYA / Kiiikiii - BTG / Shinee - Don't Call Me
-producer,producerdevinechannel,Devine Channel,,,
-producer,producerdublesidekick,Duble Sidekick,,,
-producer,producerelcapitxn,EL CAPITXN,,,
-producer,producereone,e.one,,,
-producer,produceretribe,E-Tribe,,,
-producer,producerfull8loom,Full8loom,,,
-producer,producergalactika,Galactika,,,
-producer,producerjadenjeong,Jaden Jeong,,,
-producer,producerjamfactory,JamFactory,,,
-producer,producerjoombasmusicgroup,Joombas Music Group,,,
-producer,producerjyp,JYP,,,
-producer,producerkenzie,Kenzie,,,
-producer,producerkush,KUSH,,,
-producer,producerlalalastudio,lalala studio,,,
-producer,producerldnnoise,LDN Noise,,,
-producer,producerleesooman,Lee Sooman,,,
-producer,producerleezollounder,LEEZ & Ollounder,,,
-producer,producermonotree,MonoTree,,,
-producer,producermoonshine,Moonshine,,,
-producer,producermumwmakeumineworks,MUMW (Makeumine Works),,,
-producer,producernine,NiNE,,,
-producer,produceronclassa,ONCLASSA,,,
-producer,producerpapermaker,Papermaker,,,
-producer,producerpdogg,Pdogg,,,
-producer,producerrbw,RBW,,,
-producer,producerryansjhun,Ryan S. Jhun,,,
-producer,producersaay,Saay,,,
-producer,producershinsadongtiger,Shinsadong Tiger,,,
-producer,producerstardust,Stardust,,,
-producer,producersweetune,Sweetune,,,
-producer,producerteddy,Teddy,,,
-producer,producerthemuze,The Muze,,,
-producer,producervendors,VENDORS,,,
-producer,produceryg,YG,,,
+producer,producercsashinsia,C'SA (Shin Sia),Girl Crush / Mature / Teen Crush,R&B / Groove / Pop,IVE - BANG BANG / NMIXX - Blue Valentine / fromis_9 - Supersonic / VIVIZ - Maniac / Loossemble - Sensitive
+producer,producercazziopeia,Cazzi Opeia,Teen Crush / Dark / Cute,Pop / EDM / Synthpop,TXT - LO$ER = LOVER / Red Velvet - Pick-A-Boo / ILLIT - Do The Dance / ENHYPEN - Given-Taken / TWICE - Dance the Night Away
+producer,producerdemjointz,Dem Jointz,Girl Crush / Performance / Swag,Experimental / Hip-hop / EDM,aespa - Supernova / NCT 127 - Kick It / IVE - HEYA / SHINee - Don't Call Me / A2O LITE - NEON
+producer,producerdevinechannel,Devine Channel,Performance / Swag / Elegant,Hip-hop / EDM / Experimental,BTS - Fire / KANGDANIEL - What Are You Up To / TAEYONG (NCT) - Shalala / VIXX - Shangri-La / Produce 101 Season 2 - Open Up
+producer,producerdublesidekick,Duble Sidekick,Cute / Mature / Performance,Pop / Groove / Tropical,SISTAR - Loving U / Girl's Day - Something / MAMAMOO - You're the Best / Apink - Mr.Chu / MOMOLAND - Wonderful Love
+producer,produceretribe,E-Tribe,Cute / Teen Crush / Performance,Pop / Groove / EDM,Girls' Generation - Gee / LEE HYORI feat. Nassun - U-Go-Girl / SUPER JUNIOR - It's You / miss A - Hush / T-ARA - Yayaya
+producer,producereone,e.one,Elegant / Dreamcore / Cute,Synthpop / Emotional / Groove,ME:I - Muse / Wanna One - Wanna / WJSN - Secret / APRIL - APRIL Story / KickFlip - Like a Monster
+producer,producerelcapitxn,EL CAPITXN,Conceptual / Dark / Performance,Hip-hop / Rock / Synthpop,IU feat. Suga - Eight / Agust D - Daecwhita / PLAVE - Dash / tripleS - Girls Never Die / TXT - Drama
+producer,producerfull8loom,Full8loom,Dreamcore / Elegant / Cute,Pop / Groove / Synthpop,"GOT7 - Lullaby / WJSN - Save Me, Save You / TWICE - The Best Thing I Ever Did / Kep1er - Up! / IZ*ONE - D-D-Dance"
+producer,producergalactika,GALACTIKA*,Girl Crush / Teen Crush / Performance,EDM / Pop / Rock,ITZY - DALLA DALLA / ITZY - WANNABE / ITZY - LOCO / LIGHTSUM - Alive / BAE173 - Crush on U
+producer,producerjadenjeong,Jaden Jeong,Conceptual / Dreamcore / Performance,Synthpop / Experimental / Groove,LOONA - Butterfly / LOONA - Hi High / tripleS AAA - Generation / tripleS - Rising / ARTMS - Virtual Angel
+producer,producerjamfactory,JamFactory,Performance / Cute / Girl Crush,Pop / Groove / EDM,EXO - Growl / Red Velvet - Dumb Dumb / NCT 127 - Touch / NCT Dream - Hot Sauce / Girls' Generation - Lion Heart
+producer,producerjoombasmusicgroup,Joombas Music Group,Girl Crush / Teen Crush / Performance,EDM / Pop / Experimental,aespa - Drama / aespa - Armageddon / ITZY - ICY / NMIXX - O.O / ILLIT - Lucky Girl Syndrome
+producer,producerjyp,JYP,Cute / Teen Crush / Performance,Pop / Groove / R&B,Wonder Girls - Tell Me / TWICE - What is Love? / miss A - Bad Girl Good Girl / 2PM - Heartbeat / TWICE - Signal
+producer,producerkenzie,Kenzie,Cute / Dark / Swag,Pop / EDM / R&B,aespa - Supernova / Red Velvet - Red Flavor / Red Velvet - Psycho / Girls Generation - Into the New World / EXO - Monster
+producer,producerkush,KUSH,Swag / Girl Crush / Performance,Hip-hop / R&B / Tropical,2NE1 - I Don't Care / Saja Boys - Soda Pop / Saja Boys - Your Idol / Jisoo - FLOWER / Taeyang feat. Lisa - Shoong!
+producer,producerlalalastudio,lalala studio,Dark / Teen Crush / Girl Crush,Experimental / Synthpop / Rock,ILLIT - Magnetic / LE SSERAFIM - Antifragile / TXT -  0X1=LOVESONG (I Know I Love You) / ENHYPEN - FEVER / ENHYPEN - Drunk-Dazed
+producer,producerldnnoise,LDN Noise,Swag / Performance / Girl Crush,Synthpop / EDM / Groove,SHINee - View / f(x) - 4 Walls / EXO - Lotto / NCT 127 - Fire Truck / KiiiKiii - 404 (New Era)
+producer,producerleesooman,Lee Sooman,Conceptual / Performance / Cute,EDM / Experimental / Pop,aespa - Next Level / SuperM - Jopping / Girls' Generation - Forever 1 / Girls' Generation - Genie / Red Velvet - Happiness
+producer,producerleezollounder,LEEZ & Ollounder,Conceptual / Dark / Performance,Rock / EDM / Hip-hop,Dreamcatcher - BOCA / Dreamcatcher - Scream / ATEEZ - Wonderland / ATEEZ - Answer / ifeye - NERDY
+producer,producermonotree,MonoTree,Dreamcore / Conceptual / Elegant,Synthpop / Pop / Emotional,LOONA - Butterfly / ONF - Beautiful Beautiful / X1 - FLASH / OH MY GIRL - Twilight / IVE - Kitsch
+producer,producermoonshine,Moonshine,Performance / Girl Crush / Cute,EDM / Synthpop / Groove,TWICE - Dance the Night Away / Red Velvet - Peek-A-Boo / Irene & Seulgi - Naughty / aespa - Spicy / TWICE - Fancy
+producer,producermumwmakeumineworks,MUMW (Makeumine Works),Dark / Teen Crush / Performance,Synthpop / Pop / Rock,NCT 127 - Simon Says / STAYC - Poppy / Boys Planet - Switch / Yena - Lxxk 2 U / ITZY - Boys Like You
+producer,producernine,NiNE,Performance / Girl Crush / Dreamcore,Groove / EDM / Hip-hop,BABYMONSTER - CHOOM / Billlie - Zap / Produce 101 Japan the Girls - Baddie / WJSN - Bloom Hour / TREASURE - DARARI
+producer,produceronclassa,ONCLASSA,Girl Crush / Performance / Dreamcore,EDM / Experimental / R&B,NMIXX - Love Me Like This / ifeye - Hazy (Daisy) / NMIXX - DASH / ALPHA DRIVE ONE - BORN DIRE / ASTRO - Twilight
+producer,producerpapermaker,Papermaker,Conceptual / Performance / Girl Crush,EDM / Synthpop / R&B,Boys Planet - Here I Am / VIVIZ - Bop Bop / Girls Planet 999 - Snake / Universe Ticket - Rush Hour / WANNA ONE - Beautiful
+producer,producerpdogg,Pdogg,Emotional / Dreamcore / Teen Crush,Pop / R&B / Synthpop,BTS - FAKE LOVE / TXT - Crown / Nayeon - ABCD / BTS - Boy With Love / ILLIT - Almond Chocolate
+producer,producerrbw,RBW,Girl Crush / Elegant / Dark,R&B / Synthpop / Groove,MAMAMOO - Hip / MAMAMOO - Starry Night / MAMAMOO - Décalcomanie / ONEUS - Valkyrie / Cherry Bullet - Love So Sweet
+producer,producerryansjhun,Ryan S. Jhun,Elegant / Teen Crush / Dreamcore,EDM / Pop / Synthpop,IVE - After LIKE / OH MY GIRL - Dun Dun Dance / IVE - LOVE DIVE / IU - Celebrity / Taeyeon - I
+producer,producersaay,Saay,Mature / Elegant / Girl Crush,R&B / Pop / EDM,VIVIZ - LOVEADE / BAEKHYUN - Bambi / aespa - YEPPI YEPPI / BoA - ZIP / Hearts2Hearts - Pretty Please
+producer,producershinsadongtiger,Shinsadong Tiger,Mature / Cute / Girl Crush,EDM / Pop / Groove,EXID - Up & Down / MOMOLAND - BBoom BBoom / T-ARA - Roly-Poly / BEAST - Fiction / Apink - NoNoNo
+producer,producersweetune,Sweetune,Performance / Cute / Teen Crush,Synthpop / Pop / Groove,KARA - Mister / KARA - Pretty Girl / Rainbow - A / Lovelyz - That day / KARA - STEP
+producer,producerteddy,Teddy,Girl Crush / Swag / Performance,Hip-hop / EDM / Pop,BLACKPINK - Dddu-Du Ddu-Du / 2NE1 - I Am the Best / BIGBANG - Bang Bang Bang / HUNTR/X - Golden / MEOVV - Hands Up
+producer,producerthemuze,The Muze,Dreamcore / Cute / Teen Crush,Pop / R&B / Synthpop,RESCENE - LOVE ATTACK / RESCENE - Glow Up / RESCENE - Bloom / RESCENE - UhUh / RESCENE - Pinball
+producer,producervendors,VENDORS,Conceptual / Dreamcore / Performance,Synthpop / R&B / Groove,tripleS - Girls Never Die / tripleS Lovelution - Girls' Capitalism / GOT7 - Eclipse / PSY feat. SUGA - That That / Universe Ticket - Dream of Girls
+producer,producervvn,VVN,Conceptual / Dreamcore / Elegant,R&B / Groove / Synthpop,I-LAND 2 Na - IWALY / I.O.I - Suddenly / ALLDAY PROJECT - One More Time / izna - SIGN / Baby DONT Cry - I Don't Care
+producer,produceryg,YG,Swag / Girl Crush / Performance,Hip-hop / EDM / Pop,BABYMONSTER - DRIP / BABYMONSTER - SHEESH / G-Dragon - Without You / PSY - Gangnam Style / BABYMONSTER - Batter Up

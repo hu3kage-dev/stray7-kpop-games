@@ -9016,8 +9016,16 @@ const producers = [
     "type": "producer",
     "id": "producer13kor",
     "name": "13 (KOR)",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Mature",
+      "Dark",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Rock",
+      "Synthpop"
+    ],
     "musicas": [
       "LE SSERAFIM - FEARLESS",
       "Produce 48 - Rumor",
@@ -9030,13 +9038,21 @@ const producers = [
     "type": "producer",
     "id": "producerartiffect",
     "name": "ARTiffect",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Performance",
+      "Girl Crush",
+      "Elegant"
+    ],
+    "generos": [
+      "Groove",
+      "Experimental",
+      "Rock"
+    ],
     "musicas": [
       "NMIXX - Know About Me",
       "Red Velvet - Feel My Rythm",
       "KAI - Peaches",
-      "RIIZE - Get a Guitar",
+      "Riize - Get a Guitar",
       "SEVENTEEN - Maestro"
     ]
   },
@@ -9044,8 +9060,16 @@ const producers = [
     "type": "producer",
     "id": "producerartronicwaves",
     "name": "Artronic Waves",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Teen Crush",
+      "Dark"
+    ],
+    "generos": [
+      "Synthpop",
+      "EDM",
+      "Emotional"
+    ],
     "musicas": [
       "tripleS - Rising",
       "LOONA Olivia Hye - Egoist",
@@ -9058,8 +9082,16 @@ const producers = [
     "type": "producer",
     "id": "producerblackeyedpilseung",
     "name": "Black Eyed Pilseung",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Pop",
+      "Emotional",
+      "R&B"
+    ],
     "musicas": [
       "TWICE - Likey",
       "ITZY - Cake",
@@ -9072,8 +9104,16 @@ const producers = [
     "type": "producer",
     "id": "producerbravesound",
     "name": "Brave Sound",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Mature",
+      "Elegant",
+      "Cute"
+    ],
+    "generos": [
+      "Tropical",
+      "Groove",
+      "Pop"
+    ],
     "musicas": [
       "AOA - Miniskirt",
       "SISTAR19 - Ma Boy",
@@ -9086,8 +9126,16 @@ const producers = [
     "type": "producer",
     "id": "producercsashinsia",
     "name": "C'SA (Shin Sia)",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Girl Crush",
+      "Mature",
+      "Teen Crush"
+    ],
+    "generos": [
+      "R&B",
+      "Groove",
+      "Pop"
+    ],
     "musicas": [
       "IVE - BANG BANG",
       "NMIXX - Blue Valentine",
@@ -9100,8 +9148,16 @@ const producers = [
     "type": "producer",
     "id": "producercazziopeia",
     "name": "Cazzi Opeia",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Teen Crush",
+      "Dark",
+      "Cute"
+    ],
+    "generos": [
+      "Pop",
+      "EDM",
+      "Synthpop"
+    ],
     "musicas": [
       "TXT - LO$ER = LOVER",
       "Red Velvet - Pick-A-Boo",
@@ -9114,8 +9170,16 @@ const producers = [
     "type": "producer",
     "id": "producerdemjointz",
     "name": "Dem Jointz",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Girl Crush",
+      "Performance",
+      "Swag"
+    ],
+    "generos": [
+      "Experimental",
+      "Hip-hop",
+      "EDM"
+    ],
     "musicas": [
       "aespa - Supernova",
       "NCT 127 - Kick It",
@@ -9128,12 +9192,20 @@ const producers = [
     "type": "producer",
     "id": "producerdevinechannel",
     "name": "Devine Channel",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Performance",
+      "Swag",
+      "Elegant"
+    ],
+    "generos": [
+      "Hip-hop",
+      "EDM",
+      "Experimental"
+    ],
     "musicas": [
       "BTS - Fire",
       "KANGDANIEL - What Are You Up To",
-      "TAEYONG - Shalala",
+      "TAEYONG (NCT) - Shalala",
       "VIXX - Shangri-La",
       "Produce 101 Season 2 - Open Up"
     ]
@@ -9142,8 +9214,16 @@ const producers = [
     "type": "producer",
     "id": "producerdublesidekick",
     "name": "Duble Sidekick",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Cute",
+      "Mature",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Tropical"
+    ],
     "musicas": [
       "SISTAR - Loving U",
       "Girl's Day - Something",
@@ -9156,12 +9236,20 @@ const producers = [
     "type": "producer",
     "id": "produceretribe",
     "name": "E-Tribe",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "EDM"
+    ],
     "musicas": [
       "Girls' Generation - Gee",
       "LEE HYORI feat. Nassun - U-Go-Girl",
-      "SUPER JUNIOR - It's you",
+      "SUPER JUNIOR - It's You",
       "miss A - Hush",
       "T-ARA - Yayaya"
     ]
@@ -9170,13 +9258,21 @@ const producers = [
     "type": "producer",
     "id": "producereone",
     "name": "e.one",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Elegant",
+      "Dreamcore",
+      "Cute"
+    ],
+    "generos": [
+      "Synthpop",
+      "Emotional",
+      "Groove"
+    ],
     "musicas": [
       "ME:I - Muse",
       "Wanna One - Wanna",
       "WJSN - Secret",
-      "APRIL - April Story",
+      "APRIL - APRIL Story",
       "KickFlip - Like a Monster"
     ]
   },
@@ -9184,8 +9280,16 @@ const producers = [
     "type": "producer",
     "id": "producerelcapitxn",
     "name": "EL CAPITXN",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Dark",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "Rock",
+      "Synthpop"
+    ],
     "musicas": [
       "IU feat. Suga - Eight",
       "Agust D - Daecwhita",
@@ -9198,8 +9302,16 @@ const producers = [
     "type": "producer",
     "id": "producerfull8loom",
     "name": "Full8loom",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Dreamcore",
+      "Elegant",
+      "Cute"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "Synthpop"
+    ],
     "musicas": [
       "GOT7 - Lullaby",
       "WJSN - Save Me, Save You",
@@ -9211,9 +9323,17 @@ const producers = [
   {
     "type": "producer",
     "id": "producergalactika",
-    "name": "Galactika",
-    "conceitos": [],
-    "generos": [],
+    "name": "GALACTIKA*",
+    "conceitos": [
+      "Girl Crush",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Rock"
+    ],
     "musicas": [
       "ITZY - DALLA DALLA",
       "ITZY - WANNABE",
@@ -9226,8 +9346,16 @@ const producers = [
     "type": "producer",
     "id": "producerjadenjeong",
     "name": "Jaden Jeong",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "Synthpop",
+      "Experimental",
+      "Groove"
+    ],
     "musicas": [
       "LOONA - Butterfly",
       "LOONA - Hi High",
@@ -9240,8 +9368,16 @@ const producers = [
     "type": "producer",
     "id": "producerjamfactory",
     "name": "JamFactory",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Performance",
+      "Cute",
+      "Girl Crush"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "EDM"
+    ],
     "musicas": [
       "EXO - Growl",
       "Red Velvet - Dumb Dumb",
@@ -9254,8 +9390,16 @@ const producers = [
     "type": "producer",
     "id": "producerjoombasmusicgroup",
     "name": "Joombas Music Group",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Girl Crush",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Experimental"
+    ],
     "musicas": [
       "aespa - Drama",
       "aespa - Armageddon",
@@ -9268,8 +9412,16 @@ const producers = [
     "type": "producer",
     "id": "producerjyp",
     "name": "JYP",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Cute",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Pop",
+      "Groove",
+      "R&B"
+    ],
     "musicas": [
       "Wonder Girls - Tell Me",
       "TWICE - What is Love?",
@@ -9282,8 +9434,16 @@ const producers = [
     "type": "producer",
     "id": "producerkenzie",
     "name": "Kenzie",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Cute",
+      "Dark",
+      "Swag"
+    ],
+    "generos": [
+      "Pop",
+      "EDM",
+      "R&B"
+    ],
     "musicas": [
       "aespa - Supernova",
       "Red Velvet - Red Flavor",
@@ -9296,8 +9456,16 @@ const producers = [
     "type": "producer",
     "id": "producerkush",
     "name": "KUSH",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "R&B",
+      "Tropical"
+    ],
     "musicas": [
       "2NE1 - I Don't Care",
       "Saja Boys - Soda Pop",
@@ -9310,8 +9478,16 @@ const producers = [
     "type": "producer",
     "id": "producerlalalastudio",
     "name": "lalala studio",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Dark",
+      "Teen Crush",
+      "Girl Crush"
+    ],
+    "generos": [
+      "Experimental",
+      "Synthpop",
+      "Rock"
+    ],
     "musicas": [
       "ILLIT - Magnetic",
       "LE SSERAFIM - Antifragile",
@@ -9324,8 +9500,16 @@ const producers = [
     "type": "producer",
     "id": "producerldnnoise",
     "name": "LDN Noise",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Swag",
+      "Performance",
+      "Girl Crush"
+    ],
+    "generos": [
+      "Synthpop",
+      "EDM",
+      "Groove"
+    ],
     "musicas": [
       "SHINee - View",
       "f(x) - 4 Walls",
@@ -9338,8 +9522,16 @@ const producers = [
     "type": "producer",
     "id": "producerleesooman",
     "name": "Lee Sooman",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Performance",
+      "Cute"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "Pop"
+    ],
     "musicas": [
       "aespa - Next Level",
       "SuperM - Jopping",
@@ -9352,8 +9544,16 @@ const producers = [
     "type": "producer",
     "id": "producerleezollounder",
     "name": "LEEZ & Ollounder",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Dark",
+      "Performance"
+    ],
+    "generos": [
+      "Rock",
+      "EDM",
+      "Hip-hop"
+    ],
     "musicas": [
       "Dreamcatcher - BOCA",
       "Dreamcatcher - Scream",
@@ -9366,8 +9566,16 @@ const producers = [
     "type": "producer",
     "id": "producermonotree",
     "name": "MonoTree",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Dreamcore",
+      "Conceptual",
+      "Elegant"
+    ],
+    "generos": [
+      "Synthpop",
+      "Pop",
+      "Emotional"
+    ],
     "musicas": [
       "LOONA - Butterfly",
       "ONF - Beautiful Beautiful",
@@ -9380,8 +9588,16 @@ const producers = [
     "type": "producer",
     "id": "producermoonshine",
     "name": "Moonshine",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Performance",
+      "Girl Crush",
+      "Cute"
+    ],
+    "generos": [
+      "EDM",
+      "Synthpop",
+      "Groove"
+    ],
     "musicas": [
       "TWICE - Dance the Night Away",
       "Red Velvet - Peek-A-Boo",
@@ -9394,8 +9610,16 @@ const producers = [
     "type": "producer",
     "id": "producermumwmakeumineworks",
     "name": "MUMW (Makeumine Works)",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Dark",
+      "Teen Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Synthpop",
+      "Pop",
+      "Rock"
+    ],
     "musicas": [
       "NCT 127 - Simon Says",
       "STAYC - Poppy",
@@ -9408,8 +9632,16 @@ const producers = [
     "type": "producer",
     "id": "producernine",
     "name": "NiNE",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Performance",
+      "Girl Crush",
+      "Dreamcore"
+    ],
+    "generos": [
+      "Groove",
+      "EDM",
+      "Hip-hop"
+    ],
     "musicas": [
       "BABYMONSTER - CHOOM",
       "Billlie - Zap",
@@ -9422,8 +9654,16 @@ const producers = [
     "type": "producer",
     "id": "produceronclassa",
     "name": "ONCLASSA",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Girl Crush",
+      "Performance",
+      "Dreamcore"
+    ],
+    "generos": [
+      "EDM",
+      "Experimental",
+      "R&B"
+    ],
     "musicas": [
       "NMIXX - Love Me Like This",
       "ifeye - Hazy (Daisy)",
@@ -9436,8 +9676,16 @@ const producers = [
     "type": "producer",
     "id": "producerpapermaker",
     "name": "Papermaker",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Performance",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Synthpop",
+      "R&B"
+    ],
     "musicas": [
       "Boys Planet - Here I Am",
       "VIVIZ - Bop Bop",
@@ -9450,8 +9698,16 @@ const producers = [
     "type": "producer",
     "id": "producerpdogg",
     "name": "Pdogg",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Emotional",
+      "Dreamcore",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "R&B",
+      "Synthpop"
+    ],
     "musicas": [
       "BTS - FAKE LOVE",
       "TXT - Crown",
@@ -9464,8 +9720,16 @@ const producers = [
     "type": "producer",
     "id": "producerrbw",
     "name": "RBW",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Girl Crush",
+      "Elegant",
+      "Dark"
+    ],
+    "generos": [
+      "R&B",
+      "Synthpop",
+      "Groove"
+    ],
     "musicas": [
       "MAMAMOO - Hip",
       "MAMAMOO - Starry Night",
@@ -9478,8 +9742,16 @@ const producers = [
     "type": "producer",
     "id": "producerryansjhun",
     "name": "Ryan S. Jhun",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Elegant",
+      "Teen Crush",
+      "Dreamcore"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Synthpop"
+    ],
     "musicas": [
       "IVE - After LIKE",
       "OH MY GIRL - Dun Dun Dance",
@@ -9492,8 +9764,16 @@ const producers = [
     "type": "producer",
     "id": "producersaay",
     "name": "Saay",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Mature",
+      "Elegant",
+      "Girl Crush"
+    ],
+    "generos": [
+      "R&B",
+      "Pop",
+      "EDM"
+    ],
     "musicas": [
       "VIVIZ - LOVEADE",
       "BAEKHYUN - Bambi",
@@ -9506,8 +9786,16 @@ const producers = [
     "type": "producer",
     "id": "producershinsadongtiger",
     "name": "Shinsadong Tiger",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Mature",
+      "Cute",
+      "Girl Crush"
+    ],
+    "generos": [
+      "EDM",
+      "Pop",
+      "Groove"
+    ],
     "musicas": [
       "EXID - Up & Down",
       "MOMOLAND - BBoom BBoom",
@@ -9520,8 +9808,16 @@ const producers = [
     "type": "producer",
     "id": "producersweetune",
     "name": "Sweetune",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Performance",
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Synthpop",
+      "Pop",
+      "Groove"
+    ],
     "musicas": [
       "KARA - Mister",
       "KARA - Pretty Girl",
@@ -9534,8 +9830,16 @@ const producers = [
     "type": "producer",
     "id": "producerteddy",
     "name": "Teddy",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Girl Crush",
+      "Swag",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "EDM",
+      "Pop"
+    ],
     "musicas": [
       "BLACKPINK - Dddu-Du Ddu-Du",
       "2NE1 - I Am the Best",
@@ -9549,8 +9853,16 @@ const producers = [
     "type": "producer",
     "id": "producerthemuze",
     "name": "The Muze",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Dreamcore",
+      "Cute",
+      "Teen Crush"
+    ],
+    "generos": [
+      "Pop",
+      "R&B",
+      "Synthpop"
+    ],
     "musicas": [
       "RESCENE - LOVE ATTACK",
       "RESCENE - Glow Up",
@@ -9563,22 +9875,38 @@ const producers = [
     "type": "producer",
     "id": "producervendors",
     "name": "VENDORS",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Performance"
+    ],
+    "generos": [
+      "Synthpop",
+      "R&B",
+      "Groove"
+    ],
     "musicas": [
       "tripleS - Girls Never Die",
       "tripleS Lovelution - Girls' Capitalism",
       "GOT7 - Eclipse",
       "PSY feat. SUGA - That That",
-      "Universe Ticket - Deam of Girls"
+      "Universe Ticket - Dream of Girls"
     ]
   },
   {
     "type": "producer",
     "id": "producervvn",
     "name": "VVN",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Conceptual",
+      "Dreamcore",
+      "Elegant"
+    ],
+    "generos": [
+      "R&B",
+      "Groove",
+      "Synthpop"
+    ],
     "musicas": [
       "I-LAND 2 Na - IWALY",
       "I.O.I - Suddenly",
@@ -9591,8 +9919,16 @@ const producers = [
     "type": "producer",
     "id": "produceryg",
     "name": "YG",
-    "conceitos": [],
-    "generos": [],
+    "conceitos": [
+      "Swag",
+      "Girl Crush",
+      "Performance"
+    ],
+    "generos": [
+      "Hip-hop",
+      "EDM",
+      "Pop"
+    ],
     "musicas": [
       "BABYMONSTER - DRIP",
       "BABYMONSTER - SHEESH",
