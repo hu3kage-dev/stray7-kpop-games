@@ -500,7 +500,65 @@ function renderPlayers() {
     }
     board.appendChild(row);
   });
+  ajustarLarguraBoards();
 }
+
+//f:ajustarLarguraBoards
+//Ajusta a largura de cada board de formação para caber um número EXATO de slots por linha (sem sobra de espaço):
+//usa o maior número de slots que cabe ao lado dos boards de música e produtor (ou na largura toda, quando eles
+//quebram de linha ou empilham no celular). O board não depende de quantas idols o grupo tem; se o grupo tiver
+//mais idols do que cabe numa linha, os slots quebram de linha.
+function ajustarLarguraBoards() {
+  document.querySelectorAll("#playersBoard .playerBlocks").forEach(blocos => {
+    const board = blocos.querySelector(".idolBoard");
+    const slots = board && board.querySelector(".slotsContainer");
+    if (!board || !slots) return;
+    board.style.flex = "";
+    board.style.width = "";   // mede sem a largura aplicada antes
+    const blocosCss = getComputedStyle(blocos);
+    const emColuna = blocosCss.flexDirection === "column";
+    const boardCss = getComputedStyle(board);
+    const slot = board.querySelector(".slot");
+    const larguraSlot = slot ? slot.offsetWidth : 94;
+    const espaco = parseFloat(getComputedStyle(slots).columnGap) || 0;
+    const bordas = parseFloat(boardCss.paddingLeft) + parseFloat(boardCss.paddingRight)
+                 + parseFloat(boardCss.borderLeftWidth) + parseFloat(boardCss.borderRightWidth);
+    const contarSlots = livre => Math.floor((livre - bordas + espaco) / (larguraSlot + espaco));
+    const espacoBlocos = parseFloat(blocosCss.columnGap) || 0;
+    const larguraExtras = Array.from(blocos.children)
+      .filter(el => el !== board)
+      .reduce((soma, el) => soma + el.offsetWidth + espacoBlocos, 0);
+    let slotsPorLinha = emColuna ? 0 : contarSlots(blocos.clientWidth - larguraExtras);
+    if (slotsPorLinha < 1) slotsPorLinha = Math.max(1, contarSlots(blocos.clientWidth));   // não cabe ao lado dos extras: usa a linha toda
+    const conteudo = slotsPorLinha * larguraSlot + (slotsPorLinha - 1) * espaco;
+    board.style.flex = "none";
+    board.style.width = `${boardCss.boxSizing === "border-box" ? conteudo + bordas : conteudo}px`;
+  });
+}
+
+//f:ajustarLarguraPool
+//Ajusta a largura do pool (borda ciano) para caber um número EXATO de cards por linha: ele mantém o maior número de
+//cards que cabe na tela e a borda se encolhe até o último card, sem espaço vazio à direita
+function ajustarLarguraPool() {
+  const pool = document.getElementById("pool");
+  if (!pool || !pool.parentElement) return;
+  pool.style.width = "";   // mede sem a largura aplicada antes
+  const css = getComputedStyle(pool);
+  const bordas = parseFloat(css.paddingLeft) + parseFloat(css.paddingRight)
+               + parseFloat(css.borderLeftWidth) + parseFloat(css.borderRightWidth);
+  const carta = pool.querySelector(".card");
+  const larguraCarta = carta ? carta.offsetWidth : 166;
+  const espaco = parseFloat(css.columnGap) || 0;
+  const disponivel = pool.parentElement.clientWidth;
+  const cartas = Math.max(1, Math.floor((disponivel - bordas + espaco) / (larguraCarta + espaco)));
+  const total = Math.min(cartas * larguraCarta + (cartas - 1) * espaco + bordas, disponivel);
+  pool.style.width = `${css.boxSizing === "border-box" ? total : total - bordas}px`;
+}
+
+window.addEventListener("resize", () => {
+  ajustarLarguraBoards();
+  ajustarLarguraPool();
+});
 
 //f:renderPool
 function renderPool() {
@@ -511,6 +569,7 @@ function renderPool() {
     let card = criarCardDraft(item, "pool");
     poolDiv.appendChild(card);
   });
+  ajustarLarguraPool();
 }
 
 // =====================

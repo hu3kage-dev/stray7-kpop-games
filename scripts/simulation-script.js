@@ -72,6 +72,7 @@ function iniciarPaginaSimulacao() {
   criarPainelTopo();
   iniciarCarrosselDicas();
   render();
+  window.addEventListener("resize", ajustarLarguraBoards);
 }
 
 //f:atualizarIdiomaSimulacao
@@ -81,8 +82,7 @@ function atualizarIdiomaSimulacao() {
   const carrossel = document.querySelector(".simDicas");
   if (carrossel) atualizarCarrosselDicas(carrossel, false);
   render();
-  const resultado = document.getElementById("resultadoContainer");
-  if (resultado && resultado.children.length) mostrarResultados();
+  if (resultadoAberto()) mostrarResultados();   // refaz o modal de resultados no novo idioma
 }
 
 aoMudarIdioma(atualizarIdiomaSimulacao);
@@ -159,14 +159,17 @@ function render() {
     const isLocked = lockedPlayers[pi];
     validarTrocaGenero(pi);
     const section = document.createElement("div");
-  section.className = "simSection";
-  // Linha do jogador
-  const playerRow = document.createElement("div");
-  playerRow.className = "simPlayerRow";
-  const meta = document.createElement("div");
-  meta.className = "simMeta";
-  meta.innerHTML = `<span class="simPos">${pos+1}º</span><span class="simName">${nome}</span>`;
+    section.className = "simSection";
+    // Linha do jogador: a posição e o nome ocupam uma faixa própria acima do board
+    const playerRow = document.createElement("div");
+    playerRow.className = "simPlayerRow";
+    const meta = document.createElement("div");
+    meta.className = "simMeta";
+    meta.innerHTML = `<span class="simPos">${pos+1}º</span><span class="simName">${nome}</span>`;
     playerRow.appendChild(meta);
+    // Corpo: board de idols + extras (música e produtor)
+    const corpo = document.createElement("div");
+    corpo.className = "simPlayerBody";
     // Board de idols
     const idolBoard = document.createElement("div");
     idolBoard.className = "simIdolBoard";
@@ -180,7 +183,7 @@ function render() {
       idolSlotsRow.appendChild(criarSlotWrapper(pi, "idol", idx, item, isLocked));
     });
     idolBoard.appendChild(idolSlotsRow);
-    playerRow.appendChild(idolBoard);
+    corpo.appendChild(idolBoard);
     // Extras
     const extras = document.createElement("div");
     extras.className = "simExtras";
@@ -196,12 +199,43 @@ function render() {
     } else {
       extras.appendChild(criarBoxAcoes(pi, isLocked));   // sem produtor, as ações ficam numa caixa própria
     }
-    playerRow.appendChild(extras);
+    corpo.appendChild(extras);
+    playerRow.appendChild(corpo);
     section.appendChild(playerRow);
     container.appendChild(section);
   });
   injetarBotaoResultado();
+  ajustarLarguraBoards();
   igualarAlturaPaineis();
+}
+
+//f:ajustarLarguraBoards
+//Ajusta a largura de cada board de idols para caber um número EXATO de cards por linha (sem sobra de espaço):
+//usa o maior número de cards que cabe ao lado dos extras (música e produtor) — ou na largura toda, quando
+//os extras vão para baixo (celular). O board não depende de quantas idols o grupo tem: com poucas idols ele
+//continua ocupando o espaço de todos os cards que a tela comporta; com mais idols que isso, os cards quebram de linha.
+function ajustarLarguraBoards() {
+  document.querySelectorAll("#simBoard .simPlayerBody").forEach(corpo => {
+    const board  = corpo.querySelector(".simIdolBoard");
+    const extras = corpo.querySelector(".simExtras");
+    const slots  = board && board.querySelector(".simBoardSlots");
+    if (!board || !slots) return;
+    board.style.flex = "";
+    board.style.width = "";   // mede sem a largura aplicada antes
+    const corpoCss = getComputedStyle(corpo);
+    const emColuna = corpoCss.flexDirection === "column";
+    const boardCss = getComputedStyle(board);
+    const slot = board.querySelector(".simBoardSlot");
+    const larguraCard = slot ? slot.offsetWidth : 164;
+    const espaco = parseFloat(getComputedStyle(slots).columnGap) || 0;
+    const bordasBoard = parseFloat(boardCss.paddingLeft) + parseFloat(boardCss.paddingRight)
+                      + parseFloat(boardCss.borderLeftWidth) + parseFloat(boardCss.borderRightWidth);
+    let disponivel = corpo.clientWidth;
+    if (!emColuna && extras) disponivel -= extras.offsetWidth + (parseFloat(corpoCss.columnGap) || 0);
+    const cards = Math.max(1, Math.floor((disponivel - bordasBoard + espaco) / (larguraCard + espaco)));
+    board.style.flex = "none";
+    board.style.width = `${cards * larguraCard + (cards - 1) * espaco}px`;
+  });
 }
 
 //f:igualarAlturaPaineis
@@ -257,19 +291,19 @@ function criarSlotWrapper(pi, tipo, idx, item, isLocked) {
 
 //f:criarLinhaInfo
 //Cria uma linha "Rótulo: valor" do painel (dica opcional como tooltip).
-//Com quebrarLinha, o valor vai para a linha de baixo e sempre ocupa uma linha só (assim os painéis têm a mesma altura)
+//Com quebrarLinha, o valor vai para a linha de baixo e sempre ocupa uma linha só (assim os painéis têm a mesma altura).
+//Toda linha tem tooltip ao passar o mouse: a dica informada ou, se não houver, "Rótulo: valor" completo
 function criarLinhaInfo(rotulo, valor, dica = "", quebrarLinha = false) {
   const linha = document.createElement("div");
   linha.className = "simInfoLinha";
-  if (dica) linha.title = dica;
+  linha.title = dica || `${rotulo}: ${valor}`;
   const negrito = document.createElement("b");
   negrito.textContent = `${rotulo}:`;
   linha.append(negrito);
   if (quebrarLinha) {
     const texto = document.createElement("span");
     texto.className = "simInfoValor";
-    texto.textContent = valor;
-    texto.title = valor;   // se algum dia não couber, o texto completo aparece ao passar o mouse
+    texto.textContent = valor;   // o texto completo (caso não caiba) aparece no tooltip da linha
     linha.append(document.createElement("br"), texto);
   } else {
     linha.append(` ${valor}`);
@@ -295,10 +329,12 @@ function criarPainelPosicao(pi, idx, item, isLocked) {
   titulo.className = "simPanelTitle";
   titulo.textContent = t("sim_painel_posicao");
 
-  // depois de travar, o painel avisa que a posição foi registrada (como no painel da troca de gênero)
+  // depois de travar, o painel avisa que a posição foi registrada (como no painel da troca de gênero);
+  // antes de travar a linha continua ocupando o espaço (invisível), para os atributos não se moverem ao travar
   const registrada = document.createElement("div");
-  registrada.className = "simStatusRegistrado";
+  registrada.className = "simStatusRegistrado" + (isLocked ? "" : " reservado");
   registrada.textContent = `🔒 ${t("sim_posicao_registrada")}`;
+  if (!isLocked) registrada.setAttribute("aria-hidden", "true");
 
   // ordem dos atributos igual à do modal: Vocal, Dance, Rap, Center, Visual
   const nomes = ["modal_vocal", "modal_dance", "modal_rap", "modal_center", "modal_visual"].map(chave => t(chave));
@@ -322,9 +358,7 @@ function criarPainelPosicao(pi, idx, item, isLocked) {
     aoEscolher: (role) => { roleBoard[pi].idol[idx] = role; render(); }
   });
 
-  painel.append(titulo);
-  if (isLocked) painel.append(registrada);
-  painel.append(info, menu);
+  painel.append(titulo, registrada, info, menu);
   return painel;
 }
 
@@ -374,13 +408,9 @@ function criarPainelAcoes(pi, isLocked, produtor = null) {
       criarLinhaInfo(t("sim_conceitos"), formatarListaInfo(produtor.conceitos), "", true),
       criarLinhaInfo(t("sim_generos"), formatarListaInfo(produtor.generos), "", true)
     );
-    // gêneros originais da música (sem a troca): a linha é da música, por isso tem cor própria (azul claro)
-    if (simData.config.usarMusica) {
-      const original = criarLinhaInfo(t("sim_generos_originais_musica"), formatarListaInfo(listarGenerosDaMusica(pegarMusicaDoJogador(pi))), "", true);
-      original.classList.add("simInfoMusica");
-      info.appendChild(original);
-    }
     painel.appendChild(info);
+  } else {
+    painel.classList.add("semInfo");
   }
   painel.appendChild(criarBotaoTravar(pi, isLocked));
   return painel;
@@ -685,16 +715,16 @@ function criarResultadoTrocaGenero(pi) {
   meta.textContent = `${t("gen_chance")}: ${formatarChance(estado.chance)}`;
 
   resultado.append(cabecalho, troca, meta);
-  if (revelar) {
-    const finais = document.createElement("div");
-    finais.className = "genResultMeta";
-    const generos = listarGenerosDaMusica(obterMusicaEfetiva(pi, pegarMusicaDoJogador(pi)));
-    finais.textContent = estado.sucesso
-      ? `${t("gen_generos_finais")}: ${generos.join(", ")}`
-      : t("gen_mantidos");
-    resultado.appendChild(finais);
-  }
   return resultado;
+}
+
+//f:criarInfoGenerosMusica
+//Cria o bloco "Rótulo: / gêneros" do painel da música (centralizado, rótulo em azul claro). Aceita a chave do rótulo e a lista de gêneros
+function criarInfoGenerosMusica(chaveRotulo, generos) {
+  const info = document.createElement("div");
+  info.className = "simPanelInfo simInfoMusica";
+  info.appendChild(criarLinhaInfo(t(chaveRotulo), formatarListaInfo(generos), "", true));
+  return info;
 }
 
 //f:criarPainelTrocaGenero
@@ -712,12 +742,19 @@ function criarPainelTrocaGenero(pi, isLocked) {
   titulo.textContent = `⇄ ${t("gen_troca_titulo")}`;
   painel.appendChild(titulo);
 
+  // gêneros originais da música (antes da troca): logo abaixo do título, antes e depois de travar
+  const musica = pegarMusicaDoJogador(pi);
+  painel.appendChild(criarInfoGenerosMusica("modal_generos_originais", listarGenerosDaMusica(musica)));
+
   if (isLocked && estado.resolvida) {
+    // o resultado fica centralizado no espaço entre os gêneros originais e os finais (a falha também mostra os finais: os originais)
     painel.appendChild(criarResultadoTrocaGenero(pi));
+    if (todosTravados()) {
+      painel.appendChild(criarInfoGenerosMusica("gen_generos_finais", listarGenerosDaMusica(obterMusicaEfetiva(pi, musica))));
+    }
     return painel;
   }
 
-  const musica = pegarMusicaDoJogador(pi);
   painel.appendChild(criarDropdown({
     classe: "in", icone: "+", rotulo: t("gen_entra"), valor: estado.entra, desabilitado: isLocked,
     opcoes: listarGenerosParaEntrar(pi),
@@ -945,9 +982,9 @@ function escaparHtml(valor) {
 }
 
 //f:arredondarScore
-//Arredonda o score final exibido no ranking
+//Arredonda o score para 2 casas decimais (todo valor de pontuação é exibido assim; só as % de bônus e penalidades não têm casas)
 function arredondarScore(valor) {
-  return Math.round(valor);
+  return Math.round(valor * 100) / 100;
 }
 
 //f:formatarPercentual
@@ -1309,10 +1346,10 @@ function calcularPenalidadesFormacao(contexto, idolsCalculadas) {
   return { itens, multiplicador };
 }
 
-//f:somarScoresIdols
-//Soma o score de todas as idols do grupo
-function somarScoresIdols(idolsCalculadas) {
-  return idolsCalculadas.reduce((soma, r) => soma + r.score, 0);
+//f:calcularMediaScoresIdols
+//Média do score das idols do grupo: o score do grupo é uma média, então grupos de tamanhos diferentes pontuam em faixas parecidas
+function calcularMediaScoresIdols(idolsCalculadas) {
+  return media(idolsCalculadas.map(r => r.score));
 }
 
 // =====================
@@ -1467,17 +1504,17 @@ function montarContextoScore(pi) {
 }
 
 //f:montarResultadoFinal
-//Junta os resultados parciais e aplica os multiplicadores de grupo ao score somado das idols
+//Junta os resultados parciais e aplica os multiplicadores de grupo à média do score das idols
 function montarResultadoFinal(idolsCalculadas, grupo, formacao, estrutura, troca) {
-  const somaIdols = somarScoresIdols(idolsCalculadas);
+  const mediaIdols = calcularMediaScoresIdols(idolsCalculadas);
   return {
     idols: idolsCalculadas,
     posicoes: estrutura.posicoes,
     grupo,
     formacao,
     troca,
-    somaIdols,
-    final: somaIdols * grupo.multiplicador * formacao.multiplicador
+    mediaIdols,
+    final: mediaIdols * grupo.multiplicador * formacao.multiplicador
   };
 }
 
@@ -1504,74 +1541,94 @@ function calcularScore(pi) {
 // DETALHAMENTO
 // =====================
 
+//f:formatarPercentualColorido
+//Formata uma variação em % com sinal e cor: verde para bônus, vermelho para penalidade (as classes estão em simulation-styles.css)
+function formatarPercentualColorido(pct) {
+  const texto = formatarPercentual(pct);
+  const arredondado = Math.round(pct);
+  const classe = arredondado > 0 ? "scorePos" : arredondado < 0 ? "scoreNeg" : "";
+  return classe ? `<span class="${classe}">${texto}</span>` : texto;
+}
+
 //f:listarExtrasIdol
-//Lista os textos de bônus e penalidades de uma idol (posição, especialidade, paridade, sinergia, excesso)
+//Lista os textos (HTML) de bônus e penalidades de uma idol (posição, especialidade, paridade, sinergia, excesso)
 function listarExtrasIdol(r) {
   const extras = [];
   const pctPosicao = (r.mediaPosicao / r.base - 1) * 100;
   const pctEspecialidade = (r.multEspecialidade - 1) * 100;
 
-  if (Math.abs(pctPosicao) > 0.1)        extras.push(`${formatarPercentual(pctPosicao)} ${t("score_posicao")}`);
-  if (Math.abs(pctEspecialidade) > 0.1)  extras.push(`${formatarPercentual(pctEspecialidade)} ${t("score_especialidade")}`);
-  if (r.efeitoParidade < -0.001)         extras.push(`${formatarPercentual(r.efeitoParidade * 100)} ${t("score_paridade")}`);
-  if (r.estourou)                        extras.push(`${formatarPercentual((r.multPenalidade - 1) * 100)} ${t("score_excesso")}`);
-  if (r.sinergia.matchesConceito > 0)    extras.push(`${formatarPercentual(r.sinergia.bonusConceito * 100)} ${t("score_bonus_conceito")}`);
-  if (r.sinergia.matchesGenero > 0)      extras.push(`${formatarPercentual(r.sinergia.bonusGenero * 100)} ${t("score_bonus_genero")}`);
+  if (Math.abs(pctPosicao) > 0.1)        extras.push(`${formatarPercentualColorido(pctPosicao)} ${t("score_posicao")}`);
+  if (Math.abs(pctEspecialidade) > 0.1)  extras.push(`${formatarPercentualColorido(pctEspecialidade)} ${t("score_especialidade")}`);
+  if (r.efeitoParidade < -0.001)         extras.push(`${formatarPercentualColorido(r.efeitoParidade * 100)} ${t("score_paridade")}`);
+  if (r.estourou)                        extras.push(`${formatarPercentualColorido((r.multPenalidade - 1) * 100)} ${t("score_excesso")}`);
+  if (r.sinergia.matchesConceito > 0)    extras.push(`${formatarPercentualColorido(r.sinergia.bonusConceito * 100)} ${t("score_bonus_conceito")}`);
+  if (r.sinergia.matchesGenero > 0)      extras.push(`${formatarPercentualColorido(r.sinergia.bonusGenero * 100)} ${t("score_bonus_genero")}`);
   return extras;
+}
+
+//f:montarBlocoScore
+//Monta o HTML de um bloco do detalhamento (idol ou grupo): título, pontuação inicial, bônus e penalidades (se houver) e pontuação final
+function montarBlocoScore({ titulo, inicial, extras, final, classe = "" }) {
+  return `<div class="scoreBloco ${classe}">
+    <div class="scoreTitulo">${titulo}</div>
+    <div>${t("score_inicial")}: ${inicial.toFixed(2)}</div>
+    ${extras.length ? `<div>${t("score_bonus_penalidades")}: ${extras.join(", ")}</div>` : ""}
+    <div class="scoreFinal">${t("score_final")}: <span class="scorePontos">${final.toFixed(2)} ${t("score_pontos")}</span></div>
+  </div>`;
 }
 
 //f:formatarLinhaIdol
 //Monta o HTML do detalhe de uma idol
 function formatarLinhaIdol(r) {
-  const extras = listarExtrasIdol(r);
-  return `<b>${escaparHtml(r.nome)}</b> (${escaparHtml(r.role)})<br>
-       ${t("score_base")} ${r.base.toFixed(2)} → ${t("score_score")} ${r.score.toFixed(2)}
-       ${extras.length ? `(${extras.join(", ")})` : ""}`;
+  return montarBlocoScore({
+    titulo: `${escaparHtml(r.nome)} (${escaparHtml(r.role)})`,
+    inicial: r.base,
+    extras: listarExtrasIdol(r),
+    final: r.score
+  });
 }
 
 //f:listarExtrasGrupo
-//Lista os textos de bônus e penalidades do grupo (conceito, gênero e posições que estouraram)
+//Lista os textos (HTML) de bônus e penalidades do grupo (conceito, gênero e posições que estouraram)
 function listarExtrasGrupo(resultado) {
   const { grupo, posicoes } = resultado;
   const extras = [];
 
-  if (grupo.nivelConceito) extras.push(`${formatarPercentual(grupo.bonusConceito * 100)} ${t(`score_bonus_conceito_${grupo.nivelConceito}`)}`);
-  if (grupo.nivelGenero)   extras.push(`${formatarPercentual(grupo.bonusGenero * 100)} ${t(`score_bonus_genero_${grupo.nivelGenero}`)}`);
+  if (grupo.nivelConceito) extras.push(`${formatarPercentualColorido(grupo.bonusConceito * 100)} ${t(`score_bonus_conceito_${grupo.nivelConceito}`)}`);
+  if (grupo.nivelGenero)   extras.push(`${formatarPercentualColorido(grupo.bonusGenero * 100)} ${t(`score_bonus_genero_${grupo.nivelGenero}`)}`);
 
   posicoes.filter(p => p.estourou).forEach(p => {
-    extras.push(`${t("score_posicao_excedida")} ${p.role} (${p.quantidade}/${p.limite})`);
+    extras.push(`<span class="scoreNeg">${t("score_posicao_excedida")}</span> ${escaparHtml(p.role)} (${p.quantidade}/${p.limite})`);
   });
 
   resultado.formacao.itens.forEach(item => {
-    extras.push(`${formatarPercentual((item.multiplicador - 1) * 100)} ${item.rotulo}`);
+    extras.push(`${formatarPercentualColorido((item.multiplicador - 1) * 100)} ${escaparHtml(item.rotulo)}`);
   });
   return extras;
 }
 
 //f:formatarLinhaTrocaGenero
-//Monta a linha do detalhamento com o resultado da troca de gênero (vazia se não houve troca)
+//Monta o bloco do detalhamento com o resultado da troca de gênero (vazio se não houve troca)
 function formatarLinhaTrocaGenero(troca) {
   if (!troca || !troca.mudarGenero || !troca.resolvida) return "";
+  const classe = troca.sucesso ? "scorePos" : "scoreNeg";
   const resultado = troca.sucesso ? t("score_troca_sucesso") : t("score_troca_falha");
-  return `${t("score_troca_genero")}: ${resultado} (+${escaparHtml(troca.entra)}, -${escaparHtml(troca.sai)}) · ${t("score_chance")} ${formatarChance(troca.chance)}`;
+  return `<div class="scoreBloco"><span class="scoreTitulo">${t("score_troca_genero")}:</span> <span class="${classe}">${resultado}</span> (+${escaparHtml(troca.entra)}, -${escaparHtml(troca.sai)}) · ${t("score_chance")} ${formatarChance(troca.chance)}</div>`;
 }
 
 //f:formatarDetalhesScore
-//Monta o HTML completo do detalhamento a partir de um resultado já calculado
+//Monta o HTML completo do detalhamento a partir de um resultado já calculado: um bloco por idol, a troca de gênero e o grupo
 function formatarDetalhesScore(resultado) {
-  const linhas = resultado.idols.map(formatarLinhaIdol);
-  const extrasGrupo = listarExtrasGrupo(resultado);
-  const linhaTroca = formatarLinhaTrocaGenero(resultado.troca);
-  if (linhaTroca) linhas.push(`<br>${linhaTroca}`);
-
-  linhas.push(
-    `<br>${t("score_base_grupo")} ${resultado.somaIdols.toFixed(2)} → ${t("score_grupo")} ${resultado.final.toFixed(2)} ${
-      extrasGrupo.length ? `(${extrasGrupo.join(", ")})` : ""
-    }`
-  );
-  linhas.push(`<b>${t("score_final")}: ${arredondarScore(resultado.final)}</b>`);
-
-  return linhas.join("<br>");
+  const blocos = resultado.idols.map(formatarLinhaIdol);
+  blocos.push(formatarLinhaTrocaGenero(resultado.troca));
+  blocos.push(montarBlocoScore({
+    titulo: t("score_grupo_titulo"),
+    inicial: resultado.mediaIdols,   // pontuação inicial do grupo = média do score das idols
+    extras: listarExtrasGrupo(resultado),
+    final: resultado.final,
+    classe: "scoreGrupo"
+  }));
+  return blocos.join("");
 }
 
 //f:montarDetalhesScore
@@ -1636,7 +1693,7 @@ function injetarBotaoResultado() {
   // Mantém toda a lógica de cálculo disponível, mas não exibe a interface
   // de Score enquanto a configuração estiver desativada.
   if (!MOSTRAR_SCORE) {
-    document.getElementById("resultadoContainer")?.remove();
+    document.getElementById("resultadoModal")?.remove();
     return;
   }
 
@@ -1649,21 +1706,65 @@ function injetarBotaoResultado() {
   btn.setAttribute("aria-disabled", String(!pronto));   // cinza mas clicável: o clique explica o que falta
 }
 
-//f:pegarContainerResultado
-//Devolve o container dos resultados, criando-o (logo abaixo dos boards) na primeira vez que é preciso
-function pegarContainerResultado() {
-  let container = document.getElementById("resultadoContainer");
-  const simBoard = document.getElementById("simBoard");
-  if (container || !simBoard || !document.getElementById("btnResultadoWrapper")) return container;
-  container = document.createElement("div");
-  container.id        = "resultadoContainer";
-  container.style.cssText = `
-    max-width:700px; margin:30px auto; padding:20px;
-    background:#1c1c1c; border:1px solid #333; border-radius:10px;
-  `;
-  simBoard.after(container);
-  return container;
+//f:pegarModalResultado
+//Devolve o modal de resultados (janela sobre a tela, com o fundo escurecido como o modal das cartas),
+//criando-o na primeira vez que é preciso. Estrutura: botão fechar, título fixo e lista rolável (#resultadoContainer)
+function pegarModalResultado() {
+  if (!MOSTRAR_SCORE || !document.getElementById("btnResultadoWrapper")) return null;
+  let modal = document.getElementById("resultadoModal");
+  if (modal) return modal;
+
+  modal = document.createElement("div");
+  modal.id = "resultadoModal";
+  modal.className = "modal";
+  modal.addEventListener("click", e => { if (e.target === modal) fecharResultados(); });   // clicar no fundo fecha
+
+  const conteudo = document.createElement("div");
+  conteudo.className = "resultadoModalContent";
+  conteudo.setAttribute("role", "dialog");
+  conteudo.setAttribute("aria-modal", "true");
+
+  const fechar = document.createElement("span");
+  fechar.className = "closeBtn";
+  fechar.textContent = "✕";
+  fechar.setAttribute("role", "button");
+  fechar.tabIndex = 0;
+  fechar.addEventListener("click", fecharResultados);
+  fechar.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fecharResultados(); }
+  });
+
+  const titulo = document.createElement("h2");
+  titulo.className = "resultadoTitulo";
+
+  const container = document.createElement("div");
+  container.id = "resultadoContainer";
+
+  conteudo.append(fechar, titulo, container);
+  modal.appendChild(conteudo);
+  document.body.appendChild(modal);
+  return modal;
 }
+
+//f:resultadoAberto
+//Indica se o modal de resultados está aberto
+function resultadoAberto() {
+  const modal = document.getElementById("resultadoModal");
+  return !!modal && modal.style.display === "flex";
+}
+
+//f:fecharResultados
+//Fecha o modal de resultados (X, clique no fundo ou Esc) e devolve o foco ao botão "Calcular Resultado"
+function fecharResultados() {
+  const modal = document.getElementById("resultadoModal");
+  if (!modal || modal.style.display !== "flex") return;
+  modal.style.display = "none";
+  document.getElementById("btnResultado")?.focus();
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") fecharResultados();
+});
 
 //f:calcularRankingJogadores
 //Calcula o resultado de cada jogador e devolve a lista ordenada do maior para o menor score
@@ -1705,7 +1806,7 @@ function criarLinhaRanking(player, posicao) {
 
   const pontos = document.createElement("span");
   pontos.style.cssText = "font-size:20px; font-weight:900; color:#a855f7;";
-  pontos.textContent = `${player.score} pts`;
+  pontos.textContent = `${player.score.toFixed(2)} pts`;
 
   linha.append(medalha, nome, pontos);
   return linha;
@@ -1722,11 +1823,8 @@ function criarDetalheExpansivel(resultado) {
   `;
 
   const detalheDiv = document.createElement("div");
-  detalheDiv.style.cssText = `
-    display:none; grid-column:1/-1; padding:10px 0 0;
-    font-size:12px; color:#aaa; line-height:1.8;
-    border-top:1px solid #333; margin-top:8px;
-  `;
+  detalheDiv.className = "scoreDetalhes";   // visual em simulation-styles.css
+  detalheDiv.style.display = "none";
   detalheDiv.innerHTML = formatarDetalhesScore(resultado);
 
   detalheBtn.onclick = () => {
@@ -1739,18 +1837,17 @@ function criarDetalheExpansivel(resultado) {
 }
 
 //f:mostrarResultados
-//Exibe o ranking final com o detalhamento expansível de cada jogador
+//Abre o modal com o ranking final e o detalhamento expansível de cada jogador
 function mostrarResultados() {
-  const container = pegarContainerResultado();
-  if (!container) return;
-  container.innerHTML = "";
+  const modal = pegarModalResultado();
+  if (!modal) return;
   document.getElementById("btnResultado")?.classList.add("sem-pulso");   // o pulso serviu para chamar a atenção: depois do clique ele para
 
-  const titulo = document.createElement("h2");
-  titulo.style.cssText = "text-align:center; color:#a855f7; margin-bottom:20px;";
-  titulo.innerText = t("sim_resultado_final");
-  container.appendChild(titulo);
+  modal.querySelector(".resultadoTitulo").innerText = t("sim_resultado_final");
+  modal.querySelector(".closeBtn").setAttribute("aria-label", t("sim_fechar"));
 
+  const container = modal.querySelector("#resultadoContainer");
+  container.innerHTML = "";
   calcularRankingJogadores().forEach((player, i) => {
     const linha = criarLinhaRanking(player, i);
     const { detalheBtn, detalheDiv } = criarDetalheExpansivel(player.resultado);
@@ -1762,4 +1859,5 @@ function mostrarResultados() {
     wrapper.appendChild(detalheDiv);
     container.appendChild(wrapper);
   });
+  modal.style.display = "flex";
 }

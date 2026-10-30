@@ -306,21 +306,23 @@ body {
 /* Linha do Jogador */
 .playerRow {
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
   padding: 10px;
   border-bottom: 2px solid #444;
   width: 100%;
+  box-sizing: border-box;
 }
 
+/* Posição e nome ficam numa faixa própria acima dos boards: nomes de tamanhos diferentes não mexem no layout abaixo */
 .playerMeta {
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  gap: 4px;
-  min-width: 130px;
-  flex-shrink: 0;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 4px;
+  min-width: 0;
 }
 
 .playerOrder {
@@ -333,7 +335,9 @@ body {
   font-weight: bold;
   font-size: 24px;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Jogador Atual */
@@ -374,6 +378,15 @@ body {
   text-align: center;
   margin-bottom: 6px;
   letter-spacing: 1px;
+}
+
+/* "Formação" fica centralizada sobre o primeiro slot (largura do slot: 90px + 2 bordas de 2px), não sobre o board inteiro */
+.idolBoard > .boardTitle {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 94px;
+  white-space: nowrap;
 }
 
 .musicBoard,
@@ -481,11 +494,6 @@ body {
     margin-right: 0;
   }
 
-  .playerRow {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .playerBlocks {
     flex-wrap: wrap;
   }
@@ -535,13 +543,11 @@ body {
     min-height: 66px;   /* cabe 3 linhas na largura do celular */
   }
 
-  .playerRow,
   .playerBlocks {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .playerMeta,
   .board,
   .musicBoard,
   .producerBoard {

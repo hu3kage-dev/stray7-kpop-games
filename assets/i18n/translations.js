@@ -165,7 +165,6 @@ const TRANSLATIONS = {
     "sim_atributos": "Atributos",
     "sim_conceitos": "Conceitos Predominantes",
     "sim_generos": "Gêneros Predominantes",
-    "sim_generos_originais_musica": "Gêneros Originais (Música)",
     "sim_dicas": "Dicas",
     // Alertas de validação
     "sim_tooltip_travar": "Defina todos os papéis antes de travar a escolha.",
@@ -187,11 +186,11 @@ const TRANSLATIONS = {
     "sim_fechar": "▲ Fechar",
     "score_posicao": "posição",
     "score_especialidade": "especialidade",
-    "score_base": "base",
-    "score_score": "score",
-    "score_final": "Score Final",
-    "score_base_grupo": "base do grupo",
-    "score_grupo": "score do grupo",
+    "score_inicial": "Pontuação Inicial",
+    "score_bonus_penalidades": "Bônus e Penalidades",
+    "score_final": "Pontuação Final",
+    "score_pontos": "pontos",
+    "score_grupo_titulo": "Grupo",
     "score_paridade": "Paridade",
     "score_excesso": "excesso",
     "score_posicao_excedida": "posição excedida",
@@ -224,7 +223,6 @@ const TRANSLATIONS = {
     "gen_resultado_falha": "A troca falhou!",
     "gen_resultado_registrada": "Troca registrada!",
     "gen_generos_finais": "Gêneros Finais",
-    "gen_mantidos": "Gêneros Originais Mantidos",
 
     
     // ===========================
@@ -432,7 +430,6 @@ const TRANSLATIONS = {
     "sim_atributos": "Attributes",
     "sim_conceitos": "Main Concepts",
     "sim_generos": "Main Genres",
-    "sim_generos_originais_musica": "Original Genres (Song)",
     "sim_dicas": "Tips",
     "role_placeholder_posicao": "Position",
     // Validation Alerts
@@ -440,7 +437,7 @@ const TRANSLATIONS = {
     "sim_erro_travar": "Assign every role before locking in.",
     "sim_tooltip_travar_troca": "Choose the genre that goes in and the one that goes out",
     "sim_erro_travar_troca": "Choose the genre that goes in and the one that goes out before locking in.",
-    "sim_erro_resultado": "All players must lock in their choices before calculating the result.",
+    "sim_erro_resultado": "All players must lock in their choices before calculating the score.",
     // Carousel tips
     "sim_dica_1": "An idol's specialty gives a bonus when she takes the position of the same attribute.",
     "sim_dica_2": "Two idols in the same position share the spotlight: both lose part of the position bonus.",
@@ -449,17 +446,17 @@ const TRANSLATIONS = {
     "sim_dica_5": "Main, Center and Visual have a per-position limit that depends on the group size.",
     "sim_dica_6": "Some genres and concepts require a minimum number of a certain position; without them, the group loses points.",
     // Calcs and Scoring
-    "sim_calcular_resultado": "🏆 Calculate Result",
-    "sim_resultado_final": "🏆 Final Result",
+    "sim_calcular_resultado": "🏆 Calculate Score",
+    "sim_resultado_final": "🏆 Final Score",
     "sim_detalhes": "▼ Details",
     "sim_fechar": "▲ Close",
     "score_posicao": "position",
     "score_especialidade": "specialty",
-    "score_base": "base",
-    "score_score": "score",
+    "score_inicial": "Initial Score",
+    "score_bonus_penalidades": "Bonuses and Penalties",
     "score_final": "Final Score",
-    "score_base_grupo": "group base",
-    "score_grupo": "group score",
+    "score_pontos": "points",
+    "score_grupo_titulo": "Group",
     "score_paridade": "Parity",
     "score_excesso": "excess",
     "score_posicao_excedida": "position over limit",
@@ -492,7 +489,6 @@ const TRANSLATIONS = {
     "gen_resultado_falha": "Swap Failed!",
     "gen_resultado_registrada": "Swap Registered!",
     "gen_generos_finais": "Final Genres",
-    "gen_mantidos": "Original Genres Retained",
     
     // ===========================
     // Patch Notes Page

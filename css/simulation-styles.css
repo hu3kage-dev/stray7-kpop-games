@@ -3,6 +3,12 @@
   Estilos exclusivos de simulation.html (fase de simulação).
 ================================================================== */
 
+/* Cores dos rótulos dos painéis (código de cores por tipo): troque aqui para experimentar */
+:root {
+  --cor-rotulo-idol:   #fde68a;   /* Atributos, Especialidade, Conceitos e Gêneros do painel da idol */
+  --cor-rotulo-musica: #93c5fd;   /* Gêneros Originais e Gêneros Finais do painel da música */
+}
+
 h2 {
   margin-top: 18px;
   color: #d8b4fe;
@@ -19,21 +25,32 @@ h2 {
 /* Linha do Jogador */
 .simPlayerRow {
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
   padding: 10px;
   border-top: 2px solid #444;
   width: 100%;
+  box-sizing: border-box;
 }
 
+/* Posição e nome ficam numa faixa própria acima do board: nomes de tamanhos diferentes não mexem no layout abaixo */
 .simMeta {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  min-width: 130px;
-  flex-shrink: 0;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 4px;
+  min-width: 0;
+  text-align: left;
+}
+
+/* Corpo da linha: board de idols (largura ajustada pelo JS a um número exato de cards) + extras */
+.simPlayerBody {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
 }
 
 .simPos {
@@ -46,6 +63,8 @@ h2 {
   font-weight: bold;
   font-size: 24px;
   color: #fff;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Board */
@@ -67,6 +86,16 @@ h2 {
   text-align: center;
   margin-bottom: 6px;
   letter-spacing: 1px;
+}
+
+/* "Formação" fica centralizada sobre o primeiro card (a largura do título é a do slot: 160px + 2 bordas de 2px),
+   não sobre o board inteiro, que pode ter muito mais espaço que idols */
+.simIdolBoard > .simBoardTitle {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 164px;
+  white-space: nowrap;
 }
 
 /* Extras (música + produtor) */
@@ -321,11 +350,90 @@ body {
 }
 
 /* Resultados */
+/* Modal de resultados: usa o fundo escurecido de .modal (cards-styles.css); o título fica fixo e só a lista rola */
+.resultadoModalContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(94vw, 790px);
+  max-height: 80vh;   /* altura máxima do modal: acima disso a lista de resultados ganha barra de rolagem */
+  padding: 24px 20px 20px 30px;   /* esquerda maior: compensa o espaço que a barra de rolagem ocupa à direita */
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.resultadoTitulo {
+  flex: none;
+  margin: 4px 0 20px;
+  text-align: center;
+  color: #a855f7;
+}
+
 #resultadoContainer {
-  margin-top: 20px;
-  background: #222;
-  padding: 15px;
-  border-radius: 8px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;   /* rolar a lista não rola a página que está atrás */
+  /* Posição da barra de rolagem: margin-right negativo empurra a barra para perto da borda do modal;
+     padding-right é o espaço entre as linhas do ranking e a barra */
+  margin-right: -8px;
+  padding-right: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #7f56d9 #14101f;
+}
+
+#resultadoContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#resultadoContainer::-webkit-scrollbar-track {
+  background: #14101f;
+  border-radius: 999px;
+}
+
+#resultadoContainer::-webkit-scrollbar-thumb {
+  background: #7f56d9;
+  border-radius: 999px;
+}
+
+/* Detalhamento do score (dentro do modal de resultados) */
+.scoreDetalhes {
+  margin-top: 8px;
+  padding: 18px 0 4px;
+  border-top: 1px solid #333;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aaa;   /* texto comum do detalhamento (Bônus e Penalidades, posição, especialidade...) */
+}
+
+.scoreBloco {
+  margin: 0 0 18px;
+}
+
+/* Nome da idol, títulos e Pontuação Final: o mesmo roxo de "ESCOLHA DE POSIÇÃO" e "Posição registrada!" */
+.scoreTitulo,
+.scoreFinal,
+.scorePontos {
+  font-weight: 700;
+  color: #d8b4fe;
+}
+
+.scorePos {
+  color: #22c55e;   /* bônus */
+}
+
+.scoreNeg {
+  color: #ef4444;   /* penalidade */
+}
+
+/* Bloco do grupo: separado das idols */
+.scoreBloco.scoreGrupo {
+  margin: 26px 0 8px;
+  padding-top: 18px;
+  border-top: 1px solid #333;
 }
 
 .resultadoLinha {
@@ -435,7 +543,7 @@ body {
   width: 160px;
   min-width: 160px;
   max-width: 160px;
-  min-height: 212px;   /* altura comum dos painéis (o JS iguala se algum passar disso) */
+  min-height: 200px;   /* altura mínima comum dos painéis; o JS iguala todos à do mais alto (a música travada, com gêneros em 2 linhas, tem ~210px) */
   box-sizing: border-box;
   margin-top: 6px;
   padding: 8px;
@@ -492,15 +600,48 @@ body {
   cursor: help;
 }
 
-/* Linha que pertence à música (aparece no painel do produtor): rótulo em azul claro */
-.simInfoLinha.simInfoMusica b {
-  color: #93c5fd;
+/* Painel da idol: rótulos em amarelo escuro (cor do tipo idol) */
+.posPanel .simInfoLinha b {
+  color: var(--cor-rotulo-idol);
 }
 
-/* Com a altura igual, o menu de posição e o botão Travar Escolha ficam colados na base do painel */
-.posPanel > .simDrop,
-.acoesPanel > .btnTravarWrapper {
+/* Painel da música: gêneros centralizados, rótulo em azul claro (cor do tipo música); aqui o valor pode quebrar de linha */
+.simInfoMusica .simInfoLinha b {
+  color: var(--cor-rotulo-musica);
+}
+
+/* Painéis da música e do produtor: o valor quebra de linha em vez de ser cortado com "…" */
+.simInfoMusica .simInfoValor,
+.acoesPanel .simInfoValor {
+  display: inline;
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+
+/* Atributos centralizados na vertical: ficam no meio do espaço entre o título (ou "Posição registrada!") e o menu/botão da base.
+   A linha "Posição registrada!" ocupa o espaço mesmo antes de travar (invisível), então nada se move ao travar */
+.posPanel > .simPanelInfo,
+.acoesPanel > .simPanelInfo {
+  margin: auto 0;
+}
+
+.simStatusRegistrado.reservado {
+  visibility: hidden;
+}
+
+/* Sem o bloco de atributos (partida sem produtor), o botão Travar Escolha fica colado na base */
+.acoesPanel.semInfo > .btnTravarWrapper {
   margin-top: auto;
+}
+
+/* Painel da música: o resultado da troca fica centralizado verticalmente entre os gêneros originais (topo) e os finais (base) */
+.genPanel {
+  gap: 6px;
+}
+
+.genPanel > .genResult {
+  margin: auto 0;
 }
 
 /* Valor de conceitos/gêneros: sempre uma linha só, para todos os painéis terem a mesma altura */
@@ -771,7 +912,9 @@ body {
 .genResult {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 6px;
+  text-align: center;
 }
 
 .genResultHead {
@@ -785,7 +928,8 @@ body {
 
 .genResultSwap {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 4px;
 }
 
@@ -827,13 +971,21 @@ body {
   }
 
   .simPlayerRow {
-    flex-direction: column !important;
     width: 100% !important;
     box-sizing: border-box;
   }
 
-  .simMeta,
-  .simIdolBoard,
+  /* Board e extras empilham; a largura do board (número exato de cards por linha) vem do JS, e ele fica centralizado */
+  .simPlayerBody {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .simIdolBoard {
+    align-self: center;
+    flex: none;
+  }
+
   .simExtras,
   .btnTravarWrapper {
     width: 100% !important;

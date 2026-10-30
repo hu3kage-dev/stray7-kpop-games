@@ -10,6 +10,40 @@
 // =======================================================================================================
 const PATCHES = [
   {
+    version: "v0.5.1",
+    title: { pt: "Troca de Gênero", en: "Genre Swap" },
+    date: "2026-10-30",
+    type: "minor",
+    sections: [
+      {
+        type: "change",
+        items: [
+          {
+            pt: "Foram realizados ajustes na aparência dos painéis de idols, músicas e produtores em <span class='hl'>Fase de Simulação</span>.",
+            en: "Adjustments have been made to the appearance of the panels for idols, songs, and producers in the <span class='hl'>Simulation Phase</span>."
+          },
+          {
+            pt: "Botões de jogo agora mostram quando estão desabilitados, com tooltip explicando o motivo. Quando habilitados, agora mudam de cor e exibem uma animação chamativa.",
+            en: "Game buttons now show when they are disabled, with a tooltip explaining the reason. When enabled, they now change colour and display a vibrant animation."
+          },
+        ]
+      },
+      {
+        type: "fix",
+        items: [
+          {
+            pt: "Foi corrigido um problema onde o board quebrava visualmente quando jogadores tinham nomes de tamanhos muito diferentes.",
+            en: "A problem has been fixed where the board would visually break when players had names of very different lengths."
+          },
+          {
+            pt: "Foi corrigido um problema de quebra de linha no board de idols, agora ele se ajusta melhor ao conteúdo.",
+            en: "A problem has been fixed where the idol board would break lines improperly, now it adjusts better to the content."
+          },
+        ]
+      }
+    ]
+  },
+  {
     version: "v0.5.0",
     title: { pt: "Troca de Gênero", en: "Genre Swap" },
     date: "2026-10-22",
@@ -414,8 +448,8 @@ const PATCHES = [
             en: "Detail modal when clicking any card." 
           },
           { 
-            pt: "Cards com color-code: <span class='hl'>amarelo</span> para idols, <span class='hl'>azul marinho</span> para músicas, <span class='hl'>roxo</span> para produtores.",
-            en: "Color-coded cards: <span class='hl'>yellow</span> for idols, <span class='hl'>navy blue</span> for songs, <span class='hl'>purple</span> for producers." },
+            pt: "Cards com colour-code: <span class='hl'>amarelo</span> para idols, <span class='hl'>azul marinho</span> para músicas, <span class='hl'>roxo</span> para produtores.",
+            en: "Colour-coded cards: <span class='hl'>yellow</span> for idols, <span class='hl'>navy blue</span> for songs, <span class='hl'>purple</span> for producers." },
           { 
             pt: "Destaque visual no jogador da vez.", 
             en: "Visual highlight on the current player's turn." 
@@ -484,7 +518,7 @@ const PATCHES = [
           },
           { 
             pt: "Paleta de cores definida: roxo, amarelo, azul, cinza escuro.",
-            en: "Defined color palette: purple, yellow, blue, dark gray." 
+            en: "Defined colour palette: purple, yellow, blue, dark gray." 
           },
         ]
       }
