@@ -90,25 +90,27 @@
   pointer-events: none;
 }
 
-/* Botão enviar */
+/* Botão enviar (o visual vem de btn-principal; aqui só o layout) */
 .feedback-submit {
   align-self: flex-end;
-  margin: 0;
-  padding: 12px 32px;
+}
+
+/* Botão principal (Jogar, Iniciar Draft, Enviar) — mantenha este bloco igual em index-styles.css, draft-setup-styles.css e feedback-styles.css */
+.btn-principal {
+  padding: 12px 24px;
   font-size: 14px;
-  font-weight: 700;
   color: #fff;
   background-color: #7f56d9;
 }
 
-.feedback-submit:hover:not(:disabled) {
+.btn-principal:hover:not(:disabled) {
   background-color: #6e3dc3;
 }
 
-.feedback-submit:disabled {
-  background-color: #3d3a4d;
+/* Desabilitado (ex.: "Em breve"): cinza, com cursor de proibido (o cursor vem de .btn:disabled) */
+.btn-principal:disabled {
   color: #b9b3c8;
-  cursor: not-allowed;
+  background-color: #3d3a4d;
 }
 
 /* Mensagem de resultado */

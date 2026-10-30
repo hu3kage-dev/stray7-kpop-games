@@ -1,0 +1,18 @@
+=== STRAY7 DRAFT ===
+Data: 30/10/2026, 12:14:43
+
+--- JOGADORES (ordem do draft) ---
+  1. Arinluvr
+  Integrantes por time: 4
+
+--- POOL DE IDOLS ---
+  [aespa] Giselle  {id:aespagiselle}  (Gen 4 | Esp: Rap)
+  [aespa] Karina  {id:aespakarina}  (Gen 4 | Esp: Dance)
+  [aespa] Winter  {id:aespawinter}  (Gen 4 | Esp: Vocal)
+  [aespa] NingNing  {id:aespaningning}  (Gen 4 | Esp: Vocal)
+
+--- POOL DE MÚSICAS ---
+  Brat Attitude  {id:boysiiplanetbratattitude}  (Fonte: BOYS II PLANET)
+
+--- POOL DE PRODUTORES ---
+  Dem Jointz  {id:producerdemjointz}

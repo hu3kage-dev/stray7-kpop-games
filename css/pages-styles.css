@@ -178,6 +178,25 @@ button:hover {
   background-color: #3f2f69;
 }
 
+/* Botões padronizados: classe "btn" + um estilo (btn-principal, btn-arquivo ou btn-marcar).
+   Aqui fica só o que é comum a todos; o visual de cada estilo (cores, tamanho, hover) fica no CSS das páginas que o usam. */
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
 input {
   padding: 10px;
   margin: 5px 0;

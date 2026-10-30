@@ -54,11 +54,13 @@
     </div>
     <div class="b2-field">
       <span></span>
-      <button onclick="sortearIntegrantes()" data-i18n="btn_random"></button>
+      <button class="btn btn-marcar" onclick="sortearIntegrantes()" data-i18n="btn_random"></button>
     </div>
-    <label class="btn-importar-draft" for="importDraftInput" data-i18n="btn_importar_draft"></label>
+    <label class="btn btn-arquivo btn-importar-draft" for="importDraftInput" data-i18n="btn_importar_draft"></label>
     <input type="file" id="importDraftInput" accept=".txt" onchange="importarDraftTxt(event)" style="display:none;">
-    <button class="btn-iniciar-draft" onclick="iniciarDraft()" data-i18n="btn_iniciar_draft"></button>
+    <div class="draftStartWrap">
+      <button class="btn btn-principal btn-iniciar-draft" onclick="iniciarDraft()" data-i18n="btn_iniciar_draft"></button>
+    </div>
   </div>
 
   <div class="b2-right">
@@ -118,14 +120,14 @@
         </div>
         <div class="idol-filter-row idol-filter-actions">
           <div class="idol-filter-import">
-            <label class="btn-importar-db" for="importDbInput" data-i18n="btn_importar_db"></label>
+            <label class="btn btn-arquivo" for="importDbInput" data-i18n="btn_importar_db"></label>
             <input type="file" id="importDbInput" accept=".csv,.json" onchange="importarDatabase(event)" style="display:none;">
-            <button class="btn-exportar-db" onclick="exportarDatabase()" data-i18n="btn_exportar_db"></button>
+            <button class="btn btn-arquivo" onclick="exportarDatabase()" data-i18n="btn_exportar_db"></button>
             <span id="importDbStatus" class="import-db-status"></span>
           </div>
-          <div class="idol-filter-mark-btns">
-            <button onclick="marcarTodosGeracoes()" data-i18n="btn_marcar_todos"></button>
-            <button onclick="desmarcarTodosGeracoes()" data-i18n="btn_desmarcar_todos"></button>
+          <div class="mark-btns">
+            <button class="btn btn-marcar" onclick="marcarTodosGeracoes()" data-i18n="btn_marcar_todos"></button>
+            <button class="btn btn-marcar" onclick="desmarcarTodosGeracoes()" data-i18n="btn_desmarcar_todos"></button>
           </div>
         </div>
       </div>
@@ -137,14 +139,18 @@
       <div class="half-container">
         <div>
           <span style="font-weight:bold; color:#fff;" data-i18n="label_musicas">&#9835</span>
-          <button onclick="marcarTodasMusicas()" data-i18n="btn_marcar_todos"></button>
-          <button onclick="desmarcarTodasMusicas()" data-i18n="btn_desmarcar_todos"></button>
+          <div class="mark-btns">
+            <button class="btn btn-marcar" onclick="marcarTodasMusicas()" data-i18n="btn_marcar_todos"></button>
+            <button class="btn btn-marcar" onclick="desmarcarTodasMusicas()" data-i18n="btn_desmarcar_todos"></button>
+          </div>
           <div id="musicContainer" class="scroll-box"></div>
         </div>
         <div>
           <span style="font-weight:bold; color:#fff;" data-i18n="label_produtores">&#x1F3A7</span>
-          <button onclick="marcarTodosProdutores()" data-i18n="btn_marcar_todos"></button>
-          <button onclick="desmarcarTodosProdutores()" data-i18n="btn_desmarcar_todos"></button>
+          <div class="mark-btns">
+            <button class="btn btn-marcar" onclick="marcarTodosProdutores()" data-i18n="btn_marcar_todos"></button>
+            <button class="btn btn-marcar" onclick="desmarcarTodosProdutores()" data-i18n="btn_desmarcar_todos"></button>
+          </div>
             <div id="producerContainer" class="scroll-box"></div>
         </div>
     </div>

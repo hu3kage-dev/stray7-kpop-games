@@ -110,17 +110,17 @@ function normalizarChave(chave) {
     .replace(/\s+/g, "");
 }
 
-//f:parseArray (suporta "/" e " / " como separadores)
+//f:parseArray (reconhece apenas " / " como separador)
 function parseArray(valor) {
   if (!valor) return [];
   return valor
-    .split(/\s*\/\s*/)
+    .split(/ \/ /)
     .map(v => v.trim())
     .filter(Boolean);
 }
 
 // Tabela de aliases de colunas (pt-BR / en-US) aceitos na importação.
-// Mantenha esta tabela sincronizada com a mesma constante em pages-script.js.
+// Mantenha esta tabela sincronizada com a mesma constante em draft-setup-script.js.
 const CONV_CSV_ALIASES = {
   tipo:                   ["tipo", "type"],
   id:                     ["id"],
@@ -130,7 +130,7 @@ const CONV_CSV_ALIASES = {
   aniversario:            ["aniversario", "birthday", "birthdate", "dob"],
   vocal:                  ["vocal", "vocalist", "vocalista"],
   dance:                  ["dance", "dancer", "danca"],
-  rap:                    ["rap", "rapper"],
+  rap:                    ["rap", "rapper", "raper"],
   center:                 ["center", "centro"],
   visual:                 ["visual"],
   especialidade:          ["especialidade", "specialty", "speciality", "position"],
@@ -141,7 +141,7 @@ const CONV_CSV_ALIASES = {
   fonte:                  ["fonte", "source"],
   conceitosOriginais:     ["conceitos", "concepts", "conceitosoriginais", "originalconcepts"],
   generosOriginais:       ["generos", "genres", "generosoriginais", "originalgenres"],
-  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics", "musicas"]
+  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics", "knownmusic", "musicas"]
 };
 
 //f:convPegarCampo — retorna o primeiro valor não-vazio dentre os aliases pt/en aceitos

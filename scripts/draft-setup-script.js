@@ -16,6 +16,8 @@ let filtroAtivo = {
   letra: "all"
 };
 let draftWarningContainer = null;
+let draftWarningTimer = null;
+const DRAFT_AVISO_DURACAO_MS = 5000;   // os avisos de validação do Iniciar Draft somem sozinhos depois disso
 
 // ========================
 // DATABASE VOLÁTIL
@@ -115,25 +117,21 @@ function desmarcarTodasMusicas() {
 // ======================== 
 
 //f:iniciarAvisoDraft
+//Cria a caixa de aviso flutuante logo antes do botão Iniciar Draft (dentro do wrapper que a ancora); o estilo fica em draft-setup-styles.css
 function iniciarAvisoDraft() {
   const button = document.querySelector(".btn-iniciar-draft");
   if (!button) return;
   draftWarningContainer = document.createElement("div");
   draftWarningContainer.id = "draftWarning";
-  draftWarningContainer.style.margin = "10px 0 0 0";
-  draftWarningContainer.style.padding = "12px";
-  draftWarningContainer.style.borderRadius = "8px";
-  draftWarningContainer.style.backgroundColor = "#3a1a1a";
-  draftWarningContainer.style.color = "#ffd9d9";
-  draftWarningContainer.style.border = "1px solid #b35b5b";
-  draftWarningContainer.style.display = "none";
-  draftWarningContainer.style.fontSize = "14px";
   button.insertAdjacentElement("beforebegin", draftWarningContainer);
 }
 
 //f:draftAviso
+//Mostra as mensagens de validação na caixa flutuante, que some sozinha depois de DRAFT_AVISO_DURACAO_MS; sem mensagens, limpa a caixa
 function draftAviso(messages) {
   if (!draftWarningContainer) return;
+  clearTimeout(draftWarningTimer);   // cada aviso novo (ou limpeza) cancela o tempo do anterior
+  draftWarningTimer = null;
   if (!messages || messages.length === 0) {
     draftWarningContainer.style.display = "none";
     draftWarningContainer.innerHTML = "";
@@ -141,8 +139,12 @@ function draftAviso(messages) {
   }
   draftWarningContainer.style.display = "block";
   draftWarningContainer.innerHTML = messages
-    .map(msg => `<p style="margin:0 0 6px 0;">${msg}</p>`)
+    .map(msg => `<p>${msg}</p>`)
     .join("");
+  draftWarningContainer.classList.remove("entrando");
+  void draftWarningContainer.offsetWidth;   // reinicia a animação de entrada
+  draftWarningContainer.classList.add("entrando");
+  draftWarningTimer = setTimeout(() => draftAviso([]), DRAFT_AVISO_DURACAO_MS);
 }
 
 // ========================
@@ -559,10 +561,10 @@ function normalizarChave(chave) {
     .replace(/\s+/g, "");
 }
 
-//f:parseArrayDB (suporta "/" e " / " como separadores)
+//f:parseArrayDB (suporta apenas " / " como separador)
 function parseArrayDB(valor) {
   if (!valor) return [];
-  return valor.split(/\s*\/\s*/).map(v => v.trim()).filter(Boolean);
+  return valor.split(/ \/ /).map(v => v.trim()).filter(Boolean);
 }
 
 //f:csvParaObjetos
@@ -591,7 +593,7 @@ const CSV_ALIASES = {
   aniversario:            ["aniversario", "birthday", "birthdate", "dob"],
   vocal:                  ["vocal", "vocalist", "vocalista"],
   dance:                  ["dance", "dancer", "danca"],
-  rap:                    ["rap", "rapper"],
+  rap:                    ["rap", "rapper", "raper"],
   center:                 ["center", "centro"],
   visual:                 ["visual"],
   especialidade:          ["especialidade", "specialty", "speciality", "position"],
@@ -602,7 +604,7 @@ const CSV_ALIASES = {
   fonte:                  ["fonte", "source"],
   conceitosOriginais:     ["conceitos", "concepts", "conceitosoriginais", "originalconcepts"],
   generosOriginais:       ["generos", "genres", "generosoriginais", "originalgenres"],
-  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics", "musicas"]
+  musicasConhecidas:      ["musicasconhecidas", "knownsongs", "knownmusics", "knownmusic", "musicas"]
 };
 
 //f:pegarCampo — retorna o primeiro valor não-vazio dentre os aliases pt/en aceitos
@@ -1074,9 +1076,9 @@ const TUTORIAL_LOBBY_HTML = {
     
     <br>
     <strong style="color:#d4b4ff">Formato do CSV — Idols</strong>
-    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Cabeçalho aceito (nomes das colunas, nessa ordem — use a versão em pt-BR OU em en-US):</p>
+    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Cabeçalho aceito (nomes das colunas, nessa ordem):</p>
     <code class="tut-code">Geração, Tipo, ID, Nome, Grupo, Aniversário, Vocal, Dance, Rap, Center, Visual, Especialidade,<br>Conceitos Predominantes, Gêneros Predominantes, Pontos Fortes, Pontos Fracos</code>
-    <img src="../assets/tutorial/exemplo_idol_csv.png" style="width:100%; border-radius:8px; margin:10px 0">
+    <img src="../assets/tutorial/tut-csv-idol_pt-br.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
       <li>Monte um arquivo Excel com as colunas correspondentes ao cabeçalho acima (obrigatório)</li>
       <li>A coluna <strong>Geração</strong> deve ser preenchida com o número da geração a que o idol pertence</li>
@@ -1085,7 +1087,7 @@ const TUTORIAL_LOBBY_HTML = {
       <li>A coluna <strong>Aniversário</strong> é opcional, contém apenas a data de nascimento do Idol no formato dd-mm-aaaa. O formato pode ser alterado, inclusive, pode ser escrito por extenso. Evite usar vírgula, pois isso quebra o parse do <code>.csv</code></li>
       <li>As colunas dos <strong>Atributos (Vocal, Dance, Rap, Center, Visual)</strong> devem ser preenchidas com letras <strong><code>S / A / B / C / D</code></strong></li>
       <li>A coluna <strong>Especialidade</strong> deve ser preenchida com a posição em que o idol mais se destaca: <strong><code>Vocal / Dance / Rap / Center / Visual / All-Rounder</code></strong></li>
-      <li>As colunas <strong>Conceitos Predominantes</strong> e <strong>Gêneros Predominantes</strong> devem conter dois valores separados por <strong><code>/</code></strong> <br>(ex: <code>Girl Crush / Performance</code>)</li>
+      <li>As colunas <strong>Conceitos Predominantes</strong> e <strong>Gêneros Predominantes</strong> devem conter dois valores separados por "<strong><code> / </code></strong>" (com espaços em volta da barra, obrigatoriamente) <br>(ex: <code>Girl Crush / Performance</code>)</li>
       <li>As colunas <strong>Pontos Fortes</strong> e <strong>Pontos Fracos</strong> não precisam ser preenchidas, são apenas observações. Mas caso escolham preencher, usem aspas duplas <strong><code>"exemplo"</code></strong> para envolver seu conteúdo</li>
       <li>Lista de <strong>Conceitos</strong>:</li>
         <ul>
@@ -1098,7 +1100,7 @@ const TUTORIAL_LOBBY_HTML = {
           <li><strong>Mature</strong>: Maduro, sensual, provocante, sedutor, atraente, expressão corporal</li>
           <li><strong>Performance</strong>: Focado em performance, coreografia, focado em dança, show ao vivo, marcha performática</li>
           <li><strong>Swag</strong>: Focado em rap, swag, orgulho, ostentação, estilo</li>
-          <li><strong>Teen Crush</strong>: Cheerful, jovem, divertido, alegre, enérgico, escolar</li>
+          <li><strong>Teen Crush</strong>: Animado, jovem, divertido, alegre, enérgico, escolar</li>
         </ul>
       <li>Lista de <strong>Gêneros</strong>:</li>
         <ul>
@@ -1117,25 +1119,25 @@ const TUTORIAL_LOBBY_HTML = {
     <br>
     <strong style="color:#d4b4ff">Formato do CSV — Músicas</strong>
     <code class="tut-code">Tipo, ID, Nome, Fonte, Conceitos Originais, Gêneros Originais</code>
-    <img src="../assets/tutorial/exemplo_music_csv.png" style="width:100%; max-width:1000px; border-radius:8px; margin:10px 0">
+    <img src="../assets/tutorial/tut-csv-music_pt-br.png" style="width:100%; max-width:1000px; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
       <li>Monte um arquivo Excel com as colunas correspondentes ao cabeçalho acima (obrigatório)</li>
       <li>A coluna <strong>Tipo</strong> deve ser preenchida com <strong><code>music</code></strong></li>
       <li>A coluna <strong>ID</strong> é simplesmente o nome da fonte e o nome da música juntos: sem espaços, caracteres especiais ou acentos <br>(ex: <code>girlsplanet999anotherdream</code>)</li>
       <li>A coluna <strong>Fonte</strong> é o nome do programa ou álbum do qual a música faz parte</li>
-      <li>As colunas <strong>Conceitos Originais</strong> e <strong>Gêneros Originais</strong> devem conter três valores separados por <strong><code>/</code></strong> <br>(ex: <code>Girl Crush / Performance / Dreamcore</code>)</li>
+      <li>As colunas <strong>Conceitos Originais</strong> e <strong>Gêneros Originais</strong> devem conter três valores separados por "<strong><code> / </code></strong>" (com espaços em volta da barra, obrigatoriamente) <br>(ex: <code>Girl Crush / Performance / Dreamcore</code>)</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">Formato do CSV — Produtores</strong>
     <code class="tut-code">Tipo, ID, Nome, Conceitos Predominantes, Gêneros Predominantes, Músicas Conhecidas</code>
-    <img src="../assets/tutorial/exemplo_producer_csv.png" style="width:100%; border-radius:8px; margin:10px 0">
+    <img src="../assets/tutorial/tut-csv-producer_pt-br.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
       <li>Monte um arquivo Excel com as colunas correspondentes ao cabeçalho acima (obrigatório)</li>
       <li>A coluna <strong>Tipo</strong> deve ser preenchida com <strong><code>producer</code></strong></li>
       <li>A coluna <strong>ID</strong> é simplesmente producer e o nome do produtor juntos: sem espaços, caracteres especiais ou acentos <br>(ex: <code>producerartronicwaves</code>)</li>
-      <li>As colunas <strong>Conceitos Predominantes</strong> e <strong>Gêneros Predominantes</strong> devem conter três valores separados por <strong><code>/</code></strong> <br>(ex: <code>Girl Crush / Performance / Conceptual</code>)</li>
-      <li>A coluna <strong>Músicas Conhecidas</strong> é opcional. Serve para exibir uma lista de músicas associadas ao produtor. Não existe um limite de músicas, mas devem estar separadas por <strong><code>/</code></strong> <br>(ex: <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
+      <li>As colunas <strong>Conceitos Predominantes</strong> e <strong>Gêneros Predominantes</strong> devem conter três valores separados por "<strong><code> / </code></strong>" (com espaços em volta da barra, obrigatoriamente) <br>(ex: <code>Girl Crush / Performance / Conceptual</code>)</li>
+      <li>A coluna <strong>Músicas Conhecidas</strong> é opcional. Serve para exibir uma lista de músicas associadas ao produtor. Não existe um limite de músicas, mas devem estar separadas por "<strong><code> / </code></strong>" (com espaços em volta da barra, obrigatoriamente) <br>(ex: <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
     </ul>
 
     <br>
@@ -1143,7 +1145,7 @@ const TUTORIAL_LOBBY_HTML = {
     <ul style="margin-top:10px 0 0">
       <li>Apenas baixe os arquivos criados acima no formato .csv</li>
     </ul>
-    <img src="../assets/tutorial/exemplo_csv.png" style="width:100%; border-radius:8px; margin: 0">
+    <img src="../assets/tutorial/tut-csv-export_pt-br.png" style="width:100%; border-radius:8px; margin: 0">
 
   </div>
 
@@ -1211,9 +1213,9 @@ const TUTORIAL_LOBBY_HTML = {
     
     <br>
     <strong style="color:#d4b4ff">CSV Format — Idols</strong>
-    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Accepted header (column names, in this order — use either the pt-BR OR the en-US version):</p>
+    <p style="color:#b8b8c8; font-size:13px; margin: 6px 0 4px">Accepted header (column names, in this order):</p>
     <code class="tut-code">Generation, Type, ID, Name, Group, Birthday, Vocal, Dance, Rap, Center, Visual, Specialty,<br>Main Concepts, Main Genres, Strongpoints, Weakpoints</code>
-    <img src="../assets/tutorial/exemplo_idol_csv_en.png" style="width:100%; border-radius:8px; margin:10px 0">
+    <img src="../assets/tutorial/tut-csv-idol_en-us.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
       <li>Build an Excel file with columns matching the header above (required)</li>
       <li>The <strong>Generation</strong> column must be filled with the number of the generation to which the idol belongs</li>
@@ -1222,7 +1224,7 @@ const TUTORIAL_LOBBY_HTML = {
       <li>The <strong>Birthday</strong> column is optional, containing just the idol's birth date in dd-mm-yyyy format. The format can be changed, and it can even be written out in full. Avoid using commas, since that breaks the <code>.csv</code> parsing</li>
       <li>The <strong>Attribute (Vocal, Dance, Rap, Center, Visual)</strong> columns must be filled with the letters <strong><code>S / A / B / C / D</code></strong></li>
       <li>The <strong>Specialty</strong> column must be filled with the position in which the idol excels most: <strong><code>Vocal / Dance / Rap / Center / Visual / All-Rounder</code></strong></li>
-      <li>The <strong>Main Concepts</strong> and <strong>Main Genres</strong> columns must contain two values separated by <strong><code>/</code></strong> <br>(e.g. <code>Girl Crush / Performance</code>)</li>
+      <li>The <strong>Main Concepts</strong> and <strong>Main Genres</strong> columns must contain two values separated by "<strong><code> / </code></strong>" (with spaces around the slash, required) <br>(e.g. <code>Girl Crush / Performance</code>)</li>
       <li>The <strong>Strongpoints</strong> and <strong>Weakpoints</strong> columns don't need to be filled in — they're just notes. But if you do fill them in, wrap the content in double quotes <strong><code>"example"</code></strong></li>
       <li><strong>Concepts</strong> List:</li>
         <ul>
@@ -1254,25 +1256,25 @@ const TUTORIAL_LOBBY_HTML = {
     <br>
     <strong style="color:#d4b4ff">CSV Format — Songs</strong>
     <code class="tut-code">Type, ID, Name, Source, Original Concepts, Original Genres</code>
-    <img src="../assets/tutorial/exemplo_music_csv_en.png" style="width:100%; max-width:1000px; border-radius:8px; margin:10px 0">
+    <img src="../assets/tutorial/tut-csv-music_en-us.png" style="width:100%; max-width:1000px; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
       <li>Build an Excel file with columns matching the header above (required)</li>
       <li>The <strong>Type</strong> column must be filled with <strong><code>music</code></strong></li>
       <li>The <strong>ID</strong> column is simply the source name and song name combined: no spaces, special characters, or accents <br>(e.g. <code>girlsplanet999anotherdream</code>)</li>
       <li>The <strong>Source</strong> column is the name of the show or album the song is from</li>
-      <li>The <strong>Original Concepts</strong> and <strong>Original Genres</strong> columns must contain three values separated by <strong><code>/</code></strong> <br>(e.g. <code>Girl Crush / Performance / Dreamcore</code>)</li>
+      <li>The <strong>Original Concepts</strong> and <strong>Original Genres</strong> columns must contain three values separated by "<strong><code> / </code></strong>" (with spaces around the slash, required) <br>(e.g. <code>Girl Crush / Performance / Dreamcore</code>)</li>
     </ul>
     
     <br>
     <strong style="color:#d4b4ff">CSV Format — Producers</strong>
     <code class="tut-code">Type, ID, Name, Main Concepts, Main Genres, Known Songs</code>
-    <img src="../assets/tutorial/exemplo_producer_csv_en.png" style="width:100%; border-radius:8px; margin:10px 0">
+    <img src="../assets/tutorial/tut-csv-producer_en-us.png" style="width:100%; border-radius:8px; margin:10px 0">
     <ul style="margin-top:10px">
       <li>Build an Excel file with columns matching the header above (required)</li>
       <li>The <strong>Type</strong> column must be filled with <strong><code>producer</code></strong></li>
       <li>The <strong>ID</strong> column is simply "producer" plus the producer's name <br>(e.g. <code>producerartronicwaves</code>)</li>
-      <li>The <strong>Main Concepts</strong> and <strong>Main Genres</strong> columns must contain three values separated by <strong><code>/</code></strong> <br>(e.g. <code>Girl Crush / Performance / Conceptual</code>)</li>
-      <li>The <strong>Known Songs</strong> column is optional. It shows a list of songs associated with the producer. There's no song limit, but they must be separated by <strong><code>/</code></strong> (e.g. <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
+      <li>The <strong>Main Concepts</strong> and <strong>Main Genres</strong> columns must contain three values separated by "<strong><code> / </code></strong>" (with spaces around the slash, required) <br>(e.g. <code>Girl Crush / Performance / Conceptual</code>)</li>
+      <li>The <strong>Known Songs</strong> column is optional. It shows a list of songs associated with the producer. There's no song limit, but they must be separated by "<strong><code> / </code></strong>" (with spaces around the slash, required) <br>(e.g. <code>tripleS - Rising / ARTMS - Icarus / LOONA Olivia Hye - Egoist / LOONA Hyunjin - Around You / LOONA Haseul - Let Me In</code>)</li>
     </ul>
 
     <br>
@@ -1280,7 +1282,7 @@ const TUTORIAL_LOBBY_HTML = {
     <ul style="margin-top:10px 0 0">
       <li>Just download the files you created above in .csv format</li>
     </ul>
-    <img src="../assets/tutorial/exemplo_csv_en.png" style="width:100%; border-radius:8px; margin: 0">
+    <img src="../assets/tutorial/tut-csv-export_en-us.png" style="width:100%; border-radius:8px; margin: 0">
     
   </div>
 

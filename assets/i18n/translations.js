@@ -115,9 +115,17 @@ const TRANSLATIONS = {
     // Alertas
     "aviso_erro_carregar_draft": "Erro ao carregar draft",
     "aviso_escolha_card": "Escolha um Card!",
-    "aviso_draft_encerrado": "🎉 Draft Encerrado! Todos os boards foram preenchidos com sucesso!",
+    "aviso_draft_encerrado": "🎉 Draft Encerrado! Clique no botão abaixo para prosseguir para a Fase de Simulação!",
     "aviso_sem_slot": "Não há slot disponível para este card.",
     "turno_encerrado": "Draft encerrado!",
+    // Dicas (carrossel do turno)
+    "draft_dicas": "Dicas",
+    "draft_dica_1": "Arraste um Card do Pool para um Slot do seu Board.",
+    "draft_dica_2": "A cor do Slot indica o tipo de Card que ele aceita: amarelo para Idols, azul para Músicas e roxo para Produtores.",
+    "draft_dica_3": "Clique em um Card para abrir um modal com as informações dele; por lá também dá para escolhê-lo.",
+    "draft_dica_4": "Atalhos do teclado: use Ctrl + Click em um Card do Pool para escolhê-lo na hora e a barra de Espaço para encerrar o turno.",
+    "draft_dica_5": "Cada turno vale uma escolha. Antes de encerrar o turno, você pode trocar de Card ou devolver o escolhido ao Pool; depois, a escolha fica travada.",
+    "draft_dica_6": "A ordem dos turnos é em cobrinha: ao fim de cada rodada a ordem se inverte, e quem escolheu por último abre a próxima rodada.",
     // Boards
     "board_idols": "Formação",
     "board_musica": "Música",
@@ -155,14 +163,16 @@ const TRANSLATIONS = {
     "sim_painel_posicao": "Escolha de Posição",
     "sim_posicao_registrada": "Posição registrada!",
     "sim_atributos": "Atributos",
-    "sim_conceitos": "Conceitos",
-    "sim_generos": "Gêneros",
+    "sim_conceitos": "Conceitos Predominantes",
+    "sim_generos": "Gêneros Predominantes",
+    "sim_generos_originais_musica": "Gêneros Originais (Música)",
     "sim_dicas": "Dicas",
     // Alertas de validação
     "sim_tooltip_travar": "Defina todos os papéis antes de travar a escolha.",
     "sim_erro_travar": "Defina todos os papéis antes de travar a escolha.",
     "sim_tooltip_travar_troca": "Escolha o gênero que entra e o que sai.",
     "sim_erro_travar_troca": "Escolha o gênero que entra e o que sai antes de travar a escolha.",
+    "sim_erro_resultado": "Todos os jogadores precisam travar suas escolhas antes de calcular o resultado.",
     // Dicas do carrossel
     "sim_dica_1": "A especialidade da idol rende bônus quando ela ocupa a posição do mesmo atributo.",
     "sim_dica_2": "Duas idols na mesma posição dividem o destaque: o bônus de posição de ambas diminui.",
@@ -213,7 +223,7 @@ const TRANSLATIONS = {
     "gen_resultado_sucesso": "Troca realizada!",
     "gen_resultado_falha": "A troca falhou!",
     "gen_resultado_registrada": "Troca registrada!",
-    "gen_generos_finais": "Gêneros finais",
+    "gen_generos_finais": "Gêneros Finais",
     "gen_mantidos": "Gêneros Originais Mantidos",
 
     
@@ -372,9 +382,17 @@ const TRANSLATIONS = {
     // Alerts
     "aviso_erro_carregar_draft": "Error loading draft",
     "aviso_escolha_card": "Pick a card!",
-    "aviso_draft_encerrado": "🎉 Draft Complete! All boards have been filled successfully!",
+    "aviso_draft_encerrado": "🎉 Draft Complete! Click the button below to proceed to the Simulation Phase!",
     "aviso_sem_slot": "There is no available slot for this card.",
     "turno_encerrado": "Draft complete!",
+    // Tips (turn carousel)
+    "draft_dicas": "Tips",
+    "draft_dica_1": "Drag a Card from the Pool to a Slot on your Board.",
+    "draft_dica_2": "A Slot's color shows which Card type it accepts: yellow for Idols, blue for Songs and purple for Producers.",
+    "draft_dica_3": "Click a Card to open a modal with its details; you can pick it from there too.",
+    "draft_dica_4": "Keyboard shortcuts: use Ctrl + Click on a Pool Card to pick it instantly and the Space bar to end your turn.",
+    "draft_dica_5": "Each turn is a single pick. Before ending your turn you can swap Cards or send your pick back to the Pool; after that, it is locked.",
+    "draft_dica_6": "Turns follow a snake order: when a round ends the order reverses, so whoever picked last opens the next round.",
     // Boards
     "board_idols": "Lineup",
     "board_musica": "Song",
@@ -412,8 +430,9 @@ const TRANSLATIONS = {
     "sim_painel_posicao": "Choose a Position",
     "sim_posicao_registrada": "Position Registered!",
     "sim_atributos": "Attributes",
-    "sim_conceitos": "Concepts",
-    "sim_generos": "Genres",
+    "sim_conceitos": "Main Concepts",
+    "sim_generos": "Main Genres",
+    "sim_generos_originais_musica": "Original Genres (Song)",
     "sim_dicas": "Tips",
     "role_placeholder_posicao": "Position",
     // Validation Alerts
@@ -421,6 +440,7 @@ const TRANSLATIONS = {
     "sim_erro_travar": "Assign every role before locking in.",
     "sim_tooltip_travar_troca": "Choose the genre that goes in and the one that goes out",
     "sim_erro_travar_troca": "Choose the genre that goes in and the one that goes out before locking in.",
+    "sim_erro_resultado": "All players must lock in their choices before calculating the result.",
     // Carousel tips
     "sim_dica_1": "An idol's specialty gives a bonus when she takes the position of the same attribute.",
     "sim_dica_2": "Two idols in the same position share the spotlight: both lose part of the position bonus.",

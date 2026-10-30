@@ -3,6 +3,7 @@
 //   • turnos em cobrinha, pool, boards dos jogadores e encerramento do draft
 //   • regras de drag and drop do draft (o motor do drag e o card/modal ficam em cards-script.js)
 //   • ações rápidas: Ctrl + clique, botão "escolher" do modal e barra de espaço
+//   • carrossel de dicas no painel do turno
 //   • botão Exportar Draft no header
 // Depende de pages-script.js (t, aoMudarIdioma, pegarHrefJogo) e de cards-script.js.
 // ====================================================================
@@ -18,9 +19,18 @@ let picks = {};
 let jogouNoTurno = false;
 let escolhaDoTurno = null;
 let avisoTurno = null;
-let avisoChave = null;       // chave do aviso na tela, para retraduzi-lo ao trocar de idioma
-let draftIniciado = false;   // true depois que os dados do draft foram carregados
-let draftEncerrado = false;  // true quando todos os boards estão completos
+let avisoChave = null;            // chave do aviso na tela, para retraduzi-lo ao trocar de idioma
+let avisoTimer = null;            // tempo para o aviso sumir sozinho (só avisos com duração)
+const AVISO_DURACAO_MS = 5000;    // avisos rápidos ("Escolha um Card!", "sem slot") somem sozinhos depois disso (o do fim do draft é permanente)
+let draftIniciado = false;        // true depois que os dados do draft foram carregados
+let draftEncerrado = false;       // true quando todos os boards estão completos
+
+// Dicas do carrossel do turno (chaves em translations.js). Adicione ou remova chaves à vontade.
+const DICAS_DRAFT = ["draft_dica_1", "draft_dica_2", "draft_dica_3", "draft_dica_4", "draft_dica_5", "draft_dica_6"];
+const DICAS_DRAFT_INTERVALO_MS = 8000;
+let indiceDica     = 0;      // dica atual do carrossel
+let carrosselDicas = null;   // elemento do carrossel (criado quando o draft é carregado)
+let timerDicas     = null;   // intervalo que passa as dicas sozinho
 
 // =====================
 // INICIALIZAÇÃO
@@ -60,43 +70,34 @@ function iniciarPaginaDraftGame() {
     localStorage.setItem("draftData", JSON.stringify(draftAtual));
   }
   draftIniciado = true;
+  criarCarrosselDicas();
+  iniciarCarrosselDicas();
   iniciarAtalhosDraft();
   render();
   injetarBotaoExportar();
 }
 
 //f:atualizarIdiomaDraftGame
-//Refaz o que depende de idioma: o header é recriado (o botão Exportar volta), e boards, turno e aviso são retraduzidos
+//Refaz o que depende de idioma: o header é recriado (o botão Exportar volta), e dicas, boards, turno e aviso são retraduzidos
 function atualizarIdiomaDraftGame() {
   injetarBotaoExportar();
+  atualizarCarrosselDicas(false);
   if (!draftIniciado) return;
   render();
-  if (avisoChave) mostrarAviso(t(avisoChave));
+  if (avisoChave && avisoTurno) avisoTurno.innerText = t(avisoChave);   // só troca o texto, sem mexer no tempo do aviso
 }
 
 aoMudarIdioma(atualizarIdiomaDraftGame);
 window.addEventListener("DOMContentLoaded", iniciarPaginaDraftGame);
 
 //f:inicializarAviso
+//Cria o aviso flutuante do turno logo antes do botão Encerrar Turno (dentro do wrapper que o ancora); o estilo fica em draft-game-styles.css
 function inicializarAviso() {
   const gameScreen = document.getElementById("gameScreen");
   if (!gameScreen) return;
   avisoTurno = document.createElement("div");
   avisoTurno.id = "avisoTurno";
-  avisoTurno.style.margin = "10px 0";
-  avisoTurno.style.padding = "0 16px";
-  avisoTurno.style.borderRadius = "8px";
-  avisoTurno.style.backgroundColor = "#3a1a1a";
-  avisoTurno.style.color = "#ffd9d9";
-  avisoTurno.style.border = "1px solid #b35b5b";
-  avisoTurno.style.display = "none";
-  avisoTurno.style.minHeight = "44px";
-  avisoTurno.style.height = "44px";
-  avisoTurno.style.lineHeight = "44px";
-  avisoTurno.style.fontSize = "14px";
-  avisoTurno.style.alignItems = "center";
-  avisoTurno.style.justifyContent = "center";
-  const botaoTurno = document.querySelector("#gameScreen button");
+  const botaoTurno = document.getElementById("btnEncerrarTurno");
   if (botaoTurno) {
     botaoTurno.insertAdjacentElement("beforebegin", avisoTurno);
   } else {
@@ -105,8 +106,11 @@ function inicializarAviso() {
 }
 
 //f:mostrarAviso
-function mostrarAviso(texto) {
+//Mostra ou limpa o aviso flutuante do turno; com duracaoMs ele some sozinho depois desse tempo (sem duração, fica até ser limpo)
+function mostrarAviso(texto, duracaoMs = 0) {
   if (!avisoTurno) return;
+  clearTimeout(avisoTimer);   // cada aviso novo (ou limpeza) cancela o tempo do anterior
+  avisoTimer = null;
   if (!texto) {
     avisoChave = null;
     avisoTurno.style.display = "none";
@@ -115,12 +119,18 @@ function mostrarAviso(texto) {
   }
   avisoTurno.style.display = "flex";
   avisoTurno.innerText = texto;
+  avisoTurno.classList.remove("entrando");
+  void avisoTurno.offsetWidth;   // reinicia a animação de entrada
+  avisoTurno.classList.add("entrando");
+  if (duracaoMs > 0) avisoTimer = setTimeout(() => mostrarAviso(""), duracaoMs);
 }
 
 //f:mostrarAvisoPorChave
-//Mostra um aviso traduzido guardando a chave, para ele trocar de idioma junto com a página
-function mostrarAvisoPorChave(chave) {
-  mostrarAviso(t(chave));
+//Mostra um aviso traduzido guardando a chave, para ele trocar de idioma junto com a página; com duracaoMs ele some sozinho
+//Depois do fim do draft, avisos passageiros são ignorados para não sobrescrever o "Draft Encerrado!"
+function mostrarAvisoPorChave(chave, duracaoMs = 0) {
+  if (draftEncerrado && duracaoMs > 0) return;
+  mostrarAviso(t(chave), duracaoMs);
   avisoChave = chave;
 }
 
@@ -227,8 +237,10 @@ function executarDropNoSlot(slot, data) {
     render();
     return;
   }
-  //vindo do pool
-  if (data.fromPool) colocarDoPoolNoBoard(data, playerIndex, tipo);
+  //vindo do pool (sem slot disponível no board do tipo certo: avisa; tipo errado continua em silêncio)
+  if (data.fromPool && !colocarDoPoolNoBoard(data, playerIndex, tipo) && getItemType(data) === tipo) {
+    mostrarAvisoPorChave("aviso_sem_slot", AVISO_DURACAO_MS);
+  }
 }
 
 //f:colocarDoPoolNoBoard
@@ -350,7 +362,7 @@ function jogadorAtual() {
 //f:encerrarTurno
 function encerrarTurno() {
   if (!escolhaDoTurno) {
-    mostrarAvisoPorChave("aviso_escolha_card");
+    mostrarAvisoPorChave("aviso_escolha_card", AVISO_DURACAO_MS);
     return;
   }
   let player = jogadorAtual();
@@ -377,6 +389,16 @@ function encerrarTurno() {
 }
 
 //f:atualizarTurnoUI
+//f:atualizarBotaoTurno
+//Deixa o botão Encerrar Turno cinza até haver um Card escolhido no slot; com a escolha feita ele ganha cor e pulsa (no fim do draft vira o botão da Fase de Simulação, também pronto)
+function atualizarBotaoTurno() {
+  const btn = document.getElementById("btnEncerrarTurno");
+  if (!btn) return;
+  const pronto = draftEncerrado || !!escolhaDoTurno;
+  btn.classList.toggle("pronto", pronto);
+  btn.setAttribute("aria-disabled", String(!pronto));   // cinza mas clicável: o clique mostra o aviso do que falta
+}
+
 function atualizarTurnoUI() {
   if (turno >= ordem.length) {
     document.getElementById("turnoAtual").innerText = t("turno_encerrado");
@@ -433,6 +455,7 @@ function render() {
   renderPlayers();
   renderPool();
   atualizarTurnoUI();
+  atualizarBotaoTurno();
 }
 
 //f:renderPlayers
@@ -502,7 +525,7 @@ function criarCardDraft(item, origem, playerIndex = null, slotIndex = null) {
     origem, playerIndex, slotIndex,
     aoClicar: (e) => {
       if (!e.ctrlKey || origem !== "pool") return false;
-      if (!escolherCardDoPool(item)) mostrarAvisoPorChave("aviso_sem_slot");
+      if (!escolherCardDoPool(item)) mostrarAvisoPorChave("aviso_sem_slot", AVISO_DURACAO_MS);
       return true;
     },
     // o botão "escolher" do modal só aparece quando a escolha é possível
@@ -563,14 +586,14 @@ function iniciarAtalhosDraft() {
 
 //f:tratarTeclaDraft
 //Espaço aciona o botão de encerrar turno, exceto com o modal aberto, durante um arrasto ou ao digitar em um campo.
-//Combinações com Ctrl/Alt/Meta/Shift passam direto (Ctrl+C e Ctrl+V continuam funcionando).
+//Funciona com o Ctrl pressionado (Ctrl + clique no card e, sem soltar o Ctrl, Espaço); combinações com Alt/Meta/Shift passam direto.
 function tratarTeclaDraft(e) {
   if (e.code !== "Space") return;
   if (e.repeat && espacoTratado) { e.preventDefault(); return; }   // segurar a tecla não rola a página nem repete
-  if (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) return;
+  if (e.altKey || e.metaKey || e.shiftKey) return;
   if (draftEncerrado || modalAberto() || draggedElement) return;
   if (e.target.closest && e.target.closest("input, textarea, select, [contenteditable]")) return;
-  const botao = document.querySelector("#turnActions button");
+  const botao = document.getElementById("btnEncerrarTurno");
   if (!botao) return;
   e.preventDefault();
   espacoTratado = true;
@@ -589,6 +612,76 @@ function tratarSoltarTeclaDraft(e) {
 }
 
 // =====================
+// CARROSSEL DE DICAS
+// =====================
+
+//f:criarCarrosselDicas
+//Cria o carrossel de dicas (texto + pontos clicáveis) no painel do turno, entre o título e o botão; não faz nada se não houver dicas
+function criarCarrosselDicas() {
+  const titulo = document.getElementById("turnoAtual");
+  if (!DICAS_DRAFT.length || !titulo || carrosselDicas) return;
+  const carrossel = document.createElement("div");
+  carrossel.className = "draftDicas";
+  carrossel.setAttribute("role", "group");
+
+  const texto = document.createElement("div");
+  texto.className = "draftDicaTexto";
+  texto.setAttribute("aria-live", "polite");
+
+  const pontos = document.createElement("div");
+  pontos.className = "draftDicaPontos";
+  DICAS_DRAFT.forEach((_, i) => {
+    const ponto = document.createElement("button");
+    ponto.type = "button";
+    ponto.className = "draftDicaPonto";
+    ponto.onclick = () => mostrarDica(i);
+    pontos.appendChild(ponto);
+  });
+
+  carrossel.append(texto, pontos);
+  titulo.insertAdjacentElement("afterend", carrossel);
+  carrosselDicas = carrossel;
+  atualizarCarrosselDicas(false);
+}
+
+//f:atualizarCarrosselDicas
+//Mostra no carrossel a dica atual (com animação de entrada opcional), marca o ponto correspondente e retraduz os rótulos
+function atualizarCarrosselDicas(animar) {
+  if (!carrosselDicas) return;
+  const texto = carrosselDicas.querySelector(".draftDicaTexto");
+  texto.textContent = t(DICAS_DRAFT[indiceDica]);
+  if (animar) {
+    texto.classList.remove("entrando");
+    void texto.offsetWidth;   // reinicia a animação
+    texto.classList.add("entrando");
+  }
+  carrosselDicas.setAttribute("aria-label", t("draft_dicas"));
+  carrosselDicas.querySelectorAll(".draftDicaPonto").forEach((ponto, i) => {
+    ponto.classList.toggle("active", i === indiceDica);
+    ponto.setAttribute("aria-label", `${t("draft_dicas")} ${i + 1}`);
+  });
+}
+
+//f:mostrarDica
+//Troca a dica atual do carrossel (volta ao início depois da última)
+function mostrarDica(indice) {
+  const total = DICAS_DRAFT.length;
+  indiceDica = ((indice % total) + total) % total;
+  atualizarCarrosselDicas(true);
+}
+
+//f:iniciarCarrosselDicas
+//Passa as dicas sozinho (pausa com o mouse em cima e não roda com "movimento reduzido" ativado)
+function iniciarCarrosselDicas() {
+  if (DICAS_DRAFT.length < 2 || timerDicas) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  timerDicas = setInterval(() => {
+    if (document.hidden || (carrosselDicas && carrosselDicas.matches(":hover"))) return;
+    mostrarDica(indiceDica + 1);
+  }, DICAS_DRAFT_INTERVALO_MS);
+}
+
+// =====================
 // EXPORTAR DRAFT
 // =====================
 
@@ -599,6 +692,7 @@ function injetarBotaoExportar() {
   if (!headerRight || document.getElementById("btnExportarDraft")) return;
   const btn = document.createElement("button");
   btn.id = "btnExportarDraft";
+  btn.className = "btn btn-arquivo";
   btn.setAttribute("data-i18n", "btn_exportar_draft");
   btn.textContent = t("btn_exportar_draft");
   btn.onclick = exportarDraft;
@@ -713,6 +807,8 @@ function encerrarDraft() {
   });
   mostrarAvisoPorChave("aviso_draft_encerrado");
   draftEncerrado = true;
+  atualizarTurnoUI();   // o título passa a "Draft encerrado!" (antes só mudava ao trocar de idioma)
+  atualizarBotaoTurno();
   localStorage.setItem("simulacaoData", JSON.stringify({
     jogadores,
     ordem: ordem.slice(0, jogadores.length),
@@ -720,16 +816,15 @@ function encerrarDraft() {
     pickOrder,
     config: window.config
   }));
-  const btn = document.querySelector("#gameScreen button");
+  const painelTurno = document.getElementById("turnActions");
+  if (painelTurno) painelTurno.classList.add("fimDraft");   // no celular o aviso final deixa de flutuar (ver CSS)
+  const btn = document.getElementById("btnEncerrarTurno");
   if (btn) {
     btn.dataset.i18n = "btn_fase_simulacao";   // sem isso, trocar o idioma devolveria o texto "Encerrar turno"
     btn.innerText = t("btn_fase_simulacao");
-    btn.style.backgroundColor = "#7e22ce";
     btn.onclick = () => { 
       const simulacaoHref = pegarHrefJogo("simulation-page.html");
       window.location.href = simulacaoHref;
     };
   }
 }
-
-//tá lendo isso por quê, curioso?

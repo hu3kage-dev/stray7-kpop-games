@@ -6,12 +6,12 @@
 // Depende de pages-script.js (t, aoMudarIdioma) e de cards-script.js.
 // ====================================================================
 
-// =============================
-// CONSTANTES VARIÁVEIS GLOBAIS
-// =============================
+// ===============================
+// CONSTANTES E VARIÁVEIS GLOBAIS
+// ===============================
 const ROLE_OPTIONS_IDOL = ["Main Vocal","Lead Vocal","Main Dancer","Lead Dancer","Main Rapper","Lead Rapper","Visual","Center"];
 // Gêneros que podem entrar na música pela troca de gênero.
-const GENEROS_DISPONIVEIS = ["EDM","Electro-Synth","Emotional","Experimental","Groove","Hip-Hop","Pop","R&B","Rock","Tropical"];
+const GENEROS_DISPONIVEIS = ["EDM","Emotional","Experimental","Groove","Hip-Hop","Pop","R&B","Rock","Synthpop","Tropical"];
 const NUMBERED_ROLES = ["Lead Vocal","Lead Dancer","Lead Rapper"];
 // Controle da área de resultados:
 // false = o botão "Calcular Score" e o placar não são exibidos.
@@ -23,15 +23,15 @@ const MOSTRAR_SCORE = false;
 const PERMITIR_TROCA_GENERO = true;
 // Os valores das posições (ROLE_OPTIONS_IDOL) permanecem fixos em pt para não quebrar a lógica de
 // validação/pontuação — são termos padrão da indústria K-pop. O placeholder "Selecione" é traduzido.
-// Dicas do carrossel do painel do produtor (chaves em translations.js). Adicione ou remova chaves à vontade.
+// Dicas do carrossel do painel do topo da página (chaves em translations.js). Adicione ou remova chaves à vontade.
 const DICAS_SIMULACAO = ["sim_dica_1", "sim_dica_2", "sim_dica_3", "sim_dica_4", "sim_dica_5", "sim_dica_6"];
 const DICAS_INTERVALO_MS = 8000;
 let simData       = null;
 let boardSlots    = {};
 let roleBoard     = {};
 let lockedPlayers = {};
-let trocaGenero   = {};   // por jogador: { mudarGenero, entra, sai, resolvida, sucesso, chance }
-let indiceDica    = 0;    // dica atual do carrossel (a mesma em todos os jogadores)
+let trocaGenero   = {};       // por jogador: { mudarGenero, entra, sai, resolvida, sucesso, chance }
+let indiceDica    = 0;        // dica atual do carrossel (a mesma em todos os jogadores)
 let animarPainelTroca = {};   // por jogador: true só no render logo após ligar a chave (evita piscar nos demais renders)
 
 // =====================
@@ -69,6 +69,7 @@ function iniciarPaginaSimulacao() {
     trocaGenero[pi] = criarEstadoTrocaGenero();
   });
   iniciarDropdowns();
+  criarPainelTopo();
   iniciarCarrosselDicas();
   render();
 }
@@ -77,6 +78,8 @@ function iniciarPaginaSimulacao() {
 //Redesenha o tabuleiro (e o placar, se aberto) no novo idioma
 function atualizarIdiomaSimulacao() {
   if (!simData) return;   // os dados ainda não foram carregados (primeira aplicação do idioma)
+  const carrossel = document.querySelector(".simDicas");
+  if (carrossel) atualizarCarrosselDicas(carrossel, false);
   render();
   const resultado = document.getElementById("resultadoContainer");
   if (resultado && resultado.children.length) mostrarResultados();
@@ -198,6 +201,17 @@ function render() {
     container.appendChild(section);
   });
   injetarBotaoResultado();
+  igualarAlturaPaineis();
+}
+
+//f:igualarAlturaPaineis
+//Deixa todos os painéis (posição, troca de gênero e ações do produtor) com a mesma altura, em qualquer estado:
+//a altura mínima do CSS já cobre os casos normais; se algum conteúdo passar disso, todos crescem juntos
+function igualarAlturaPaineis() {
+  const paineis = Array.from(document.querySelectorAll("#simBoard .simPanel"));
+  paineis.forEach(painel => { painel.style.minHeight = ""; });
+  const maior = Math.max(0, ...paineis.map(painel => painel.offsetHeight));
+  if (maior) paineis.forEach(painel => { painel.style.minHeight = `${maior}px`; });
 }
 
 // =====================
@@ -232,7 +246,7 @@ function criarSlotWrapper(pi, tipo, idx, item, isLocked) {
   wrapper.appendChild(slot);
   const painel = tipo === "idol"  ? criarPainelPosicao(pi, idx, item, isLocked)
                : tipo === "music" ? criarPainelTrocaGenero(pi, isLocked)
-               :                    criarPainelAcoes(pi, isLocked);
+               :                    criarPainelAcoes(pi, isLocked, item);
   if (painel) wrapper.appendChild(painel);
   return wrapper;
 }
@@ -319,7 +333,8 @@ function criarPainelPosicao(pi, idx, item, isLocked) {
 function criarBotaoTravar(pi, isLocked) {
   const btn = document.createElement("button");
   const pronto = podeTravar(pi);
-  btn.className = "btnTravar" + (isLocked ? " btnTravado" : "") + (!pronto ? " btnDesabilitado" : "");
+  btn.className = "btn btn-jogo btnTravar" + (!isLocked && pronto ? " pronto" : "");   // cinza até poder travar; depois de travar, "disabled"
+  btn.setAttribute("aria-disabled", String(isLocked || !pronto));   // cinza mas clicável: o clique explica o que falta
   btn.innerText = isLocked ? t("btn_travado") : t("btn_travar_escolha");
   btn.disabled  = isLocked;
   const motivo = motivoBloqueioTravar(pi);
@@ -347,13 +362,26 @@ function criarBotaoTravar(pi, isLocked) {
 }
 
 //f:criarPainelAcoes
-//Cria o painel abaixo do card do produtor: chave "Mudar gênero", carrossel de dicas e botão Travar Escolha
-function criarPainelAcoes(pi, isLocked) {
+//Cria o painel abaixo do card do produtor: chave "Mudar gênero", conceitos e gêneros do produtor (como no painel das idols) e botão Travar Escolha
+function criarPainelAcoes(pi, isLocked, produtor = null) {
   const painel = document.createElement("div");
   painel.className = "simPanel acoesPanel" + (isLocked ? " locked" : "");
   if (trocaGeneroDisponivel(pi)) painel.appendChild(criarChaveMudarGenero(pi, isLocked));
-  const dicas = criarCarrosselDicas();
-  if (dicas) painel.appendChild(dicas);
+  if (produtor) {
+    const info = document.createElement("div");
+    info.className = "simPanelInfo";
+    info.append(
+      criarLinhaInfo(t("sim_conceitos"), formatarListaInfo(produtor.conceitos), "", true),
+      criarLinhaInfo(t("sim_generos"), formatarListaInfo(produtor.generos), "", true)
+    );
+    // gêneros originais da música (sem a troca): a linha é da música, por isso tem cor própria (azul claro)
+    if (simData.config.usarMusica) {
+      const original = criarLinhaInfo(t("sim_generos_originais_musica"), formatarListaInfo(listarGenerosDaMusica(pegarMusicaDoJogador(pi))), "", true);
+      original.classList.add("simInfoMusica");
+      info.appendChild(original);
+    }
+    painel.appendChild(info);
+  }
   painel.appendChild(criarBotaoTravar(pi, isLocked));
   return painel;
 }
@@ -402,6 +430,7 @@ function criarCarrosselDicas() {
 //f:atualizarCarrosselDicas
 //Mostra no carrossel a dica atual (com animação de entrada opcional) e marca o ponto correspondente
 function atualizarCarrosselDicas(carrossel, animar) {
+  carrossel.setAttribute("aria-label", t("sim_dicas"));
   const texto = carrossel.querySelector(".simDicaTexto");
   texto.textContent = t(DICAS_SIMULACAO[indiceDica]);
   if (animar) {
@@ -411,11 +440,12 @@ function atualizarCarrosselDicas(carrossel, animar) {
   }
   carrossel.querySelectorAll(".simDicaPonto").forEach((ponto, i) => {
     ponto.classList.toggle("active", i === indiceDica);
+    ponto.setAttribute("aria-label", `${t("sim_dicas")} ${i + 1}`);
   });
 }
 
 //f:mostrarDica
-//Troca a dica atual em todos os carrosseis da tela (todos os jogadores veem a mesma dica)
+//Troca a dica atual do carrossel da tela
 function mostrarDica(indice) {
   const total = DICAS_SIMULACAO.length;
   indiceDica = ((indice % total) + total) % total;
@@ -1561,64 +1591,78 @@ function todosTravados() {
 }
 
 //f:criarBotaoResultado
-//Cria o botão "Calcular resultado" e o container de resultados logo abaixo do tabuleiro
+//Cria o botão "Calcular resultado" (com a mensagem de erro abaixo dele); ele nasce cinza e fica pronto quando todos travam
 function criarBotaoResultado() {
   const btn = document.createElement("button");
   btn.id        = "btnResultado";
+  btn.className = "btn btn-jogo";
   btn.innerText = t("sim_calcular_resultado");
-  btn.style.cssText = `
-    display:block; 
-    margin: 20px auto 0;
-    background-color:#7e22ce; 
-    border:2px solid yellow;
-    color:white; 
-    padding:12px 32px; 
-    font-size:15px;
-    border-radius:6px; 
-    cursor:pointer;
-  `;
-  btn.onmouseover = () => btn.style.backgroundColor = "#6b21a8";
-  btn.onmouseout  = () => btn.style.backgroundColor = "#7e22ce";
-  btn.onclick     = mostrarResultados;
-  document.getElementById("simBoard").after(btn);
+  btn.onclick   = () => {
+    if (todosTravados()) mostrarResultados();
+    else mostrarMensagemErro("resultado", t("sim_erro_resultado"));
+  };
 
-  if (!document.getElementById("resultadoContainer")) {
-    const container = document.createElement("div");
-    container.id        = "resultadoContainer";
-    container.style.cssText = `
-      max-width:700px; margin:30px auto; padding:20px;
-      background:#1c1c1c; border:1px solid #333; border-radius:10px;
-    `;
-    btn.after(container);
-  }
+  // a mensagem de erro fica logo abaixo do botão
+  const msgErro = document.createElement("div");
+  msgErro.className = "simMensagemErro";
+  msgErro.id = "msgErro-resultado";
+  msgErro.style.display = "none";
+
+  const wrapper = document.createElement("div");
+  wrapper.id        = "btnResultadoWrapper";
+  wrapper.className = "btnResultadoWrapper";
+  wrapper.append(btn, msgErro);
+  return wrapper;
+}
+
+//f:criarPainelTopo
+//Cria (uma única vez) o painel do topo da página, acima dos boards: carrossel de dicas + botão "Calcular resultado".
+//Ele não é refeito pelo render(), assim o carrossel e o pulso do botão não reiniciam a cada jogada
+function criarPainelTopo() {
+  const botao = MOSTRAR_SCORE ? criarBotaoResultado() : null;
+  const dicas = criarCarrosselDicas();
+  if (!botao && !dicas) return;
+  const painel = document.createElement("div");
+  painel.id = "simTurnActions";
+  painel.className = "simTurnActions" + (botao && dicas ? "" : " simples");
+  if (dicas) painel.appendChild(dicas);
+  if (botao) painel.appendChild(botao);
+  document.getElementById("simBoard").before(painel);
 }
 
 //f:injetarBotaoResultado
-//Mostra, esconde ou remove o botão de resultado conforme MOSTRAR_SCORE e o estado dos jogadores
+//Atualiza o botão de resultado (cinza até todos travarem, depois pronto) ou o remove, conforme MOSTRAR_SCORE
 function injetarBotaoResultado() {
-  const jaExiste = document.getElementById("btnResultado");
-
-  // Mantém toda a lógica de cálculo disponível, mas não cria nem exibe a interface
+  // Mantém toda a lógica de cálculo disponível, mas não exibe a interface
   // de Score enquanto a configuração estiver desativada.
   if (!MOSTRAR_SCORE) {
-    jaExiste?.remove();
     document.getElementById("resultadoContainer")?.remove();
     return;
   }
 
-  // Só mostra se todos estiverem travados
-  if (!todosTravados()) {
-    if (jaExiste) jaExiste.style.display = "none";
-    return;
-  }
+  const btn = document.getElementById("btnResultado");
+  if (!btn) return;
+  const pronto = todosTravados();
+  btn.innerText = t("sim_calcular_resultado");
+  btn.title = pronto ? "" : t("sim_erro_resultado");
+  btn.classList.toggle("pronto", pronto);
+  btn.setAttribute("aria-disabled", String(!pronto));   // cinza mas clicável: o clique explica o que falta
+}
 
-  if (jaExiste) {
-    jaExiste.innerText = t("sim_calcular_resultado");
-    jaExiste.style.display = "";
-    return;
-  }
-
-  criarBotaoResultado();
+//f:pegarContainerResultado
+//Devolve o container dos resultados, criando-o (logo abaixo dos boards) na primeira vez que é preciso
+function pegarContainerResultado() {
+  let container = document.getElementById("resultadoContainer");
+  const simBoard = document.getElementById("simBoard");
+  if (container || !simBoard || !document.getElementById("btnResultadoWrapper")) return container;
+  container = document.createElement("div");
+  container.id        = "resultadoContainer";
+  container.style.cssText = `
+    max-width:700px; margin:30px auto; padding:20px;
+    background:#1c1c1c; border:1px solid #333; border-radius:10px;
+  `;
+  simBoard.after(container);
+  return container;
 }
 
 //f:calcularRankingJogadores
@@ -1697,9 +1741,10 @@ function criarDetalheExpansivel(resultado) {
 //f:mostrarResultados
 //Exibe o ranking final com o detalhamento expansível de cada jogador
 function mostrarResultados() {
-  const container = document.getElementById("resultadoContainer");
+  const container = pegarContainerResultado();
   if (!container) return;
   container.innerHTML = "";
+  document.getElementById("btnResultado")?.classList.add("sem-pulso");   // o pulso serviu para chamar a atenção: depois do clique ele para
 
   const titulo = document.createElement("h2");
   titulo.style.cssText = "text-align:center; color:#a855f7; margin-bottom:20px;";
