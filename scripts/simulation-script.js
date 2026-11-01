@@ -11,7 +11,7 @@
 // ===============================
 const ROLE_OPTIONS_IDOL = ["Main Vocal","Lead Vocal","Main Dancer","Lead Dancer","Main Rapper","Lead Rapper","Visual","Center"];
 // Gêneros que podem entrar na música pela troca de gênero.
-const GENEROS_DISPONIVEIS = ["EDM","Emotional","Experimental","Groove","Hip-Hop","Pop","R&B","Rock","Synthpop","Tropical"];
+const GENEROS_DISPONIVEIS = ["EDM","Emotional","Experimental","Groove","Hip-hop","Pop","R&B","Rock","Synthpop","Tropical"];
 const NUMBERED_ROLES = ["Lead Vocal","Lead Dancer","Lead Rapper"];
 // Controle da área de resultados:
 // false = o botão "Calcular Score" e o placar não são exibidos.

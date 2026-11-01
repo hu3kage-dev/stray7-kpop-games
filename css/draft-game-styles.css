@@ -354,7 +354,7 @@ body {
   display: flex;
   flex: 1;
   gap: 15px;
-  justify-content: space-between;
+  justify-content: flex-start;   /* a largura do board de formação é ajustada pelo JS (ajustarLarguraBoards); os extras ficam logo ao lado */
   flex-wrap: nowrap;
   width: 100%;
   min-width: 0;
@@ -454,10 +454,10 @@ body {
   border-color: purple;
 }
 
-/* Pool */
+/* Pool (a largura é ajustada pelo JS, ajustarLarguraPool, a um número exato de cards por linha) */
 #pool {
   width: 100%;
-  margin: 20px auto 0;
+  margin: 20px 0 0;
   padding: 16px;
   min-height: 240px;
   border: 2px solid rgba(34, 255, 255, 0.25);
@@ -546,6 +546,12 @@ body {
   .playerBlocks {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  /* O board de formação tem largura exata (JS); no celular ele fica centralizado */
+  .idolBoard {
+    align-self: center;
+    flex: none;
   }
 
   .board,

@@ -19,6 +19,15 @@
     border: 1px solid #444; 
     border-radius: 8px; 
   }
+  .fileRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .fileRow label {
+    min-width: 80px;
+    text-align: left;
+  }
   textarea {
     width: 100%; 
     height: 150px; 
@@ -65,6 +74,17 @@
   <button onclick="processarArquivo('producers')">Converter</button>
   <button onclick="copiarJS('producers')">Copiar JS</button>
   <textarea id="producersOutput"></textarea>
+</div>
+</section>
+
+<section class="content">
+<div class="section">
+  <h2>Arquivo completo (draft-game-objects.js)</h2>
+  <p>Selecione os 3 CSVs para gerar e baixar o arquivo de objetos pronto.</p>
+  <div class="fileRow"><label for="fullIdolsFile">Idols</label> <input type="file" id="fullIdolsFile"></div>
+  <div class="fileRow"><label for="fullSongsFile">Musics</label> <input type="file" id="fullSongsFile"></div>
+  <div class="fileRow"><label for="fullProducersFile">Producers</label> <input type="file" id="fullProducersFile"></div>
+  <button onclick="gerarArquivoObjetos()">Gerar draft-game-objects.js</button>
 </div>
 </section>
 
@@ -160,6 +180,83 @@ const TIPO_CANONICO = {
   producers: "producer"
 };
 
+//f:converterCSV — converte o texto de um CSV na lista de objetos do tipo ("idols", "songs" ou "producers")
+function converterCSV(tipo, texto) {
+  const linhas = texto.trim().split("\n");
+
+  const headers = parseCSVLine(linhas[0])
+    .map(h => normalizarChave(h));
+
+  let resultado = [];
+
+  for (let i = 1; i < linhas.length; i++) {
+    if (!linhas[i].trim()) continue;
+
+    const valores = parseCSVLine(linhas[i]);
+    let obj = {};
+
+    headers.forEach((h, index) => {
+      obj[h] = valores[index] || "";
+    });
+
+    let objFinal = {};
+
+    // IDOLS
+    if (tipo === "idols") {
+      objFinal = {
+        gen: convPegarCampo(obj, CONV_CSV_ALIASES.geracao),
+        type: TIPO_CANONICO.idols,
+        id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
+        name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
+        group: convPegarCampo(obj, CONV_CSV_ALIASES.grupo),
+        aniversario: convPegarCampo(obj, CONV_CSV_ALIASES.aniversario),
+        vocal: convPegarCampo(obj, CONV_CSV_ALIASES.vocal),
+        dance: convPegarCampo(obj, CONV_CSV_ALIASES.dance),
+        rap: convPegarCampo(obj, CONV_CSV_ALIASES.rap),
+        center: convPegarCampo(obj, CONV_CSV_ALIASES.center),
+        visual: convPegarCampo(obj, CONV_CSV_ALIASES.visual),
+        especialidade: convPegarCampo(obj, CONV_CSV_ALIASES.especialidade),
+
+        conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosPredominantes)),
+        generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosPredominantes)),
+
+        fortes: convPegarCampo(obj, CONV_CSV_ALIASES.pontosFortes),
+        fracos: convPegarCampo(obj, CONV_CSV_ALIASES.pontosFracos)
+      };
+    }
+
+    // SONGS
+    if (tipo === "songs") {
+      objFinal = {
+        type: TIPO_CANONICO.songs,
+        id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
+        name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
+        fonte: convPegarCampo(obj, CONV_CSV_ALIASES.fonte),
+
+        conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosOriginais)),
+        generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosOriginais))
+      };
+    }
+
+    // PRODUCERS
+    if (tipo === "producers") {
+      objFinal = {
+        type: TIPO_CANONICO.producers,
+        id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
+        name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
+
+        conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosPredominantes)),
+        generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosPredominantes)),
+        musicas: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.musicasConhecidas))
+      };
+    }
+
+    resultado.push(objFinal);
+  }
+
+  return resultado;
+}
+
 //f:processarArquivo
 function processarArquivo(tipo) {
   const input = document.getElementById(tipo + "File");
@@ -171,83 +268,65 @@ function processarArquivo(tipo) {
   const reader = new FileReader();
 
   reader.onload = function(e) {
-    const linhas = e.target.result.trim().split("\n");
-
-    const headers = parseCSVLine(linhas[0])
-      .map(h => normalizarChave(h));
-
-    let resultado = [];
-
-    for (let i = 1; i < linhas.length; i++) {
-      if (!linhas[i].trim()) continue;
-
-      const valores = parseCSVLine(linhas[i]);
-      let obj = {};
-
-      headers.forEach((h, index) => {
-        obj[h] = valores[index] || "";
-      });
-
-      let objFinal = {};
-
-      // IDOLS
-      if (tipo === "idols") {
-        objFinal = {
-          gen: convPegarCampo(obj, CONV_CSV_ALIASES.geracao),
-          type: TIPO_CANONICO.idols,
-          id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
-          name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
-          group: convPegarCampo(obj, CONV_CSV_ALIASES.grupo),
-          aniversario: convPegarCampo(obj, CONV_CSV_ALIASES.aniversario),
-          vocal: convPegarCampo(obj, CONV_CSV_ALIASES.vocal),
-          dance: convPegarCampo(obj, CONV_CSV_ALIASES.dance),
-          rap: convPegarCampo(obj, CONV_CSV_ALIASES.rap),
-          center: convPegarCampo(obj, CONV_CSV_ALIASES.center),
-          visual: convPegarCampo(obj, CONV_CSV_ALIASES.visual),
-          especialidade: convPegarCampo(obj, CONV_CSV_ALIASES.especialidade),
-
-          conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosPredominantes)),
-          generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosPredominantes)),
-
-          fortes: convPegarCampo(obj, CONV_CSV_ALIASES.pontosFortes),
-          fracos: convPegarCampo(obj, CONV_CSV_ALIASES.pontosFracos)
-        };
-      }
-
-      // SONGS
-      if (tipo === "songs") {
-        objFinal = {
-          type: TIPO_CANONICO.songs,
-          id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
-          name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
-          fonte: convPegarCampo(obj, CONV_CSV_ALIASES.fonte),
-
-          conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosOriginais)),
-          generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosOriginais))
-        };
-      }
-
-      // PRODUCERS
-      if (tipo === "producers") {
-        objFinal = {
-          type: TIPO_CANONICO.producers,
-          id: convPegarCampo(obj, CONV_CSV_ALIASES.id),
-          name: convPegarCampo(obj, CONV_CSV_ALIASES.nome),
-
-          conceitos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.conceitosPredominantes)),
-          generos: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.generosPredominantes)),
-          musicas: parseArray(convPegarCampo(obj, CONV_CSV_ALIASES.musicasConhecidas))
-        };
-      }
-
-      resultado.push(objFinal);
-    }
+    const resultado = converterCSV(tipo, e.target.result);
 
     output.value = JSON.stringify(resultado, null, 2);
     output.style.display = "block";
   };
 
   reader.readAsText(file);
+}
+
+//f:lerArquivoTexto — lê um arquivo e devolve uma Promise com o texto
+function lerArquivoTexto(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = e => resolve(e.target.result);
+    reader.onerror = () => reject(reader.error);
+    reader.readAsText(file);
+  });
+}
+
+//f:gerarArquivoObjetos — lê os 3 CSVs e baixa o draft-game-objects.js completo
+// (mesmo formato do arquivo usado pelo jogo: //data:idols, //data:musics e //data:producers antes de cada const)
+async function gerarArquivoObjetos() {
+  const arquivos = {
+    idols:     document.getElementById("fullIdolsFile").files[0],
+    songs:     document.getElementById("fullSongsFile").files[0],
+    producers: document.getElementById("fullProducersFile").files[0]
+  };
+  if (!arquivos.idols || !arquivos.songs || !arquivos.producers) {
+    return alert("Selecione os 3 arquivos (Idols, Musics e Producers)!");
+  }
+
+  try {
+    const [idols, songs, producers] = await Promise.all([
+      lerArquivoTexto(arquivos.idols),
+      lerArquivoTexto(arquivos.songs),
+      lerArquivoTexto(arquivos.producers)
+    ]);
+
+    const bloco = (marcador, nome, lista) =>
+      `//data:${marcador}\n` + `const ${nome} = ${JSON.stringify(lista, null, 2)};`;
+
+    const conteudo = [
+      bloco("idols", "idols", converterCSV("idols", idols)),
+      bloco("musics", "musics", converterCSV("songs", songs)),
+      bloco("producers", "producers", converterCSV("producers", producers))
+    ].join("\n\n").replace(/\n/g, "\r\n");   // o arquivo do jogo usa quebras de linha CRLF
+
+    const blob = new Blob([conteudo], { type: "text/javascript;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "draft-game-objects.js";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  } catch (erro) {
+    alert("Erro ao ler os arquivos.");
+  }
 }
 
 //f:copiarJS
@@ -271,6 +350,7 @@ function copiarJS(tipo) {
 // Expostas globalmente pois são chamadas pelos onclick="" do HTML.
 window.processarArquivo = processarArquivo;
 window.copiarJS = copiarJS;
+window.gerarArquivoObjetos = gerarArquivoObjetos;
 
 })();
 </script>

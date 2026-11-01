@@ -16,7 +16,7 @@ h2 {
 
 /* Seção por Jogador */
 .simSection {
-  margin-bottom: 30px;
+  margin-bottom: 5px;   /* espaço entre um board e o seguinte */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -815,6 +815,12 @@ body {
 
 .simDrop.open .simDropChevron {
   transform: rotate(-135deg) translateY(-2px);
+}
+
+/* Espaço reservado abaixo do último board: o menu aberto (até ~195px) e o pulso do botão Travar Escolha (300px) passam do fim
+   do conteúdo; sem esta folga a página cresceria enquanto eles aparecem e encolheria quando sumissem */
+#simBoard {
+  padding-bottom: 170px;
 }
 
 .simDropMenu {
